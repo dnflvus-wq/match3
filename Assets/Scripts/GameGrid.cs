@@ -296,9 +296,27 @@ namespace Match3
             }
             else
             {
+                // 매치 실패 — 갔다가 돌아오는 애니메이션
                 _pieces[piece1.X, piece1.Y] = piece1;
                 _pieces[piece2.X, piece2.Y] = piece2;
+                StartCoroutine(SwapBackAnimation(piece1, piece2));
             }
+        }
+
+        private IEnumerator SwapBackAnimation(GamePiece piece1, GamePiece piece2)
+        {
+            int p1X = piece1.X, p1Y = piece1.Y;
+            int p2X = piece2.X, p2Y = piece2.Y;
+
+            // 시각 전용 이동 (X,Y 좌표 안 바꿈)
+            piece1.MovableComponent.MoveVisual(p2X, p2Y, fillTime);
+            piece2.MovableComponent.MoveVisual(p1X, p1Y, fillTime);
+
+            yield return new WaitForSeconds(fillTime);
+
+            // 원래 위치로 되돌리기
+            piece1.MovableComponent.MoveVisual(p1X, p1Y, fillTime);
+            piece2.MovableComponent.MoveVisual(p2X, p2Y, fillTime);
         }
 
         public void PressPiece(GamePiece piece) => _pressedPiece = piece;
@@ -307,9 +325,88 @@ namespace Match3
 
         public void ReleasePiece()
         {
-            if (IsAdjacent (_pressedPiece, _enteredPiece))
+            if (_pressedPiece != null && _enteredPiece != null && IsAdjacent(_pressedPiece, _enteredPiece))
             {
                 SwapPieces(_pressedPiece, _enteredPiece);
+            }
+            _pressedPiece = null;
+            _enteredPiece = null;
+        }
+
+        private Vector2 _touchStart;
+        private bool _swiped;
+        private float _swipeThreshold = 0.3f;
+
+        private void Update()
+        {
+            // Android 뒤로가기 키
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
+                return;
+            }
+
+            bool began = false, moved = false, ended = false;
+            Vector2 screenPos = Vector2.zero;
+
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                screenPos = touch.position;
+                began = touch.phase == TouchPhase.Began;
+                moved = touch.phase == TouchPhase.Moved;
+                ended = touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled;
+            }
+            else
+            {
+                screenPos = Input.mousePosition;
+                began = Input.GetMouseButtonDown(0);
+                moved = Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0);
+                ended = Input.GetMouseButtonUp(0);
+            }
+
+            if (!began && !moved && !ended) return;
+
+            Vector3 wp = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 0));
+            Vector2 worldPos = new Vector2(wp.x, wp.y);
+
+            if (began)
+            {
+                _touchStart = worldPos;
+                _swiped = false;
+                RaycastHit2D hitBegin = Physics2D.Raycast(worldPos, Vector2.zero);
+                GamePiece beginPiece = hitBegin.collider != null ? hitBegin.collider.GetComponent<GamePiece>() : null;
+                if (beginPiece != null) PressPiece(beginPiece);
+            }
+            else if (moved)
+            {
+                if (_pressedPiece != null && !_swiped)
+                {
+                    Vector2 delta = worldPos - _touchStart;
+                    if (delta.magnitude >= _swipeThreshold)
+                    {
+                        _swiped = true;
+                        int dx = 0, dy = 0;
+                        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+                            dx = delta.x > 0 ? 1 : -1;
+                        else
+                            dy = delta.y > 0 ? 1 : -1;
+
+                        int targetX = _pressedPiece.X + dx;
+                        int targetY = _pressedPiece.Y - dy;
+                        if (targetX >= 0 && targetX < xDim && targetY >= 0 && targetY < yDim)
+                        {
+                            EnterPiece(_pieces[targetX, targetY]);
+                            SwapPieces(_pressedPiece, _enteredPiece);
+                        }
+                    }
+                }
+            }
+            else if (ended)
+            {
+                if (!_swiped) ReleasePiece();
+                _pressedPiece = null;
+                _enteredPiece = null;
             }
         }
 
