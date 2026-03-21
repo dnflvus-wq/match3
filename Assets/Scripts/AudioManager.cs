@@ -44,6 +44,15 @@ namespace Match3
 
         private void Start()
         {
+            // Inspector에서 할당 안 했으면 프로시저럴 생성
+            if (matchSound == null) matchSound = ProceduralAudio.GenerateMatch();
+            if (swapSound == null) swapSound = ProceduralAudio.GenerateSwap();
+            if (failSound == null) failSound = ProceduralAudio.GenerateFail();
+            if (comboSound == null) comboSound = ProceduralAudio.GenerateCombo();
+            if (specialSound == null) specialSound = ProceduralAudio.GenerateSpecial();
+            if (winSound == null) winSound = ProceduralAudio.GenerateWin();
+            if (loseSound == null) loseSound = ProceduralAudio.GenerateLose();
+
             PlayBGM();
         }
 

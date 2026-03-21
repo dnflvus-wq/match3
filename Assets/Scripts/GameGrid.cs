@@ -106,6 +106,20 @@ namespace Match3
                 }
             }
 
+            // AudioManager 자동 생성 (씬에 없으면)
+            if (AudioManager.Instance == null)
+            {
+                var audioObj = new GameObject("AudioManager");
+                audioObj.AddComponent<AudioManager>();
+            }
+
+            // MatchParticles 자동 생성
+            if (MatchParticles.Instance == null)
+            {
+                var particleObj = new GameObject("MatchParticles");
+                particleObj.AddComponent<MatchParticles>();
+            }
+
             StartCoroutine(Fill());
         }
 
@@ -772,12 +786,33 @@ namespace Match3
         {
             if (!_pieces[x, y].IsClearable() || _pieces[x, y].ClearableComponent.IsBeingCleared) return false;
 
+            // 파티클 이펙트
+            if (MatchParticles.Instance != null && _pieces[x, y].IsColored())
+            {
+                Color particleColor = GetColorForType(_pieces[x, y].ColorComponent.Color);
+                MatchParticles.Instance.PlayAt(_pieces[x, y].transform.position, particleColor);
+            }
+
             _pieces[x, y].ClearableComponent.Clear();
             SpawnNewPiece(x, y, PieceType.Empty);
 
             ClearObstacles(x, y);
 
             return true;
+        }
+
+        private Color GetColorForType(ColorType type)
+        {
+            switch (type)
+            {
+                case ColorType.Yellow: return new Color(1f, 0.85f, 0.1f);
+                case ColorType.Purple: return new Color(0.7f, 0.2f, 0.9f);
+                case ColorType.Red: return new Color(1f, 0.2f, 0.2f);
+                case ColorType.Blue: return new Color(0.2f, 0.4f, 1f);
+                case ColorType.Green: return new Color(0.2f, 0.9f, 0.3f);
+                case ColorType.Pink: return new Color(1f, 0.4f, 0.7f);
+                default: return Color.white;
+            }
         }
 
         private void ClearObstacles(int x, int y)
