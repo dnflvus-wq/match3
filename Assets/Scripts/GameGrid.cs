@@ -55,6 +55,9 @@ namespace Match3
         // Juice
         private int _comboCount;
 
+        // 부스터
+        private BoosterUI _boosterUI;
+
         // 힌트 시스템
         [Header("Hint System")]
         public float hintDelay = 5f;
@@ -471,6 +474,22 @@ namespace Match3
 
             if (began)
             {
+                // 망치 모드: 터치한 타일 파괴
+                if (_boosterUI != null && _boosterUI.IsHammerMode)
+                {
+                    RaycastHit2D hammerHit = Physics2D.Raycast(worldPos, Vector2.zero);
+                    GamePiece hammerPiece = hammerHit.collider != null ? hammerHit.collider.GetComponent<GamePiece>() : null;
+                    if (hammerPiece != null && hammerPiece.IsClearable())
+                    {
+                        ClearPiece(hammerPiece.X, hammerPiece.Y);
+                        _boosterUI.UseHammer();
+                        if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
+                        StartCoroutine(CameraShake(0.03f, 0.15f));
+                        StartCoroutine(Fill());
+                    }
+                    return;
+                }
+
                 StopHint();
                 ResetHintTimer();
                 _touchStart = worldPos;
@@ -908,6 +927,11 @@ namespace Match3
             // 먼저 보드 채우기
             yield return StartCoroutine(Fill());
 
+            // BoosterUI 생성
+            var boosterObj = new GameObject("BoosterUI");
+            _boosterUI = boosterObj.AddComponent<BoosterUI>();
+            _boosterUI.Init(this);
+
             // 카운트다운 3-2-1
             Canvas canvas = FindFirstObjectByType<Canvas>();
             if (canvas != null)
@@ -1256,6 +1280,11 @@ namespace Match3
             }
 
             cam.transform.position = originalPos;
+        }
+
+        public void ForceShuffleBoard()
+        {
+            StartCoroutine(ShuffleBoard());
         }
 
         // === 데드 보드 셔플 ===

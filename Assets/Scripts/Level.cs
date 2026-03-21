@@ -29,6 +29,20 @@ namespace Match3
         {
             gameGrid.GameOver();
             _didWin = true;
+
+            // 승리 시 코인 보상
+            if (CoinSystem.Instance != null)
+            {
+                int coinReward = 10 + currentScore / 100;
+                CoinSystem.Instance.AddCoins(coinReward);
+            }
+
+            // 승리 시 부스터 보상 (랜덤)
+            if (BoosterSystem.Instance != null && Random.value > 0.5f)
+            {
+                BoosterSystem.Instance.AddBooster((BoosterType)Random.Range(0, 3));
+            }
+
             StartCoroutine(WaitForGridFill());
         }
 
