@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +25,10 @@ namespace Match3
         public int yDim;
         public float fillTime;
 
+        [Header("Animation Timing")]
+        public float swapTime = 0.25f;
+        public float swapBackTime = 0.2f;
+
         public Level level;
 
         public PiecePrefab[] piecePrefabs;
@@ -43,11 +47,24 @@ namespace Match3
 
         private bool _gameOver;
 
+        // FSM
+        private GameState _currentState = GameState.PREGAME;
+        public GameState CurrentState => _currentState;
+
+        // Juice
+        private int _comboCount;
+
+        // 힌트 시스템
+        [Header("Hint System")]
+        public float hintDelay = 5f;
+        private float _hintTimer;
+        private List<GamePiece> _hintPieces;
+        private Coroutine _hintCoroutine;
+
         public bool IsFilling { get; private set; }
 
         private void Awake()
         {
-            // populating dictionary with piece prefabs types
             _piecePrefabDict = new Dictionary<PieceType, GameObject>();
             for (int i = 0; i < piecePrefabs.Length; i++)
             {
@@ -57,7 +74,6 @@ namespace Match3
                 }
             }
 
-            // instantiate backgrounds
             for (int x = 0; x < xDim; x++)
             {
                 for (int y = 0; y < yDim; y++)
@@ -67,7 +83,6 @@ namespace Match3
                 }
             }
 
-            // instantiating pieces
             _pieces = new GamePiece[xDim, yDim];
 
             for (int i = 0; i < initialPieces.Length; i++)
@@ -86,7 +101,7 @@ namespace Match3
                     if (_pieces[x, y] == null)
                     {
                         SpawnNewPiece(x, y, PieceType.Empty);
-                    }                
+                    }
                 }
             }
 
@@ -94,9 +109,11 @@ namespace Match3
         }
 
         private IEnumerator Fill()
-        {        
+        {
             bool needsRefill = true;
             IsFilling = true;
+            _currentState = GameState.COLLAPSING;
+            _comboCount = 0;
 
             while (needsRefill)
             {
@@ -108,19 +125,34 @@ namespace Match3
                 }
 
                 needsRefill = ClearAllValidMatches();
+                if (needsRefill)
+                {
+                    _comboCount++;
+                }
             }
 
             IsFilling = false;
+
+            if (_gameOver)
+            {
+                _currentState = GameState.ENDGAME;
+            }
+            else
+            {
+                // 데드 보드 체크
+                if (FindValidMove() == null)
+                {
+                    yield return StartCoroutine(ShuffleBoard());
+                }
+
+                _currentState = GameState.READY;
+                ResetHintTimer();
+            }
         }
 
-        /// <summary>
-        /// One pass through all grid cells, moving them down one grid, if possible.
-        /// </summary>
-        /// <returns> returns true if at least one piece is moved down</returns>
         private bool FillStep()
         {
             bool movedPiece = false;
-            // y = 0 is at the top, we ignore the last row, since it can't be moved down.
             for (int y = yDim - 2; y >= 0; y--)
             {
                 for (int loopX = 0; loopX < xDim; loopX++)
@@ -130,13 +162,13 @@ namespace Match3
                     GamePiece piece = _pieces[x, y];
 
                     if (!piece.IsMovable()) continue;
-                
+
                     GamePiece pieceBelow = _pieces[x, y + 1];
 
                     if (pieceBelow.Type == PieceType.Empty)
                     {
                         Destroy(pieceBelow.gameObject);
-                        piece.MovableComponent.Move(x, y + 1, fillTime);
+                        piece.MovableComponent.MoveDrop(x, y + 1, fillTime);
                         _pieces[x, y + 1] = piece;
                         SpawnNewPiece(x, y, PieceType.Empty);
                         movedPiece = true;
@@ -146,7 +178,7 @@ namespace Match3
                         for (int diag = -1; diag <= 1; diag++)
                         {
                             if (diag == 0) continue;
-                        
+
                             int diagX = x + diag;
 
                             if (_inverse)
@@ -155,11 +187,11 @@ namespace Match3
                             }
 
                             if (diagX < 0 || diagX >= xDim) continue;
-                        
+
                             GamePiece diagonalPiece = _pieces[diagX, y + 1];
 
                             if (diagonalPiece.Type != PieceType.Empty) continue;
-                        
+
                             bool hasPieceAbove = true;
 
                             for (int aboveY = y; aboveY >= 0; aboveY--)
@@ -170,7 +202,7 @@ namespace Match3
                                 {
                                     break;
                                 }
-                                else if (/*!pieceAbove.IsMovable() && */pieceAbove.Type != PieceType.Empty)
+                                else if (pieceAbove.Type != PieceType.Empty)
                                 {
                                     hasPieceAbove = false;
                                     break;
@@ -178,9 +210,9 @@ namespace Match3
                             }
 
                             if (hasPieceAbove) continue;
-                        
+
                             Destroy(diagonalPiece.gameObject);
-                            piece.MovableComponent.Move(diagX, y + 1, fillTime);
+                            piece.MovableComponent.MoveDrop(diagX, y + 1, fillTime);
                             _pieces[diagX, y + 1] = piece;
                             SpawnNewPiece(x, y, PieceType.Empty);
                             movedPiece = true;
@@ -190,20 +222,19 @@ namespace Match3
                 }
             }
 
-            // the highest row (0) is a special case, we must fill it with new pieces if empty
             for (int x = 0; x < xDim; x++)
             {
                 GamePiece pieceBelow = _pieces[x, 0];
 
                 if (pieceBelow.Type != PieceType.Empty) continue;
-            
+
                 Destroy(pieceBelow.gameObject);
                 GameObject newPiece = Instantiate(_piecePrefabDict[PieceType.Normal], GetWorldPosition(x, -1), Quaternion.identity, this.transform);
 
                 _pieces[x, 0] = newPiece.GetComponent<GamePiece>();
                 _pieces[x, 0].Init(x, -1, this, PieceType.Normal);
-                _pieces[x, 0].MovableComponent.Move(x, 0, fillTime);
-                _pieces[x, 0].ColorComponent.SetColor((ColorType)Random.Range(0, _pieces[x, 0].ColorComponent.NumColors));
+                _pieces[x, 0].MovableComponent.MoveDrop(x, 0, fillTime);
+                _pieces[x, 0].ColorComponent.SetColor(GetWeightedRandomColor(_pieces[x, 0].ColorComponent.NumColors));
                 movedPiece = true;
             }
 
@@ -232,56 +263,74 @@ namespace Match3
 
         private void SwapPieces(GamePiece piece1, GamePiece piece2)
         {
-            if (_gameOver) { return; }
+            if (_gameOver || _currentState != GameState.READY) { return; }
 
             if (!piece1.IsMovable() || !piece2.IsMovable()) return;
-        
-            _pieces[piece1.X, piece1.Y] = piece2;
-            _pieces[piece2.X, piece2.Y] = piece1;
 
-            if (GetMatch(piece1, piece2.X, piece2.Y) != null || 
-                GetMatch(piece2, piece1.X, piece1.Y) != null ||
-                piece1.Type == PieceType.Rainbow ||
-                piece2.Type == PieceType.Rainbow)
+            StartCoroutine(SwapPiecesCoroutine(piece1, piece2));
+        }
+
+        private IEnumerator SwapPiecesCoroutine(GamePiece piece1, GamePiece piece2)
+        {
+            _currentState = GameState.SWAPPING;
+
+            int p1X = piece1.X, p1Y = piece1.Y;
+            int p2X = piece2.X, p2Y = piece2.Y;
+
+            // 배열 교환 (매치 확인용)
+            _pieces[p1X, p1Y] = piece2;
+            _pieces[p2X, p2Y] = piece1;
+
+            // 시각 애니메이션 — Ease-Out + Z축 아크 (한쪽만 arc로 겹침 방지)
+            piece1.MovableComponent.MoveVisual(p2X, p2Y, swapTime, useArc: true);
+            piece2.MovableComponent.MoveVisual(p1X, p1Y, swapTime, useArc: false);
+
+            yield return new WaitForSeconds(swapTime);
+
+            // EVALUATING: 매치 확인
+            _currentState = GameState.EVALUATING;
+
+            bool hasMatch = GetMatch(piece1, p2X, p2Y) != null ||
+                            GetMatch(piece2, p1X, p1Y) != null ||
+                            piece1.Type == PieceType.Rainbow ||
+                            piece2.Type == PieceType.Rainbow;
+
+            if (hasMatch)
             {
-                int piece1X = piece1.X;
-                int piece1Y = piece1.Y;
+                // 매치 성공 — 데이터(X,Y) 확정
+                piece1.MovableComponent.SetPosition(p2X, p2Y);
+                piece2.MovableComponent.SetPosition(p1X, p1Y);
 
-                piece1.MovableComponent.Move(piece2.X, piece2.Y, fillTime);
-                piece2.MovableComponent.Move(piece1X, piece1Y, fillTime);
-
+                // Rainbow 처리
                 if (piece1.Type == PieceType.Rainbow && piece1.IsClearable() && piece2.IsColored())
                 {
                     ClearColorPiece clearColor = piece1.GetComponent<ClearColorPiece>();
-
                     if (clearColor)
                     {
                         clearColor.Color = piece2.ColorComponent.Color;
                     }
-
                     ClearPiece(piece1.X, piece1.Y);
                 }
 
                 if (piece2.Type == PieceType.Rainbow && piece2.IsClearable() && piece1.IsColored())
                 {
                     ClearColorPiece clearColor = piece2.GetComponent<ClearColorPiece>();
-
                     if (clearColor)
                     {
                         clearColor.Color = piece1.ColorComponent.Color;
                     }
-
                     ClearPiece(piece2.X, piece2.Y);
                 }
 
+                // MATCHING
+                _currentState = GameState.MATCHING;
                 ClearAllValidMatches();
 
-                // special pieces get cleared, event if they are not matched
+                // 특수 타일 클리어
                 if (piece1.Type == PieceType.RowClear || piece1.Type == PieceType.ColumnClear)
                 {
                     ClearPiece(piece1.X, piece1.Y);
                 }
-
                 if (piece2.Type == PieceType.RowClear || piece2.Type == PieceType.ColumnClear)
                 {
                     ClearPiece(piece2.X, piece2.Y);
@@ -290,33 +339,25 @@ namespace Match3
                 _pressedPiece = null;
                 _enteredPiece = null;
 
+                // COLLAPSING → Fill이 완료되면 READY로 전환
                 StartCoroutine(Fill());
 
                 level.OnMove();
             }
             else
             {
-                // 매치 실패 — 갔다가 돌아오는 애니메이션
-                _pieces[piece1.X, piece1.Y] = piece1;
-                _pieces[piece2.X, piece2.Y] = piece2;
-                StartCoroutine(SwapBackAnimation(piece1, piece2));
+                // 매치 실패 — 배열 복원
+                _pieces[p1X, p1Y] = piece1;
+                _pieces[p2X, p2Y] = piece2;
+
+                // 핑퐁: 원래 위치로 되돌리기 (빠르게)
+                piece1.MovableComponent.MoveVisual(p1X, p1Y, swapBackTime);
+                piece2.MovableComponent.MoveVisual(p2X, p2Y, swapBackTime);
+
+                yield return new WaitForSeconds(swapBackTime);
+
+                _currentState = GameState.READY;
             }
-        }
-
-        private IEnumerator SwapBackAnimation(GamePiece piece1, GamePiece piece2)
-        {
-            int p1X = piece1.X, p1Y = piece1.Y;
-            int p2X = piece2.X, p2Y = piece2.Y;
-
-            // 시각 전용 이동 (X,Y 좌표 안 바꿈)
-            piece1.MovableComponent.MoveVisual(p2X, p2Y, fillTime);
-            piece2.MovableComponent.MoveVisual(p1X, p1Y, fillTime);
-
-            yield return new WaitForSeconds(fillTime);
-
-            // 원래 위치로 되돌리기
-            piece1.MovableComponent.MoveVisual(p1X, p1Y, fillTime);
-            piece2.MovableComponent.MoveVisual(p2X, p2Y, fillTime);
         }
 
         public void PressPiece(GamePiece piece) => _pressedPiece = piece;
@@ -346,6 +387,16 @@ namespace Match3
                 return;
             }
 
+            // FSM: READY 상태에서만 터치 입력 허용
+            if (_currentState != GameState.READY) return;
+
+            // 힌트 타이머
+            _hintTimer -= Time.deltaTime;
+            if (_hintTimer <= 0f && _hintCoroutine == null)
+            {
+                ShowHint();
+            }
+
             bool began = false, moved = false, ended = false;
             Vector2 screenPos = Vector2.zero;
 
@@ -372,6 +423,8 @@ namespace Match3
 
             if (began)
             {
+                StopHint();
+                ResetHintTimer();
                 _touchStart = worldPos;
                 _swiped = false;
                 RaycastHit2D hitBegin = Physics2D.Raycast(worldPos, Vector2.zero);
@@ -419,17 +472,22 @@ namespace Match3
                 for (int x = 0; x < xDim; x++)
                 {
                     if (!_pieces[x, y].IsClearable()) continue;
-                
+
                     List<GamePiece> match = GetMatch(_pieces[x, y], x, y);
 
                     if (match == null) continue;
-                
+
+                    // 4매치 이상 시 카메라 쉐이크
+                    if (match.Count >= 4)
+                    {
+                        StartCoroutine(CameraShake(0.05f, 0.2f));
+                    }
+
                     PieceType specialPieceType = PieceType.Count;
                     GamePiece randomPiece = match[Random.Range(0, match.Count)];
                     int specialPieceX = randomPiece.X;
                     int specialPieceY = randomPiece.Y;
 
-                    // Spawning special pieces
                     if (match.Count == 4)
                     {
                         if (_pressedPiece == null || _enteredPiece == null)
@@ -444,7 +502,7 @@ namespace Match3
                         {
                             specialPieceType = PieceType.ColumnClear;
                         }
-                    } // Spawning a rainbow piece
+                    }
                     else if (match.Count >= 5)
                     {
                         specialPieceType = PieceType.Rainbow;
@@ -453,22 +511,21 @@ namespace Match3
                     foreach (var gamePiece in match)
                     {
                         if (!ClearPiece(gamePiece.X, gamePiece.Y)) continue;
-                    
+
                         needsRefill = true;
 
                         if (gamePiece != _pressedPiece && gamePiece != _enteredPiece) continue;
-                    
+
                         specialPieceX = gamePiece.X;
                         specialPieceY = gamePiece.Y;
                     }
 
-                    // Setting their colors
                     if (specialPieceType == PieceType.Count) continue;
-                
+
                     Destroy(_pieces[specialPieceX, specialPieceY]);
                     GamePiece newPiece = SpawnNewPiece(specialPieceX, specialPieceY, specialPieceType);
 
-                    if ((specialPieceType == PieceType.RowClear || specialPieceType == PieceType.ColumnClear) 
+                    if ((specialPieceType == PieceType.RowClear || specialPieceType == PieceType.ColumnClear)
                         && newPiece.IsColored() && match[0].IsColored())
                     {
                         newPiece.ColorComponent.SetColor(match[0].ColorComponent.Color);
@@ -491,7 +548,6 @@ namespace Match3
             var verticalPieces = new List<GamePiece>();
             var matchingPieces = new List<GamePiece>();
 
-            // First check horizontal
             horizontalPieces.Add(piece);
 
             for (int dir = 0; dir <= 1; dir++)
@@ -501,18 +557,16 @@ namespace Match3
                     int x;
 
                     if (dir == 0)
-                    { // Left
+                    {
                         x = newX - xOffset;
                     }
                     else
-                    { // right
-                        x = newX + xOffset;                        
+                    {
+                        x = newX + xOffset;
                     }
 
-                    // out-of-bounds
                     if (x < 0 || x >= xDim) { break; }
 
-                    // piece is the same color?
                     if (_pieces[x, newY].IsColored() && _pieces[x, newY].ColorComponent.Color == color)
                     {
                         horizontalPieces.Add(_pieces[x, newY]);
@@ -529,23 +583,22 @@ namespace Match3
                 matchingPieces.AddRange(horizontalPieces);
             }
 
-            // Traverse vertically if we found a match (for L and T shape)
             if (horizontalPieces.Count >= 3)
             {
                 for (int i = 0; i < horizontalPieces.Count; i++ )
                 {
                     for (int dir = 0; dir <= 1; dir++)
                     {
-                        for (int yOffset = 1; yOffset < yDim; yOffset++)                        
+                        for (int yOffset = 1; yOffset < yDim; yOffset++)
                         {
                             int y;
-                            
+
                             if (dir == 0)
-                            { // Up
+                            {
                                 y = newY - yOffset;
                             }
                             else
-                            { // Down
+                            {
                                 y = newY + yOffset;
                             }
 
@@ -582,9 +635,6 @@ namespace Match3
                 return matchingPieces;
             }
 
-
-            // Didn't find anything going horizontally first,
-            // so now check vertically
             horizontalPieces.Clear();
             verticalPieces.Clear();
             verticalPieces.Add(piece);
@@ -596,18 +646,16 @@ namespace Match3
                     int y;
 
                     if (dir == 0)
-                    { // Up
+                    {
                         y = newY - yOffset;
                     }
                     else
-                    { // Down
-                        y = newY + yOffset;                        
+                    {
+                        y = newY + yOffset;
                     }
 
-                    // out-of-bounds
                     if (y < 0 || y >= yDim) { break; }
 
-                    // piece is the same color?
                     if (_pieces[newX, y].IsColored() && _pieces[newX, y].ColorComponent.Color == color)
                     {
                         verticalPieces.Add(_pieces[newX, y]);
@@ -624,7 +672,6 @@ namespace Match3
                 matchingPieces.AddRange(verticalPieces);
             }
 
-            // Traverse horizontally if we found a match (for L and T shape)
             if (verticalPieces.Count >= 3)
             {
                 for (int i = 0; i < verticalPieces.Count; i++)
@@ -636,11 +683,11 @@ namespace Match3
                             int x;
 
                             if (dir == 0)
-                            { // Left
+                            {
                                 x = newX - xOffset;
                             }
                             else
-                            { // Right
+                            {
                                 x = newX + xOffset;
                             }
 
@@ -683,14 +730,13 @@ namespace Match3
         private bool ClearPiece(int x, int y)
         {
             if (!_pieces[x, y].IsClearable() || _pieces[x, y].ClearableComponent.IsBeingCleared) return false;
-        
+
             _pieces[x, y].ClearableComponent.Clear();
             SpawnNewPiece(x, y, PieceType.Empty);
 
             ClearObstacles(x, y);
 
             return true;
-
         }
 
         private void ClearObstacles(int x, int y)
@@ -700,7 +746,7 @@ namespace Match3
                 if (adjacentX == x || adjacentX < 0 || adjacentX >= xDim) continue;
 
                 if (_pieces[adjacentX, y].Type != PieceType.Bubble || !_pieces[adjacentX, y].IsClearable()) continue;
-            
+
                 _pieces[adjacentX, y].ClearableComponent.Clear();
                 SpawnNewPiece(adjacentX, y, PieceType.Empty);
             }
@@ -710,7 +756,7 @@ namespace Match3
                 if (adjacentY == y || adjacentY < 0 || adjacentY >= yDim) continue;
 
                 if (_pieces[x, adjacentY].Type != PieceType.Bubble || !_pieces[x, adjacentY].IsClearable()) continue;
-            
+
                 _pieces[x, adjacentY].ClearableComponent.Clear();
                 SpawnNewPiece(x, adjacentY, PieceType.Empty);
             }
@@ -747,7 +793,11 @@ namespace Match3
             }
         }
 
-        public void GameOver() => _gameOver = true;
+        public void GameOver()
+        {
+            _gameOver = true;
+            _currentState = GameState.ENDGAME;
+        }
 
         public List<GamePiece> GetPiecesOfType(PieceType type)
         {
@@ -765,6 +815,232 @@ namespace Match3
             }
 
             return piecesOfType;
+        }
+
+        // === 스폰 가중치 시스템 ===
+
+        private ColorType GetWeightedRandomColor(int numColors)
+        {
+            // 보드에 많은 색상일수록 스폰 확률 감소
+            int[] colorCounts = new int[numColors];
+            int totalPieces = 0;
+
+            for (int x = 0; x < xDim; x++)
+            {
+                for (int y = 0; y < yDim; y++)
+                {
+                    if (_pieces[x, y].IsColored() && (int)_pieces[x, y].ColorComponent.Color < numColors)
+                    {
+                        colorCounts[(int)_pieces[x, y].ColorComponent.Color]++;
+                        totalPieces++;
+                    }
+                }
+            }
+
+            if (totalPieces == 0)
+                return (ColorType)Random.Range(0, numColors);
+
+            // 역가중치: 보드에 적을수록 높은 확률
+            float[] weights = new float[numColors];
+            float totalWeight = 0f;
+
+            for (int i = 0; i < numColors; i++)
+            {
+                weights[i] = 1f + (totalPieces / (float)numColors - colorCounts[i]) * 0.5f;
+                if (weights[i] < 0.1f) weights[i] = 0.1f;
+                totalWeight += weights[i];
+            }
+
+            float rand = Random.Range(0f, totalWeight);
+            float cumulative = 0f;
+            for (int i = 0; i < numColors; i++)
+            {
+                cumulative += weights[i];
+                if (rand <= cumulative)
+                    return (ColorType)i;
+            }
+
+            return (ColorType)(numColors - 1);
+        }
+
+        // === 힌트 시스템 ===
+
+        private List<GamePiece> FindValidMove()
+        {
+            for (int x = 0; x < xDim; x++)
+            {
+                for (int y = 0; y < yDim; y++)
+                {
+                    if (!_pieces[x, y].IsColored() || !_pieces[x, y].IsMovable()) continue;
+
+                    // 상하좌우 4방향 가상 스왑
+                    int[,] dirs = { {1,0}, {-1,0}, {0,1}, {0,-1} };
+                    for (int d = 0; d < 4; d++)
+                    {
+                        int nx = x + dirs[d, 0];
+                        int ny = y + dirs[d, 1];
+
+                        if (nx < 0 || nx >= xDim || ny < 0 || ny >= yDim) continue;
+                        if (!_pieces[nx, ny].IsMovable()) continue;
+
+                        // 가상 스왑
+                        GamePiece temp = _pieces[x, y];
+                        _pieces[x, y] = _pieces[nx, ny];
+                        _pieces[nx, ny] = temp;
+
+                        // 매치 확인
+                        var match1 = GetMatch(_pieces[x, y], x, y);
+                        var match2 = GetMatch(_pieces[nx, ny], nx, ny);
+
+                        // 복원
+                        temp = _pieces[x, y];
+                        _pieces[x, y] = _pieces[nx, ny];
+                        _pieces[nx, ny] = temp;
+
+                        if (match1 != null)
+                        {
+                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
+                        }
+                        if (match2 != null)
+                        {
+                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
+                        }
+                    }
+                }
+            }
+
+            return null; // 데드 보드
+        }
+
+        private void ResetHintTimer()
+        {
+            _hintTimer = hintDelay;
+        }
+
+        private void ShowHint()
+        {
+            _hintPieces = FindValidMove();
+            if (_hintPieces == null) return;
+
+            _hintCoroutine = StartCoroutine(HintPulseCoroutine());
+        }
+
+        private void StopHint()
+        {
+            if (_hintCoroutine != null)
+            {
+                StopCoroutine(_hintCoroutine);
+                _hintCoroutine = null;
+            }
+
+            // 힌트 타일 스케일 복원
+            if (_hintPieces != null)
+            {
+                foreach (var piece in _hintPieces)
+                {
+                    if (piece != null && piece.gameObject != null)
+                    {
+                        piece.transform.localScale = Vector3.one;
+                    }
+                }
+                _hintPieces = null;
+            }
+        }
+
+        private IEnumerator HintPulseCoroutine()
+        {
+            float pulseSpeed = 2f * Mathf.PI; // 주기 약 0.5초
+            float elapsed = 0f;
+
+            while (true)
+            {
+                elapsed += Time.deltaTime;
+                float scale = 1f + 0.15f * Mathf.Sin(elapsed * pulseSpeed);
+
+                if (_hintPieces != null)
+                {
+                    foreach (var piece in _hintPieces)
+                    {
+                        if (piece != null && piece.gameObject != null)
+                        {
+                            piece.transform.localScale = new Vector3(scale, scale, 1f);
+                        }
+                    }
+                }
+
+                yield return null;
+            }
+        }
+
+        // === 카메라 쉐이크 ===
+
+        private IEnumerator CameraShake(float magnitude, float duration)
+        {
+            var cam = Camera.main;
+            if (cam == null) yield break;
+
+            Vector3 originalPos = cam.transform.position;
+
+            for (float t = 0; t < duration; t += Time.deltaTime)
+            {
+                float x = Random.Range(-1f, 1f) * magnitude;
+                float y = Random.Range(-1f, 1f) * magnitude;
+                cam.transform.position = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+                yield return null;
+            }
+
+            cam.transform.position = originalPos;
+        }
+
+        // === 데드 보드 셔플 ===
+
+        private IEnumerator ShuffleBoard()
+        {
+            _currentState = GameState.SHUFFLING;
+
+            // Fisher-Yates 셔플 (색상만 섞기)
+            var colorPieces = new List<GamePiece>();
+            for (int x = 0; x < xDim; x++)
+            {
+                for (int y = 0; y < yDim; y++)
+                {
+                    if (_pieces[x, y].IsColored() && _pieces[x, y].Type == PieceType.Normal)
+                    {
+                        colorPieces.Add(_pieces[x, y]);
+                    }
+                }
+            }
+
+            int maxAttempts = 30;
+            for (int attempt = 0; attempt < maxAttempts; attempt++)
+            {
+                // Fisher-Yates
+                for (int i = colorPieces.Count - 1; i > 0; i--)
+                {
+                    int j = Random.Range(0, i + 1);
+                    // 색상만 교환
+                    ColorType tempColor = colorPieces[i].ColorComponent.Color;
+                    colorPieces[i].ColorComponent.SetColor(colorPieces[j].ColorComponent.Color);
+                    colorPieces[j].ColorComponent.SetColor(tempColor);
+                }
+
+                // 초기 매치 없는지 확인
+                bool hasMatch = false;
+                for (int x = 0; x < xDim && !hasMatch; x++)
+                {
+                    for (int y = 0; y < yDim && !hasMatch; y++)
+                    {
+                        if (GetMatch(_pieces[x, y], x, y) != null)
+                            hasMatch = true;
+                    }
+                }
+
+                // 유효 이동 존재 + 초기 매치 없음 → 성공
+                if (!hasMatch && FindValidMove() != null)
+                    break;
+            }
+
+            yield return new WaitForSeconds(0.3f);
         }
 
     }
