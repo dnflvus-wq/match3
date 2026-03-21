@@ -39,7 +39,7 @@ public class LevelGenerator
             var scene = EditorSceneManager.OpenScene(destPath, OpenSceneMode.Single);
 
             // LevelMoves 컴포넌트 찾기
-            var levelMoves = Object.FindObjectOfType<Match3.LevelMoves>();
+            var levelMoves = Object.FindFirstObjectByType<Match3.LevelMoves>();
             if (levelMoves != null)
             {
                 levelMoves.numMoves = levelConfigs[i][0];

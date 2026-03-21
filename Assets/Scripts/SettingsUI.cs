@@ -68,7 +68,7 @@ namespace Match3
         private void Open()
         {
             _isOpen = true;
-            Canvas canvas = FindObjectOfType<Canvas>();
+            Canvas canvas = FindFirstObjectByType<Canvas>();
             if (canvas == null) return;
 
             _panel = new GameObject("SettingsPanel");

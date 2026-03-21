@@ -120,7 +120,7 @@ namespace Match3
                 particleObj.AddComponent<MatchParticles>();
             }
 
-            StartCoroutine(Fill());
+            StartCoroutine(StartSequence());
         }
 
         private IEnumerator Fill()
@@ -786,11 +786,19 @@ namespace Match3
         {
             if (!_pieces[x, y].IsClearable() || _pieces[x, y].ClearableComponent.IsBeingCleared) return false;
 
-            // 파티클 이펙트
-            if (MatchParticles.Instance != null && _pieces[x, y].IsColored())
+            // 파티클 이펙트 + 점수 팝업
+            if (_pieces[x, y].IsColored())
             {
+                Vector3 piecePos = _pieces[x, y].transform.position;
                 Color particleColor = GetColorForType(_pieces[x, y].ColorComponent.Color);
-                MatchParticles.Instance.PlayAt(_pieces[x, y].transform.position, particleColor);
+
+                if (MatchParticles.Instance != null)
+                    MatchParticles.Instance.PlayAt(piecePos, particleColor);
+
+                // 점수 팝업
+                int score = _pieces[x, y].score;
+                if (score > 0)
+                    ShowScorePopup(piecePos, score);
             }
 
             _pieces[x, y].ClearableComponent.Clear();
@@ -893,11 +901,136 @@ namespace Match3
             return piecesOfType;
         }
 
+        // === 시작 카운트다운 ===
+
+        private IEnumerator StartSequence()
+        {
+            // 먼저 보드 채우기
+            yield return StartCoroutine(Fill());
+
+            // 카운트다운 3-2-1
+            Canvas canvas = FindFirstObjectByType<Canvas>();
+            if (canvas != null)
+            {
+                for (int i = 3; i >= 1; i--)
+                {
+                    yield return StartCoroutine(ShowCountdownNumber(canvas, i.ToString()));
+                }
+                yield return StartCoroutine(ShowCountdownNumber(canvas, "GO!"));
+            }
+        }
+
+        private IEnumerator ShowCountdownNumber(Canvas canvas, string text)
+        {
+            GameObject obj = new GameObject("Countdown");
+            obj.transform.SetParent(canvas.transform, false);
+
+            Text uiText = obj.AddComponent<Text>();
+            uiText.text = text;
+            uiText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            uiText.fontSize = 100;
+            uiText.fontStyle = FontStyle.Bold;
+            uiText.alignment = TextAnchor.MiddleCenter;
+            uiText.color = Color.white;
+
+            Outline outline = obj.AddComponent<Outline>();
+            outline.effectColor = new Color(0.1f, 0.1f, 0.1f, 0.9f);
+            outline.effectDistance = new Vector2(4, -4);
+
+            RectTransform rt = obj.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0.5f, 0.5f);
+            rt.anchorMax = new Vector2(0.5f, 0.5f);
+            rt.anchoredPosition = Vector2.zero;
+            rt.sizeDelta = new Vector2(400, 150);
+
+            // 팝 애니메이션
+            float duration = 0.6f;
+            for (float t = 0; t < duration; t += Time.deltaTime)
+            {
+                float progress = t / duration;
+                float scale;
+                float alpha;
+
+                if (progress < 0.2f)
+                {
+                    scale = Mathf.Lerp(2f, 1f, progress / 0.2f);
+                    alpha = Mathf.Lerp(0f, 1f, progress / 0.2f);
+                }
+                else if (progress < 0.7f)
+                {
+                    scale = 1f;
+                    alpha = 1f;
+                }
+                else
+                {
+                    scale = 1f;
+                    alpha = Mathf.Lerp(1f, 0f, (progress - 0.7f) / 0.3f);
+                }
+
+                rt.localScale = new Vector3(scale, scale, 1f);
+                uiText.color = new Color(1f, 1f, 1f, alpha);
+                yield return null;
+            }
+
+            Destroy(obj);
+        }
+
+        // === 점수 팝업 ===
+
+        private void ShowScorePopup(Vector3 worldPos, int score)
+        {
+            Canvas canvas = FindFirstObjectByType<Canvas>();
+            if (canvas == null) return;
+
+            GameObject obj = new GameObject("ScorePopup");
+            obj.transform.SetParent(canvas.transform, false);
+
+            Text text = obj.AddComponent<Text>();
+            text.text = "+" + score;
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            text.fontSize = 32;
+            text.fontStyle = FontStyle.Bold;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = Color.white;
+
+            Outline outline = obj.AddComponent<Outline>();
+            outline.effectColor = new Color(0, 0, 0, 0.8f);
+            outline.effectDistance = new Vector2(2, -2);
+
+            // 월드 좌표 → 스크린 → 캔버스 로컬
+            RectTransform rt = obj.GetComponent<RectTransform>();
+            Vector2 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.GetComponent<RectTransform>(), screenPos, canvas.worldCamera, out Vector2 localPos);
+            rt.anchoredPosition = localPos;
+            rt.sizeDelta = new Vector2(200, 50);
+
+            StartCoroutine(ScorePopupAnimation(obj, text));
+        }
+
+        private IEnumerator ScorePopupAnimation(GameObject obj, Text text)
+        {
+            float duration = 0.8f;
+            RectTransform rt = obj.GetComponent<RectTransform>();
+            Vector2 startPos = rt.anchoredPosition;
+            Color startColor = text.color;
+
+            for (float t = 0; t < duration; t += Time.deltaTime)
+            {
+                float progress = t / duration;
+                rt.anchoredPosition = startPos + new Vector2(0, progress * 60f);
+                text.color = new Color(startColor.r, startColor.g, startColor.b, 1f - progress);
+                yield return null;
+            }
+
+            Destroy(obj);
+        }
+
         // === 콤보 텍스트 UI ===
 
         private void ShowComboText(int combo)
         {
-            Canvas canvas = FindObjectOfType<Canvas>();
+            Canvas canvas = FindFirstObjectByType<Canvas>();
             if (canvas == null) return;
 
             GameObject comboObj = new GameObject("ComboText");
