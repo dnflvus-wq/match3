@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Match3
 {
@@ -128,6 +129,11 @@ namespace Match3
                 if (needsRefill)
                 {
                     _comboCount++;
+                    if (_comboCount >= 2)
+                    {
+                        ShowComboText(_comboCount);
+                        if (AudioManager.Instance != null) AudioManager.Instance.PlayCombo();
+                    }
                 }
             }
 
@@ -281,6 +287,9 @@ namespace Match3
             _pieces[p1X, p1Y] = piece2;
             _pieces[p2X, p2Y] = piece1;
 
+            // 스왑 효과음
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySwap();
+
             // 시각 애니메이션 — Ease-Out + Z축 아크 (한쪽만 arc로 겹침 방지)
             piece1.MovableComponent.MoveVisual(p2X, p2Y, swapTime, useArc: true);
             piece2.MovableComponent.MoveVisual(p1X, p1Y, swapTime, useArc: false);
@@ -300,6 +309,28 @@ namespace Match3
                 // 매치 성공 — 데이터(X,Y) 확정
                 piece1.MovableComponent.SetPosition(p2X, p2Y);
                 piece2.MovableComponent.SetPosition(p1X, p1Y);
+
+                // 특수 + 특수 조합: 레인보우 + 레인보우 = 전체 클리어
+                if (piece1.Type == PieceType.Rainbow && piece2.Type == PieceType.Rainbow)
+                {
+                    if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
+                    StartCoroutine(CameraShake(0.1f, 0.4f));
+                    ClearPiece(piece1.X, piece1.Y);
+                    ClearPiece(piece2.X, piece2.Y);
+                    // 전체 보드 클리어
+                    for (int cx = 0; cx < xDim; cx++)
+                    {
+                        for (int cy = 0; cy < yDim; cy++)
+                        {
+                            ClearPiece(cx, cy);
+                        }
+                    }
+                    _pressedPiece = null;
+                    _enteredPiece = null;
+                    StartCoroutine(Fill());
+                    level.OnMove();
+                    yield break;
+                }
 
                 // Rainbow 처리
                 if (piece1.Type == PieceType.Rainbow && piece1.IsClearable() && piece2.IsColored())
@@ -349,6 +380,9 @@ namespace Match3
                 // 매치 실패 — 배열 복원
                 _pieces[p1X, p1Y] = piece1;
                 _pieces[p2X, p2Y] = piece2;
+
+                // 실패 효과음
+                if (AudioManager.Instance != null) AudioManager.Instance.PlayFail();
 
                 // 핑퐁: 원래 위치로 되돌리기 (빠르게)
                 piece1.MovableComponent.MoveVisual(p1X, p1Y, swapBackTime);
@@ -477,10 +511,17 @@ namespace Match3
 
                     if (match == null) continue;
 
-                    // 4매치 이상 시 카메라 쉐이크
+                    // 매치 효과음 (콤보 피치 상승)
+                    if (AudioManager.Instance != null)
+                    {
+                        AudioManager.Instance.PlayMatch(_comboCount);
+                    }
+
+                    // 4매치 이상 시 카메라 쉐이크 + 특수 효과음
                     if (match.Count >= 4)
                     {
                         StartCoroutine(CameraShake(0.05f, 0.2f));
+                        if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
                     }
 
                     PieceType specialPieceType = PieceType.Count;
@@ -815,6 +856,63 @@ namespace Match3
             }
 
             return piecesOfType;
+        }
+
+        // === 콤보 텍스트 UI ===
+
+        private void ShowComboText(int combo)
+        {
+            Canvas canvas = FindObjectOfType<Canvas>();
+            if (canvas == null) return;
+
+            GameObject comboObj = new GameObject("ComboText");
+            comboObj.transform.SetParent(canvas.transform, false);
+
+            Text text = comboObj.AddComponent<Text>();
+            text.text = "x" + combo + " COMBO!";
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            text.fontSize = 60;
+            text.fontStyle = FontStyle.Bold;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = new Color(1f, 0.9f, 0.1f); // 노란색
+
+            // 외곽선
+            Outline outline = comboObj.AddComponent<Outline>();
+            outline.effectColor = new Color(0.8f, 0.2f, 0f);
+            outline.effectDistance = new Vector2(3, -3);
+
+            RectTransform rt = comboObj.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0.5f, 0.5f);
+            rt.anchorMax = new Vector2(0.5f, 0.5f);
+            rt.anchoredPosition = new Vector2(0, 100);
+            rt.sizeDelta = new Vector2(500, 100);
+
+            StartCoroutine(ComboTextAnimation(comboObj, text));
+        }
+
+        private IEnumerator ComboTextAnimation(GameObject obj, Text text)
+        {
+            float duration = 1.2f;
+            RectTransform rt = obj.GetComponent<RectTransform>();
+            Vector2 startPos = rt.anchoredPosition;
+            Color startColor = text.color;
+
+            for (float t = 0; t < duration; t += Time.deltaTime)
+            {
+                float progress = t / duration;
+                // 위로 올라가면서 페이드 아웃
+                rt.anchoredPosition = startPos + new Vector2(0, progress * 80f);
+                text.color = new Color(startColor.r, startColor.g, startColor.b, 1f - progress);
+
+                // 초반 스케일 팝
+                float scale = progress < 0.15f ? Mathf.Lerp(0.5f, 1.2f, progress / 0.15f) :
+                              progress < 0.3f ? Mathf.Lerp(1.2f, 1f, (progress - 0.15f) / 0.15f) : 1f;
+                rt.localScale = new Vector3(scale, scale, 1f);
+
+                yield return null;
+            }
+
+            Destroy(obj);
         }
 
         // === 스폰 가중치 시스템 ===
