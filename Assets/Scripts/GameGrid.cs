@@ -109,6 +109,12 @@ namespace Match3
                 }
             }
 
+            // MobileCameraSetup 자동 적용 (카메라에 없으면)
+            if (Camera.main != null && Camera.main.GetComponent<MobileCameraSetup>() == null)
+            {
+                Camera.main.gameObject.AddComponent<MobileCameraSetup>();
+            }
+
             // AudioManager 자동 생성 (씬에 없으면)
             if (AudioManager.Instance == null)
             {
@@ -926,6 +932,10 @@ namespace Match3
         {
             // 먼저 보드 채우기
             yield return StartCoroutine(Fill());
+
+            // 보드 채운 후 카메라 재조정 (그리드 크기 확정 후)
+            var camSetup = Camera.main != null ? Camera.main.GetComponent<MobileCameraSetup>() : null;
+            if (camSetup != null) camSetup.Adjust();
 
             // BoosterUI 생성
             var boosterObj = new GameObject("BoosterUI");

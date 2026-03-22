@@ -86,8 +86,32 @@ Save to Assets/Textures/Sprites/
 
 ---
 
+---
+
+## 에뮬레이터 테스트 프로세스 (모든 Phase 적용)
+
+### 환경
+- **ollama 서버**: 61.75.21.224:22 (comes/rlawlgud09)
+- **에뮬레이터 웹 화면**: https://emulator.comes.co.kr/
+- **APK 설치**: ollama 서버의 adb로 설치 (로컬 adb 아님!)
+- SSH 접속: `c:/Project/tools/ssh_cmd.py ollama "명령"`
+
+### 테스트 절차
+1. APK 빌드 완료 후 ollama 서버로 APK 전송 (scp)
+2. ollama 서버에서 `adb install -r /path/to/Match3.apk`
+3. https://emulator.comes.co.kr/ 에서 실제 화면 확인
+4. Playwright MCP로 에뮬레이터 웹 화면 스크린샷 촬영
+5. 문제 발견 시 수정 → 재빌드 → 재설치 반복
+
+### 체크리스트
+- [ ] 모든 스테이지에서 하단 빈 공간 없음
+- [ ] 스테이지 2 오른쪽 넘침 없음
+- [ ] 부스터 UI가 화면 하단에 정상 표시
+- [ ] HUD가 상단에 정상 표시
+- [ ] 터치/스와이프 정상 동작
+
 ## 구현 검증 프로세스
 1. 이 계획서를 반드시 Read 도구로 다시 읽기
 2. 검증 항목 하나씩 체크
-3. Unity Play 모드 + 모바일 APK 실제 테스트
+3. Unity Play 모드 + 에뮬레이터 APK 실제 테스트
 4. Gap Analysis 99% 일치 시까지 반복
