@@ -59,12 +59,12 @@ namespace Match3
             bg.color = new Color(0, 0, 0, 0.4f);
 
             // 코인 표시
-            _coinText = CreateLabel(_panel, "Coins", new Vector2(-200, 0), 24);
+            _coinText = CreateLabel(_panel, "Coins", new Vector2(-220, 0), 22);
             UpdateCoinText();
 
             // 부스터 버튼들
-            CreateBoosterButton("Hammer", new Vector2(-60, 0), BoosterType.Hammer, OnHammerClick);
-            CreateBoosterButton("Shuffle", new Vector2(60, 0), BoosterType.Shuffle, OnShuffleClick);
+            CreateBoosterButton("Hammer", new Vector2(-80, 0), BoosterType.Hammer, OnHammerClick);
+            CreateBoosterButton("Shuffle", new Vector2(50, 0), BoosterType.Shuffle, OnShuffleClick);
             CreateBoosterButton("+5", new Vector2(180, 0), BoosterType.ExtraMoves, OnExtraMovesClick);
         }
 
@@ -74,30 +74,63 @@ namespace Match3
             btnObj.transform.SetParent(_panel.transform, false);
 
             Image img = btnObj.AddComponent<Image>();
-            img.color = new Color(0.2f, 0.6f, 0.3f, 0.9f);
+            img.color = new Color(0.2f, 0.5f, 0.3f, 0.85f);
 
             Button btn = btnObj.AddComponent<Button>();
             btn.onClick.AddListener(action);
 
             RectTransform rt = btnObj.GetComponent<RectTransform>();
             rt.anchoredPosition = pos;
-            rt.sizeDelta = new Vector2(100, 60);
+            rt.sizeDelta = new Vector2(110, 70);
 
-            // 라벨
-            GameObject textObj = new GameObject("Label");
+            // 아이콘 이미지 로드
+            string iconName = type == BoosterType.Hammer ? "hammer_icon" :
+                              type == BoosterType.Shuffle ? "shuffle_icon" : "extra_moves_icon";
+            Sprite iconSprite = LoadIcon(iconName);
+
+            if (iconSprite != null)
+            {
+                GameObject iconObj = new GameObject("Icon");
+                iconObj.transform.SetParent(btnObj.transform, false);
+                Image iconImg = iconObj.AddComponent<Image>();
+                iconImg.sprite = iconSprite;
+                iconImg.preserveAspect = true;
+                iconImg.raycastTarget = false;
+                RectTransform irt = iconObj.GetComponent<RectTransform>();
+                irt.anchorMin = new Vector2(0.05f, 0.15f);
+                irt.anchorMax = new Vector2(0.55f, 0.95f);
+                irt.offsetMin = Vector2.zero;
+                irt.offsetMax = Vector2.zero;
+            }
+
+            // 수량 텍스트 (우측)
+            GameObject textObj = new GameObject("Count");
             textObj.transform.SetParent(btnObj.transform, false);
             Text text = textObj.AddComponent<Text>();
             int count = BoosterSystem.Instance != null ? BoosterSystem.Instance.GetCount(type) : 0;
-            text.text = label + "\n(" + count + ")";
+            text.text = "x" + count;
             text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            text.fontSize = 18;
+            text.fontSize = 20;
+            text.fontStyle = FontStyle.Bold;
             text.alignment = TextAnchor.MiddleCenter;
             text.color = Color.white;
+
+            Outline textOutline = textObj.AddComponent<Outline>();
+            textOutline.effectColor = Color.black;
+            textOutline.effectDistance = new Vector2(1, -1);
+
             RectTransform trt = textObj.GetComponent<RectTransform>();
-            trt.anchorMin = Vector2.zero;
-            trt.anchorMax = Vector2.one;
+            trt.anchorMin = new Vector2(0.5f, 0f);
+            trt.anchorMax = new Vector2(1f, 1f);
             trt.offsetMin = Vector2.zero;
             trt.offsetMax = Vector2.zero;
+        }
+
+        private Sprite LoadIcon(string name)
+        {
+            Texture2D tex = Resources.Load<Texture2D>(name);
+            if (tex == null) return null;
+            return Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
         }
 
         private Text CreateLabel(GameObject parent, string label, Vector2 pos, int size)
