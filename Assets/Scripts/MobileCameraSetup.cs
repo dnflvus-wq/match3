@@ -1,26 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Match3
 {
-    /// <summary>
-    /// 모바일 Portrait 모드에서 그리드가 화면에 꽉 차도록 카메라를 자동 조정.
-    /// HUD(상단) + 그리드(중앙) + 부스터UI(하단)를 모두 고려.
-    /// </summary>
     [RequireComponent(typeof(Camera))]
     public class MobileCameraSetup : MonoBehaviour
     {
-        [Tooltip("상단 HUD가 차지하는 화면 비율 (0~1)")]
-        public float hudHeightRatio = 0.12f;
-
-        [Tooltip("하단 부스터UI가 차지하는 화면 비율 (0~1)")]
-        public float bottomUIRatio = 0.05f;
-
-        [Tooltip("좌우 여백 (Unity unit)")]
-        public float horizontalPadding = 0.3f;
-
-        [Tooltip("상하 여백 (Unity unit)")]
-        public float verticalPadding = 0.3f;
-
         private void Start()
         {
             Adjust();
@@ -32,82 +17,68 @@ namespace Match3
             var grid = FindFirstObjectByType<GameGrid>();
             if (grid == null || cam == null) return;
 
-            // 카메라 배경색
             cam.clearFlags = CameraClearFlags.SolidColor;
-            cam.backgroundColor = new Color(0.45f, 0.72f, 0.35f, 1f); // 초원 녹색 (배경 하단과 어울림)
+            cam.backgroundColor = new Color(0.4f, 0.7f, 0.3f, 1f);
 
             int xDim = grid.xDim;
             int yDim = grid.yDim;
             float aspect = (float)Screen.width / Screen.height;
 
-            // 그리드 중심 (GameGrid.GetWorldPosition 기준)
-            // GetWorldPosition(0,0) = 좌상단, GetWorldPosition(xDim-1, yDim-1) = 우하단
-            Vector2 topLeft = grid.GetWorldPosition(0, 0);
-            Vector2 bottomRight = grid.GetWorldPosition(xDim - 1, yDim - 1);
-            float gridCenterX = (topLeft.x + bottomRight.x) / 2f;
-            float gridCenterY = (topLeft.y + bottomRight.y) / 2f;
+            // 그리드 중심
+            float gridCenterX = grid.transform.position.x + (xDim - 1) / 2f - xDim / 2f;
+            float gridCenterY = grid.transform.position.y + yDim / 2f - (yDim - 1) / 2f;
 
-            float gridWidth = xDim + horizontalPadding * 2f;
-            float gridHeight = yDim + verticalPadding * 2f;
-
-            // 그리드가 차지할 수 있는 화면 비율 (HUD + 하단 UI 제외)
-            float usableRatio = 1f - hudHeightRatio - bottomUIRatio;
-
-            // 가로 기준 ortho size: 그리드 폭이 화면 폭에 맞도록
-            float orthoByWidth = (gridWidth / 2f) / aspect;
-
-            // 세로 기준 ortho size: 그리드 높이가 사용 가능 영역에 맞도록
-            float orthoByHeight = (gridHeight / 2f) / usableRatio;
-
-            // 더 큰 값을 사용 (잘림 방지)
-            float orthoSize = Mathf.Max(orthoByWidth, orthoByHeight);
+            // 가로 기준 orthoSize
+            float padding = 0.5f;
+            float orthoSize = (xDim / 2f + padding) / aspect;
+            float minOrtho = yDim / 2f + 1.5f;
+            orthoSize = Mathf.Max(orthoSize, minOrtho);
             cam.orthographicSize = orthoSize;
 
-            // 카메라 Y 위치: 그리드가 HUD 아래, 부스터 위 중앙에 오도록
-            // 화면 상단 = camY + orthoSize
-            // 화면 하단 = camY - orthoSize
-            // HUD 하단 = camY + orthoSize - (orthoSize * 2 * hudHeightRatio)
-            //           = camY + orthoSize * (1 - 2 * hudHeightRatio)
-            // 부스터 상단 = camY - orthoSize + (orthoSize * 2 * bottomUIRatio)
-            //             = camY - orthoSize * (1 - 2 * bottomUIRatio)
-            // 사용 가능 영역 중심 Y = camY + orthoSize * (bottomUIRatio - hudHeightRatio)
-            // 그리드 중심을 사용 가능 영역 중심에 맞춤
-            float camY = gridCenterY - orthoSize * (bottomUIRatio - hudHeightRatio);
-
+            // 카메라 Y: 그리드를 약간 위로 (HUD 공간)
+            float camY = gridCenterY + orthoSize * 0.05f;
             transform.position = new Vector3(gridCenterX, camY, transform.position.z);
 
-            // 배경 스프라이트를 화면 전체에 맞게 스케일링
-            StretchBackground(cam);
+            // SpriteRenderer 배경을 화면 전체에 맞추기
+            StretchSpriteBackground(cam);
         }
 
-        private void StretchBackground(Camera cam)
+        private void StretchSpriteBackground(Camera cam)
         {
-            // "Background" 이름의 SpriteRenderer 찾기
-            var backgrounds = FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None);
-            foreach (var sr in backgrounds)
+            var renderers = FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None);
+            foreach (var sr in renderers)
             {
-                if (!sr.gameObject.name.ToLower().Contains("background") &&
-                    !sr.gameObject.name.ToLower().Contains("bg"))
-                    continue;
-
+                string n = sr.gameObject.name.ToLower();
+                if (!n.Contains("background") && !n.Contains("bg")) continue;
+                // 타일 배경(piece_bg)은 제외
+                if (n.Contains("piece")) continue;
                 if (sr.sprite == null) continue;
 
-                // 카메라 보이는 영역 계산
-                float camHeight = cam.orthographicSize * 2f;
-                float camWidth = camHeight * cam.aspect;
+                // 카메라 영역
+                float camH = cam.orthographicSize * 2f;
+                float camW = camH * cam.aspect;
 
-                // 스프라이트 원본 크기
-                float spriteWidth = sr.sprite.bounds.size.x;
-                float spriteHeight = sr.sprite.bounds.size.y;
+                // 스프라이트 크기
+                float sprW = sr.sprite.bounds.size.x;
+                float sprH = sr.sprite.bounds.size.y;
 
-                // 화면을 완전히 덮도록 스케일 (Cover 모드)
-                float scaleX = camWidth / spriteWidth;
-                float scaleY = camHeight / spriteHeight;
-                float scale = Mathf.Max(scaleX, scaleY) * 1.05f; // 5% 여유
+                if (sprW <= 0 || sprH <= 0) continue;
+
+                // Cover: 화면을 완전히 채우도록 (큰 쪽 기준)
+                float scaleX = camW / sprW;
+                float scaleY = camH / sprH;
+                float scale = Mathf.Max(scaleX, scaleY);
+                // 최소 1.0 (줄이지 않음) + 10% 여유
+                scale = Mathf.Max(scale, 1f) * 1.1f;
 
                 sr.transform.localScale = new Vector3(scale, scale, 1f);
-                sr.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, 10f); // 뒤로 보내기
-                sr.sortingOrder = -100; // 가장 뒤에 렌더링
+                sr.transform.position = new Vector3(
+                    cam.transform.position.x,
+                    cam.transform.position.y,
+                    1f // 타일보다 뒤, 카메라보다 앞
+                );
+                sr.sortingOrder = -100;
+                sr.enabled = true;
             }
         }
     }
