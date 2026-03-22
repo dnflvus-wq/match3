@@ -34,7 +34,7 @@ namespace Match3
 
             // 카메라 배경색
             cam.clearFlags = CameraClearFlags.SolidColor;
-            cam.backgroundColor = new Color(0.68f, 0.85f, 0.95f, 1f);
+            cam.backgroundColor = new Color(0.45f, 0.72f, 0.35f, 1f); // 초원 녹색 (배경 하단과 어울림)
 
             int xDim = grid.xDim;
             int yDim = grid.yDim;
@@ -75,6 +75,39 @@ namespace Match3
             float camY = gridCenterY - orthoSize * (bottomUIRatio - hudHeightRatio);
 
             transform.position = new Vector3(gridCenterX, camY, transform.position.z);
+
+            // 배경 스프라이트를 화면 전체에 맞게 스케일링
+            StretchBackground(cam);
+        }
+
+        private void StretchBackground(Camera cam)
+        {
+            // "Background" 이름의 SpriteRenderer 찾기
+            var backgrounds = FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None);
+            foreach (var sr in backgrounds)
+            {
+                if (!sr.gameObject.name.ToLower().Contains("background") &&
+                    !sr.gameObject.name.ToLower().Contains("bg"))
+                    continue;
+
+                if (sr.sprite == null) continue;
+
+                // 카메라 보이는 영역 계산
+                float camHeight = cam.orthographicSize * 2f;
+                float camWidth = camHeight * cam.aspect;
+
+                // 스프라이트 원본 크기
+                float spriteWidth = sr.sprite.bounds.size.x;
+                float spriteHeight = sr.sprite.bounds.size.y;
+
+                // 화면을 완전히 덮도록 스케일 (Cover 모드)
+                float scaleX = camWidth / spriteWidth;
+                float scaleY = camHeight / spriteHeight;
+                float scale = Mathf.Max(scaleX, scaleY) * 1.05f; // 5% 여유
+
+                sr.transform.localScale = new Vector3(scale, scale, 1f);
+                sr.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, sr.transform.position.z);
+            }
         }
     }
 }
