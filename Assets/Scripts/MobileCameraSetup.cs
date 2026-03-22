@@ -106,7 +106,8 @@ namespace Match3
                 float scale = Mathf.Max(scaleX, scaleY) * 1.05f; // 5% 여유
 
                 sr.transform.localScale = new Vector3(scale, scale, 1f);
-                sr.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, sr.transform.position.z);
+                sr.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, 10f); // 뒤로 보내기
+                sr.sortingOrder = -100; // 가장 뒤에 렌더링
             }
         }
     }
