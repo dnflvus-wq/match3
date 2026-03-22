@@ -85,19 +85,6 @@ namespace Match3
             {
                 string sceneName = $"Level{level:D2}";
 
-                // 씬 존재 여부 확인 (Build Settings에 있는지)
-                bool sceneExists = false;
-                for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings; i++)
-                {
-                    string path = UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i);
-                    if (path.Contains(sceneName))
-                    {
-                        sceneExists = true;
-                        break;
-                    }
-                }
-                if (!sceneExists) continue;
-
                 var btnObj = new GameObject("LevelBtn_" + level);
                 btnObj.transform.SetParent(canvas.transform, false);
 
