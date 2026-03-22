@@ -10,16 +10,16 @@ namespace Match3
     public class MobileCameraSetup : MonoBehaviour
     {
         [Tooltip("상단 HUD가 차지하는 화면 비율 (0~1)")]
-        public float hudHeightRatio = 0.15f;
+        public float hudHeightRatio = 0.12f;
 
         [Tooltip("하단 부스터UI가 차지하는 화면 비율 (0~1)")]
-        public float bottomUIRatio = 0.08f;
+        public float bottomUIRatio = 0.05f;
 
         [Tooltip("좌우 여백 (Unity unit)")]
         public float horizontalPadding = 0.3f;
 
         [Tooltip("상하 여백 (Unity unit)")]
-        public float verticalPadding = 0.5f;
+        public float verticalPadding = 0.3f;
 
         private void Start()
         {
