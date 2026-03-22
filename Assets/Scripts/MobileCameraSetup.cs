@@ -24,9 +24,9 @@ namespace Match3
             int yDim = grid.yDim;
             float aspect = (float)Screen.width / Screen.height;
 
-            // 그리드 중심
-            float gridCenterX = grid.transform.position.x + (xDim - 1) / 2f - xDim / 2f;
-            float gridCenterY = grid.transform.position.y + yDim / 2f - (yDim - 1) / 2f;
+            // 그리드 중심 = grid.position (각 칸이 1유닛이므로 -xDim/2 ~ +xDim/2 범위, 중심=0)
+            float gridCenterX = grid.transform.position.x;
+            float gridCenterY = grid.transform.position.y + 0.5f;
 
             // 가로 기준 orthoSize
             float padding = 0.5f;
