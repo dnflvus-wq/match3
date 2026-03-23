@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ba5478b40a93944a7edccc7e2520c5, type: 3}
+  m_Name: Level01
+  m_EditorClassIdentifier: Assembly-CSharp::Match3.LevelConfig
+  width: 6
+  height: 6
+  levelType: 2
+  moveLimit: 20
+  timeLimit: 90
+  targetScore: 15000
+  numColors: 6
+  colorWeights: []
