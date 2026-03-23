@@ -190,7 +190,7 @@ namespace Match3
             else
             {
                 // 데드 보드 체크
-                if (FindValidMove() == null)
+                if (MatchFinder.FindValidMove(_pieces, xDim, yDim) == null)
                 {
                     yield return StartCoroutine(ShuffleBoard());
                 }
@@ -343,8 +343,8 @@ namespace Match3
             // EVALUATING: 매치 확인
             _currentState = GameState.EVALUATING;
 
-            bool hasMatch = GetMatch(piece1, p2X, p2Y) != null ||
-                            GetMatch(piece2, p1X, p1Y) != null ||
+            bool hasMatch = MatchFinder.GetMatch(_pieces, piece1, p2X, p2Y, xDim, yDim) != null ||
+                            MatchFinder.GetMatch(_pieces, piece2, p1X, p1Y, xDim, yDim) != null ||
                             piece1.Type == PieceType.Rainbow ||
                             piece2.Type == PieceType.Rainbow;
 
@@ -499,7 +499,7 @@ namespace Match3
                 {
                     if (!_pieces[x, y].IsClearable()) continue;
 
-                    List<GamePiece> match = GetMatch(_pieces[x, y], x, y);
+                    List<GamePiece> match = MatchFinder.GetMatch(_pieces, _pieces[x, y], x, y, xDim, yDim);
 
                     if (match == null) continue;
 
@@ -583,192 +583,7 @@ namespace Match3
             return needsRefill;
         }
 
-        private List<GamePiece> GetMatch(GamePiece piece, int newX, int newY)
-        {
-            if (!piece.IsColored()) return null;
-            var color = piece.ColorComponent.Color;
-            var horizontalPieces = new List<GamePiece>();
-            var verticalPieces = new List<GamePiece>();
-            var matchingPieces = new List<GamePiece>();
-
-            horizontalPieces.Add(piece);
-
-            for (int dir = 0; dir <= 1; dir++)
-            {
-                for (int xOffset = 1; xOffset < xDim; xOffset++)
-                {
-                    int x;
-
-                    if (dir == 0)
-                    {
-                        x = newX - xOffset;
-                    }
-                    else
-                    {
-                        x = newX + xOffset;
-                    }
-
-                    if (x < 0 || x >= xDim) { break; }
-
-                    if (_pieces[x, newY].IsColored() && _pieces[x, newY].ColorComponent.Color == color)
-                    {
-                        horizontalPieces.Add(_pieces[x, newY]);
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if (horizontalPieces.Count >= 3)
-            {
-                matchingPieces.AddRange(horizontalPieces);
-            }
-
-            if (horizontalPieces.Count >= 3)
-            {
-                for (int i = 0; i < horizontalPieces.Count; i++ )
-                {
-                    for (int dir = 0; dir <= 1; dir++)
-                    {
-                        for (int yOffset = 1; yOffset < yDim; yOffset++)
-                        {
-                            int y;
-
-                            if (dir == 0)
-                            {
-                                y = newY - yOffset;
-                            }
-                            else
-                            {
-                                y = newY + yOffset;
-                            }
-
-                            if (y < 0 || y >= yDim)
-                            {
-                                break;
-                            }
-
-                            if (_pieces[horizontalPieces[i].X, y].IsColored() && _pieces[horizontalPieces[i].X, y].ColorComponent.Color == color)
-                            {
-                                verticalPieces.Add(_pieces[horizontalPieces[i].X, y]);
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-
-                    if (verticalPieces.Count < 2)
-                    {
-                        verticalPieces.Clear();
-                    }
-                    else
-                    {
-                        matchingPieces.AddRange(verticalPieces);
-                        break;
-                    }
-                }
-            }
-
-            if (matchingPieces.Count >= 3)
-            {
-                return matchingPieces;
-            }
-
-            horizontalPieces.Clear();
-            verticalPieces.Clear();
-            verticalPieces.Add(piece);
-
-            for (int dir = 0; dir <= 1; dir++)
-            {
-                for (int yOffset = 1; yOffset < xDim; yOffset++)
-                {
-                    int y;
-
-                    if (dir == 0)
-                    {
-                        y = newY - yOffset;
-                    }
-                    else
-                    {
-                        y = newY + yOffset;
-                    }
-
-                    if (y < 0 || y >= yDim) { break; }
-
-                    if (_pieces[newX, y].IsColored() && _pieces[newX, y].ColorComponent.Color == color)
-                    {
-                        verticalPieces.Add(_pieces[newX, y]);
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if (verticalPieces.Count >= 3)
-            {
-                matchingPieces.AddRange(verticalPieces);
-            }
-
-            if (verticalPieces.Count >= 3)
-            {
-                for (int i = 0; i < verticalPieces.Count; i++)
-                {
-                    for (int dir = 0; dir <= 1; dir++)
-                    {
-                        for (int xOffset = 1; xOffset < yDim; xOffset++)
-                        {
-                            int x;
-
-                            if (dir == 0)
-                            {
-                                x = newX - xOffset;
-                            }
-                            else
-                            {
-                                x = newX + xOffset;
-                            }
-
-                            if (x < 0 || x >= xDim)
-                            {
-                                break;
-                            }
-
-                            if (_pieces[x, verticalPieces[i].Y].IsColored() && _pieces[x, verticalPieces[i].Y].ColorComponent.Color == color)
-                            {
-                                horizontalPieces.Add(_pieces[x, verticalPieces[i].Y]);
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-
-                    if (horizontalPieces.Count < 2)
-                    {
-                        horizontalPieces.Clear();
-                    }
-                    else
-                    {
-                        matchingPieces.AddRange(horizontalPieces);
-                        break;
-                    }
-                }
-            }
-
-            if (matchingPieces.Count >= 3)
-            {
-                return matchingPieces;
-            }
-
-            return null;
-        }
+        // GetMatch() → MatchFinder.GetMatch() 로 이동됨
 
         private bool ClearPiece(int x, int y)
         {
@@ -1134,53 +949,7 @@ namespace Match3
         }
 
         // === 힌트 시스템 ===
-
-        private List<GamePiece> FindValidMove()
-        {
-            for (int x = 0; x < xDim; x++)
-            {
-                for (int y = 0; y < yDim; y++)
-                {
-                    if (!_pieces[x, y].IsColored() || !_pieces[x, y].IsMovable()) continue;
-
-                    // 상하좌우 4방향 가상 스왑
-                    int[,] dirs = { {1,0}, {-1,0}, {0,1}, {0,-1} };
-                    for (int d = 0; d < 4; d++)
-                    {
-                        int nx = x + dirs[d, 0];
-                        int ny = y + dirs[d, 1];
-
-                        if (nx < 0 || nx >= xDim || ny < 0 || ny >= yDim) continue;
-                        if (!_pieces[nx, ny].IsMovable()) continue;
-
-                        // 가상 스왑
-                        GamePiece temp = _pieces[x, y];
-                        _pieces[x, y] = _pieces[nx, ny];
-                        _pieces[nx, ny] = temp;
-
-                        // 매치 확인
-                        var match1 = GetMatch(_pieces[x, y], x, y);
-                        var match2 = GetMatch(_pieces[nx, ny], nx, ny);
-
-                        // 복원
-                        temp = _pieces[x, y];
-                        _pieces[x, y] = _pieces[nx, ny];
-                        _pieces[nx, ny] = temp;
-
-                        if (match1 != null)
-                        {
-                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
-                        }
-                        if (match2 != null)
-                        {
-                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
-                        }
-                    }
-                }
-            }
-
-            return null; // 데드 보드
-        }
+        // FindValidMove() → MatchFinder.FindValidMove() 로 이동됨
 
         public void ResetHintTimer()
         {
@@ -1189,7 +958,7 @@ namespace Match3
 
         private void ShowHint()
         {
-            _hintPieces = FindValidMove();
+            _hintPieces = MatchFinder.FindValidMove(_pieces, xDim, yDim);
             if (_hintPieces == null) return;
 
             _hintCoroutine = StartCoroutine(HintPulseCoroutine());
@@ -1322,13 +1091,13 @@ namespace Match3
                 {
                     for (int y = 0; y < yDim && !hasMatch; y++)
                     {
-                        if (GetMatch(_pieces[x, y], x, y) != null)
+                        if (MatchFinder.GetMatch(_pieces, _pieces[x, y], x, y, xDim, yDim) != null)
                             hasMatch = true;
                     }
                 }
 
                 // 유효 이동 존재 + 초기 매치 없음 → 성공
-                if (!hasMatch && FindValidMove() != null)
+                if (!hasMatch && MatchFinder.FindValidMove(_pieces, xDim, yDim) != null)
                     break;
             }
 
