@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 namespace Match3
 {
-    [RequireComponent(typeof(InputController))]
     public class GameGrid : MonoBehaviour
     {
         [System.Serializable]
@@ -31,9 +30,6 @@ namespace Match3
         public float swapTime = 0.25f;
         public float swapBackTime = 0.2f;
 
-        [Header("Config (Optional)")]
-        public GameConfig gameConfig;
-
         public Level level;
 
         public PiecePrefab[] piecePrefabs;
@@ -45,10 +41,6 @@ namespace Match3
 
         private GamePiece[,] _pieces;
 
-        // Phase 1-3: BoardModel (순수 데이터, 병렬 운영 중)
-        private BoardModel _boardModel;
-        public BoardModel Board => _boardModel;
-
         private bool _inverse;
 
         private GamePiece _pressedPiece;
@@ -57,8 +49,8 @@ namespace Match3
         private bool _gameOver;
 
         // FSM
-        private GameStateMachine _fsm = new GameStateMachine();
-        public GameState CurrentState => _fsm.CurrentState;
+        private GameState _currentState = GameState.PREGAME;
+        public GameState CurrentState => _currentState;
 
         // Juice
         private int _comboCount;
@@ -77,15 +69,6 @@ namespace Match3
 
         private void Awake()
         {
-            // GameConfig가 있으면 값 적용
-            if (gameConfig != null)
-            {
-                fillTime = gameConfig.fillTime;
-                swapTime = gameConfig.swapTime;
-                swapBackTime = gameConfig.swapBackTime;
-                hintDelay = gameConfig.hintDelay;
-            }
-
             _piecePrefabDict = new Dictionary<PieceType, GameObject>();
             for (int i = 0; i < piecePrefabs.Length; i++)
             {
@@ -105,7 +88,6 @@ namespace Match3
             }
 
             _pieces = new GamePiece[xDim, yDim];
-            _boardModel = new BoardModel(xDim, yDim);
 
             for (int i = 0; i < initialPieces.Length; i++)
             {
@@ -154,7 +136,7 @@ namespace Match3
         {
             bool needsRefill = true;
             IsFilling = true;
-            _fsm.TransitionTo(GameState.COLLAPSING);
+            _currentState = GameState.COLLAPSING;
             _comboCount = 0;
 
             while (needsRefill)
@@ -180,22 +162,19 @@ namespace Match3
 
             IsFilling = false;
 
-            // BoardModel 동기화
-            _boardModel.SyncFromGamePieces(_pieces);
-
             if (_gameOver)
             {
-                _fsm.TransitionTo(GameState.ENDGAME);
+                _currentState = GameState.ENDGAME;
             }
             else
             {
                 // 데드 보드 체크
-                if (MatchFinder.FindValidMove(_pieces, xDim, yDim) == null)
+                if (FindValidMove() == null)
                 {
                     yield return StartCoroutine(ShuffleBoard());
                 }
 
-                _fsm.TransitionTo(GameState.READY);
+                _currentState = GameState.READY;
                 ResetHintTimer();
             }
         }
@@ -313,7 +292,7 @@ namespace Match3
 
         private void SwapPieces(GamePiece piece1, GamePiece piece2)
         {
-            if (_gameOver || _fsm.CurrentState != GameState.READY) { return; }
+            if (_gameOver || _currentState != GameState.READY) { return; }
 
             if (!piece1.IsMovable() || !piece2.IsMovable()) return;
 
@@ -322,7 +301,7 @@ namespace Match3
 
         private IEnumerator SwapPiecesCoroutine(GamePiece piece1, GamePiece piece2)
         {
-            _fsm.TransitionTo(GameState.SWAPPING);
+            _currentState = GameState.SWAPPING;
 
             int p1X = piece1.X, p1Y = piece1.Y;
             int p2X = piece2.X, p2Y = piece2.Y;
@@ -341,10 +320,10 @@ namespace Match3
             yield return new WaitForSeconds(swapTime);
 
             // EVALUATING: 매치 확인
-            _fsm.TransitionTo(GameState.EVALUATING);
+            _currentState = GameState.EVALUATING;
 
-            bool hasMatch = MatchFinder.GetMatch(_pieces, piece1, p2X, p2Y, xDim, yDim) != null ||
-                            MatchFinder.GetMatch(_pieces, piece2, p1X, p1Y, xDim, yDim) != null ||
+            bool hasMatch = GetMatch(piece1, p2X, p2Y) != null ||
+                            GetMatch(piece2, p1X, p1Y) != null ||
                             piece1.Type == PieceType.Rainbow ||
                             piece2.Type == PieceType.Rainbow;
 
@@ -398,7 +377,7 @@ namespace Match3
                 }
 
                 // MATCHING
-                _fsm.TransitionTo(GameState.MATCHING);
+                _currentState = GameState.MATCHING;
                 ClearAllValidMatches();
 
                 // 특수 타일 클리어
@@ -434,11 +413,9 @@ namespace Match3
 
                 yield return new WaitForSeconds(swapBackTime);
 
-                _fsm.TransitionTo(GameState.READY);
+                _currentState = GameState.READY;
             }
         }
-
-        // === InputController에서 호출하는 public API ===
 
         public void PressPiece(GamePiece piece) => _pressedPiece = piece;
 
@@ -454,40 +431,110 @@ namespace Match3
             _enteredPiece = null;
         }
 
-        /// <summary>InputController에서 스왑을 요청할 때 호출</summary>
-        public void TrySwap(GamePiece piece, int targetX, int targetY)
-        {
-            if (targetX < 0 || targetX >= xDim || targetY < 0 || targetY >= yDim) return;
-            EnterPiece(_pieces[targetX, targetY]);
-            SwapPieces(piece, _enteredPiece);
-        }
+        private Vector2 _touchStart;
+        private bool _swiped;
+        private float _swipeThreshold = 0.3f;
 
-        /// <summary>InputController에서 망치 터치를 처리할 때 호출</summary>
-        public void HandleHammerTouch(Vector2 worldPos)
+        private void Update()
         {
-            RaycastHit2D hammerHit = Physics2D.Raycast(worldPos, Vector2.zero);
-            GamePiece hammerPiece = hammerHit.collider != null ? hammerHit.collider.GetComponent<GamePiece>() : null;
-            if (hammerPiece != null && hammerPiece.IsClearable())
+            // Android 뒤로가기 키
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ClearPiece(hammerPiece.X, hammerPiece.Y);
-                if (_boosterUI != null) _boosterUI.UseHammer();
-                if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
-                StartCoroutine(CameraShake(0.03f, 0.15f));
-                StartCoroutine(Fill());
+                UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
+                return;
             }
-        }
 
-        /// <summary>InputController에서 힌트 타이머를 업데이트할 때 호출</summary>
-        public void UpdateHintTimer(float deltaTime)
-        {
-            _hintTimer -= deltaTime;
+            // FSM: READY 상태에서만 터치 입력 허용
+            if (_currentState != GameState.READY) return;
+
+            // 힌트 타이머
+            _hintTimer -= Time.deltaTime;
             if (_hintTimer <= 0f && _hintCoroutine == null)
             {
                 ShowHint();
             }
-        }
 
-        // Update()는 InputController.cs로 이동됨 (Strangler Pattern 1단계)
+            bool began = false, moved = false, ended = false;
+            Vector2 screenPos = Vector2.zero;
+
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                screenPos = touch.position;
+                began = touch.phase == TouchPhase.Began;
+                moved = touch.phase == TouchPhase.Moved;
+                ended = touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled;
+            }
+            else
+            {
+                screenPos = Input.mousePosition;
+                began = Input.GetMouseButtonDown(0);
+                moved = Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0);
+                ended = Input.GetMouseButtonUp(0);
+            }
+
+            if (!began && !moved && !ended) return;
+
+            Vector3 wp = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 0));
+            Vector2 worldPos = new Vector2(wp.x, wp.y);
+
+            if (began)
+            {
+                // 망치 모드: 터치한 타일 파괴
+                if (_boosterUI != null && _boosterUI.IsHammerMode)
+                {
+                    RaycastHit2D hammerHit = Physics2D.Raycast(worldPos, Vector2.zero);
+                    GamePiece hammerPiece = hammerHit.collider != null ? hammerHit.collider.GetComponent<GamePiece>() : null;
+                    if (hammerPiece != null && hammerPiece.IsClearable())
+                    {
+                        ClearPiece(hammerPiece.X, hammerPiece.Y);
+                        _boosterUI.UseHammer();
+                        if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
+                        StartCoroutine(CameraShake(0.03f, 0.15f));
+                        StartCoroutine(Fill());
+                    }
+                    return;
+                }
+
+                StopHint();
+                ResetHintTimer();
+                _touchStart = worldPos;
+                _swiped = false;
+                RaycastHit2D hitBegin = Physics2D.Raycast(worldPos, Vector2.zero);
+                GamePiece beginPiece = hitBegin.collider != null ? hitBegin.collider.GetComponent<GamePiece>() : null;
+                if (beginPiece != null) PressPiece(beginPiece);
+            }
+            else if (moved)
+            {
+                if (_pressedPiece != null && !_swiped)
+                {
+                    Vector2 delta = worldPos - _touchStart;
+                    if (delta.magnitude >= _swipeThreshold)
+                    {
+                        _swiped = true;
+                        int dx = 0, dy = 0;
+                        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+                            dx = delta.x > 0 ? 1 : -1;
+                        else
+                            dy = delta.y > 0 ? 1 : -1;
+
+                        int targetX = _pressedPiece.X + dx;
+                        int targetY = _pressedPiece.Y - dy;
+                        if (targetX >= 0 && targetX < xDim && targetY >= 0 && targetY < yDim)
+                        {
+                            EnterPiece(_pieces[targetX, targetY]);
+                            SwapPieces(_pressedPiece, _enteredPiece);
+                        }
+                    }
+                }
+            }
+            else if (ended)
+            {
+                if (!_swiped) ReleasePiece();
+                _pressedPiece = null;
+                _enteredPiece = null;
+            }
+        }
 
         private bool ClearAllValidMatches()
         {
@@ -499,7 +546,7 @@ namespace Match3
                 {
                     if (!_pieces[x, y].IsClearable()) continue;
 
-                    List<GamePiece> match = MatchFinder.GetMatch(_pieces, _pieces[x, y], x, y, xDim, yDim);
+                    List<GamePiece> match = GetMatch(_pieces[x, y], x, y);
 
                     if (match == null) continue;
 
@@ -583,7 +630,192 @@ namespace Match3
             return needsRefill;
         }
 
-        // GetMatch() → MatchFinder.GetMatch() 로 이동됨
+        private List<GamePiece> GetMatch(GamePiece piece, int newX, int newY)
+        {
+            if (!piece.IsColored()) return null;
+            var color = piece.ColorComponent.Color;
+            var horizontalPieces = new List<GamePiece>();
+            var verticalPieces = new List<GamePiece>();
+            var matchingPieces = new List<GamePiece>();
+
+            horizontalPieces.Add(piece);
+
+            for (int dir = 0; dir <= 1; dir++)
+            {
+                for (int xOffset = 1; xOffset < xDim; xOffset++)
+                {
+                    int x;
+
+                    if (dir == 0)
+                    {
+                        x = newX - xOffset;
+                    }
+                    else
+                    {
+                        x = newX + xOffset;
+                    }
+
+                    if (x < 0 || x >= xDim) { break; }
+
+                    if (_pieces[x, newY].IsColored() && _pieces[x, newY].ColorComponent.Color == color)
+                    {
+                        horizontalPieces.Add(_pieces[x, newY]);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            if (horizontalPieces.Count >= 3)
+            {
+                matchingPieces.AddRange(horizontalPieces);
+            }
+
+            if (horizontalPieces.Count >= 3)
+            {
+                for (int i = 0; i < horizontalPieces.Count; i++ )
+                {
+                    for (int dir = 0; dir <= 1; dir++)
+                    {
+                        for (int yOffset = 1; yOffset < yDim; yOffset++)
+                        {
+                            int y;
+
+                            if (dir == 0)
+                            {
+                                y = newY - yOffset;
+                            }
+                            else
+                            {
+                                y = newY + yOffset;
+                            }
+
+                            if (y < 0 || y >= yDim)
+                            {
+                                break;
+                            }
+
+                            if (_pieces[horizontalPieces[i].X, y].IsColored() && _pieces[horizontalPieces[i].X, y].ColorComponent.Color == color)
+                            {
+                                verticalPieces.Add(_pieces[horizontalPieces[i].X, y]);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (verticalPieces.Count < 2)
+                    {
+                        verticalPieces.Clear();
+                    }
+                    else
+                    {
+                        matchingPieces.AddRange(verticalPieces);
+                        break;
+                    }
+                }
+            }
+
+            if (matchingPieces.Count >= 3)
+            {
+                return matchingPieces;
+            }
+
+            horizontalPieces.Clear();
+            verticalPieces.Clear();
+            verticalPieces.Add(piece);
+
+            for (int dir = 0; dir <= 1; dir++)
+            {
+                for (int yOffset = 1; yOffset < xDim; yOffset++)
+                {
+                    int y;
+
+                    if (dir == 0)
+                    {
+                        y = newY - yOffset;
+                    }
+                    else
+                    {
+                        y = newY + yOffset;
+                    }
+
+                    if (y < 0 || y >= yDim) { break; }
+
+                    if (_pieces[newX, y].IsColored() && _pieces[newX, y].ColorComponent.Color == color)
+                    {
+                        verticalPieces.Add(_pieces[newX, y]);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            if (verticalPieces.Count >= 3)
+            {
+                matchingPieces.AddRange(verticalPieces);
+            }
+
+            if (verticalPieces.Count >= 3)
+            {
+                for (int i = 0; i < verticalPieces.Count; i++)
+                {
+                    for (int dir = 0; dir <= 1; dir++)
+                    {
+                        for (int xOffset = 1; xOffset < yDim; xOffset++)
+                        {
+                            int x;
+
+                            if (dir == 0)
+                            {
+                                x = newX - xOffset;
+                            }
+                            else
+                            {
+                                x = newX + xOffset;
+                            }
+
+                            if (x < 0 || x >= xDim)
+                            {
+                                break;
+                            }
+
+                            if (_pieces[x, verticalPieces[i].Y].IsColored() && _pieces[x, verticalPieces[i].Y].ColorComponent.Color == color)
+                            {
+                                horizontalPieces.Add(_pieces[x, verticalPieces[i].Y]);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (horizontalPieces.Count < 2)
+                    {
+                        horizontalPieces.Clear();
+                    }
+                    else
+                    {
+                        matchingPieces.AddRange(horizontalPieces);
+                        break;
+                    }
+                }
+            }
+
+            if (matchingPieces.Count >= 3)
+            {
+                return matchingPieces;
+            }
+
+            return null;
+        }
 
         private bool ClearPiece(int x, int y)
         {
@@ -683,7 +915,7 @@ namespace Match3
         public void GameOver()
         {
             _gameOver = true;
-            _fsm.TransitionTo(GameState.ENDGAME);
+            _currentState = GameState.ENDGAME;
         }
 
         public List<GamePiece> GetPiecesOfType(PieceType type)
@@ -712,7 +944,7 @@ namespace Match3
             yield return StartCoroutine(Fill());
 
             // 카운트다운 동안 입력 차단 (PREGAME 상태 유지)
-            _fsm.TransitionTo(GameState.PREGAME);
+            _currentState = GameState.PREGAME;
 
             // 보드 채운 후 카메라 재조정 (그리드 크기 확정 후)
             var camSetup = Camera.main != null ? Camera.main.GetComponent<MobileCameraSetup>() : null;
@@ -735,7 +967,7 @@ namespace Match3
             }
 
             // 카운트다운 완료 후 입력 허용
-            _fsm.TransitionTo(GameState.READY);
+            _currentState = GameState.READY;
             ResetHintTimer();
         }
 
@@ -949,22 +1181,68 @@ namespace Match3
         }
 
         // === 힌트 시스템 ===
-        // FindValidMove() → MatchFinder.FindValidMove() 로 이동됨
 
-        public void ResetHintTimer()
+        private List<GamePiece> FindValidMove()
+        {
+            for (int x = 0; x < xDim; x++)
+            {
+                for (int y = 0; y < yDim; y++)
+                {
+                    if (!_pieces[x, y].IsColored() || !_pieces[x, y].IsMovable()) continue;
+
+                    // 상하좌우 4방향 가상 스왑
+                    int[,] dirs = { {1,0}, {-1,0}, {0,1}, {0,-1} };
+                    for (int d = 0; d < 4; d++)
+                    {
+                        int nx = x + dirs[d, 0];
+                        int ny = y + dirs[d, 1];
+
+                        if (nx < 0 || nx >= xDim || ny < 0 || ny >= yDim) continue;
+                        if (!_pieces[nx, ny].IsMovable()) continue;
+
+                        // 가상 스왑
+                        GamePiece temp = _pieces[x, y];
+                        _pieces[x, y] = _pieces[nx, ny];
+                        _pieces[nx, ny] = temp;
+
+                        // 매치 확인
+                        var match1 = GetMatch(_pieces[x, y], x, y);
+                        var match2 = GetMatch(_pieces[nx, ny], nx, ny);
+
+                        // 복원
+                        temp = _pieces[x, y];
+                        _pieces[x, y] = _pieces[nx, ny];
+                        _pieces[nx, ny] = temp;
+
+                        if (match1 != null)
+                        {
+                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
+                        }
+                        if (match2 != null)
+                        {
+                            return new List<GamePiece> { _pieces[x, y], _pieces[nx, ny] };
+                        }
+                    }
+                }
+            }
+
+            return null; // 데드 보드
+        }
+
+        private void ResetHintTimer()
         {
             _hintTimer = hintDelay;
         }
 
         private void ShowHint()
         {
-            _hintPieces = MatchFinder.FindValidMove(_pieces, xDim, yDim);
+            _hintPieces = FindValidMove();
             if (_hintPieces == null) return;
 
             _hintCoroutine = StartCoroutine(HintPulseCoroutine());
         }
 
-        public void StopHint()
+        private void StopHint()
         {
             if (_hintCoroutine != null)
             {
@@ -1057,7 +1335,7 @@ namespace Match3
 
         private IEnumerator ShuffleBoard()
         {
-            _fsm.TransitionTo(GameState.SHUFFLING);
+            _currentState = GameState.SHUFFLING;
 
             // Fisher-Yates 셔플 (색상만 섞기)
             var colorPieces = new List<GamePiece>();
@@ -1091,22 +1369,22 @@ namespace Match3
                 {
                     for (int y = 0; y < yDim && !hasMatch; y++)
                     {
-                        if (MatchFinder.GetMatch(_pieces, _pieces[x, y], x, y, xDim, yDim) != null)
+                        if (GetMatch(_pieces[x, y], x, y) != null)
                             hasMatch = true;
                     }
                 }
 
                 // 유효 이동 존재 + 초기 매치 없음 → 성공
-                if (!hasMatch && MatchFinder.FindValidMove(_pieces, xDim, yDim) != null)
+                if (!hasMatch && FindValidMove() != null)
                     break;
             }
 
             yield return new WaitForSeconds(0.3f);
 
             // 셔플 완료 후 입력 허용 (ForceShuffleBoard에서 호출 시 필수)
-            if (_fsm.CurrentState == GameState.SHUFFLING)
+            if (_currentState == GameState.SHUFFLING)
             {
-                _fsm.TransitionTo(GameState.READY);
+                _currentState = GameState.READY;
                 ResetHintTimer();
             }
         }

@@ -1,0 +1,3 @@
+{
+  "csharpCode": "using UnityEngine; using UnityEditor; using UnityEngine.SceneManagement; public class Script { public static string Main() { var scene = SceneManager.GetActiveScene(); var roots = scene.GetRootGameObjects(); string r = \"\"; foreach (var go in roots) { var grid = go.GetComponentInChildren<Match3.GameGrid>(); if (grid != null) { var ic = go.GetComponentInChildren<Match3.InputController>(); if (ic == null) { go.AddComponent<Match3.InputController>(); EditorUtility.SetDirty(go); r += \"Added InputController to \" + go.name; } else { r += \"InputController already on \" + go.name; } } } if (r == \"\") r = \"GameGrid not found in scene\"; return r; } }"
+}

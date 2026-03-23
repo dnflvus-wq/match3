@@ -1,0 +1,3 @@
+{
+  "csharpCode": "using UnityEngine; using UnityEngine.SceneManagement; public class Script { public static string Main() { EditorCheck(); return Check(); } static void EditorCheck() { UnityEditor.SceneManagement.EditorSceneManager.OpenScene(\"Assets/Scenes/Level01.unity\"); } static string Check() { var scene = SceneManager.GetActiveScene(); var roots = scene.GetRootGameObjects(); string r = \"\"; foreach (var go in roots) { r += go.name; var sr = go.GetComponent<SpriteRenderer>(); if (sr != null) r += \" [SR: sprite=\" + (sr.sprite != null ? sr.sprite.name : \"null\") + \"]\"; r += \" | \"; } return r; } }"
+}
