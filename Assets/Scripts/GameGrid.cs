@@ -45,6 +45,10 @@ namespace Match3
 
         private GamePiece[,] _pieces;
 
+        // Phase 1-3: BoardModel (순수 데이터, 병렬 운영 중)
+        private BoardModel _boardModel;
+        public BoardModel Board => _boardModel;
+
         private bool _inverse;
 
         private GamePiece _pressedPiece;
@@ -101,6 +105,7 @@ namespace Match3
             }
 
             _pieces = new GamePiece[xDim, yDim];
+            _boardModel = new BoardModel(xDim, yDim);
 
             for (int i = 0; i < initialPieces.Length; i++)
             {
@@ -174,6 +179,9 @@ namespace Match3
             }
 
             IsFilling = false;
+
+            // BoardModel 동기화
+            _boardModel.SyncFromGamePieces(_pieces);
 
             if (_gameOver)
             {
