@@ -57,8 +57,8 @@ namespace Match3
         private bool _gameOver;
 
         // FSM
-        private GameState _currentState = GameState.PREGAME;
-        public GameState CurrentState => _currentState;
+        private GameStateMachine _fsm = new GameStateMachine();
+        public GameState CurrentState => _fsm.CurrentState;
 
         // Juice
         private int _comboCount;
@@ -154,7 +154,7 @@ namespace Match3
         {
             bool needsRefill = true;
             IsFilling = true;
-            _currentState = GameState.COLLAPSING;
+            _fsm.TransitionTo(GameState.COLLAPSING);
             _comboCount = 0;
 
             while (needsRefill)
@@ -185,7 +185,7 @@ namespace Match3
 
             if (_gameOver)
             {
-                _currentState = GameState.ENDGAME;
+                _fsm.TransitionTo(GameState.ENDGAME);
             }
             else
             {
@@ -195,7 +195,7 @@ namespace Match3
                     yield return StartCoroutine(ShuffleBoard());
                 }
 
-                _currentState = GameState.READY;
+                _fsm.TransitionTo(GameState.READY);
                 ResetHintTimer();
             }
         }
@@ -313,7 +313,7 @@ namespace Match3
 
         private void SwapPieces(GamePiece piece1, GamePiece piece2)
         {
-            if (_gameOver || _currentState != GameState.READY) { return; }
+            if (_gameOver || _fsm.CurrentState != GameState.READY) { return; }
 
             if (!piece1.IsMovable() || !piece2.IsMovable()) return;
 
@@ -322,7 +322,7 @@ namespace Match3
 
         private IEnumerator SwapPiecesCoroutine(GamePiece piece1, GamePiece piece2)
         {
-            _currentState = GameState.SWAPPING;
+            _fsm.TransitionTo(GameState.SWAPPING);
 
             int p1X = piece1.X, p1Y = piece1.Y;
             int p2X = piece2.X, p2Y = piece2.Y;
@@ -341,7 +341,7 @@ namespace Match3
             yield return new WaitForSeconds(swapTime);
 
             // EVALUATING: 매치 확인
-            _currentState = GameState.EVALUATING;
+            _fsm.TransitionTo(GameState.EVALUATING);
 
             bool hasMatch = MatchFinder.GetMatch(_pieces, piece1, p2X, p2Y, xDim, yDim) != null ||
                             MatchFinder.GetMatch(_pieces, piece2, p1X, p1Y, xDim, yDim) != null ||
@@ -398,7 +398,7 @@ namespace Match3
                 }
 
                 // MATCHING
-                _currentState = GameState.MATCHING;
+                _fsm.TransitionTo(GameState.MATCHING);
                 ClearAllValidMatches();
 
                 // 특수 타일 클리어
@@ -434,7 +434,7 @@ namespace Match3
 
                 yield return new WaitForSeconds(swapBackTime);
 
-                _currentState = GameState.READY;
+                _fsm.TransitionTo(GameState.READY);
             }
         }
 
@@ -683,7 +683,7 @@ namespace Match3
         public void GameOver()
         {
             _gameOver = true;
-            _currentState = GameState.ENDGAME;
+            _fsm.TransitionTo(GameState.ENDGAME);
         }
 
         public List<GamePiece> GetPiecesOfType(PieceType type)
@@ -712,7 +712,7 @@ namespace Match3
             yield return StartCoroutine(Fill());
 
             // 카운트다운 동안 입력 차단 (PREGAME 상태 유지)
-            _currentState = GameState.PREGAME;
+            _fsm.TransitionTo(GameState.PREGAME);
 
             // 보드 채운 후 카메라 재조정 (그리드 크기 확정 후)
             var camSetup = Camera.main != null ? Camera.main.GetComponent<MobileCameraSetup>() : null;
@@ -735,7 +735,7 @@ namespace Match3
             }
 
             // 카운트다운 완료 후 입력 허용
-            _currentState = GameState.READY;
+            _fsm.TransitionTo(GameState.READY);
             ResetHintTimer();
         }
 
@@ -1057,7 +1057,7 @@ namespace Match3
 
         private IEnumerator ShuffleBoard()
         {
-            _currentState = GameState.SHUFFLING;
+            _fsm.TransitionTo(GameState.SHUFFLING);
 
             // Fisher-Yates 셔플 (색상만 섞기)
             var colorPieces = new List<GamePiece>();
@@ -1104,9 +1104,9 @@ namespace Match3
             yield return new WaitForSeconds(0.3f);
 
             // 셔플 완료 후 입력 허용 (ForceShuffleBoard에서 호출 시 필수)
-            if (_currentState == GameState.SHUFFLING)
+            if (_fsm.CurrentState == GameState.SHUFFLING)
             {
-                _currentState = GameState.READY;
+                _fsm.TransitionTo(GameState.READY);
                 ResetHintTimer();
             }
         }
