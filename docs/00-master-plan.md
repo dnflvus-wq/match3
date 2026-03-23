@@ -16,7 +16,10 @@
 | 10 | 성능 최적화 | [10-optimization.plan.md](10-optimization.plan.md) | 미착수 | 0% |
 | 11 | 데이터 저장 + DB 연동 | [11-data-storage.plan.md](11-data-storage.plan.md) | 미착수 | 0% |
 | 12 | 그래픽/디자인 시스템 | [12-graphics-design.plan.md](12-graphics-design.plan.md) | 진행중 | 5% |
-| 13 | 장애물 시스템 | [13-obstacles.plan.md](13-obstacles.plan.md) | 미착수 | 0% |
+| 13 | 장애물 시스템 + 비정형 보드 | [13-obstacles.plan.md](13-obstacles.plan.md) | 미착수 | 0% |
+| 14 | 라이브 이벤트 (LiveOps) | [14-liveops.plan.md](14-liveops.plan.md) | 미착수 | 0% |
+| 15 | 출시 준비 (다국어/접근성/ASO/약관) | [15-launch.plan.md](15-launch.plan.md) | 미착수 | 0% |
+| 16 | 운영 인프라 (Analytics/푸시/크래시) | [16-ops-infra.plan.md](16-ops-infra.plan.md) | 미착수 | 0% |
 
 ## 우선순위 (권장 순서)
 1. **GDD** (8) — 전체 방향 정리
@@ -32,6 +35,9 @@
 11. **데이터 저장** (11) — 서버 연동 준비
 12. **수익화** (5) — 매출 구조
 13. **메타게임** (6) — 장기 리텐션
+14. **라이브 이벤트** (14) — 주간/시즌 이벤트
+15. **출시 준비** (15) — 다국어, 접근성, 스토어 등록
+16. **운영 인프라** (16) — Analytics, 푸시 알림, 크래시 리포팅
 
 ## 핵심 원칙
 - Unity 에디터 기능 최대 활용 (Prefab, Inspector, Particle System, Timeline)
