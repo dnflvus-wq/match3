@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildScript
 {
-    [MenuItem("Build/Android ARM64 (Direct)")]
+    [MenuItem("Build/Android APK (Simple)")]
     public static void BuildAndroid()
     {
         // 씬 목록

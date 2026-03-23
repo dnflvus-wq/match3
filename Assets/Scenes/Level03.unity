@@ -194,7 +194,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &455804010
 Transform:
@@ -258,6 +258,8 @@ MonoBehaviour:
   xDim: 8
   yDim: 8
   fillTime: 0.1
+  swapTime: 0.25
+  swapBackTime: 0.2
   level: {fileID: 1773144088}
   piecePrefabs:
   - type: 0
@@ -274,6 +276,7 @@ MonoBehaviour:
     prefab: {fileID: 1052986968358228, guid: 76cf5fcb1fcbe0f4a8673d6ce36da32c, type: 3}
   backgroundPrefab: {fileID: 126596, guid: 86f7705ed2388c64294da188eff4bc1b, type: 3}
   initialPieces: []
+  hintDelay: 5
 --- !u!1 &606057589
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,9 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89610b8e6bd1c2543a2d9112948339bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Match3.MobileCameraSetup
-  hudHeightRatio: 0.15
-  bottomMarginRatio: 0.08
-  horizontalPadding: 0.5
 --- !u!1001 &1464972683
 PrefabInstance:
   m_ObjectHideFlags: 0

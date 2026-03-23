@@ -171,15 +171,11 @@ namespace Match3
             }
             else
             {
-                if (BoosterSystem.Instance.BuyBooster(BoosterType.Hammer))
+                ShowBuyPopup(BoosterType.Hammer, () =>
                 {
-                    ShowToast("Hammer purchased!");
-                    RefreshUI();
-                }
-                else
-                {
-                    ShowToast("Not enough coins!");
-                }
+                    _hammerMode = true;
+                    ShowToast("Tap a piece to destroy!");
+                });
             }
         }
 
@@ -193,14 +189,17 @@ namespace Match3
                 ShowToast("Board shuffled!");
                 RefreshUI();
             }
-            else if (BoosterSystem.Instance.BuyBooster(BoosterType.Shuffle))
-            {
-                ShowToast("Shuffle purchased!");
-                RefreshUI();
-            }
             else
             {
-                ShowToast("Not enough coins!");
+                ShowBuyPopup(BoosterType.Shuffle, () =>
+                {
+                    if (BoosterSystem.Instance.UseBooster(BoosterType.Shuffle))
+                    {
+                        _grid.ForceShuffleBoard();
+                        ShowToast("Board shuffled!");
+                        RefreshUI();
+                    }
+                });
             }
         }
 
@@ -210,26 +209,123 @@ namespace Match3
 
             if (BoosterSystem.Instance.UseBooster(BoosterType.ExtraMoves))
             {
-                // LevelMoves에 +5 이동 추가
                 var levelMoves = FindFirstObjectByType<LevelMoves>();
                 if (levelMoves != null)
                 {
                     levelMoves.numMoves += 5;
-                    levelMoves.OnMove(); // UI 업데이트 트리거 (이동 안 소모)
-                    // 실제로는 movesUsed를 줄여야 하므로 반영을 위해 -1 처리
+                    levelMoves.RefreshRemainingUI();
                 }
                 ShowToast("+5 Moves!");
                 RefreshUI();
             }
-            else if (BoosterSystem.Instance.BuyBooster(BoosterType.ExtraMoves))
-            {
-                ShowToast("+5 Moves purchased!");
-                RefreshUI();
-            }
             else
             {
-                ShowToast("Not enough coins!");
+                ShowBuyPopup(BoosterType.ExtraMoves, () =>
+                {
+                    if (BoosterSystem.Instance.UseBooster(BoosterType.ExtraMoves))
+                    {
+                        var levelMoves = FindFirstObjectByType<LevelMoves>();
+                        if (levelMoves != null)
+                        {
+                            levelMoves.numMoves += 5;
+                            levelMoves.RefreshRemainingUI();
+                        }
+                        ShowToast("+5 Moves!");
+                        RefreshUI();
+                    }
+                });
             }
+        }
+
+        private void ShowBuyPopup(BoosterType type, System.Action onBought)
+        {
+            if (BoosterSystem.Instance == null) return;
+            int cost = BoosterSystem.Instance.GetCost(type);
+            int coins = CoinSystem.Instance != null ? CoinSystem.Instance.Coins : 0;
+
+            if (coins < cost)
+            {
+                ShowToast("Not enough coins! (" + cost + " needed)");
+                return;
+            }
+
+            Canvas canvas = FindFirstObjectByType<Canvas>();
+            if (canvas == null) return;
+
+            // 팝업 배경 (반투명)
+            var popupBg = new GameObject("BuyPopupBg");
+            popupBg.transform.SetParent(canvas.transform, false);
+            var bgImg = popupBg.AddComponent<Image>();
+            bgImg.color = new Color(0, 0, 0, 0.6f);
+            var bgRt = popupBg.GetComponent<RectTransform>();
+            bgRt.anchorMin = Vector2.zero; bgRt.anchorMax = Vector2.one;
+            bgRt.sizeDelta = Vector2.zero;
+
+            // 팝업 패널
+            var panel = new GameObject("BuyPanel");
+            panel.transform.SetParent(popupBg.transform, false);
+            var panelImg = panel.AddComponent<Image>();
+            panelImg.color = new Color(0.15f, 0.15f, 0.25f, 0.95f);
+            var panelRt = panel.GetComponent<RectTransform>();
+            panelRt.anchorMin = new Vector2(0.5f, 0.5f); panelRt.anchorMax = new Vector2(0.5f, 0.5f);
+            panelRt.sizeDelta = new Vector2(500, 280);
+
+            // 텍스트
+            string typeName = type == BoosterType.Hammer ? "Hammer" : type == BoosterType.Shuffle ? "Shuffle" : "+5 Moves";
+            var textObj = new GameObject("Text");
+            textObj.transform.SetParent(panel.transform, false);
+            var text = textObj.AddComponent<Text>();
+            text.text = "Buy " + typeName + "\nfor " + cost + " coins?";
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            text.fontSize = 32; text.fontStyle = FontStyle.Bold;
+            text.alignment = TextAnchor.MiddleCenter; text.color = Color.white;
+            var tRt = textObj.GetComponent<RectTransform>();
+            tRt.anchorMin = new Vector2(0.1f, 0.45f); tRt.anchorMax = new Vector2(0.9f, 0.9f);
+            tRt.sizeDelta = Vector2.zero; tRt.anchoredPosition = Vector2.zero;
+
+            // Yes 버튼
+            CreatePopupButton(panel, "Yes", new Vector2(-90, -80), new Color(0.2f, 0.7f, 0.3f), () =>
+            {
+                if (BoosterSystem.Instance.BuyBooster(type))
+                {
+                    RefreshUI();
+                    onBought?.Invoke();
+                }
+                else
+                {
+                    ShowToast("Purchase failed!");
+                }
+                Destroy(popupBg);
+            });
+
+            // No 버튼
+            CreatePopupButton(panel, "No", new Vector2(90, -80), new Color(0.7f, 0.2f, 0.2f), () =>
+            {
+                Destroy(popupBg);
+            });
+        }
+
+        private void CreatePopupButton(GameObject parent, string label, Vector2 pos, Color color, UnityEngine.Events.UnityAction action)
+        {
+            var btnObj = new GameObject("Btn_" + label);
+            btnObj.transform.SetParent(parent.transform, false);
+            var img = btnObj.AddComponent<Image>();
+            img.color = color;
+            var btn = btnObj.AddComponent<Button>();
+            btn.onClick.AddListener(action);
+            var rt = btnObj.GetComponent<RectTransform>();
+            rt.anchoredPosition = pos; rt.sizeDelta = new Vector2(150, 60);
+
+            var textObj = new GameObject("Text");
+            textObj.transform.SetParent(btnObj.transform, false);
+            var text = textObj.AddComponent<Text>();
+            text.text = label;
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            text.fontSize = 28; text.fontStyle = FontStyle.Bold;
+            text.alignment = TextAnchor.MiddleCenter; text.color = Color.white;
+            var tRt = textObj.GetComponent<RectTransform>();
+            tRt.anchorMin = Vector2.zero; tRt.anchorMax = Vector2.one;
+            tRt.sizeDelta = Vector2.zero;
         }
 
         public bool IsHammerMode => _hammerMode;

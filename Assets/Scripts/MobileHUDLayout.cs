@@ -192,25 +192,38 @@ namespace Match3
             rt.anchoredPosition = new Vector2(20f, -(hudHeight + 10f));
             rt.sizeDelta = new Vector2(120f, 120f);
 
-            // 반투명 원형 배경
+            // 뒤로가기 아이콘 이미지
             var img = btnObj.AddComponent<Image>();
-            img.color = new Color(0f, 0f, 0f, 0.4f);
-
-            // "<" 텍스트
-            var textObj = new GameObject("Text");
-            textObj.transform.SetParent(btnObj.transform, false);
-            var textRt = textObj.AddComponent<RectTransform>();
-            textRt.anchorMin = Vector2.zero;
-            textRt.anchorMax = Vector2.one;
-            textRt.sizeDelta = Vector2.zero;
-            textRt.anchoredPosition = Vector2.zero;
-
-            var text = textObj.AddComponent<Text>();
-            text.text = "<";
-            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            text.fontSize = 60;
-            text.alignment = TextAnchor.MiddleCenter;
-            text.color = Color.white;
+            Sprite backSprite = Resources.Load<Sprite>("back_icon");
+            if (backSprite == null)
+            {
+                Texture2D backTex = Resources.Load<Texture2D>("back_icon");
+                if (backTex != null && backTex.isReadable)
+                    backSprite = Sprite.Create(backTex, new Rect(0, 0, backTex.width, backTex.height), new Vector2(0.5f, 0.5f));
+            }
+            if (backSprite != null)
+            {
+                img.sprite = backSprite;
+                img.preserveAspect = true;
+                img.color = Color.white;
+            }
+            else
+            {
+                img.color = new Color(0.15f, 0.1f, 0.05f, 0.7f);
+                // fallback 텍스트
+                var textObj = new GameObject("Text");
+                textObj.transform.SetParent(btnObj.transform, false);
+                var textRt = textObj.AddComponent<RectTransform>();
+                textRt.anchorMin = Vector2.zero;
+                textRt.anchorMax = Vector2.one;
+                textRt.sizeDelta = Vector2.zero;
+                var text = textObj.AddComponent<Text>();
+                text.text = "←";
+                text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+                text.fontSize = 50;
+                text.alignment = TextAnchor.MiddleCenter;
+                text.color = Color.white;
+            }
 
             // 버튼 클릭 이벤트
             var btn = btnObj.AddComponent<Button>();

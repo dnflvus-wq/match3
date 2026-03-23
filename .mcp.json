@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mcp-unity": {
+      "type": "stdio",
+      "command": "C:\Project\Match3\Library\mcp-server\win-x64\unity-mcp-server.exe",
+      "env": {
+        "MCP_PLUGIN_PORT": "26785",
+        "MCP_PLUGIN_CLIENT_TRANSPORT": "stdio"
+      }
+    },
+    "win32-inspector": {
+      "command": "C:\Users\comes\AppData\Local\Programs\Python\Python311\Scripts\win32-mcp-server.exe",
+      "args": []
+    }
+  }
+}

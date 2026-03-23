@@ -21,6 +21,12 @@ namespace Match3
             hud.SetRemaining(numMoves);
         }
 
+        public void RefreshRemainingUI()
+        {
+            int remaining = numMoves - _movesUsed;
+            hud.SetRemaining(remaining);
+        }
+
         public override void OnMove()
         {
             _movesUsed++;

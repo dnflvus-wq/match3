@@ -556,11 +556,21 @@ namespace Match3
                         AudioManager.Instance.PlayMatch(_comboCount);
                     }
 
-                    // 4매치 이상 시 카메라 쉐이크 + 특수 효과음
+                    // 4매치 이상 시 카메라 쉐이크 + 특수 효과음 + 강화 파티클
                     if (match.Count >= 4)
                     {
                         StartCoroutine(CameraShake(0.05f, 0.2f));
                         if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
+
+                        // 4매치 중심에 강화 파티클
+                        if (MatchParticles.Instance != null && match.Count > 0)
+                        {
+                            Vector3 center = Vector3.zero;
+                            foreach (var p in match) center += p.transform.position;
+                            center /= match.Count;
+                            Color c = match[0].IsColored() ? GetColorForType(match[0].ColorComponent.Color) : Color.white;
+                            MatchParticles.Instance.PlayBigAt(center, c);
+                        }
                     }
 
                     PieceType specialPieceType = PieceType.Count;
@@ -933,6 +943,9 @@ namespace Match3
             // 먼저 보드 채우기
             yield return StartCoroutine(Fill());
 
+            // 카운트다운 동안 입력 차단 (PREGAME 상태 유지)
+            _currentState = GameState.PREGAME;
+
             // 보드 채운 후 카메라 재조정 (그리드 크기 확정 후)
             var camSetup = Camera.main != null ? Camera.main.GetComponent<MobileCameraSetup>() : null;
             if (camSetup != null) camSetup.Adjust();
@@ -952,6 +965,10 @@ namespace Match3
                 }
                 yield return StartCoroutine(ShowCountdownNumber(canvas, "GO!"));
             }
+
+            // 카운트다운 완료 후 입력 허용
+            _currentState = GameState.READY;
+            ResetHintTimer();
         }
 
         private IEnumerator ShowCountdownNumber(Canvas canvas, string text)
@@ -1233,7 +1250,7 @@ namespace Match3
                 _hintCoroutine = null;
             }
 
-            // 힌트 타일 스케일 복원
+            // 힌트 타일 투명도 복원
             if (_hintPieces != null)
             {
                 foreach (var piece in _hintPieces)
@@ -1241,6 +1258,11 @@ namespace Match3
                     if (piece != null && piece.gameObject != null)
                     {
                         piece.transform.localScale = Vector3.one;
+                        var sr = piece.transform.Find("piece")?.GetComponent<SpriteRenderer>();
+                        if (sr != null)
+                        {
+                            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+                        }
                     }
                 }
                 _hintPieces = null;
@@ -1249,13 +1271,17 @@ namespace Match3
 
         private IEnumerator HintPulseCoroutine()
         {
-            float pulseSpeed = 2f * Mathf.PI; // 주기 약 0.5초
+            float pulseSpeed = 1.5f; // 부드러운 펄스 속도
             float elapsed = 0f;
 
             while (true)
             {
                 elapsed += Time.deltaTime;
-                float scale = 1f + 0.15f * Mathf.Sin(elapsed * pulseSpeed);
+                float t = Mathf.Sin(elapsed * pulseSpeed * Mathf.PI * 2f) * 0.5f + 0.5f; // 0~1
+
+                // 확실한 깜빡임 (alpha 0.3~1.0) + 부드러운 스케일 펄스 (1.0~1.1)
+                float alpha = Mathf.Lerp(0.3f, 1f, t);
+                float scale = Mathf.Lerp(1f, 1.1f, t);
 
                 if (_hintPieces != null)
                 {
@@ -1263,7 +1289,15 @@ namespace Match3
                     {
                         if (piece != null && piece.gameObject != null)
                         {
+                            // 부드러운 스케일 펄스
                             piece.transform.localScale = new Vector3(scale, scale, 1f);
+
+                            // 투명도 깜빡임
+                            var sr = piece.transform.Find("piece")?.GetComponent<SpriteRenderer>();
+                            if (sr != null)
+                            {
+                                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
+                            }
                         }
                     }
                 }
@@ -1346,6 +1380,13 @@ namespace Match3
             }
 
             yield return new WaitForSeconds(0.3f);
+
+            // 셔플 완료 후 입력 허용 (ForceShuffleBoard에서 호출 시 필수)
+            if (_currentState == GameState.SHUFFLING)
+            {
+                _currentState = GameState.READY;
+                ResetHintTimer();
+            }
         }
 
     }
