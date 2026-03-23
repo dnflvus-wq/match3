@@ -32,16 +32,16 @@
 ## 미생성 (대기)
 
 ### 특수 타일 오버레이
-- [ ] 줄무늬 가로 오버레이
-- [ ] 줄무늬 세로 오버레이
-- [ ] 폭탄 오버레이
-- [ ] 레인보우 타일
+- [x] `Assets/Textures/Tiles/overlay_striped_h.png` — 줄무늬 가로
+- [x] `Assets/Textures/Tiles/overlay_striped_v.png` — 줄무늬 세로
+- [x] `Assets/Textures/Tiles/overlay_bomb.png` — 폭탄 (리본 포장)
+- [x] `Assets/Textures/Tiles/tile_rainbow.png` — 레인보우 (무지개 소용돌이)
 
 ### 장애물
-- [ ] 얼음 1단계
-- [ ] 얼음 2단계
-- [ ] 얼음 3단계
-- [ ] 사슬 오버레이
+- [x] `Assets/Textures/Tiles/obstacle_ice_1.png` — 얼음 1단계 (얇은 투명)
+- [x] `Assets/Textures/Tiles/obstacle_ice_2.png` — 얼음 2단계 (중간)
+- [x] `Assets/Textures/Tiles/obstacle_ice_3.png` — 얼음 3단계 (두꺼운 불투명)
+- [x] `Assets/Textures/Tiles/obstacle_chain.png` — 사슬 (X자 금속)
 
 ### 추가 배경
 - [ ] 수중 궁전 테마 배경
