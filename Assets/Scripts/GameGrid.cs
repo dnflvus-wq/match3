@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace Match3
 {
+    [RequireComponent(typeof(InputController))]
     public class GameGrid : MonoBehaviour
     {
         [System.Serializable]
@@ -417,6 +418,8 @@ namespace Match3
             }
         }
 
+        // === InputController에서 호출하는 public API ===
+
         public void PressPiece(GamePiece piece) => _pressedPiece = piece;
 
         public void EnterPiece(GamePiece piece) => _enteredPiece = piece;
@@ -431,110 +434,40 @@ namespace Match3
             _enteredPiece = null;
         }
 
-        private Vector2 _touchStart;
-        private bool _swiped;
-        private float _swipeThreshold = 0.3f;
-
-        private void Update()
+        /// <summary>InputController에서 스왑을 요청할 때 호출</summary>
+        public void TrySwap(GamePiece piece, int targetX, int targetY)
         {
-            // Android 뒤로가기 키
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (targetX < 0 || targetX >= xDim || targetY < 0 || targetY >= yDim) return;
+            EnterPiece(_pieces[targetX, targetY]);
+            SwapPieces(piece, _enteredPiece);
+        }
+
+        /// <summary>InputController에서 망치 터치를 처리할 때 호출</summary>
+        public void HandleHammerTouch(Vector2 worldPos)
+        {
+            RaycastHit2D hammerHit = Physics2D.Raycast(worldPos, Vector2.zero);
+            GamePiece hammerPiece = hammerHit.collider != null ? hammerHit.collider.GetComponent<GamePiece>() : null;
+            if (hammerPiece != null && hammerPiece.IsClearable())
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
-                return;
+                ClearPiece(hammerPiece.X, hammerPiece.Y);
+                if (_boosterUI != null) _boosterUI.UseHammer();
+                if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
+                StartCoroutine(CameraShake(0.03f, 0.15f));
+                StartCoroutine(Fill());
             }
+        }
 
-            // FSM: READY 상태에서만 터치 입력 허용
-            if (_currentState != GameState.READY) return;
-
-            // 힌트 타이머
-            _hintTimer -= Time.deltaTime;
+        /// <summary>InputController에서 힌트 타이머를 업데이트할 때 호출</summary>
+        public void UpdateHintTimer(float deltaTime)
+        {
+            _hintTimer -= deltaTime;
             if (_hintTimer <= 0f && _hintCoroutine == null)
             {
                 ShowHint();
             }
-
-            bool began = false, moved = false, ended = false;
-            Vector2 screenPos = Vector2.zero;
-
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-                screenPos = touch.position;
-                began = touch.phase == TouchPhase.Began;
-                moved = touch.phase == TouchPhase.Moved;
-                ended = touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled;
-            }
-            else
-            {
-                screenPos = Input.mousePosition;
-                began = Input.GetMouseButtonDown(0);
-                moved = Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0);
-                ended = Input.GetMouseButtonUp(0);
-            }
-
-            if (!began && !moved && !ended) return;
-
-            Vector3 wp = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 0));
-            Vector2 worldPos = new Vector2(wp.x, wp.y);
-
-            if (began)
-            {
-                // 망치 모드: 터치한 타일 파괴
-                if (_boosterUI != null && _boosterUI.IsHammerMode)
-                {
-                    RaycastHit2D hammerHit = Physics2D.Raycast(worldPos, Vector2.zero);
-                    GamePiece hammerPiece = hammerHit.collider != null ? hammerHit.collider.GetComponent<GamePiece>() : null;
-                    if (hammerPiece != null && hammerPiece.IsClearable())
-                    {
-                        ClearPiece(hammerPiece.X, hammerPiece.Y);
-                        _boosterUI.UseHammer();
-                        if (AudioManager.Instance != null) AudioManager.Instance.PlaySpecial();
-                        StartCoroutine(CameraShake(0.03f, 0.15f));
-                        StartCoroutine(Fill());
-                    }
-                    return;
-                }
-
-                StopHint();
-                ResetHintTimer();
-                _touchStart = worldPos;
-                _swiped = false;
-                RaycastHit2D hitBegin = Physics2D.Raycast(worldPos, Vector2.zero);
-                GamePiece beginPiece = hitBegin.collider != null ? hitBegin.collider.GetComponent<GamePiece>() : null;
-                if (beginPiece != null) PressPiece(beginPiece);
-            }
-            else if (moved)
-            {
-                if (_pressedPiece != null && !_swiped)
-                {
-                    Vector2 delta = worldPos - _touchStart;
-                    if (delta.magnitude >= _swipeThreshold)
-                    {
-                        _swiped = true;
-                        int dx = 0, dy = 0;
-                        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
-                            dx = delta.x > 0 ? 1 : -1;
-                        else
-                            dy = delta.y > 0 ? 1 : -1;
-
-                        int targetX = _pressedPiece.X + dx;
-                        int targetY = _pressedPiece.Y - dy;
-                        if (targetX >= 0 && targetX < xDim && targetY >= 0 && targetY < yDim)
-                        {
-                            EnterPiece(_pieces[targetX, targetY]);
-                            SwapPieces(_pressedPiece, _enteredPiece);
-                        }
-                    }
-                }
-            }
-            else if (ended)
-            {
-                if (!_swiped) ReleasePiece();
-                _pressedPiece = null;
-                _enteredPiece = null;
-            }
         }
+
+        // Update()는 InputController.cs로 이동됨 (Strangler Pattern 1단계)
 
         private bool ClearAllValidMatches()
         {
@@ -1229,7 +1162,7 @@ namespace Match3
             return null; // 데드 보드
         }
 
-        private void ResetHintTimer()
+        public void ResetHintTimer()
         {
             _hintTimer = hintDelay;
         }
@@ -1242,7 +1175,7 @@ namespace Match3
             _hintCoroutine = StartCoroutine(HintPulseCoroutine());
         }
 
-        private void StopHint()
+        public void StopHint()
         {
             if (_hintCoroutine != null)
             {
