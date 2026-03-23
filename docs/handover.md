@@ -1,96 +1,72 @@
 # Match3 게임 고도화 - 인수인계 문서
 
-## ⚠️ 다음 세션 작업 (2026-03-23 업데이트)
+## ⚠️ 현재 상태 (2026-03-23)
 
-### 완료된 작업 (이번 세션)
-1. **판타지 테마 전환 완료** — Gemini로 생성한 배경 이미지 적용
-   - `Assets/Resources/level_select_bg.png` — 마법의 숲 + 크리스탈 + 오로라 밤하늘
-   - `Assets/Textures/UI/bg.png` — 마법의 숲 인게임 배경
-   - `Assets/Textures/UI/bg2.png` — LevelSelect 씬 실제 참조 파일 (level_select_bg와 동일)
-2. **레벨 버튼 이미지 통일** — LevelSelect.cs 전면 리팩토링
-   - 레벨 1~5 전부 코드로 동적 생성, 3열 그리드 레이아웃
-   - `level_btn.png` (해금) / `level_btn_locked.png` (잠금) 사용
-   - 레벨 1~3 항상 해금, 4~5는 이전 레벨 클리어 필요
-3. **파티클 이펙트 고도화** — 4레이어 (스파크+별+글로우+링)
-   - 스파크에 트레일 이펙트 추가
-   - 파티클 수/속도/크기 전반적 강화
-4. **Resources 이미지 meta 수정** — 모든 Resources/*.png.meta: isReadable=1, spriteMode=1
-5. **뒤로가기 아이콘** — Sprite 직접 로드 방식으로 개선
-6. **힌트 시스템** — 동작 확인 (프레임 밝기 변화 감지)
+### 이번 세션에서 한 것
+1. **판타지 테마 배경 적용** — Antigravity+Gemini로 생성, bg2.png 교체 완료
+2. **레벨 버튼 통일** — LevelSelect.cs에서 1~5 전부 level_btn.png로 동적 생성
+3. **Unity MCP 연결 성공** — stdio 방식 (.mcp.json), npx unity-mcp-cli로 도구 호출
+4. **16개 Phase 계획서 수립** — NotebookLM + Playwright로 리서치, docs/00-master-plan.md
+5. **이미지 에셋 생성** — 타일 8색, 특수타일 4종, 장애물 4종, 앱 아이콘 (asset-tracker.md 참조)
+6. **Phase 1 에셋 생성 (부실)** — Prefab/SO/Atlas 파일은 만들었으나 내용 미흡
 
-### 남은 작업
-1. **Unity MCP 연결 성공!** — `.mcp.json`에서 `type: "stdio"` + `env` 방식 사용. `npx unity-mcp-cli run-tool` Skill을 통해 HTTP API(`localhost:26785/api/tools/`)로 Unity와 통신. **실제 도구 호출 성공 확인 (editor-application-get-state)**. 설정:
-   ```json
-   {
-     "mcp-unity": {
-       "type": "stdio",
-       "command": "C:\\Project\\Match3\\Library\\mcp-server\\win-x64\\unity-mcp-server.exe",
-       "env": {
-         "MCP_PLUGIN_PORT": "26785",
-         "MCP_PLUGIN_CLIENT_TRANSPORT": "stdio"
-       }
-     }
-   }
-   ```
-2. **빌드 + APK 배포 완료** — Match3_25.apk (Google Drive)
-3. **bg2.png 재교체** — 숫자 그려진 배경 → 깨끗한 판타지 배경으로 교체 완료
-4. **LevelSelect.cs 재수정** — 기존 씬 버튼 1~3 유지 + 4~5만 동적 추가 (사용자 요청)
+### ⛔ 중요: Phase 1이 제대로 안 됨
+Phase 1 (에디터 에셋 기반 구축)의 파일은 존재하지만 **계획서 요구 수준에 미달**:
+- 타일 Prefab: Base + Variant 구조가 아닌 개별 Prefab
+- TileView.cs: 코드만 있고 Prefab에 미부착
+- 파티클 Prefab: 코드로 생성, 에디터에서 시각적 설정 안 함
+- UI Prefab: 실제 이미지 미할당, 빈 껍데기
+- Custom Editor: 미작성
+- Sprite Atlas: Pack Preview 미확인
 
-### 향후 작업
-1. **파티클 이펙트** — 사용자가 허접하다고 피드백
-2. **인게임 배경** — bg.png도 필요시 교체
-3. **힌트 시스템** — 실동작 확인 필요
-
-### 미커밋 변경 파일
-- `Assets/Scripts/LevelSelect.cs` — 전면 리팩토링 (버튼 통일)
-- `Assets/Scripts/MatchParticles.cs` — 4레이어 파티클
-- `Assets/Scripts/MobileHUDLayout.cs` — back_icon Sprite 로드 개선
-- `Assets/Resources/level_select_bg.png` — Gemini 판타지 배경
-- `Assets/Textures/UI/bg.png` — Gemini 인게임 배경
-- `Assets/Textures/UI/bg2.png` — 판타지 배경 (씬 참조용)
-- 여러 `.meta` 파일 — isReadable/spriteMode 수정
-
-### 작업 프로세스 (모든 구현에 반드시 적용):
-1. 코드 수정/이미지 적용
-2. **Unity Play 모드 진입 → 스크린샷으로 직접 확인**
-3. 오류 발견 → 즉시 수정
-4. **다시 확인 → 문제 없을 때까지 반복**
-5. 모든 항목 확인 완료 → 그때서야 빌드
-
-**⛔ 빌드는 모든 것이 완료되었을 때만 한다.**
-
-### 절대 규칙:
-- **빌드 전 Unity Play 모드에서 충분히 테스트/수정 반복 필수**
-- **코드 수정 → Unity 확인 → 수정 → 확인 루프를 반드시 거칠 것**
-- **좌표 추정 금지** — find_text 또는 OCR 사용
-- **Play 모드 확인** — 반드시 픽셀 색상으로 확인
-- **해상도 변경 금지** — 2160x1080 Portrait 유지
+### ⛔ Phase 2-3 롤백됨
+- 이전에 계획서 순서를 무시하고 Phase 2(Model), Phase 3(Controller)을 먼저 진행했다가 **전부 롤백**함
+- GameGrid.cs는 원래 1393줄 상태로 복원됨
+- **반드시 Phase 1을 제대로 완료한 후 Phase 2로 넘어갈 것**
 
 ---
+
+## 계획서 체계
+- **마스터 계획서**: `docs/00-master-plan.md` (16개 Phase 전체 현황)
+- **Phase 1**: `docs/01-architecture.plan.md` (아키텍처 리팩토링)
+- **Phase 2~16**: 각각 `docs/02~16-*.plan.md`
+- **에셋 트래커**: `docs/asset-tracker.md` (이미지 생성 현황)
+
+## 절대 규칙 (MEMORY.md에도 있음)
+1. **계획서(.plan.md)를 반드시 Read로 읽고 그 순서대로 실행**
+2. **계획서 변경 시 사용자 보고+승인 필수**
+3. **작업 덩어리 완료 즉시 계획서+마스터+인수인계 업데이트**
+4. **빌드는 사용자 승인 후에만**
+5. **Unity 에디터 기능 최대 활용** (코드 생성 금지, Prefab/Inspector 사용)
+
+## 다음 작업
+1. **Phase 1을 제대로 다시 해야 함** — 01-architecture.plan.md의 Phase 1 항목 하나씩 확인
+   - Base Tile Prefab + Variant 8개 (에디터에서)
+   - TileView.cs를 Prefab에 부착
+   - 파티클을 에디터 Particle System으로 설정
+   - UI Prefab에 실제 이미지 할당
+   - Custom Editor 작성
+2. Phase 1 완료 후 Phase 2 (Model 분리) 진행
 
 ## 프로젝트 위치
 - **Unity 프로젝트**: `C:/Project/Match3/`
 - **Unity 버전**: 6.3 LTS (6000.3.11f1)
-- **APK 빌드 경로**: `Build/Match3.apk`
-- **APK 배포**: `G:\내 드라이브\apk\Match3_{번호}.apk` (현재 최신: **Match3_25**)
-- **다음 APK 번호**: **Match3_26**
+- **APK 최신**: Match3_25 (`G:\내 드라이브\apk\`)
+- **다음 APK 번호**: Match3_26
 
-## 핵심 스크립트 파일
+## MCP 설정
+- `.mcp.json`: mcp-unity (stdio) + win32-inspector
+- Unity MCP: `npx unity-mcp-cli run-tool <도구> --input-file -`
+- NotebookLM MCP: 반복 응답 문제 있음 → Playwright MCP로 직접 접근 가능
 
-| 파일 | 역할 |
-|---|---|
-| `Assets/Scripts/GameGrid.cs` | **메인 게임 로직** — 보드, 매치, 스왑, 힌트, 부스터, 파티클 |
-| `Assets/Scripts/LevelSelect.cs` | 레벨 선택 화면 — 5개 버튼 동적 생성, 배경 교체 |
-| `Assets/Scripts/MatchParticles.cs` | 파티클 — 4레이어 (스파크+별+글로우+링) |
-| `Assets/Scripts/MobileHUDLayout.cs` | HUD 레이아웃 + 뒤로가기 버튼 |
-| `Assets/Scripts/BoosterUI.cs` | 부스터 버튼 UI + 구매 팝업 |
+## NotebookLM 노트북
+- match3-1: `eb5804c6` — 게임 아키텍처/알고리즘
+- match3-2: `9621b87a` — 추가 리서치
+- match3 (그래픽): `b0886bfe` — 디자인/그래픽
+- unity-android-mcp: `40bb5215` — MCP 설정
 
-## 배경 이미지 구조 (중요!)
-
-| 파일 | 용도 | 참조 위치 |
-|---|---|---|
-| `Assets/Resources/level_select_bg.png` | 코드에서 Resources.Load | LevelSelect.cs |
-| `Assets/Textures/UI/bg2.png` | **LevelSelect 씬 Background 스프라이트** | LevelSelect.unity (guid) |
-| `Assets/Textures/UI/bg.png` | **인게임 씬 Background 스프라이트** | Level01~05.unity (guid) |
-
-**주의: 씬의 배경은 guid로 참조하므로 파일 자체를 교체해야 함. Resources.Load로 코드 교체해도 씬 스프라이트가 우선 표시됨.**
+## Antigravity
+- 실행: `env -u ELECTRON_RUN_AS_NODE "C:/Users/comes/AppData/Local/Programs/Antigravity/Antigravity.exe"`
+- ELECTRON_RUN_AS_NODE=1 환경변수 해제 필수
+- Gemini Pro 일일 쿼터 제한 있음
+- 가이드: `C:/Users/comes/.claude/projects/c--Project/memory/guide_antigravity.md`
