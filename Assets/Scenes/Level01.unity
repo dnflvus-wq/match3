@@ -381,7 +381,6 @@ MonoBehaviour:
   fillTime: 0.1
   swapTime: 0.25
   swapBackTime: 0.2
-  gameConfig: {fileID: 0}
   level: {fileID: 1773144088}
   piecePrefabs:
   - type: 0
@@ -411,6 +410,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 482e69fe2663b364284929f95cd5aed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Match3.InputController
+  _gameGrid: {fileID: 0}
+  _boosterUI: {fileID: 0}
+  _pressedPiece: {fileID: 0}
+  _touchStart: {x: 0, y: 0}
+  _swiped: 0
+  _swipeThreshold: 0.3
 --- !u!1 &606057589
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +461,8 @@ Camera:
   m_GameObject: {fileID: 606057589}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.05, g: 0.05, b: 0.15, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

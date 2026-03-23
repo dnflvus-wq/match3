@@ -4,7 +4,7 @@
 
 | # | Phase | 세부 계획서 | 상태 | 진행률 |
 |---|-------|-----------|------|--------|
-| 1 | 아키텍처 리팩토링 (MVC + Prefab) | [01-architecture.plan.md](01-architecture.plan.md) | 진행중 | 12% (Phase1 완료) |
+| 1 | 아키텍처 리팩토링 (MVC + Prefab) | [01-architecture.plan.md](01-architecture.plan.md) | 진행중 | 15% (Phase1 완료, 계획서 NLM 검증 완료) |
 | 2 | 특수 타일 시스템 | [02-special-tiles.plan.md](02-special-tiles.plan.md) | 미착수 | 0% |
 | 3 | 튜토리얼 시스템 | [03-tutorial.plan.md](03-tutorial.plan.md) | 미착수 | 0% |
 | 4 | 난이도 곡선 설계 | [04-difficulty.plan.md](04-difficulty.plan.md) | 미착수 | 0% |

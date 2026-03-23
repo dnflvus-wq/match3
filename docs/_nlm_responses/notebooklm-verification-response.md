@@ -1,0 +1,3857 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - button "Google 앱" [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+    - 'button "Google 계정: 이성현 (dnflvus@gmail.com)" [ref=e15] [cursor=pointer]':
+      - img [ref=e17]
+      - img [ref=e23]
+  - generic [ref=e26]:
+    - generic [ref=e30]:
+      - link "NotebookLM 홈페이지" [ref=e32] [cursor=pointer]:
+        - /url: /
+        - img "NotebookLM 로고" [ref=e34]
+      - textbox [ref=e39]: Match-3 Game Design Mechanics and Engineering Strategies
+      - generic [ref=e40]:
+        - button "노트북 만들기" [ref=e41]:
+          - img [ref=e42]: add
+          - generic [ref=e43]: 노트북 만들기
+        - generic [ref=e46]:
+          - button "분석" [ref=e49]:
+            - img [ref=e50]: trending_up
+            - generic [ref=e52]: 분석
+          - generic "노트북 공유" [ref=e57]:
+            - button "노트북 공유" [ref=e59]:
+              - img [ref=e60]: share
+              - generic [ref=e62]: 공유
+        - generic "설정" [ref=e67]:
+          - button "설정" [ref=e69]:
+            - img [ref=e70]: settings
+            - generic [ref=e72]: 설정
+        - generic [ref=e77]: PRO
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - navigation [ref=e81]:
+            - heading "출처" [level=2] [ref=e82]:
+              - generic [ref=e83]: 출처
+          - button "소스 패널 접기" [ref=e85] [cursor=pointer]:
+            - img [ref=e86]: dock_to_right
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - button "출처 추가" [ref=e94]:
+              - img [ref=e95]: add
+              - generic [ref=e96]: 소스 추가
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - img [ref=e104]: search
+                - textbox "입력된 질문을 기반으로 소스 검색" [ref=e109]:
+                  - /placeholder: 웹에서 새 소스를 검색하세요
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - button "웹" [ref=e114]:
+                    - generic [ref=e116]:
+                      - generic [ref=e117]:
+                        - img [ref=e118]: language
+                        - generic [ref=e119]: 웹
+                      - img [ref=e120]: keyboard_arrow_down
+                  - button "Fast Research" [ref=e125]:
+                    - generic [ref=e127]:
+                      - generic [ref=e128]:
+                        - img [ref=e129]: search_spark
+                        - generic [ref=e130]: Fast Research
+                      - img [ref=e131]: keyboard_arrow_down
+                - generic [ref=e134]:
+                  - button "제출" [disabled]:
+                    - img: arrow_forward
+            - generic [ref=e135]:
+              - generic [ref=e137]: 모든 소스 선택
+              - generic [ref=e141] [cursor=pointer]:
+                - checkbox "모든 출처 선택" [checked] [ref=e143]
+                - generic:
+                  - img
+          - generic [ref=e145]:
+            - generic [ref=e146] [cursor=pointer]:
+              - 'button "Deep Research 보고서: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e147]'
+              - button "더보기" [ref=e151]:
+                - img [ref=e153]: markdown
+              - generic:
+                - generic: "Deep Research 보고서: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서"
+              - generic [ref=e159]:
+                - 'checkbox "Deep Research 보고서: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [checked] [ref=e161]'
+                - generic:
+                  - img
+            - generic [ref=e162] [cursor=pointer]:
+              - 'button "(PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e163]'
+              - button "더보기" [ref=e167]:
+                - img [ref=e169]
+              - generic:
+                - generic: "(PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate"
+              - generic [ref=e175]:
+                - 'checkbox "(PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [checked] [ref=e177]'
+                - generic:
+                  - img
+            - generic [ref=e178] [cursor=pointer]:
+              - button "45 Match-3 Mechanics - Game Developer" [ref=e179]
+              - button "더보기" [ref=e183]:
+                - img [ref=e185]
+              - generic:
+                - generic: 45 Match-3 Mechanics - Game Developer
+              - generic [ref=e191]:
+                - checkbox "45 Match-3 Mechanics - Game Developer" [checked] [ref=e193]
+                - generic:
+                  - img
+            - generic [ref=e194] [cursor=pointer]:
+              - button "Best practices for profiling game performance - Unity" [ref=e195]
+              - button "더보기" [ref=e199]:
+                - img [ref=e201]
+              - generic:
+                - generic: Best practices for profiling game performance - Unity
+              - generic [ref=e207]:
+                - checkbox "Best practices for profiling game performance - Unity" [checked] [ref=e209]
+                - generic:
+                  - img
+            - generic [ref=e210] [cursor=pointer]:
+              - 'button "Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e211]'
+              - button "더보기" [ref=e215]:
+                - img [ref=e217]
+              - generic:
+                - generic: "Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI"
+              - generic [ref=e223]:
+                - 'checkbox "Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [checked] [ref=e225]'
+                - generic:
+                  - img
+            - generic [ref=e226] [cursor=pointer]:
+              - button "Free Assets for a Match 3 Puzzle Game (Unity) - ArtStation" [ref=e227]
+              - button "더보기" [ref=e231]:
+                - img [ref=e233]
+              - generic:
+                - generic: Free Assets for a Match 3 Puzzle Game (Unity) - ArtStation
+              - generic [ref=e239]:
+                - checkbox "Free Assets for a Match 3 Puzzle Game (Unity) - ArtStation" [checked] [ref=e241]
+                - generic:
+                  - img
+            - generic [ref=e242] [cursor=pointer]:
+              - button "How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e243]
+              - button "더보기" [ref=e247]:
+                - img [ref=e249]
+              - generic:
+                - generic: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games
+              - generic [ref=e255]:
+                - checkbox "How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [checked] [ref=e257]
+                - generic:
+                  - img
+            - generic [ref=e258] [cursor=pointer]:
+              - button "How can I create Special Candies? - Candy Crush Saga" [ref=e259]
+              - button "더보기" [ref=e263]:
+                - img [ref=e265]
+              - generic:
+                - generic: How can I create Special Candies? - Candy Crush Saga
+              - generic [ref=e271]:
+                - checkbox "How can I create Special Candies? - Candy Crush Saga" [checked] [ref=e273]
+                - generic:
+                  - img
+            - generic [ref=e274] [cursor=pointer]:
+              - button "How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e275]
+              - button "더보기" [ref=e279]:
+                - img [ref=e281]
+              - generic:
+                - generic: How to Play And Deconstruct Match 3 Games Like A Pro
+              - generic [ref=e287]:
+                - checkbox "How to Play And Deconstruct Match 3 Games Like A Pro" [checked] [ref=e289]
+                - generic:
+                  - img
+            - generic [ref=e290] [cursor=pointer]:
+              - 'button "Java: Match-3 Game, Fill Algorithm Performance - Stack Overflow" [ref=e291]'
+              - button "더보기" [ref=e295]:
+                - img [ref=e297]
+              - generic:
+                - generic: "Java: Match-3 Game, Fill Algorithm Performance - Stack Overflow"
+              - generic [ref=e303]:
+                - 'checkbox "Java: Match-3 Game, Fill Algorithm Performance - Stack Overflow" [checked] [ref=e305]'
+                - generic:
+                  - img
+            - generic [ref=e306] [cursor=pointer]:
+              - button "Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e307]
+              - button "더보기" [ref=e311]:
+                - img [ref=e313]
+              - generic:
+                - generic: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified
+              - generic [ref=e319]:
+                - checkbox "Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [checked] [ref=e321]
+                - generic:
+                  - img
+            - generic [ref=e322] [cursor=pointer]:
+              - button "Match 3 - Candy Tile-Match - App Store - Apple" [ref=e323]
+              - button "더보기" [ref=e327]:
+                - img [ref=e329]
+              - generic:
+                - generic: Match 3 - Candy Tile-Match - App Store - Apple
+              - generic [ref=e335]:
+                - checkbox "Match 3 - Candy Tile-Match - App Store - Apple" [checked] [ref=e337]
+                - generic:
+                  - img
+            - generic [ref=e338] [cursor=pointer]:
+              - button "Match 3 - Catlike Coding" [ref=e339]
+              - button "더보기" [ref=e343]:
+                - img [ref=e345]
+              - generic:
+                - generic: Match 3 - Catlike Coding
+              - generic [ref=e351]:
+                - checkbox "Match 3 - Catlike Coding" [checked] [ref=e353]
+                - generic:
+                  - img
+            - generic [ref=e354] [cursor=pointer]:
+              - button "Match 3 Basics | Hidden City Wiki - Fandom" [ref=e355]
+              - button "더보기" [ref=e359]:
+                - img [ref=e361]
+              - generic:
+                - generic: Match 3 Basics | Hidden City Wiki - Fandom
+              - generic [ref=e367]:
+                - checkbox "Match 3 Basics | Hidden City Wiki - Fandom" [checked] [ref=e369]
+                - generic:
+                  - img
+            - generic [ref=e370] [cursor=pointer]:
+              - button "Match 3 Game - Wax Studios" [ref=e371]
+              - button "더보기" [ref=e375]:
+                - img [ref=e377]
+              - generic:
+                - generic: Match 3 Game - Wax Studios
+              - generic [ref=e383]:
+                - checkbox "Match 3 Game - Wax Studios" [checked] [ref=e385]
+                - generic:
+                  - img
+            - generic [ref=e386] [cursor=pointer]:
+              - button "Match 3 Games | What Are Match Three Games & How create them - iLogos Game Studios" [ref=e387]
+              - button "더보기" [ref=e391]:
+                - img [ref=e393]
+              - generic:
+                - generic: Match 3 Games | What Are Match Three Games & How create them - iLogos Game Studios
+              - generic [ref=e399]:
+                - checkbox "Match 3 Games | What Are Match Three Games & How create them - iLogos Game Studios" [checked] [ref=e401]
+                - generic:
+                  - img
+            - generic [ref=e402] [cursor=pointer]:
+              - button "Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e403]
+              - button "더보기" [ref=e407]:
+                - img [ref=e409]
+              - generic:
+                - generic: Match 3 level design study — Building three Candy Crush levels | by ...
+              - generic [ref=e415]:
+                - checkbox "Match 3 level design study — Building three Candy Crush levels | by ..." [checked] [ref=e417]
+                - generic:
+                  - img
+            - generic [ref=e418] [cursor=pointer]:
+              - 'button "Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e419]'
+              - button "더보기" [ref=e423]:
+                - img [ref=e425]
+              - generic:
+                - generic: "Match-3 Game Design: What Is It & How to Make - VSQUAD Studio"
+              - generic [ref=e431]:
+                - 'checkbox "Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [checked] [ref=e433]'
+                - generic:
+                  - img
+            - generic [ref=e434] [cursor=pointer]:
+              - button "Match-3 Game Development - Game-Ace" [ref=e435]
+              - button "더보기" [ref=e439]:
+                - img [ref=e441]
+              - generic:
+                - generic: Match-3 Game Development - Game-Ace
+              - generic [ref=e447]:
+                - checkbox "Match-3 Game Development - Game-Ace" [checked] [ref=e449]
+                - generic:
+                  - img
+            - generic [ref=e450] [cursor=pointer]:
+              - 'button "Match-3 game design : r/gamedesign - Reddit" [ref=e451]'
+              - button "더보기" [ref=e455]:
+                - img [ref=e457]
+              - generic:
+                - generic: "Match-3 game design : r/gamedesign - Reddit"
+              - generic [ref=e463]:
+                - 'checkbox "Match-3 game design : r/gamedesign - Reddit" [checked] [ref=e465]'
+                - generic:
+                  - img
+            - generic [ref=e466] [cursor=pointer]:
+              - button "Match-three puzzle games algorithm - Game Development Stack Exchange" [ref=e467]
+              - button "더보기" [ref=e471]:
+                - img [ref=e473]
+              - generic:
+                - generic: Match-three puzzle games algorithm - Game Development Stack Exchange
+              - generic [ref=e479]:
+                - checkbox "Match-three puzzle games algorithm - Game Development Stack Exchange" [checked] [ref=e481]
+                - generic:
+                  - img
+            - generic [ref=e482] [cursor=pointer]:
+              - 'button "Object-oriented vs Data-oriented design : r/Unity3D - Reddit" [ref=e483]'
+              - button "더보기" [ref=e487]:
+                - img [ref=e489]
+              - generic:
+                - generic: "Object-oriented vs Data-oriented design : r/Unity3D - Reddit"
+              - generic [ref=e495]:
+                - 'checkbox "Object-oriented vs Data-oriented design : r/Unity3D - Reddit" [checked] [ref=e497]'
+                - generic:
+                  - img
+            - generic [ref=e498] [cursor=pointer]:
+              - button "Optimization Approaches for Project Assets - Unity Learn" [ref=e499]
+              - button "더보기" [ref=e503]:
+                - img [ref=e505]
+              - generic:
+                - generic: Optimization Approaches for Project Assets - Unity Learn
+              - generic [ref=e511]:
+                - checkbox "Optimization Approaches for Project Assets - Unity Learn" [checked] [ref=e513]
+                - generic:
+                  - img
+            - generic [ref=e514] [cursor=pointer]:
+              - button "Optimize Sprite Atlas usage and size for improved performance - Unity - Manual" [ref=e515]
+              - button "더보기" [ref=e519]:
+                - img [ref=e521]
+              - generic:
+                - generic: Optimize Sprite Atlas usage and size for improved performance - Unity - Manual
+              - generic [ref=e527]:
+                - checkbox "Optimize Sprite Atlas usage and size for improved performance - Unity - Manual" [checked] [ref=e529]
+                - generic:
+                  - img
+            - generic [ref=e530] [cursor=pointer]:
+              - button "Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e531]
+              - button "더보기" [ref=e535]:
+                - img [ref=e537]
+              - generic:
+                - generic: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI
+              - generic [ref=e543]:
+                - checkbox "Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [checked] [ref=e545]
+                - generic:
+                  - img
+            - generic [ref=e546] [cursor=pointer]:
+              - button "Optimizing performance - Unity - Manual" [ref=e547]
+              - button "더보기" [ref=e551]:
+                - img [ref=e553]
+              - generic:
+                - generic: Optimizing performance - Unity - Manual
+              - generic [ref=e559]:
+                - checkbox "Optimizing performance - Unity - Manual" [checked] [ref=e561]
+                - generic:
+                  - img
+            - generic [ref=e562] [cursor=pointer]:
+              - button "Secrets to Building a Successful Match-3 Game from Scratch - Gamecrio" [ref=e563]
+              - button "더보기" [ref=e567]:
+                - img [ref=e569]
+              - generic:
+                - generic: Secrets to Building a Successful Match-3 Game from Scratch - Gamecrio
+              - generic [ref=e575]:
+                - checkbox "Secrets to Building a Successful Match-3 Game from Scratch - Gamecrio" [checked] [ref=e577]
+                - generic:
+                  - img
+            - generic [ref=e578] [cursor=pointer]:
+              - 'button "Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e579]'
+              - button "더보기" [ref=e583]:
+                - img [ref=e585]
+              - generic:
+                - generic: "Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio"
+              - generic [ref=e591]:
+                - 'checkbox "Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [checked] [ref=e593]'
+                - generic:
+                  - img
+            - generic [ref=e594] [cursor=pointer]:
+              - button "Squeezing more juice out of your game design! - GameAnalytics" [ref=e595]
+              - button "더보기" [ref=e599]:
+                - img [ref=e601]
+              - generic:
+                - generic: Squeezing more juice out of your game design! - GameAnalytics
+              - generic [ref=e607]:
+                - checkbox "Squeezing more juice out of your game design! - GameAnalytics" [checked] [ref=e609]
+                - generic:
+                  - img
+            - generic [ref=e610] [cursor=pointer]:
+              - 'button "The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e611]'
+              - button "더보기" [ref=e615]:
+                - img [ref=e617]
+              - generic:
+                - generic: "The Logic Behind Match-3 Games: Building with Unity & C# - Azumo"
+              - generic [ref=e623]:
+                - 'checkbox "The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [checked] [ref=e625]'
+                - generic:
+                  - img
+            - generic [ref=e626] [cursor=pointer]:
+              - button "Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e627]
+              - button "더보기" [ref=e631]:
+                - img [ref=e633]
+              - generic:
+                - generic: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ...
+              - generic [ref=e639]:
+                - checkbox "Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [checked] [ref=e641]
+                - generic:
+                  - img
+            - generic [ref=e642] [cursor=pointer]:
+              - button "What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e643]
+              - button "더보기" [ref=e647]:
+                - img [ref=e649]
+              - generic:
+                - generic: What Special Bomb Combinations can I make? — Mystery Match Village Help Center
+              - generic [ref=e655]:
+                - checkbox "What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [checked] [ref=e657]
+                - generic:
+                  - img
+            - generic [ref=e658] [cursor=pointer]:
+              - button "What is a Match 3? How to do it? Workflow Included - RetroStyle Games" [ref=e659]
+              - button "더보기" [ref=e663]:
+                - img [ref=e665]
+              - generic:
+                - generic: What is a Match 3? How to do it? Workflow Included - RetroStyle Games
+              - generic [ref=e671]:
+                - checkbox "What is a Match 3? How to do it? Workflow Included - RetroStyle Games" [checked] [ref=e673]
+                - generic:
+                  - img
+            - generic [ref=e674] [cursor=pointer]:
+              - button "What special tiles exist in Match 3 mini-games? - G5 Entertainment" [ref=e675]
+              - button "더보기" [ref=e679]:
+                - img [ref=e681]
+              - generic:
+                - generic: What special tiles exist in Match 3 mini-games? - G5 Entertainment
+              - generic [ref=e687]:
+                - checkbox "What special tiles exist in Match 3 mini-games? - G5 Entertainment" [checked] [ref=e689]
+                - generic:
+                  - img
+            - generic [ref=e690] [cursor=pointer]:
+              - button "What techniques do you use to optimize performance in 2D games made with Unity?" [ref=e691]
+              - button "더보기" [ref=e695]:
+                - img [ref=e697]
+              - generic:
+                - generic: What techniques do you use to optimize performance in 2D games made with Unity?
+              - generic [ref=e703]:
+                - checkbox "What techniques do you use to optimize performance in 2D games made with Unity?" [checked] [ref=e705]
+                - generic:
+                  - img
+            - generic [ref=e706] [cursor=pointer]:
+              - 'button "You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e707]'
+              - button "더보기" [ref=e711]:
+                - img [ref=e713]
+              - generic:
+                - generic: "You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit"
+              - generic [ref=e719]:
+                - 'checkbox "You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [checked] [ref=e721]'
+                - generic:
+                  - img
+            - generic [ref=e722] [cursor=pointer]:
+              - 'button "sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e723]'
+              - button "더보기" [ref=e727]:
+                - img [ref=e729]
+              - generic:
+                - generic: "sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub"
+              - generic [ref=e735]:
+                - 'checkbox "sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [checked] [ref=e737]'
+                - generic:
+                  - img
+            - generic [ref=e738] [cursor=pointer]:
+              - button "which flood-fill algorithm is better for performance? - Codemia" [ref=e739]
+              - button "더보기" [ref=e743]:
+                - img [ref=e745]
+              - generic:
+                - generic: which flood-fill algorithm is better for performance? - Codemia
+              - generic [ref=e751]:
+                - checkbox "which flood-fill algorithm is better for performance? - Codemia" [checked] [ref=e753]
+                - generic:
+                  - img
+      - generic [ref=e755]:
+        - generic [ref=e756]:
+          - heading "채팅" [level=2] [ref=e758]
+          - generic [ref=e759]:
+            - button "노트북 구성" [ref=e760] [cursor=pointer]:
+              - img [ref=e761]: tune
+            - button "채팅 옵션" [ref=e764] [cursor=pointer]:
+              - img [ref=e765]: more_vert
+        - generic [ref=e768]:
+          - generic [ref=e769]:
+            - generic [ref=e770]:
+              - generic [ref=e771] [cursor=pointer]: 🧩
+              - heading "Match-3 Game Design Mechanics and Engineering Strategies" [level=1] [ref=e772]
+              - generic [ref=e773]: 소스 38개
+              - paragraph [ref=e958]:
+                - text: 제공된 자료들은
+                - strong [ref=e959]: 매치 3 퍼즐 게임의 기획, 디자인 및 기술적 구현
+                - text: 에 관한 포괄적인 지식을 담고 있습니다. 게임 개발의 핵심인
+                - strong [ref=e960]: 유한 상태 머신(FSM) 아키텍처
+                - text: 와 데이터-시각 계층 분리 전략을 통해 논리적 안정성을 확보하는 방법을 상세히 설명합니다. 또한, 45가지 이상의
+                - strong [ref=e961]: 레벨 기믹과 특수 아이템
+                - text: 의 메커니즘을 분석하여 사용자에게 지속적인 재미를 제공하는 디자인 요소를 다룹니다.
+                - strong [ref=e962]: 캔디크러쉬사가
+                - text: 와 같은 성공 사례를 바탕으로 난이도 조절과 스테이지 구성의 철학을 제시하며 전문적인 분석 기준도 함께 제안합니다. 마지막으로
+                - strong [ref=e963]: AI 시뮬레이션
+                - text: 을 활용한 밸런스 검증과 시각적 몰입감을 높이는 연출 기법 등 최신 제작 트렌드와 최적화 방안을 통합적으로 아우르고 있습니다.
+              - generic [ref=e964]:
+                - button "메모에 저장" [ref=e965]:
+                  - img [ref=e966]: keep
+                  - generic [ref=e967]: 메모에 저장
+                - button "요약 복사" [ref=e970] [cursor=pointer]:
+                  - img [ref=e971]: copy_all
+                - button "만족스러운 요약" [ref=e974] [cursor=pointer]:
+                  - img [ref=e975]: thumb_up
+                - button "불만족스러운 요약" [ref=e978] [cursor=pointer]:
+                  - img [ref=e979]: thumb_down
+              - generic [ref=e984]:
+                - button "매치 3 게임의 핵심 시스템인 FSM의 역할은 무엇인가요?" [ref=e985] [cursor=pointer]:
+                  - generic [ref=e986]: 매치 3 게임의 핵심 시스템인 FSM의 역할은 무엇인가요?
+                - button "특수 타일을 생성하는 4/5개 매칭의 주요 규칙을 알려주세요." [ref=e987] [cursor=pointer]:
+                  - generic [ref=e988]: 특수 타일을 생성하는 4/5개 매칭의 주요 규칙을 알려주세요.
+                - button "게임의 재미를 높이는 45가지 장애물과 기믹에는 어떤 것이 있나요?" [ref=e989] [cursor=pointer]:
+                  - generic [ref=e990]: 게임의 재미를 높이는 45가지 장애물과 기믹에는 어떤 것이 있나요?
+            - generic [ref=e88802]: 오늘 • PM 3:36
+            - generic [ref=e88803]:
+              - 'heading "노트북 개요는 이미 알고 있으니 생략해주세요. 구체적인 질문입니다: 상용 Match3 게임(캔디크러쉬 등)에서 수천 개의 레벨 맵을 어떻게 대량 제작하나요? CSV나 Excel로 맵 데이터를 관리하는 파이프라인이 있나요? Unity에서 Custom Inspector로 시각적 그리드 레벨 에디터를 만드는 방법은? 기획자가 코드 없이 레벨을 찍어낼 수 있는 도구는 어떤 게 있나요?" [level=3] [ref=e88809]':
+                - paragraph [ref=e88810]: "노트북 개요는 이미 알고 있으니 생략해주세요. 구체적인 질문입니다: 상용 Match3 게임(캔디크러쉬 등)에서 수천 개의 레벨 맵을 어떻게 대량 제작하나요? CSV나 Excel로 맵 데이터를 관리하는 파이프라인이 있나요? Unity에서 Custom Inspector로 시각적 그리드 레벨 에디터를 만드는 방법은? 기획자가 코드 없이 레벨을 찍어낼 수 있는 도구는 어떤 게 있나요?"
+              - generic [ref=e88813]:
+                - generic [ref=e88817]:
+                  - generic [ref=e88819]:
+                    - text: 1. 상용 Match3 게임(캔디크러쉬 등)의 수천 개 레벨 대량 제작 파이프라인 캔디크러쉬사가와 같은 게임은 10,000개 이상의 스테이지를 보유하고 있으며, 플레이어의 콘텐츠 소비 속도를 맞추기 위해 매주 새로운 레벨을 업데이트해야 합니다
+                    - 'button "1: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e88821] [cursor=pointer]':
+                      - 'generic "1: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e88822]': "1"
+                    - text: . 이를 달성하기 위한 상용 게임의 대량 제작 파이프라인은 다음과 같이 구축됩니다.
+                  - list [ref=e88823]:
+                    - listitem [ref=e88825]:
+                      - text: "레벨 데이터의 독립과 원격 배포: 레벨 데이터를 게임 클라이언트의 핵심 코드(Monolithic game repo)와 완벽히 분리합니다"
+                      - 'button "2: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e88827] [cursor=pointer]':
+                        - 'generic "2: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e88828]': "2"
+                      - text: . Addressables나 커스텀 에셋 번들(Asset Bundle) 시스템을 구축하여, 스토어 앱 업데이트 과정 없이도 기획자(LiveOps 팀)가 독립적으로 새로운 레벨 콘텐츠를 프로덕션에 배포할 수 있게 만듭니다
+                      - 'button "3: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e88830] [cursor=pointer]':
+                        - 'generic "3: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e88831]': "3"
+                      - text: .
+                    - listitem [ref=e88833]:
+                      - text: "AI를 활용한 밸런싱 자동화: 수만 개의 레벨 난이도를 사람이 직접 테스트하는 것은 불가능하므로, 기계 학습(Machine Learning) 기반의 자동 플레이 AI를 도입합니다"
+                      - 'button "4: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e88835] [cursor=pointer]':
+                        - 'generic "4: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e88836]': "4"
+                      - 'button "5: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e88838] [cursor=pointer]':
+                        - 'generic "5: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e88839]': "5"
+                      - text: . 주로 MCTS(몬테카를로 트리 탐색)이나 PPO, SAC 같은 강화학습 알고리즘을 사용해 AI가 수만 번의 시뮬레이션을 돌려 클리어 확률을 산출하고 난이도를 검증합니다
+                      - 'button "6: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e88841] [cursor=pointer]':
+                        - 'generic "6: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e88842]': "6"
+                      - button [ref=e88844] [cursor=pointer]:
+                        - img [ref=e88845]: more_horiz
+                      - text: .
+                    - listitem [ref=e88847]:
+                      - text: "아웃소싱 및 라이브옵스(LiveOps) 파이프라인: 대형 퍼블리셔들은 Room 8 Studio와 같은 레벨 디자인 전문 스튜디오에 요구사항과 밸런스 시트를 제공하고, 매월 40~80개 이상의 테스트 완료된 레벨을 정기적으로 납품받아 서버에 추가하는 식으로 파이프라인을 굴립니다"
+                      - 'button "9: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88849] [cursor=pointer]':
+                        - 'generic "9: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88850]': "9"
+                      - 'button "10: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88852] [cursor=pointer]':
+                        - 'generic "10: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88853]': "10"
+                      - text: .
+                  - generic [ref=e88855]:
+                    - text: 2. CSV나 Excel을 활용한 맵 데이터 관리 시스템 상용 게임 제작 시 CSV와 Excel 형태의 '밸런스 시트'는 필수적으로 사용됩니다
+                    - 'button "9: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88857] [cursor=pointer]':
+                      - 'generic "9: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88858]': "9"
+                    - text: . 이전 대화에서 다루었듯, Excel/CSV는 각 레벨의 턴 수 제한, 목표 점수, 드랍되는 특수 블록의 확률(가중치) 등 수치적인 메타 데이터를 한눈에 관리하고 밸런싱하는 데 압도적으로 유리합니다. 하지만 타일 위에 얼음이 있고 그 위에 사슬이 있는 등 복잡한 '다중 레이어(Multi-layered)'의 공간적 배치를 엑셀의 셀만으로 직관적으로 표현하기는 어렵습니다. 따라서 엑셀은 전체적인 통계와 난이도 수치를 통제하는 용도로 쓰이고, 실제 블록의 시각적 배치는 별도의 레벨 에디터 툴과 결합하여 사용되는 것이 일반적입니다.
+                  - generic [ref=e88860]:
+                    - text: "3. Unity에서 Custom Inspector로 시각적 그리드 레벨 에디터를 만드는 방법 유니티는 기본적으로 다차원 배열(예: 2D 배열)을 직렬화(Serialize)하지 못하므로 핫 리로딩이나 에디터 상태 저장이 불가능합니다"
+                    - 'button "11: Match 3 - Catlike Coding" [ref=e88862] [cursor=pointer]':
+                      - 'generic "11: Match 3 - Catlike Coding" [ref=e88863]': "11"
+                    - text: . 따라서 시각적 에디터를 만들려면 데이터 구조부터 맞춰야 합니다.
+                  - list [ref=e88864]:
+                    - listitem [ref=e88866]:
+                      - text: "1차원 데이터 구조체: 메모리 효율과 직렬화를 위해 데이터를"
+                      - code [ref=e88867]: Grid2D<T>
+                      - text: 와 같은 1차원 배열로 평면화하여 구성합니다
+                      - 'button "11: Match 3 - Catlike Coding" [ref=e88869] [cursor=pointer]':
+                        - 'generic "11: Match 3 - Catlike Coding" [ref=e88870]': "11"
+                      - text: .
+                    - listitem [ref=e88872]:
+                      - text: "ScriptableObject 및 Custom Editor 작성: 레벨의 설정값을 담을"
+                      - code [ref=e88873]: ScriptableObject
+                      - text: "(예:"
+                      - code [ref=e88874]: LevelData
+                      - text: )를 생성한 후, 유니티의 IMGUI 또는 UI Toolkit을 이용해 커스텀 에디터(Custom Editor) 스크립트를 작성합니다.
+                    - listitem [ref=e88876]:
+                      - text: "Inspector 렌더링: 커스텀 에디터 상에서 1차원 배열을 루프 문으로 돌려 2D 그리드 버튼(버튼의"
+                      - code [ref=e88877]: x, y
+                      - text: 인덱스 계산) 모양으로 Inspector 창에 그려줍니다. 기획자가 특정 칸을 마우스로 클릭하면 해당 배열 인덱스의 값이 지정된 장애물이나 타일 종류로 직관적으로 토글(Toggle)되도록 구현합니다.
+                  - generic [ref=e88879]: 4. 기획자가 코드 없이 레벨을 찍어낼 수 있는 도구
+                  - list [ref=e88880]:
+                    - listitem [ref=e88882]:
+                      - text: "Unity Editor's Level Builder (유니티 내장/확장 레벨 빌더): 개발자가 유니티 에디터 창을 커스텀하여 기획자 전용 윈도우를 만들어주면, 기획자는 **개발자의 도움 없이도 레벨을 조립하고 에디터 내에서 즉시 플레이 테스트(Playtest)**를 수행할 수 있습니다"
+                      - 'button "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e88884] [cursor=pointer]':
+                        - 'generic "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e88885]': "12"
+                      - text: .
+                    - listitem [ref=e88887]: "전용 드래그 앤 드롭 레벨 에디터: Candy Crush 같은 대형 스튜디오는 유니티 외부 혹은 유니티 툴로 동작하는 독자적인 위지위그(WYSIWYG) 레벨 에디터를 구축합니다. 기획자가 브러시 칠하듯 장애물과 타일을 배치하면, 이 에디터가 결과물을 가벼운 JSON 형식으로 변환하여 백오피스 서버로 직렬화 전송하는 도구를 사용합니다."
+                    - listitem [ref=e88889]:
+                      - text: "동적 난이도 조절 시스템 연동: 기획자가 에디터로 찍어낸 레벨들은 유저의 실력 데이터를 수집하는 머신러닝 시스템과 결합되어, 특정 구간에서 유저가 어려워하면 게임이 알아서 동적으로 게임 변수(타일 드랍률 등)를 조절하도록 돕는 툴을 함께 활용하기도 합니다"
+                      - 'button "13: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88891] [cursor=pointer]':
+                        - 'generic "13: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e88892]': "13"
+                      - text: .
+                - generic [ref=e88893]:
+                  - button "메시지를 메모에 저장" [ref=e88894]:
+                    - img [ref=e88895]: keep_pin
+                    - generic [ref=e88896]: 메모에 저장
+                  - generic [ref=e88899]:
+                    - button "클립보드에 모델 대답 복사" [ref=e88903] [cursor=pointer]:
+                      - img [ref=e88904]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e88910] [cursor=pointer]:
+                      - img [ref=e88911]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e88917] [cursor=pointer]:
+                      - img [ref=e88918]: thumb_down
+            - generic [ref=e88921]:
+              - 'heading "Match3 게임 리팩토링 계획을 세웠는데 빠진 것이 있는지 검토해주세요. 현재 계획: Phase1: Prefab 에셋(타일8색 Prefab Variant, 파티클Prefab 4종, UI Prefab, ScriptableObject, Sprite Atlas), Phase2: Model분리(BoardModel, MatchFinder, DropSimulator 순수C#), Phase3: Controller+FSM(GameStateMachine, InputController, GameController), Phase4: View분리+Prefab연결+오브젝트풀링+DOTween, Phase5: UI Prefab기반 전환(LevelSelect, HUD, Booster, GameOver), Phase6: 사운드개선(프로시저럴→실제음원+AudioMixer), Phase7: 데이터저장(PlayerPrefs→JSON+REST API준비), Phase8: GameGrid.cs제거+최종정리, Phase9: 레벨에디터도구(Custom Inspector그리드+CSV임포트). 이 계획에서 Match3 게임 개발에 필수적인데 빠진 항목이 있다면 알려주세요." [level=3] [ref=e88927]':
+                - paragraph [ref=e88928]: "Match3 게임 리팩토링 계획을 세웠는데 빠진 것이 있는지 검토해주세요. 현재 계획: Phase1: Prefab 에셋(타일8색 Prefab Variant, 파티클Prefab 4종, UI Prefab, ScriptableObject, Sprite Atlas), Phase2: Model분리(BoardModel, MatchFinder, DropSimulator 순수C#), Phase3: Controller+FSM(GameStateMachine, InputController, GameController), Phase4: View분리+Prefab연결+오브젝트풀링+DOTween, Phase5: UI Prefab기반 전환(LevelSelect, HUD, Booster, GameOver), Phase6: 사운드개선(프로시저럴→실제음원+AudioMixer), Phase7: 데이터저장(PlayerPrefs→JSON+REST API준비), Phase8: GameGrid.cs제거+최종정리, Phase9: 레벨에디터도구(Custom Inspector그리드+CSV임포트). 이 계획에서 Match3 게임 개발에 필수적인데 빠진 항목이 있다면 알려주세요."
+              - generic [ref=e88931]:
+                - generic [ref=e88935]:
+                  - generic [ref=e88937]: 제시해주신 9단계 리팩토링 계획은 MVC 아키텍처와 FSM(상태 머신), 오브젝트 풀링 등 핵심적인 디자인 패턴을 잘 포괄하고 있는 매우 훌륭한 구조입니다.
+                  - generic [ref=e88939]: 하지만 상용 수준의 매치 3 게임(Candy Crush, Royal Match 등)을 개발하기 위한 관점에서 검토했을 때, 게임의 '재미(전략성)'를 담당하는 코어 로직과 라이브 서비스 유지를 위한 핵심 인프라 몇 가지가 누락되어 있습니다.
+                  - generic [ref=e88941]: 계획에 반드시 추가되어야 할 5가지 필수 항목과 삽입할 단계를 제안해 드립니다.
+                  - heading "1. 특수 타일 생성 및 상호작용 매트릭스 (Phase 2 모델 분리 시 추가)" [level=3] [ref=e88943]
+                  - generic [ref=e88945]:
+                    - text: 단순히 3개를 맞추는
+                    - code [ref=e88946]: MatchFinder
+                    - text: 로직만으로는 단조로움을 피할 수 없습니다.
+                  - list [ref=e88947]:
+                    - listitem [ref=e88949]:
+                      - text: "모양 인식(Shape Recognition): 4개 직선 매치(가로/세로 줄무늬), T/L자 5개 매치(폭탄/십자), 5개 직선 매치(컬러 밤) 등 매칭된 타일의 기하학적 형태를 인식하고 그에 맞는 특수 타일을 스폰하는 로직이 필요합니다"
+                      - 'button "1: How can I create Special Candies? - Candy Crush Saga" [ref=e88951] [cursor=pointer]':
+                        - 'generic "1: How can I create Special Candies? - Candy Crush Saga" [ref=e88952]': "1"
+                      - button [ref=e88954] [cursor=pointer]:
+                        - img [ref=e88955]: more_horiz
+                      - text: .
+                    - listitem [ref=e88957]:
+                      - text: "시너지 매트릭스(Synergy Matrix): 특수 타일끼리 교환했을 때 발생하는 거대한 연쇄 반응(예: 컬러 밤 + 폭탄 조합 등)을 처리하기 위한 우선순위 및 충돌 없는 파괴 로직이"
+                      - code [ref=e88958]: BoardModel
+                      - text: 에 반드시 포함되어야 합니다
+                      - 'button "3: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e88960] [cursor=pointer]':
+                        - 'generic "3: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e88961]': "3"
+                      - 'button "4: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e88963] [cursor=pointer]':
+                        - 'generic "4: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e88964]': "4"
+                      - text: .
+                  - heading "2. 장애물(Blockers) 및 기믹 프레임워크 (Phase 2 모델 분리 시 추가)" [level=3] [ref=e88966]
+                  - generic [ref=e88968]: 현재 계획에는 얼음, 사슬, 상자 등 레벨 디자인의 핵심인 장애물 시스템이 빠져 있습니다.
+                  - list [ref=e88969]:
+                    - listitem [ref=e88971]:
+                      - text: 타일의 이동을 막는 '잠금형(Chain)', 인접 매치로만 타격을 입는 '고정형(Stone/Ice)', 제거하지 않으면 증식하는 '증식형(Fog)' 등 다양한 행동 방식을 가진 장애물들이 확장이 가능하도록 객체 지향적(또는 데이터 지향적)인 프레임워크로 설계되어야 합니다
+                      - 'button "5: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e88973] [cursor=pointer]':
+                        - 'generic "5: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e88974]': "5"
+                      - button [ref=e88976] [cursor=pointer]:
+                        - img [ref=e88977]: more_horiz
+                      - text: .
+                  - heading "3. 데드 보드(Dead Board) 감지 및 힌트/셔플 시스템 (Phase 2 & 3에 추가)" [level=3] [ref=e88979]
+                  - list [ref=e88980]:
+                    - listitem [ref=e88982]:
+                      - text: "유효 이동 탐색(FindMove): 보드 상에 매치가 가능한 타일 교환이 1개라도 남아있는지 스캔하는 알고리즘이 필요합니다"
+                      - 'button "8: Match 3 - Catlike Coding" [ref=e88984] [cursor=pointer]':
+                        - 'generic "8: Match 3 - Catlike Coding" [ref=e88985]': "8"
+                      - 'button "9: Match 3 - Catlike Coding" [ref=e88987] [cursor=pointer]':
+                        - 'generic "9: Match 3 - Catlike Coding" [ref=e88988]': "9"
+                      - text: .
+                    - listitem [ref=e88990]:
+                      - text: 일정 시간 입력이 없을 때 이 탐색 결과를 바탕으로 플레이어에게 힌트 애니메이션을 제공해야 합니다
+                      - 'button "8: Match 3 - Catlike Coding" [ref=e88992] [cursor=pointer]':
+                        - 'generic "8: Match 3 - Catlike Coding" [ref=e88993]': "8"
+                      - button [ref=e88995] [cursor=pointer]:
+                        - img [ref=e88996]: more_horiz
+                      - text: .
+                    - listitem [ref=e88998]:
+                      - text: 만약 유효한 이동이 단 하나도 없다면(Dead Board), 게임이 멈추지 않도록 자동으로 남은 타일들을 섞어주는 셔플(Shuffle) 로직이 필수적입니다
+                      - 'button "11: Match-3 game design : r/gamedesign - Reddit" [ref=e89000] [cursor=pointer]':
+                        - 'generic "11: Match-3 game design : r/gamedesign - Reddit" [ref=e89001]': "11"
+                      - 'button "12: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89003] [cursor=pointer]':
+                        - 'generic "12: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89004]': "12"
+                      - text: .
+                  - heading "4. Addressables를 활용한 콘텐츠 원격 배포 (Phase 9 레벨 에디터와 연계)" [level=3] [ref=e89006]
+                  - generic [ref=e89008]: Phase 9에 레벨 에디터 도구와 CSV 임포트를 계획하신 것은 좋지만, 생성된 수백~수천 개의 레벨 데이터를 어떻게 배포할지에 대한 계획이 필요합니다.
+                  - list [ref=e89009]:
+                    - listitem [ref=e89011]:
+                      - text: 레벨을 업데이트할 때마다 앱 스토어에 새 클라이언트를 심사받는 것은 라이브 서비스에서 치명적입니다
+                      - 'button "13: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89013] [cursor=pointer]':
+                        - 'generic "13: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89014]': "13"
+                      - text: .
+                    - listitem [ref=e89016]:
+                      - text: JSON이나 CSV로 추출된 레벨 데이터와 테마별 그래픽 프리팹을 Unity Addressables(또는 Asset Bundles)로 패키징하여, 앱 업데이트 없이 서버에서 원격으로 레벨 콘텐츠를 다운로드할 수 있는 파이프라인을 구축해야 합니다
+                      - 'button "13: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89018] [cursor=pointer]':
+                        - 'generic "13: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89019]': "13"
+                      - text: .
+                  - heading "5. 헤드리스(Headless) 자동 플레이 및 AI 밸런싱 테스트 (Phase 10으로 추가 권장)" [level=3] [ref=e89021]
+                  - generic [ref=e89023]:
+                    - text: Phase 2에서
+                    - code [ref=e89024]: BoardModel
+                    - text: ","
+                    - code [ref=e89025]: MatchFinder
+                    - text: ","
+                    - code [ref=e89026]: DropSimulator
+                    - text: 를 유니티 API(View)와 무관한 순수 C#으로 완벽히 분리하신다면, 이를 활용할 가장 큰 무기가 하나 생깁니다.
+                  - list [ref=e89027]:
+                    - listitem [ref=e89029]:
+                      - text: 바로 그래픽 렌더링 없이 초고속으로 게임 로직만 돌려보는 **헤드리스 테스트(Headless Testing)**입니다
+                      - 'button "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89031] [cursor=pointer]':
+                        - 'generic "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89032]': "14"
+                      - text: .
+                    - listitem [ref=e89034]:
+                      - text: 수천 개의 레벨 난이도를 사람이 직접 테스트하는 대신, 강화학습(PPO, SAC 알고리즘 등)이나 몬테카를로 트리 탐색(MCTS) 기반의 AI 에이전트가 수만 번 자동으로 플레이하며 클리어 확률과 적정 이동 횟수를 산출하고 난이도를 밸런싱하는 자동화 파이프라인을 구축할 수 있습니다
+                      - 'button "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89036] [cursor=pointer]':
+                        - 'generic "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89037]': "10"
+                      - button [ref=e89039] [cursor=pointer]:
+                        - img [ref=e89040]: more_horiz
+                      - text: . 이는 상용 매치 3 게임의 필수 공정입니다
+                      - 'button "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89042] [cursor=pointer]':
+                        - 'generic "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89043]': "10"
+                      - text: .
+                  - generic [ref=e89045]: "--------------------------------------------------------------------------------"
+                  - generic [ref=e89047]: 💡 리팩토링 진행 순서에 대한 주의사항 (Reminder) 현재 Phase 1에 "Prefab 에셋 우선 제작"이 배치되어 있습니다. 시각적 에셋을 미리 만들어 두는 것은 문제가 없으나, 기존의 1400줄짜리 갓 클래스(God Object)에 이 Prefab들을 선적용하려 하면 코드가 완전히 망가질 위험이 큽니다. 가장 안전한 리팩토링을 위해서는 반드시 Phase 2(순수 데이터 모델 분리)와 Phase 3(입력 및 흐름 제어 분리)의 코드 구조를 먼저 안정화시킨 뒤에, 껍데기만 남은 뷰 계층에 Phase 1에서 만든 Prefab과 Phase 4의 DOTween 연출을 연결(Sync)하시는 순서로 진행하시길 강력히 권장합니다.
+                - generic [ref=e89048]:
+                  - button "메시지를 메모에 저장" [ref=e89049]:
+                    - img [ref=e89050]: keep_pin
+                    - generic [ref=e89051]: 메모에 저장
+                  - generic [ref=e89054]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89058] [cursor=pointer]:
+                      - img [ref=e89059]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89065] [cursor=pointer]:
+                      - img [ref=e89066]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89072] [cursor=pointer]:
+                      - img [ref=e89073]: thumb_down
+            - generic [ref=e89076]:
+              - heading "Match3 게임에서 특수 타일 시스템을 구체적으로 설계하려면 어떻게 해야 하나요? 1) 4매치/5매치/L자/T자 매치 시 생성되는 특수 타일 종류(줄무늬, 폭탄, 레인보우 등)와 각각의 효과, 2) 특수 타일끼리 조합했을 때의 시너지 효과, 3) 이것을 코드로 구현할 때 어떤 클래스 구조가 좋은지 (Strategy 패턴? Enum? ScriptableObject?), 4) 특수 타일의 이펙트와 애니메이션은 어떻게 처리하는지 알려주세요." [level=3] [ref=e89082]:
+                - paragraph [ref=e89083]: Match3 게임에서 특수 타일 시스템을 구체적으로 설계하려면 어떻게 해야 하나요? 1) 4매치/5매치/L자/T자 매치 시 생성되는 특수 타일 종류(줄무늬, 폭탄, 레인보우 등)와 각각의 효과, 2) 특수 타일끼리 조합했을 때의 시너지 효과, 3) 이것을 코드로 구현할 때 어떤 클래스 구조가 좋은지 (Strategy 패턴? Enum? ScriptableObject?), 4) 특수 타일의 이펙트와 애니메이션은 어떻게 처리하는지 알려주세요.
+              - generic [ref=e89086]:
+                - generic [ref=e89090]:
+                  - generic [ref=e89092]:
+                    - text: 1) 매치 형태별 생성되는 특수 타일 종류와 효과 매치 3 알고리즘은 매칭된 타일의 기하학적 형태(Shape)와 개수를 인식하여 그에 맞는 특수 타일을 생성합니다
+                    - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89094] [cursor=pointer]':
+                      - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89095]': "1"
+                    - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89097] [cursor=pointer]':
+                      - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89098]': "2"
+                    - text: .
+                  - list [ref=e89099]:
+                    - listitem [ref=e89101]:
+                      - text: "4매치 (직선 배열): 줄무늬 타일 / 라인 폭탄 (Striped / Line Bomb) 가로 또는 세로로 4개가 연결되었을 때 생성되며, 플레이어가 마지막으로 스와이프한 방향에 따라 가로줄 또는 세로줄 전체를 즉시 지워버리는 효과를 냅니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89103] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89104]': "1"
+                      - button [ref=e89106] [cursor=pointer]:
+                        - img [ref=e89107]: more_horiz
+                      - text: .
+                    - listitem [ref=e89109]:
+                      - text: "5매치 (L자 또는 T자 배열): 폭탄 / 포장된 캔디 (Bomb / Wrapped) 가로와 세로 매칭이 동시에 교차할 때 생성됩니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89111] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89112]': "1"
+                      - text: . 작동 시 주변 3x3 반경(8개 타일)을 날려버리는 폭발을 일으키며, 종종 제자리에서 두 번 연속으로 폭발하여 강력한 파괴력을 냅니다
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89114] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89115]': "1"
+                      - button [ref=e89117] [cursor=pointer]:
+                        - img [ref=e89118]: more_horiz
+                      - text: .
+                    - listitem [ref=e89120]:
+                      - text: "5매치 (직선 배열): 컬러 밤 / 슈퍼 크리스탈 (Color Bomb / Supercrystal) 직선으로 5개가 정렬될 때 생성되는 최고 등급 타일입니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89122] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89123]': "1"
+                      - button [ref=e89125] [cursor=pointer]:
+                        - img [ref=e89126]: more_horiz
+                      - text: . 이 타일을 인접한 일반 타일과 교환하면, 보드 위에 존재하는 해당 색상의 모든 타일이 한 번에 일괄 제거됩니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89128] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89129]': "2"
+                      - button [ref=e89131] [cursor=pointer]:
+                        - img [ref=e89132]: more_horiz
+                      - text: .
+                    - listitem [ref=e89134]:
+                      - text: "(참고) 2x2 매치 (정사각형): 종이비행기 / 로켓 (Paper Plane / Rocket) 최근 게임 트렌드에 자주 등장하며, 목표 지점이나 가장 까다로운 장애물을 스스로 추적하여 타격하는 유도형 타일입니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89136] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89137]': "2"
+                      - text: .
+                  - generic [ref=e89139]:
+                    - text: 2) 특수 타일끼리 조합했을 때의 시너지 효과 두 개의 특수 타일이 인접해 있을 때 교환하면 거대한 연쇄 반응(Synergy)이 일어납니다
+                    - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89141] [cursor=pointer]':
+                      - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89142]': "2"
+                    - 'button "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89144] [cursor=pointer]':
+                      - 'generic "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89145]': "7"
+                    - text: .
+                  - list [ref=e89146]:
+                    - listitem [ref=e89148]:
+                      - text: "줄무늬 + 줄무늬 (Line + Line): 가로줄과 세로줄을 한 번에 날려버리는 거대한 십자(+) 모양의 폭발이 일어납니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89150] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89151]': "2"
+                      - 'button "8: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e89153] [cursor=pointer]':
+                        - 'generic "8: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e89154]': "8"
+                      - text: .
+                    - listitem [ref=e89156]:
+                      - text: "줄무늬 + 폭탄 (Line + Bomb): 가로와 세로 각각 세 줄씩(총 3x3 넓이의 십자 형태) 광범위하게 휩쓸며 수많은 장애물을 제거합니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89158] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89159]': "2"
+                      - 'button "8: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e89161] [cursor=pointer]':
+                        - 'generic "8: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e89162]': "8"
+                      - text: .
+                    - listitem [ref=e89164]:
+                      - text: "폭탄 + 폭탄 (Bomb + Bomb): 폭발 반경이 5x5 크기로 매우 넓어지며 두 번에 걸쳐 화면을 크게 타격합니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89166] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89167]': "2"
+                      - button [ref=e89169] [cursor=pointer]:
+                        - img [ref=e89170]: more_horiz
+                      - text: .
+                    - listitem [ref=e89172]:
+                      - text: "컬러 밤 + 줄무늬/폭탄/로켓: 컬러 밤과 교환한 타일과 동일한 색상의 보드 위 모든 타일이 해당 특수 타일로 일제히 변환된 후, 동시다발적으로 트리거되어 보드 전체를 초토화시킵니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89174] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89175]': "2"
+                      - button [ref=e89177] [cursor=pointer]:
+                        - img [ref=e89178]: more_horiz
+                      - text: .
+                    - listitem [ref=e89180]:
+                      - text: "컬러 밤 + 컬러 밤: 매치 3에서 가장 강력한 콤보로, 보드 위 모든 셀을 한 번씩 싹쓸이하며 얼음이나 금속 같은 장애물의 레이어도 한 단계 모두 파괴합니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89182] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89183]': "2"
+                      - button [ref=e89185] [cursor=pointer]:
+                        - img [ref=e89186]: more_horiz
+                      - text: .
+                  - generic [ref=e89188]:
+                    - text: 3) 코드로 구현 시 권장되는 클래스 구조 (OOP & ScriptableObject) 모든 폭발 로직을
+                    - code [ref=e89189]: Enum
+                    - text: 과 거대한
+                    - code [ref=e89190]: switch
+                    - text: 문으로 하드코딩하는 것은 확장성이 떨어지며 코드를 복잡하게 만듭니다
+                    - 'button "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89192] [cursor=pointer]':
+                      - 'generic "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89193]': "11"
+                    - text: . 효과적인 구조는 **데이터 정의(ScriptableObject)**와 **다형성(Polymorphism/Strategy 패턴)**을 조합하는 것입니다.
+                  - list [ref=e89194]:
+                    - listitem [ref=e89196]:
+                      - text: "ScriptableObject (데이터 및 설정 관리): 각 특수 타일이 사용할 시각적 아트 프리팹, 스폰 가중치, 폭발 반경, 점수 등의 정적 설정값을"
+                      - code [ref=e89197]: ScriptableObject
+                      - text: 로 관리하여 기획자가 코드 수정 없이 밸런싱할 수 있게 합니다
+                      - 'button "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89199] [cursor=pointer]':
+                        - 'generic "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89200]': "11"
+                      - 'button "12: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e89202] [cursor=pointer]':
+                        - 'generic "12: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e89203]': "12"
+                      - text: .
+                    - listitem [ref=e89205]:
+                      - text: "Strategy 패턴 / 오버라이딩 적용:"
+                      - code [ref=e89206]: Match3Piece
+                      - text: 나
+                      - code [ref=e89207]: PickupAbility
+                      - text: 같은 기본 클래스(또는 인터페이스)를 두고, 각 특수 타일 클래스가 이를 상속받게 합니다. 특정 타일이 터질 때
+                      - code [ref=e89208]: Trigger()
+                      - text: 또는
+                      - code [ref=e89209]: ActivateOn()
+                      - text: 메서드를 호출하도록 구현하면, 각 특수 타일이 가진 고유의 오버라이드(Override)된 폭발 반경 처리나 시너지 매트릭스 로직이 다형적으로 실행됩니다
+                      - 'button "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89211] [cursor=pointer]':
+                        - 'generic "11: Optimization Approaches for Project Assets - Unity Learn" [ref=e89212]': "11"
+                      - 'button "13: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e89214] [cursor=pointer]':
+                        - 'generic "13: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e89215]': "13"
+                      - text: .
+                    - listitem [ref=e89217]:
+                      - text: "동작 흐름:"
+                      - code [ref=e89218]: FindMatches()
+                      - text: 가 배열을 탐색하다가 기하학적 형태(L자, 4개 연결 등)를 인식하여
+                      - code [ref=e89219]: MatchInfo
+                      - text: 를 반환하면, 그에 맞는 전략 객체(특수 타일 로직)를 보드 데이터 배열에 스폰시킵니다
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89221] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89222]': "1"
+                      - text: .
+                  - generic [ref=e89224]:
+                    - text: 4) 특수 타일의 이펙트와 애니메이션 처리법 로직(Model) 상에서는 이미 데이터가 즉시 삭제되고 타일 낙하 계산이 끝났더라도, 시각적(View)으로는 극강의 만족감(Juicing)을 위해 애니메이션을 정교하게 제어해야 합니다
+                    - 'button "14: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89226] [cursor=pointer]':
+                      - 'generic "14: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89227]': "14"
+                    - text: .
+                  - list [ref=e89228]:
+                    - listitem [ref=e89230]:
+                      - text: "안티시페이션(Anticipation)과 히트스탑: 타일이 터지기 직전, 아주 짧은 순간 동안 타일이 부풀어 오르거나 미세하게 떨리는 애니메이션을 주어 폭발을 예고합니다. 거대 폭발 시엔 화면을 살짝 멈추는 효과를 가미해 충격량을 배가시킵니다"
+                      - 'button "15: Match 3 - Catlike Coding" [ref=e89232] [cursor=pointer]':
+                        - 'generic "15: Match 3 - Catlike Coding" [ref=e89233]': "15"
+                      - button [ref=e89235] [cursor=pointer]:
+                        - img [ref=e89236]: more_horiz
+                      - text: .
+                    - listitem [ref=e89238]:
+                      - text: "다층적(Layered) 파티클 시스템과 화면 흔들림: 단순한 이미지 삭제가 아니라, 부서지는 파편, 섬광 파티클, 연기를 유니티의"
+                      - code [ref=e89239]: Particle System
+                      - text: 으로 출력합니다
+                      - 'button "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89241] [cursor=pointer]':
+                        - 'generic "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89242]': "17"
+                      - 'button "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89244] [cursor=pointer]':
+                        - 'generic "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89245]': "18"
+                      - text: . 또한,
+                      - code [ref=e89246]: Screen Shake
+                      - text: 와 게임패드 햅틱 진동을 동기화하여 플레이어가 물리적인 타격감을 느끼게 합니다
+                      - 'button "16: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89248] [cursor=pointer]':
+                        - 'generic "16: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89249]': "16"
+                      - button [ref=e89251] [cursor=pointer]:
+                        - img [ref=e89252]: more_horiz
+                      - text: .
+                    - listitem [ref=e89254]:
+                      - text: "엄격한 애니메이션 시퀀싱 (타이밍 동기화): 이 모든 연출은"
+                      - code [ref=e89255]: Coroutine
+                      - text: 이나
+                      - code [ref=e89256]: DOTween
+                      - text: 을 통해 철저히 시퀀싱되어야 합니다. '1) 파티클 스폰 -> 2) 0.1초 동안 스케일 축소 -> 3) 0.15초 페이드 아웃 -> 4) 플로팅 점수 팝업 -> 5) 0.2초 후 빈 공간으로 낙하 시작' 과 같은 타이밍이 완벽하게 맞아야 시각적인 오류나 잘못된 매치 판정을 막을 수 있습니다
+                      - 'button "20: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89258] [cursor=pointer]':
+                        - 'generic "20: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89259]': "20"
+                      - 'button "21: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89261] [cursor=pointer]':
+                        - 'generic "21: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89262]': "21"
+                      - text: . 연속 폭발 시 사운드 피치(Pitch)를 점진적으로 높여 쾌감을 고조시키는 기법도 필수적입니다
+                      - 'button "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89264] [cursor=pointer]':
+                        - 'generic "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89265]': "17"
+                      - 'button "22: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89267] [cursor=pointer]':
+                        - 'generic "22: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89268]': "22"
+                      - text: .
+                - generic [ref=e89269]:
+                  - button "메시지를 메모에 저장" [ref=e89270]:
+                    - img [ref=e89271]: keep_pin
+                    - generic [ref=e89272]: 메모에 저장
+                  - generic [ref=e89275]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89279] [cursor=pointer]:
+                      - img [ref=e89280]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89286] [cursor=pointer]:
+                      - img [ref=e89287]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89293] [cursor=pointer]:
+                      - img [ref=e89294]: thumb_down
+            - generic [ref=e89297]:
+              - 'heading "Match3 게임의 수익화 모델과 메타게임을 구체적으로 설계하려면 어떻게 해야 하나요? 1) IAP(인앱결제) 아이템 종류와 가격 전략, 2) 보상형 광고 배치 위치와 타이밍, 3) 시즌패스/배틀패스 구현 방법, 4) 메타게임(퍼즐 외 장기 목표: 스토리, 꾸미기, 수집 등)의 종류와 퍼즐과의 연동 방법, 5) 일일 보상/출석 시스템, 6) 소셜 기능(리더보드, 친구 도움 등)을 알려주세요. Unity에서 이것들을 구현할 때 어떤 서비스/SDK를 쓰나요?" [level=3] [ref=e89303]':
+                - paragraph [ref=e89304]: "Match3 게임의 수익화 모델과 메타게임을 구체적으로 설계하려면 어떻게 해야 하나요? 1) IAP(인앱결제) 아이템 종류와 가격 전략, 2) 보상형 광고 배치 위치와 타이밍, 3) 시즌패스/배틀패스 구현 방법, 4) 메타게임(퍼즐 외 장기 목표: 스토리, 꾸미기, 수집 등)의 종류와 퍼즐과의 연동 방법, 5) 일일 보상/출석 시스템, 6) 소셜 기능(리더보드, 친구 도움 등)을 알려주세요. Unity에서 이것들을 구현할 때 어떤 서비스/SDK를 쓰나요?"
+              - generic [ref=e89307]:
+                - generic [ref=e89311]:
+                  - generic [ref=e89313]:
+                    - text: 1) IAP(인앱결제) 아이템 종류와 가격 전략 매치 3 게임의 IAP 아이템은 주로 추가 이동 횟수(Extra moves), 어려운 레벨을 돌파하기 위한 부스터 및 파워업, 소진된 하트/생명력(Lives), 꾸미기 외형 아이템, 진행을 빠르게 돕는 가속기(Progression Boosters) 등으로 구성됩니다
+                    - 'button "1: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89315] [cursor=pointer]':
+                      - 'generic "1: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89316]': "1"
+                    - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89318] [cursor=pointer]':
+                      - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89319]': "2"
+                    - text: . 가격 및 판매 전략은 레벨 난이도 디자인과 밀접하게 연동되어야 합니다. 초기 레벨(1~20)에서는 결제를 유도하지 않고 유저를 훅(Hook)하는 데 집중하며, 50레벨 이후부터 서서히 난이도를 높여 생명력 소모와 소액 결제를 유도하고, 200레벨 이상의 하드코어 단계에서 부스터의 필요성을 극대화하여 헌신적인 플레이어들의 반복 결제를 이끌어내는 전략을 씁니다
+                    - 'button "1: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89321] [cursor=pointer]':
+                      - 'generic "1: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89322]': "1"
+                    - text: . 단, 부스터 없이는 절대 깰 수 없는 노골적인 '페이 투 윈(Pay-to-win)' 구조는 피해야 합니다
+                    - 'button "3: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89324] [cursor=pointer]':
+                      - 'generic "3: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89325]': "3"
+                    - text: .
+                  - generic [ref=e89327]:
+                    - text: 2) 보상형 광고 배치 위치와 타이밍 광고는 게임 플레이의 흐름을 끊지 않고 자연스러운 게임의 일부처럼 느껴지도록 전략적으로 배치해야 합니다
+                    - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89329] [cursor=pointer]':
+                      - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89330]': "2"
+                    - text: ". 가장 효과적인 보상형 광고 위치는 다음과 같습니다:"
+                  - list [ref=e89331]:
+                    - listitem [ref=e89333]:
+                      - text: "레벨 실패 직후: 게임오버 화면에서 광고를 시청하면 추가 이동 횟수나 생명력을 제공하여 유저가 재도전할 수 있게 합니다"
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89335] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89336]': "2"
+                      - text: .
+                    - listitem [ref=e89338]:
+                      - text: "레벨 클리어 직후: 획득한 보상(코인 등)을 2배 또는 3배로 부풀려주는(Double/Triple rewards) 선택지를 제공하여 시청을 유도합니다"
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89340] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89341]': "2"
+                      - text: .
+                    - listitem [ref=e89343]:
+                      - text: "인게임 상점: 투명하게 '광고 시청 시 얻을 수 있는 재화량'을 명시하여 자발적인 시청을 유도합니다"
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89345] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89346]': "2"
+                      - text: . 주의할 점은 유저가 광고만으로 결제를 완전히 대체하지 못하도록 광고 시청 횟수에 적절한 제한을 두어야 한다는 것입니다
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89348] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89349]': "2"
+                      - text: .
+                  - generic [ref=e89351]:
+                    - text: 3) 시즌패스/배틀패스 (구독 모델) 구현 방법 매치 3 게임의 구독 또는 패스 모델은 광고 제거 혜택, 일일 추가 보상, 재화 부스트, 전용 부스터, 독점 꾸미기 콘텐츠를 보상으로 제공하는 형태로 구현됩니다
+                    - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89353] [cursor=pointer]':
+                      - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89354]': "2"
+                    - text: . 이는 게임에 많은 시간을 할애하는 충성도 높은 플레이어들을 타겟으로 하며, 코어 퍼즐 플레이나 이벤트(보물 상자, 룰렛 휠 목표 달성)와 연동하여 게이지를 채우면 티어별로 보상이 해금되는 방식을 통해 개발자에게 안정적이고 지속적인 수익을 제공합니다
+                    - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89356] [cursor=pointer]':
+                      - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89357]': "2"
+                    - text: .
+                  - generic [ref=e89359]:
+                    - text: 4) 메타게임의 종류와 퍼즐과의 연동 방법 최근의 매치 3 게임은 단순 퍼즐을 넘어 메타게임을 혼합하여 플레이어에게 장기적인 목표를 제공합니다
+                    - 'button "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89361] [cursor=pointer]':
+                      - 'generic "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89362]': "4"
+                    - 'button "5: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89364] [cursor=pointer]':
+                      - 'generic "5: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89365]': "5"
+                    - text: .
+                  - list [ref=e89366]:
+                    - listitem [ref=e89368]:
+                      - text: "종류: 스토리 기반 모험, 집/정원 개조 및 꾸미기(Homescapes, Gardenscapes), 펫 및 캐릭터 수집, 농사 및 자원 관리, RPG 전투와 캐릭터 육성(Puzzle Quest) 등이 있습니다"
+                      - 'button "6: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89370] [cursor=pointer]':
+                        - 'generic "6: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89371]': "6"
+                      - button [ref=e89373] [cursor=pointer]:
+                        - img [ref=e89374]: more_horiz
+                      - text: .
+                    - listitem [ref=e89376]:
+                      - text: "연동 방법: 코어 퍼즐 레벨을 클리어하여 획득한 특수 재화(별, 코인 등)를 메타게임의 스토리 해금, 건물 수리, 몬스터 공격 및 팀 업그레이드 등에 소비하게 만드는 순환 구조를 설계합니다"
+                      - 'button "6: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89378] [cursor=pointer]':
+                        - 'generic "6: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89379]': "6"
+                      - 'button "7: Match 3 Game - Wax Studios" [ref=e89381] [cursor=pointer]':
+                        - 'generic "7: Match 3 Game - Wax Studios" [ref=e89382]': "7"
+                      - text: . 이렇게 스토리에 감정적으로 투자하게 만들면 플레이어가 IAP 결제에 대한 거부감을 덜 느끼게 됩니다
+                      - 'button "9: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89384] [cursor=pointer]':
+                        - 'generic "9: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89385]': "9"
+                      - text: .
+                  - generic [ref=e89387]:
+                    - text: 5) 일일 보상 및 출석 시스템 유저 리텐션을 높이기 위해 코어 게임 외에도 **일일 도전 과제(Daily challenges)와 미션, 제한 시간 이벤트(LiveOps)**를 제공해야 합니다
+                    - 'button "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89389] [cursor=pointer]':
+                      - 'generic "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89390]': "4"
+                    - 'button "10: Match 3 Game - Wax Studios" [ref=e89392] [cursor=pointer]':
+                      - 'generic "10: Match 3 Game - Wax Studios" [ref=e89393]': "10"
+                    - text: . 매일 접속하여 간단한 임무를 완수하면 룰렛 돌리기(Spinning wheels)나 보물 상자 열기 등을 통해 부스터나 재화를 보상으로 지급하여, 꾸준히 게임을 켜야 할 동기를 부여합니다
+                    - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89395] [cursor=pointer]':
+                      - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89396]': "2"
+                    - 'button "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89398] [cursor=pointer]':
+                      - 'generic "4: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89399]': "4"
+                    - text: .
+                  - generic [ref=e89401]: 6) 소셜 기능 (리더보드, 친구 도움 등) 소셜 기능은 플레이어 간의 상호작용을 통해 접속률을 높이고 경쟁 지출을 유도하는 강력한 장치입니다.
+                  - list [ref=e89402]:
+                    - listitem [ref=e89404]:
+                      - text: "구현 요소: 글로벌/친구 리더보드(순위표), 기간 한정 경쟁 이벤트, 클랜/팀 시스템(Teams and chat), 협동 모드가 포함됩니다"
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89406] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89407]': "2"
+                      - button [ref=e89409] [cursor=pointer]:
+                        - img [ref=e89410]: more_horiz
+                      - text: .
+                    - listitem [ref=e89412]:
+                      - text: 팀에 가입하여 서로 부족한 생명(하트)을 주고받게 하거나, 팀 대항전 성적을 통해 압박감(Peer pressure)과 소속감을 느끼게 만들어 게임 접속을 강제하고 순위 경쟁을 위한 결제를 촉진합니다
+                      - 'button "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89414] [cursor=pointer]':
+                        - 'generic "2: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e89415]': "2"
+                      - 'button "11: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89417] [cursor=pointer]':
+                        - 'generic "11: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89418]': "11"
+                      - text: .
+                  - generic [ref=e89420]: "--------------------------------------------------------------------------------"
+                  - generic [ref=e89422]:
+                    - text: 🛠 Unity 구현을 위한 권장 서비스/SDK 위의 기능들을 Unity 프로젝트에 통합할 때, 백엔드 서버를 직접 구축하는 대신 다음과 같은 외부 SDK와 클라우드 서비스를 결합하여 개발하는 것이 널리 권장됩니다
+                    - 'button "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89424] [cursor=pointer]':
+                      - 'generic "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89425]': "12"
+                    - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89427] [cursor=pointer]':
+                      - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89428]': "13"
+                    - text: .
+                  - list [ref=e89429]:
+                    - listitem [ref=e89431]:
+                      - text: "데이터 저장, 유저 인증 및 클라우드 동기화: Firebase (실시간 데이터베이스, 클라우드 스토리지, 인증)"
+                      - 'button "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89433] [cursor=pointer]':
+                        - 'generic "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89434]': "12"
+                      - text: .
+                    - listitem [ref=e89436]:
+                      - text: "리더보드, 소셜 기능 및 게임 경제 관리: PlayFab (순위표, 플레이어 데이터 분석, 경제 밸런싱)"
+                      - 'button "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89438] [cursor=pointer]':
+                        - 'generic "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89439]': "12"
+                      - text: .
+                    - listitem [ref=e89441]:
+                      - text: "인앱 결제 (IAP): Unity IAP를 활용한 Google Play Billing 및 Apple StoreKit 연동"
+                      - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89443] [cursor=pointer]':
+                        - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89444]': "13"
+                      - text: .
+                    - listitem [ref=e89446]:
+                      - text: "광고 미디에이션 (보상형 광고): Unity LevelPlay 또는 AppLovin MAX (여러 광고 네트워크를 통합하여 수익을 극대화)"
+                      - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89448] [cursor=pointer]':
+                        - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89449]': "13"
+                      - text: .
+                    - listitem [ref=e89451]:
+                      - text: "푸시 알림 (리텐션 유도): Braze 또는 OneSignal"
+                      - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89453] [cursor=pointer]':
+                        - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89454]': "13"
+                      - text: .
+                    - listitem [ref=e89456]:
+                      - text: "사용자 행동 분석: Firebase Analytics, Devtodev, GameAnalytics, Mixpanel 등을 활용하여 이탈 구간과 결제 패턴을 추적"
+                      - 'button "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89458] [cursor=pointer]':
+                        - 'generic "12: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89459]': "12"
+                      - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89461] [cursor=pointer]':
+                        - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e89462]': "13"
+                      - text: .
+                - generic [ref=e89463]:
+                  - button "메시지를 메모에 저장" [ref=e89464]:
+                    - img [ref=e89465]: keep_pin
+                    - generic [ref=e89466]: 메모에 저장
+                  - generic [ref=e89469]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89473] [cursor=pointer]:
+                      - img [ref=e89474]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89480] [cursor=pointer]:
+                      - img [ref=e89481]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89487] [cursor=pointer]:
+                      - img [ref=e89488]: thumb_down
+            - generic [ref=e89491]:
+              - heading "기존에 동작하는 Match3 게임의 God Object(1400줄)를 리팩토링할 때 안전한 순서를 알려주세요. 1) Prefab 에셋 먼저 만들고 코드를 수정할지, 코드 구조(MVC)를 먼저 잡고 Prefab을 나중에 할지? 2) God Object를 한 번에 분해할지, 메서드 단위로 하나씩 추출할지? 3) 오브젝트 풀링은 언제 통합하는 게 좋은지? 4) DOTween vs 내장 Animation 에디터 중 Match3에 적합한 것은?" [level=3] [ref=e89497]:
+                - paragraph [ref=e89498]: 기존에 동작하는 Match3 게임의 God Object(1400줄)를 리팩토링할 때 안전한 순서를 알려주세요. 1) Prefab 에셋 먼저 만들고 코드를 수정할지, 코드 구조(MVC)를 먼저 잡고 Prefab을 나중에 할지? 2) God Object를 한 번에 분해할지, 메서드 단위로 하나씩 추출할지? 3) 오브젝트 풀링은 언제 통합하는 게 좋은지? 4) DOTween vs 내장 Animation 에디터 중 Match3에 적합한 것은?
+              - generic [ref=e89501]:
+                - generic [ref=e89505]:
+                  - generic [ref=e89507]: 성공적으로 동작 중인 1400줄 분량의 '신적 클래스(God Object)'를 리팩토링하는 것은 게임의 안정성을 유지하면서 아키텍처를 개선해야 하는 매우 섬세한 작업입니다. 제공된 자료와 이전 대화의 맥락을 바탕으로, 기존 기능을 깨뜨리지 않고 가장 안전하게 리팩토링할 수 있는 구체적인 순서와 방법을 안내해 드립니다.
+                  - generic [ref=e89509]: 1. Prefab 에셋 구축 vs 코드 구조(MVC) 분리 순서
+                  - generic [ref=e89511]: 코드 구조(MVC)를 먼저 잡은 후, 시각적 요소(Prefab)를 나중에 분리하고 연결하는 것이 훨씬 안전합니다.
+                  - list [ref=e89512]:
+                    - listitem [ref=e89514]:
+                      - text: "이유: 매치 3 게임은 순수 데이터(배열)로 이루어진 논리 세계(Model)와 화면에 보여지는 시각적 세계(View)를 철저히 분리하는 '두 세계 시스템(Two-World System)' 또는 MVC 패턴을 구축하는 것이 핵심입니다"
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89516] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89517]': "1"
+                      - text: . 현재
+                      - code [ref=e89518]: GameGrid.cs
+                      - text: 와 같은 단일 모놀리식(Monolithic) 아키텍처에서는 게임 로직과 UI/시각적 표현이 강하게 결합되어 있습니다
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89520] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89521]': "2"
+                      - text: .
+                    - listitem [ref=e89523]:
+                      - text: 이 상태에서 Prefab부터 만들어 억지로 분리하려 하면 게임 로직이 특정
+                      - code [ref=e89524]: GameObject
+                      - text: 구조를 기대하고 있어 즉시 게임이 망가지게 됩니다
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89526] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89527]': "2"
+                      - text: .
+                    - listitem [ref=e89529]:
+                      - text: "안전한 방법: 먼저 유니티 API에 의존하지 않는 순수 C# 배열(예:"
+                      - code [ref=e89530]: Match3Game
+                      - text: 클래스)로 데이터를 구축하여 로직을 처리하게 한 뒤
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89532] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89533]': "1"
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89535] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89536]': "3"
+                      - text: ", 시각적 처리를 담당하는 뷰(예:"
+                      - code [ref=e89537]: Match3Skin
+                      - text: 클래스)가 이 모델 데이터를 읽어와서 Prefab을 화면에 그리도록(Sync) 설계해야 합니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89539] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89540]': "3"
+                      - text: .
+                  - generic [ref=e89542]: 2. God Object(GameGrid.cs) 분해 방식
+                  - generic [ref=e89544]: 절대 한 번에 갈아엎지 말고, 기능(메서드)이나 상태 단위로 점진적으로 추출해야 합니다.
+                  - list [ref=e89545]:
+                    - listitem [ref=e89547]:
+                      - text: "이유: 모놀리식 컴포넌트 디자인을 한 번에 해체하면 데이터 흐름이 끊겨 예측할 수 없는 버그에 빠질 위험이 큽니다"
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89549] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89550]': "2"
+                      - text: .
+                    - listitem [ref=e89552]:
+                      - text: "안전한 방법: 컴포넌트의 결합도를 낮추기 위해 유한 상태 머신(State Machine) 기반으로 상태별 로직을 하나씩 떼어내는 것을 권장합니다"
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89554] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89555]': "2"
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89557] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89558]': "4"
+                      - text: .
+                      - list [ref=e89559]:
+                        - listitem [ref=e89561]:
+                          - text: 예를 들어, 플레이어의 입력을 받는
+                          - code [ref=e89562]: READY
+                          - text: 상태, 스와이프 유효성을 검증하는
+                          - code [ref=e89563]: EVALUATE
+                          - text: 상태, 매치를 찾는
+                          - code [ref=e89564]: MATCH
+                          - text: 상태, 빈 공간으로 타일이 떨어지는
+                          - code [ref=e89565]: COLLAPSE
+                          - text: 상태 등으로 명확히 구분합니다
+                          - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89567] [cursor=pointer]':
+                            - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89568]': "4"
+                          - text: .
+                        - listitem [ref=e89570]:
+                          - text: 입력 처리(Controller)를 먼저 떼어내고, 이후 3매치 검사 로직(Model), 마지막으로 시각적 애니메이션(View)을 순차적으로 분리해 내며 매 단계마다 테스트를 진행해야 합니다
+                          - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89572] [cursor=pointer]':
+                            - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89573]': "1"
+                          - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89575] [cursor=pointer]':
+                            - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89576]': "2"
+                          - text: .
+                  - generic [ref=e89578]: 3. 오브젝트 풀링(Object Pooling) 통합 시점
+                  - generic [ref=e89580]: 오브젝트 풀링은 리팩토링의 후반부, 즉 시각적 연출(View) 계층 분리가 완료된 시점에 통합하는 것이 좋습니다.
+                  - list [ref=e89581]:
+                    - listitem [ref=e89583]:
+                      - text: "이유: 오브젝트 풀링은 타일이나 파티클을 매번 생성(Instantiate)하고 파괴(Destroy)하는 대신, 재사용하여 시스템 리소스 소모를 막는 훌륭한 최적화 기법입니다"
+                      - 'button "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89585] [cursor=pointer]':
+                        - 'generic "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89586]': "5"
+                      - text: . 하지만 프로젝트 후반에 이를 강제로 도입하려고 하면 수많은 프리팹 설정을 다시 해야 하는 등 설계상 어려움이 따를 수 있습니다
+                      - 'button "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89588] [cursor=pointer]':
+                        - 'generic "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89589]': "5"
+                      - text: .
+                    - listitem [ref=e89591]:
+                      - text: "안전한 방법: 로직(Model)에서 타일의 '생성'과 '파괴' 데이터를 안정적으로 전달할 수 있게 된 후, 시각적 표현을 담당하는 View 계층("
+                      - code [ref=e89592]: Match3Skin
+                      - text: 등)에
+                      - code [ref=e89593]: PrefabInstancePool
+                      - text: 과 같은 풀링 구조체를 도입합니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89595] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89596]': "3"
+                      - text: . 기존의
+                      - code [ref=e89597]: Instantiate()
+                      - text: 와
+                      - code [ref=e89598]: Destroy()
+                      - text: 코드를 풀에서 가져오고(
+                      - code [ref=e89599]: GetInstance
+                      - text: ) 반환하는(
+                      - code [ref=e89600]: Recycle
+                      - text: ) 코드로 1:1 교체하면 로직 충돌 없이 안전하게 가비지 컬렉션(GC) 스파이크 문제를 해결할 수 있습니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89602] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89603]': "3"
+                      - 'button "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89605] [cursor=pointer]':
+                        - 'generic "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89606]': "5"
+                      - text: .
+                  - generic [ref=e89608]: 4. DOTween vs Unity 내장 Animation 에디터 중 Match3에 적합한 것은?
+                  - generic [ref=e89610]: 코어 보드 애니메이션(타일 스왑, 낙하 등)에는 DOTween과 같은 코드 기반 트위닝(Tweening)이 압도적으로 적합합니다. 내장 Animation은 UI나 정적인 특수 효과에 보조적으로 사용하는 것이 좋습니다.
+                  - list [ref=e89611]:
+                    - listitem [ref=e89613]:
+                      - text: "이유: 매치 3 게임의 타일 이동은 시작 좌표에서 목표 좌표로 동적으로 변해야 하며, 선형적인 움직임보다는 이징(Easing)을 활용해 탄성 있는 부드러운 움직임을 만들어내야 합니다"
+                      - 'button "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89615] [cursor=pointer]':
+                        - 'generic "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89616]': "6"
+                      - text: .
+                    - listitem [ref=e89618]:
+                      - text: "콜백(Callback) 동기화: 타일 스왑이나 낙하 애니메이션은 약 0.25초 정도로 실행되며, 이 애니메이션이 \"끝난 직후\"에 즉시 매치 검사(FindMatches) 로직이 실행되어야 합니다"
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89620] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89621]': "1"
+                      - text: . DOTween이나 코루틴을 사용하면 시각적 이동이 완료되는 타이밍과 논리적 상태 변화(Model)를 엄격하게 동기화할 수 있어 오류 없는 게임 루프를 만들 수 있습니다
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89623] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89624]': "1"
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89626] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89627]': "4"
+                      - text: .
+                    - listitem [ref=e89629]:
+                      - text: "쥬싱(Juicing) 극대화: 젤리가 통통 튀는 듯한 바운스(Bounce) 효과 등은 물리 엔진 없이 이징 수학 공식을 사용하는 DOTween으로 훨씬 가볍고 타격감 있게 구현할 수 있습니다"
+                      - 'button "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89631] [cursor=pointer]':
+                        - 'generic "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89632]': "6"
+                      - text: .
+                - generic [ref=e89633]:
+                  - button "메시지를 메모에 저장" [ref=e89634]:
+                    - img [ref=e89635]: keep_pin
+                    - generic [ref=e89636]: 메모에 저장
+                  - generic [ref=e89639]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89643] [cursor=pointer]:
+                      - img [ref=e89644]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89650] [cursor=pointer]:
+                      - img [ref=e89651]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89657] [cursor=pointer]:
+                      - img [ref=e89658]: thumb_down
+            - generic [ref=e89661]:
+              - heading "Match3 게임에서 DOTween과 Unity 내장 Animation 에디터 중 어떤 것이 더 적합한가요? 타일 스왑, 낙하, 매치 파괴 애니메이션 각각에 대해 어떤 방식이 좋은지 구체적으로 알려주세요. 또한 레벨 에디터를 만들 때 CSV/Excel에서 맵 데이터를 임포트하는 파이프라인과 Custom Inspector 시각적 그리드 에디터 중 어떤 게 더 효율적인가요? 수천 개 레벨을 관리하는 상용 게임에서는 어떤 도구를 쓰나요?" [level=3] [ref=e89667]:
+                - paragraph [ref=e89668]: Match3 게임에서 DOTween과 Unity 내장 Animation 에디터 중 어떤 것이 더 적합한가요? 타일 스왑, 낙하, 매치 파괴 애니메이션 각각에 대해 어떤 방식이 좋은지 구체적으로 알려주세요. 또한 레벨 에디터를 만들 때 CSV/Excel에서 맵 데이터를 임포트하는 파이프라인과 Custom Inspector 시각적 그리드 에디터 중 어떤 게 더 효율적인가요? 수천 개 레벨을 관리하는 상용 게임에서는 어떤 도구를 쓰나요?
+              - generic [ref=e89671]:
+                - generic [ref=e89675]:
+                  - generic [ref=e89677]: 매치 3 게임 개발에서는 애니메이션의 성격에 따라 코드 기반 트위닝(DOTween)과 유니티 내장 시스템을 혼용하는 것이 가장 적합합니다.
+                  - generic [ref=e89679]: 1. 애니메이션 유형별 권장 구현 방식
+                  - list [ref=e89680]:
+                    - listitem [ref=e89682]:
+                      - text: "타일 스왑 및 낙하 (DOTween 권장): 타일의 이동은 동적인 시작 좌표에서 목표 좌표로 위치가 변해야 하므로 DOTween이나 코루틴을 사용하는 것이 훨씬 효율적입니다. 특히 매치 3 게임은 애니메이션 재생 시간(예: 스왑 0.25초, 낙하 0.2초)과 게임 논리 타이밍을 엄격하게 동기화해야 합니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89684] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89685]': "1"
+                      - 'button "2: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89687] [cursor=pointer]':
+                        - 'generic "2: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89688]': "2"
+                      - text: . 이동이 끝나는 즉시 매치 검사(콜백)를 실행해야 하므로 코드 기반 제어가 필수적입니다
+                      - 'button "2: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89690] [cursor=pointer]':
+                        - 'generic "2: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89691]': "2"
+                      - text: . 또한, 타일이 바닥에 닿을 때 젤리처럼 튕기는 탄성(Bounce) 효과 등 현실적이고 타격감 있는 움직임(쥬싱, Juicing)을 물리 엔진 없이 이징(Easing) 수학 공식으로 가볍게 구현하는 데 DOTween이 압도적으로 유리합니다
+                      - 'button "3: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89693] [cursor=pointer]':
+                        - 'generic "3: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89694]': "3"
+                      - 'button "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89696] [cursor=pointer]':
+                        - 'generic "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e89697]': "4"
+                      - text: .
+                    - listitem [ref=e89699]:
+                      - text: "매치 파괴 애니메이션 (Particle System + DOTween/Animation 혼용 권장): 타일 파괴는 지정된 자리에서 정적으로 발생하며, 여러 시각 효과가 겹겹이 쌓이는 다층적(Layered) 구조를 가집니다. 파편이나 섬광, 연기 등은 유니티 내장 Particle System으로 처리하는 것이 엔진의 이점을 극대화하는 방법입니다"
+                      - 'button "5: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e89701] [cursor=pointer]':
+                        - 'generic "5: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e89702]': "5"
+                      - 'button "6: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e89704] [cursor=pointer]':
+                        - 'generic "6: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e89705]': "6"
+                      - text: . 크기가 0.1초 동안 줄어들고 0.15초 동안 페이드 아웃되는 등의 세밀한 파괴 시퀀스는 DOTween을 통해 스케일과 투명도를 조절하거나, 유니티 내장 Animation 에디터의 타임라인을 활용하여 시각적으로 타이밍을 맞추는 것이 좋습니다
+                      - 'button "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89707] [cursor=pointer]':
+                        - 'generic "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e89708]': "7"
+                      - text: .
+                  - generic [ref=e89710]: 2. CSV/Excel 임포트 vs Custom Inspector 시각적 에디터 효율성
+                  - list [ref=e89711]:
+                    - listitem [ref=e89713]: "CSV/Excel 파일: 각 레벨의 턴 수 제한, 목표 점수, 타일 스폰 가중치 등 수치적인 메타 데이터를 대량으로 관리하고 밸런싱하는 데 압도적으로 유리합니다. 하지만 얼음 밑에 타일이 있고 그 위에 사슬이 있는 등 복잡한 '다층 레이어' 공간 구조를 엑셀 셀로 직관적으로 시각화하고 편집하기는 매우 어렵습니다."
+                    - listitem [ref=e89715]: "Custom Inspector 시각적 그리드 에디터: 초기 에디터 개발 비용과 시간은 들지만, 2차원 배열을 시각적 그리드로 렌더링하여 마우스 클릭만으로 장애물을 직관적으로 배치할 수 있어 실제 맵 공간을 디자인하는 데는 훨씬 효율적입니다."
+                  - generic [ref=e89717]: 따라서 중간 규모 이상의 프로젝트에서는 맵의 시각적 형태와 장애물 배치는 Custom Inspector 기반의 에디터로 진행하고, 턴 수나 스폰 확률 같은 메타 데이터는 CSV/Excel과 연동하는 하이브리드 방식이 가장 권장됩니다.
+                  - generic [ref=e89719]: 3. 수천 개 레벨을 관리하는 상용 게임의 파이프라인
+                  - generic [ref=e89721]: 캔디크러쉬사가나 로얄 매치처럼 수천 개의 레벨을 매주 업데이트해야 하는 상용 게임들은 단순한 유니티 내장 에디터를 넘어 '전용 레벨 에디터 + 백오피스 서버 + AI 밸런싱'의 통합 파이프라인을 사용합니다.
+                  - list [ref=e89722]:
+                    - listitem [ref=e89724]:
+                      - text: "독자적인 드래그 앤 드롭 레벨 에디터: 개발자의 도움 없이 기획자가 인게임 그래픽을 보며 붓칠하듯 장애물을 배치하고(WYSIWYG), 그 자리에서 즉시 플레이 테스트를 해볼 수 있는 자체 에디터 환경을 구축합니다"
+                      - 'button "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89726] [cursor=pointer]':
+                        - 'generic "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89727]': "8"
+                      - text: .
+                    - listitem [ref=e89729]:
+                      - text: "데이터 직렬화 및 백오피스(서버) 연동: 만들어진 맵 데이터는 클라이언트 앱에 하드코딩되지 않고 가벼운 JSON 등으로 직렬화되어 백오피스 서버로 전송됩니다"
+                      - 'button "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89731] [cursor=pointer]':
+                        - 'generic "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89732]': "8"
+                      - text: . 유저가 앱 스토어에서 게임을 업데이트할 필요 없이, Addressables(어드레서블)나 Asset Bundles를 통해 서버에서 실시간으로 새로운 레벨 콘텐츠를 다운로드할 수 있는 원격 배포 구조를 사용합니다
+                      - 'button "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89734] [cursor=pointer]':
+                        - 'generic "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89735]': "8"
+                      - 'button "9: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89737] [cursor=pointer]':
+                        - 'generic "9: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89738]': "9"
+                      - text: .
+                    - listitem [ref=e89740]:
+                      - text: "AI/머신러닝을 이용한 자동 밸런싱: 사람이 수천 개의 레벨을 테스트하는 것은 불가능하므로, 강화학습(SAC, PPO)이나 몬테카를로 트리 탐색(MCTS)을 기반으로 한 AI 에이전트를 도입합니다"
+                      - 'button "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89742] [cursor=pointer]':
+                        - 'generic "8: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89743]': "8"
+                      - button [ref=e89745] [cursor=pointer]:
+                        - img [ref=e89746]: more_horiz
+                      - text: . AI가 수만 번 자동으로 플레이하며 클리어 성공률과 평균 이동 횟수 데이터를 추출하여 정밀하게 레벨 난이도를 검증하고 밸런스를 맞춥니다
+                      - 'button "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89748] [cursor=pointer]':
+                        - 'generic "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89749]': "10"
+                      - 'button "11: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89751] [cursor=pointer]':
+                        - 'generic "11: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89752]': "11"
+                      - text: .
+                - generic [ref=e89753]:
+                  - button "메시지를 메모에 저장" [ref=e89754]:
+                    - img [ref=e89755]: keep_pin
+                    - generic [ref=e89756]: 메모에 저장
+                  - generic [ref=e89759]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89763] [cursor=pointer]:
+                      - img [ref=e89764]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89770] [cursor=pointer]:
+                      - img [ref=e89771]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89777] [cursor=pointer]:
+                      - img [ref=e89778]: thumb_down
+            - generic [ref=e89781]:
+              - heading "Match3 게임에서 DOTween vs Unity 내장 Animator/Animation 에디터 중 어떤 것이 적합한가요? 타일 스왑 애니메이션, 타일 낙하 바운스, 매치 파괴(스케일 축소+페이드), 콤보 텍스트 팝업, 카메라 쉐이크 각각에 대해 어떤 방식이 좋은지 구체적으로 알려주세요. 또한 그래픽 품질을 높이기 위해 2D Lighting, Shader Graph, Spine/Skeletal Animation 등을 Match3에서 어떻게 활용하나요?" [level=3] [ref=e89787]:
+                - paragraph [ref=e89788]: Match3 게임에서 DOTween vs Unity 내장 Animator/Animation 에디터 중 어떤 것이 적합한가요? 타일 스왑 애니메이션, 타일 낙하 바운스, 매치 파괴(스케일 축소+페이드), 콤보 텍스트 팝업, 카메라 쉐이크 각각에 대해 어떤 방식이 좋은지 구체적으로 알려주세요. 또한 그래픽 품질을 높이기 위해 2D Lighting, Shader Graph, Spine/Skeletal Animation 등을 Match3에서 어떻게 활용하나요?
+              - generic [ref=e89791]:
+                - generic [ref=e89795]:
+                  - generic [ref=e89797]:
+                    - text: 매치 3 게임 개발에서 **DOTween(코드 기반 트위닝)**과 Unity 내장 Animator/Animation은 각각의 강점이 다르며, 이를 적절히 혼용하는 것이 가장 효율적입니다. 일반적으로 동적인 좌표 이동과 엄격한 로직 동기화가 필요한 보드 내 타일 제어에는 DOTween이 압도적으로 유리하며, 미리 정의된 정적인 연출이나 캐릭터/UI 애니메이션에는 Animator가 적합합니다
+                    - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89799] [cursor=pointer]':
+                      - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89800]': "1"
+                    - text: .
+                  - generic [ref=e89802]: 요청하신 5가지 애니메이션과 3가지 그래픽 품질 향상 기법에 대한 구체적인 적용 방안은 다음과 같습니다.
+                  - generic [ref=e89804]: "--------------------------------------------------------------------------------"
+                  - heading "1. 애니메이션 유형별 적합한 구현 방식" [level=3] [ref=e89806]
+                  - generic [ref=e89808]: ① 타일 스왑 애니메이션 (Tile Swap)
+                  - list [ref=e89809]:
+                    - listitem [ref=e89811]: "적합한 방식: DOTween"
+                    - listitem [ref=e89813]:
+                      - text: "이유: 타일 스왑은 매 턴마다 다른 시작 좌표(x1, y1)에서 목표 좌표(x2, y2)로 동적으로 이동해야 합니다. Animator는 정해진 위치 기반의 애니메이션에 적합하므로 동적 이동 처리가 매우 까다롭습니다. DOTween을 사용하면 두 타일의 위치를 선형 보간(Lerp)으로 부드럽게 교환할 수 있으며, 스왑 애니메이션이 끝난 직후"
+                      - code [ref=e89814]: OnComplete
+                      - text: 콜백을 통해 매치 유효성 검사 로직(Model)을 정확한 타이밍에 동기화할 수 있습니다
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89816] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89817]': "1"
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89819] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89820]': "2"
+                      - text: .
+                  - generic [ref=e89822]: ② 타일 낙하 바운스 (Tile Drop & Bounce)
+                  - list [ref=e89823]:
+                    - listitem [ref=e89825]: "적합한 방식: DOTween"
+                    - listitem [ref=e89827]:
+                      - text: "이유: 물리 엔진(Rigidbody/Collider)을 사용해 타일을 떨어뜨리면 부동 소수점 오차나 예측 불가능한 버그가 발생할 수 있습니다"
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89829] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89830]': "3"
+                      - text: . 대신 DOTween의
+                      - code [ref=e89831]: Bounce
+                      - text: 또는
+                      - code [ref=e89832]: Elastic
+                      - text: 같은 이징(Easing) 수식을 사용하면, 타일이 바닥에 닿을 때 젤리처럼 통통 튀는 '쥬싱(Juicing)' 효과를 매우 가볍고 일관되게 구현할 수 있습니다
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89834] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89835]': "4"
+                      - text: . 낙하 거리 역시 동적이므로 코드 기반 제어가 필수적입니다
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89837] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89838]': "2"
+                      - text: .
+                  - generic [ref=e89840]: ③ 매치 파괴 (Scale Down + Fade Out)
+                  - list [ref=e89841]:
+                    - listitem [ref=e89843]: "적합한 방식: DOTween (Sequence 활용) + Particle System 혼용"
+                    - listitem [ref=e89845]:
+                      - text: "이유: 파괴 연출은 크기 축소, 페이드 아웃, 점수 팝업 띄우기, 파티클 재생 등이 순차적으로 일어나는 시퀀스입니다. DOTween Sequence를 사용하면"
+                      - code [ref=e89846]: "0.0초: 파티클 스폰 -> 0.0~0.1초: 스케일 축소 -> 0.05~0.15초: 페이드 아웃"
+                      - text: 과 같은 미세한 타이밍 체인(Chain)을 쉽게 구성하고, 완료 후 오브젝트 풀에 타일을 반환(Recycle)하는 작업까지 깔끔하게 처리할 수 있습니다
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89848] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89849]': "1"
+                      - text: .
+                  - generic [ref=e89851]: ④ 콤보 텍스트 팝업 (Floating Score)
+                  - list [ref=e89852]:
+                    - listitem [ref=e89854]: "적합한 방식: DOTween"
+                    - listitem [ref=e89856]:
+                      - text: "이유: 콤보 텍스트는 매치가 발생한 보드 위의 특정 동적 좌표에서 생성되어 위로 서서히 떠오르며 사라져야 합니다"
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89858] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89859]': "2"
+                      - text: . DOTween을 사용하면 타겟 Y 좌표를 향해 이동(
+                      - code [ref=e89860]: DOMoveY
+                      - text: )시킴과 동시에 투명도를 낮추는(
+                      - code [ref=e89861]: DOFade
+                      - text: ) 연출을 한 줄의 코드로 작성할 수 있습니다
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89863] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89864]': "1"
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89866] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89867]': "2"
+                      - text: .
+                  - generic [ref=e89869]: ⑤ 카메라 쉐이크 (Camera Shake)
+                  - list [ref=e89870]:
+                    - listitem [ref=e89872]: "적합한 방식: DOTween 또는 코어 스크립트(Cinemachine Impulse)"
+                    - listitem [ref=e89874]:
+                      - text: "이유: 특수 타일 폭발 등 강력한 타격감을 줄 때 화면을 미세하게 흔드는 스크린 셰이크 효과는 DOTween의 내장 함수("
+                      - code [ref=e89875]: DOShakePosition
+                      - text: )를 사용하면 간단히 구현됩니다
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89877] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89878]': "4"
+                      - text: . 또한 이를 게임패드의 햅틱 진동(Haptics)과 동기화하면 플레이어의 감각적 만족감을 극대화할 수 있습니다
+                      - 'button "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89880] [cursor=pointer]':
+                        - 'generic "5: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89881]': "5"
+                      - text: .
+                  - generic [ref=e89883]: "--------------------------------------------------------------------------------"
+                  - heading "2. 그래픽 품질 향상을 위한 고급 툴 활용법" [level=3] [ref=e89885]
+                  - generic [ref=e89887]: 단순한 2D 스프라이트의 한계를 넘어 상용 게임 수준의 고품질 그래픽을 구현하기 위해 다음과 같은 유니티 기술을 적극적으로 활용할 수 있습니다.
+                  - generic [ref=e89889]: ① 2D Lighting (URP 환경)
+                  - list [ref=e89890]:
+                    - listitem [ref=e89892]:
+                      - text: "활용법: URP(Universal Render Pipeline)의 2D 조명 시스템을 도입하면 평면적인 보드에 입체감을 불어넣을 수 있습니다. 타일 스프라이트에 **노멀 맵(Normal Map)이나 마스크 맵(Mask Map)**을 추가하면, 2D 빛(Point Light 등)의 위치에 따라 타일의 모서리에 스페큘러 하이라이트(빛 반사)가 맺히거나 그림자가 드리워집니다"
+                      - 'button "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89894] [cursor=pointer]':
+                        - 'generic "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89895]': "6"
+                      - text: .
+                    - listitem [ref=e89897]: "효과: 폭발하는 특수 타일 주변에 일시적인 2D 동적 광원을 배치하면 폭발광이 인접한 타일들에 반사되는 화려한 시각적 효과를 낼 수 있습니다."
+                  - generic [ref=e89899]: ② Shader Graph (셰이더 그래프)
+                  - list [ref=e89900]:
+                    - listitem [ref=e89902]:
+                      - text: "활용법: 매치 3 게임에서 보드의 타일이나 배경에 생동감을 주기 위해 CPU 연산 없이 GPU만으로 절차적 애니메이션(Procedural Movements)을 만들 때 사용합니다. 정점 색상(Vertex Colors)과 사인/코사인(Sine/Cosine) 함수를 결합해 스스로 숨 쉬듯 커졌다 작아지는 에너지 펄스, 바람에 흔들리는 식물 블록, 반짝이는 UI 테두리 등의 셰이더를 시각적으로 노드를 연결해 제작합니다"
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89904] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89905]': "4"
+                      - 'button "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89907] [cursor=pointer]':
+                        - 'generic "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89908]': "6"
+                      - text: .
+                    - listitem [ref=e89910]: "효과: 애니메이터나 트위닝을 사용하지 않고도 거대한 특수 타일이나 배경 오브젝트가 부드럽게 일렁이는 마법 같은 연출을 매우 저렴한 성능 비용으로 구현할 수 있습니다."
+                  - generic [ref=e89912]: ③ Spine / Skeletal Animation (스파인 / 2D 뼈대 애니메이션)
+                  - list [ref=e89913]:
+                    - listitem [ref=e89915]:
+                      - text: "활용법: 부드러운 2D 애니메이션을 제작하기 위해 사용합니다"
+                      - 'button "7: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89917] [cursor=pointer]':
+                        - 'generic "7: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89918]': "7"
+                      - text: . 게임 보드 바깥에서 플레이어의 콤보에 반응하여 응원하는 캐릭터(마스코트), 보스전이 있는 매치 3 게임(RPG 퍼즐 하이브리드)의 몬스터 애니메이션 등에 활용됩니다.
+                    - listitem [ref=e89920]:
+                      - text: "효과: 전통적인 프레임 바이 프레임(Frame-by-frame) 스프라이트 애니메이션은 각 프레임마다 이미지를 그려야 하므로 텍스처 메모리를 엄청나게 차지합니다. Spine을 활용하면 부위별 이미지 조각을 뼈대에 연결하여 움직이므로 메모리(스프라이트 아틀라스) 공간을 획기적으로 아끼면서 60FPS 이상의 부드러운 캐릭터 반응과 연출을 게임에 더할 수 있습니다"
+                      - 'button "7: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89922] [cursor=pointer]':
+                        - 'generic "7: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e89923]': "7"
+                      - text: .
+                - generic [ref=e89924]:
+                  - button "메시지를 메모에 저장" [ref=e89925]:
+                    - img [ref=e89926]: keep_pin
+                    - generic [ref=e89927]: 메모에 저장
+                  - generic [ref=e89930]:
+                    - button "클립보드에 모델 대답 복사" [ref=e89934] [cursor=pointer]:
+                      - img [ref=e89935]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e89941] [cursor=pointer]:
+                      - img [ref=e89942]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e89948] [cursor=pointer]:
+                      - img [ref=e89949]: thumb_down
+            - generic [ref=e89952]:
+              - 'heading "Match3 게임의 그래픽 에셋 전체 목록을 검토해주세요. 빠진 것이 있으면 알려주세요: 타일 스프라이트 8색, 특수 타일 오버레이(줄무늬/폭탄/레인보우), 장애물(얼음/사슬/금속), 배경 5종(테마별), UI(버튼/패널/아이콘), 월드맵, 로비, HUD, 게임오버 팝업, 상점, 설정, 로딩화면, 앱아이콘, 파티클 7종, 화면전환, 캐릭터 마스코트. 상용 수준의 Match3에서 추가로 필요한 그래픽 에셋이 있나요?" [level=3] [ref=e89958]':
+                - paragraph [ref=e89959]: "Match3 게임의 그래픽 에셋 전체 목록을 검토해주세요. 빠진 것이 있으면 알려주세요: 타일 스프라이트 8색, 특수 타일 오버레이(줄무늬/폭탄/레인보우), 장애물(얼음/사슬/금속), 배경 5종(테마별), UI(버튼/패널/아이콘), 월드맵, 로비, HUD, 게임오버 팝업, 상점, 설정, 로딩화면, 앱아이콘, 파티클 7종, 화면전환, 캐릭터 마스코트. 상용 수준의 Match3에서 추가로 필요한 그래픽 에셋이 있나요?"
+              - generic [ref=e89962]:
+                - generic [ref=e89966]:
+                  - generic [ref=e89968]: 작성해주신 그래픽 에셋 목록은 매치 3 게임의 훌륭한 핵심 뼈대(MVP 수준)를 갖추고 있습니다. 하지만 상용 수준(Candy Crush Saga, Royal Match 등)의 게임으로 발전시키기 위해서는 시각적 타격감(Juicing), 다양한 기믹(Obstacles), 그리고 수익화 및 리텐션을 위한 메타게임/UI 에셋이 꽤 많이 추가되어야 합니다.
+                  - generic [ref=e89970]: 제시해주신 목록을 바탕으로 상용 매치 3 게임 개발 시 누락되기 쉬운, 추가로 필요한 그래픽 에셋 목록을 5가지 카테고리로 세분화하여 정리해 드립니다.
+                  - heading "1. 인게임 보드 및 타일 (In-Game Board & Tiles)" [level=3] [ref=e89972]
+                  - generic [ref=e89974]: 현재 '기본 8색'과 '특수 타일 3종'이 있지만, 상호작용과 기믹을 위한 디테일이 더 필요합니다.
+                  - list [ref=e89975]:
+                    - listitem [ref=e89977]:
+                      - text: "목표 추적용(유도형) 특수 타일: 최근 트렌드인 종이비행기(로켓) 형태의 유도형 타일이 누락되어 있습니다"
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89979] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89980]': "1"
+                      - text: .
+                    - listitem [ref=e89982]:
+                      - text: "특수 타일 시너지 이펙트: '폭탄+폭탄(거대 폭발)', '줄무늬+줄무늬(거대 십자)', '레인보우+일반(화면 전체 타일 변환)' 등 특수 타일끼리 결합했을 때 나오는 거대한 연쇄 반응용 오버레이 및 스프라이트 시퀀스가 필요합니다"
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89984] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89985]': "1"
+                      - text: .
+                    - listitem [ref=e89987]:
+                      - text: "다층(Multi-layered) 장애물: 얼음, 돌, 상자 등의 장애물은 한 번에 부서지지 않고 2~5번에 걸쳐 부서지는 다층 구조로 설계됩니다. 따라서 타격을 입을 때마다 금이 가거나 부서지는 **단계별 상태 스프라이트(1단계, 2단계, 3단계 파괴 상태)**가 필요합니다"
+                      - 'button "2: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e89989] [cursor=pointer]':
+                        - 'generic "2: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e89990]': "2"
+                      - 'button "3: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89992] [cursor=pointer]':
+                        - 'generic "3: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e89993]': "3"
+                      - text: .
+                    - listitem [ref=e89995]:
+                      - text: "유동형/특수 기믹: 타일이 쏟아지는 출구 역할을 하는 포털(Portal), 타일을 이동시키는 컨베이어 벨트(Conveyor Belt), 타일을 뱉어내는 생성기(대포/상자) 스프라이트가 상용 게임에서는 필수적입니다"
+                      - 'button "4: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e89997] [cursor=pointer]':
+                        - 'generic "4: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e89998]': "4"
+                      - 'button "5: What special tiles exist in Match 3 mini-games? - G5 Entertainment" [ref=e90000] [cursor=pointer]':
+                        - 'generic "5: What special tiles exist in Match 3 mini-games? - G5 Entertainment" [ref=e90001]': "5"
+                      - text: .
+                    - listitem [ref=e90003]:
+                      - text: "타일 상태 애니메이션: 타일이 선택되었을 때의 하이라이트(빛남), 터지기 직전 부풀어 오르거나 떨리는 애니메이션(Anticipation) 프레임, 10초간 입력이 없을 때 힌트를 주는 '흔들림' 애니메이션 에셋이 필요합니다"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90005] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90006]': "6"
+                      - text: .
+                  - heading "2. 시각 효과 및 연출 (VFX & Juicing)" [level=3] [ref=e90008]
+                  - generic [ref=e90010]: 7종의 파티클이 있다고 하셨으나, 타격감과 피드백을 극대화하려면 다음의 연출 에셋들이 포함되어야 합니다.
+                  - list [ref=e90011]:
+                    - listitem [ref=e90013]:
+                      - text: "잔상(Trails) 및 스미어(Smears): 특수 타일(비행기/로켓 등)이 날아갈 때나 타일이 빠르게 떨어질 때 궤적을 강조하는 꼬리(Trail) 파티클이 필요합니다"
+                      - 'button "7: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90015] [cursor=pointer]':
+                        - 'generic "7: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90016]': "7"
+                      - text: .
+                    - listitem [ref=e90018]:
+                      - text: "플로팅 텍스트 (Floating Scores & Combos): 타일이 터질 때 그 자리에서 위로 떠오르는 개별 점수 텍스트와, 연쇄 반응(Cascade) 시 나타나는 \"Great!\", \"Awesome!\", \"Amazing!\" 등의 화려한 콤보 타이포그래피 에셋이 필요합니다"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90020] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90021]': "6"
+                      - 'button "8: Match 3 - Catlike Coding" [ref=e90023] [cursor=pointer]':
+                        - 'generic "8: Match 3 - Catlike Coding" [ref=e90024]': "8"
+                      - text: .
+                    - listitem [ref=e90026]:
+                      - text: "거절 애니메이션 (Ping-pong): 매치가 성립되지 않는 스와이프를 시도했을 때, 타일이 교환되었다가 빠르게 제자리로 튕겨 돌아가는 애니메이션(시각적 거절 피드백)이 있어야 합니다"
+                      - 'button "9: Match-3 game design : r/gamedesign - Reddit" [ref=e90028] [cursor=pointer]':
+                        - 'generic "9: Match-3 game design : r/gamedesign - Reddit" [ref=e90029]': "9"
+                      - 'button "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90031] [cursor=pointer]':
+                        - 'generic "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90032]': "10"
+                      - text: .
+                  - heading "3. 인게임 UI 및 HUD" [level=3] [ref=e90034]
+                  - generic [ref=e90036]: 게임 오버 팝업은 있으나, 게임의 시작과 성공을 알리는 핵심 UI가 빠져 있습니다.
+                  - list [ref=e90037]:
+                    - listitem [ref=e90039]:
+                      - text: "레벨 시작 팝업 (Level Start / Pre-game): 해당 레벨에서 달성해야 할 목표(예: 사과 10개 수집, 상자 5개 파괴)와 사용할 부스터를 선택하는 진입 팝업이 필요합니다"
+                      - 'button "11: Match-3 game design : r/gamedesign - Reddit" [ref=e90041] [cursor=pointer]':
+                        - 'generic "11: Match-3 game design : r/gamedesign - Reddit" [ref=e90042]': "11"
+                      - text: .
+                    - listitem [ref=e90044]:
+                      - text: "레벨 클리어 팝업 (Victory / End-game): 상용 게임에서 가장 중요한 도파민 분비 구간입니다. 별 1~3개 달성 애니메이션, 남은 턴 수가 특수 타일로 변해 터지는 보너스 타임(Sugar Crush 등) 연출, 그리고 화려한 축하 폭죽/색종이(Confetti) 에셋이 필수입니다"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90046] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90047]': "6"
+                      - 'button "11: Match-3 game design : r/gamedesign - Reddit" [ref=e90049] [cursor=pointer]':
+                        - 'generic "11: Match-3 game design : r/gamedesign - Reddit" [ref=e90050]': "11"
+                      - text: .
+                    - listitem [ref=e90052]:
+                      - text: "HUD 디테일: 남은 이동 횟수(Moves) 카운터, 상단에 표시되는 실시간 목표 달성도(체크마크 아이콘), 별 3개를 향해 차오르는 점수 프로그레스 바(Score Bar)가 필요합니다"
+                      - 'button "2: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90054] [cursor=pointer]':
+                        - 'generic "2: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90055]': "2"
+                      - 'button "12: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90057] [cursor=pointer]':
+                        - 'generic "12: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90058]': "12"
+                      - text: .
+                    - listitem [ref=e90060]:
+                      - text: "인게임 인벤토리 부스터: 게임 시작 전이 아닌, 게임 플레이 도중 화면 하단에 배치되어 클릭 시 즉시 발동하는 인게임 부스터 아이콘(예: 롤리팝 해머, 셔플, 특정 타일 지우기) 및 타겟팅(십자선) 이펙트가 필요합니다"
+                      - 'button "13: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90062] [cursor=pointer]':
+                        - 'generic "13: Match 3 level design study — Building three Candy Crush levels | by ..." [ref=e90063]': "13"
+                      - text: .
+                  - heading "4. 메타게임 및 아웃게임 UI (수익화 및 리텐션)" [level=3] [ref=e90065]
+                  - generic [ref=e90067]: 월드맵과 로비, 상점이 기획되어 있으나, 구체적인 구성 요소가 보완되어야 합니다.
+                  - list [ref=e90068]:
+                    - listitem [ref=e90070]:
+                      - text: "월드맵 노드 및 아바타: 월드맵 위에 표시될 각 레벨의 노드(잠김, 열림, 클리어됨, 별 1~3개 획득 상태), 플레이어의 현재 위치를 나타내는 프로필/아바타 마커가 필요합니다"
+                      - 'button "14: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e90072] [cursor=pointer]':
+                        - 'generic "14: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e90073]': "14"
+                      - text: .
+                    - listitem [ref=e90075]:
+                      - text: "재화 및 수익화 아이콘: 코인(또는 보석), 하트(생명력/무제한 생명력 아이콘), 그리고 이를 담고 있는 다양한 크기의 재화 묶음(번들 팩) 스프라이트가 상점에 필요합니다"
+                      - 'button "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90077] [cursor=pointer]':
+                        - 'generic "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90078]': "15"
+                      - text: .
+                    - listitem [ref=e90080]:
+                      - text: "보상 시스템 (Rewards): 출석 보상, 레벨 클리어 보상 등을 열 때 사용하는 **보물 상자(닫힘/열림 상태)**와 룰렛(Spin Wheel) UI가 있어야 일일 리텐션을 끌어올릴 수 있습니다"
+                      - 'button "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90082] [cursor=pointer]':
+                        - 'generic "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90083]': "15"
+                      - text: .
+                    - listitem [ref=e90085]:
+                      - text: "라이브옵스 (LiveOps) UI: 리더보드(순위표) 패널, 친구에게 하트 보내기 아이콘, 시즌 패스/배틀 패스(게이지 바 및 티어별 보상) UI가 상용 게임에서는 거의 필수적으로 들어갑니다"
+                      - 'button "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90087] [cursor=pointer]':
+                        - 'generic "15: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90088]': "15"
+                      - text: .
+                  - heading "5. 캐릭터 마스코트 연출" [level=3] [ref=e90090]
+                  - generic [ref=e90092]:
+                    - text: 캐릭터 마스코트가 도입된다면 단순히 서 있는 이미지뿐만 아니라 게임 상황에 맞는 감정 표현 리소스가 필요합니다
+                    - 'button "16: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90094] [cursor=pointer]':
+                      - 'generic "16: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90095]': "16"
+                    - 'button "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90097] [cursor=pointer]':
+                      - 'generic "17: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90098]': "17"
+                    - text: .
+                  - list [ref=e90099]:
+                    - listitem [ref=e90101]: "대기(Idle): 화면 가장자리에서 숨을 쉬거나 플레이어를 쳐다보는 기본 애니메이션."
+                    - listitem [ref=e90103]: "응원/환호: 플레이어가 콤보를 터뜨렸을 때 방방 뛰거나 박수 치는 연출."
+                    - listitem [ref=e90105]: "슬픔/절망: 게임 오버 시 울거나 시무룩해지는 연출 (플레이어의 재도전 및 결제 유도)."
+                    - listitem [ref=e90107]: "튜토리얼 지시: 특정 타일을 가리키거나 팁을 알려주는 제스처."
+                  - generic [ref=e90109]: "💡 요약 체크리스트 (가장 시급하게 추가해야 할 항목):"
+                  - list [ref=e90110]:
+                    - listitem [ref=e90112]: 다층 파괴 상태를 가진 장애물 스프라이트 (1~3단계)
+                    - listitem [ref=e90114]: 클리어/빅토리 팝업 및 별(Star) 달성 연출 (매우 중요)
+                    - listitem [ref=e90116]: 특수 타일 콤보(시너지) 발생 시의 거대한 오버레이/VFX
+                    - listitem [ref=e90118]: "\"Great!\", \"Combo!\" 같은 화려한 플로팅 타이포그래피"
+                    - listitem [ref=e90120]: 보물상자, 룰렛, 부스터 아이콘 등 메타게임/상점용 에셋
+                  - generic [ref=e90122]: 현재 보유하신 에셋에 위 요소들을 추가하시면, 시각적인 만족감(Juicing)과 결제를 유도하는 흐름이 완벽히 갖춰진 상용 수준의 매치 3 게임을 완성하실 수 있을 것입니다.
+                - generic [ref=e90123]:
+                  - button "메시지를 메모에 저장" [ref=e90124]:
+                    - img [ref=e90125]: keep_pin
+                    - generic [ref=e90126]: 메모에 저장
+                  - generic [ref=e90129]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90133] [cursor=pointer]:
+                      - img [ref=e90134]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90140] [cursor=pointer]:
+                      - img [ref=e90141]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e90147] [cursor=pointer]:
+                      - img [ref=e90148]: thumb_down
+            - generic [ref=e90151]:
+              - heading "Match3 게임에서 흔히 저지르는 실수나 함정(pitfall)을 알려주세요. 아키텍처, 성능, 게임 디자인, 수익화 각 분야에서 초보 개발자가 빠지기 쉬운 실수 TOP 10을 구체적으로 알려주세요. 또한 Match3 게임을 처음부터 다시 만든다면 반드시 지켜야 할 황금 규칙(Golden Rules) 5가지도 알려주세요." [level=3] [ref=e90157]:
+                - paragraph [ref=e90158]: Match3 게임에서 흔히 저지르는 실수나 함정(pitfall)을 알려주세요. 아키텍처, 성능, 게임 디자인, 수익화 각 분야에서 초보 개발자가 빠지기 쉬운 실수 TOP 10을 구체적으로 알려주세요. 또한 Match3 게임을 처음부터 다시 만든다면 반드시 지켜야 할 황금 규칙(Golden Rules) 5가지도 알려주세요.
+              - generic [ref=e90161]:
+                - generic [ref=e90165]:
+                  - generic [ref=e90167]: "[초보 개발자가 빠지기 쉬운 Match3 실수 및 함정 TOP 10]"
+                  - generic [ref=e90169]: 아키텍처 (Architecture)
+                  - list [ref=e90170]:
+                    - listitem [ref=e90172]:
+                      - text: "God Object 생성 및 컴포넌트 강한 결합 (Tight Coupling): 가장 흔한 실수는 게임의 코어 로직(데이터 배열), 매치 검사, UI, 애니메이션 처리를 단일 클래스(예: 수천 줄의"
+                      - code [ref=e90173]: GameGrid.cs
+                      - text: )에 모두 몰아넣는 것입니다
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90175] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90176]': "1"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90178] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90179]': "2"
+                      - text: . 이러한 모놀리식(Monolithic) 구조는 새로운 기믹을 추가할 때마다 예상치 못한 버그를 유발하며, 유지보수와 자동화 테스트를 불가능하게 만듭니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90181] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90182]': "2"
+                      - button [ref=e90184] [cursor=pointer]:
+                        - img [ref=e90185]: more_horiz
+                      - text: .
+                    - listitem [ref=e90187]:
+                      - text: "유니티 물리 엔진(Unity Physics) 남용: 타일이 떨어지는 효과를 구현하기 위해"
+                      - code [ref=e90188]: Rigidbody2D
+                      - text: 나 콜라이더를 사용하는 것은 치명적인 실수입니다
+                      - 'button "5: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90190] [cursor=pointer]':
+                        - 'generic "5: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90191]': "5"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90193] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90194]': "6"
+                      - text: . 부동 소수점 오차로 인해 기기마다 물리 연산 결과가 달라지는 비결정론적(Non-deterministic) 버그인 일명 'Flaky bugs'가 발생합니다
+                      - 'button "5: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90196] [cursor=pointer]':
+                        - 'generic "5: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90197]': "5"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90199] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90200]': "6"
+                      - text: . 타일 이동은 반드시 순수 수학적 좌표 계산과 트윈(Tween)으로 제어해야 합니다
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90202] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90203]': "6"
+                      - text: .
+                    - listitem [ref=e90205]:
+                      - text: "레벨 및 라이브옵스(LiveOps) 데이터의 하드코딩: 초기 개발 시 레벨 에셋이나 이벤트 데이터를 클라이언트에 하드코딩하면, 레벨을 추가하거나 이벤트를 열 때마다 앱스토어 심사를 새로 받아야 합니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90207] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90208]': "2"
+                      - button [ref=e90210] [cursor=pointer]:
+                        - img [ref=e90211]: more_horiz
+                      - text: . Addressables나 에셋 번들을 활용하여 게임 코드와 콘텐츠 레벨을 분리하고, 서버에서 JSON 형태로 데이터를 내려받는 구조를 짜지 않으면 라이브 서비스가 마비됩니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90213] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90214]': "2"
+                      - 'button "7: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90216] [cursor=pointer]':
+                        - 'generic "7: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90217]': "7"
+                      - text: .
+                  - generic [ref=e90219]:
+                    - text: "성능 (Performance) 4. 오브젝트 풀링(Object Pooling) 부재로 인한 GC 스파이크: 매치3는 1초에도 수십 개의 타일과 파티클이 터지고 생성됩니다. 이를"
+                    - code [ref=e90220]: Instantiate()
+                    - text: 와
+                    - code [ref=e90221]: Destroy()
+                    - text: 로 처리하면 가비지 컬렉터(GC)가 작동하여 화면에 끊김(Hitch)이 발생하고 메모리 부족(OOM)으로 앱이 크래시됩니다
+                    - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90223] [cursor=pointer]':
+                      - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90224]': "6"
+                    - 'button "9: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90226] [cursor=pointer]':
+                      - 'generic "9: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e90227]': "9"
+                    - text: . 모든 타일과 이펙트는 반드시 미리 생성해 둔 풀(Pool)에서 재사용해야 합니다
+                    - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90229] [cursor=pointer]':
+                      - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90230]': "6"
+                    - text: ". 5. 오버드로우(Overdraw) 및 드로우 콜(Draw Call) 폭발 방치: 스프라이트 아틀라스(Sprite Atlas)를 사용하지 않아 머티리얼과 텍스처 상태 변경으로 인해 배칭(Batching)이 깨지면서 드로우 콜이 치솟는 경우가 많습니다"
+                    - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90232] [cursor=pointer]':
+                      - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90233]': "6"
+                    - button [ref=e90235] [cursor=pointer]:
+                      - img [ref=e90236]: more_horiz
+                    - text: . 또한, 타일 뒤에 깔린 투명한 배경이나 과도한 파티클 레이어가 겹치면 심각한 오버드로우를 유발하여 모바일 기기의 발열과 배터리 광탈을 초래합니다
+                    - 'button "12: Optimizing performance - Unity - Manual" [ref=e90238] [cursor=pointer]':
+                      - 'generic "12: Optimizing performance - Unity - Manual" [ref=e90239]': "12"
+                    - text: .
+                  - generic [ref=e90241]:
+                    - text: "게임 디자인 (Game Design) 6. 순수 무작위성(Pure Randomness)에 의존한 타일 스폰: 순수하게 무작위로만 타일을 떨어뜨리면, 플레이어가 움직일 곳이 아예 없는 '데드 보드(Dead boards)'가 자주 발생하거나, 반대로 플레이어가 아무것도 안 했는데 알아서 끝없이 연쇄가 터져버리는 '연쇄 재앙(Cascading disasters)'이 발생합니다"
+                    - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90243] [cursor=pointer]':
+                      - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90244]': "13"
+                    - 'button "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90246] [cursor=pointer]':
+                      - 'generic "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90247]': "14"
+                    - text: . 가중치 기반 확률(Weighted Randomness)을 통해 보드 상태에 맞춰 타일 등장 확률을 동적으로 조절해야 합니다
+                    - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90249] [cursor=pointer]':
+                      - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90250]': "13"
+                    - text: ". 7. 가독성이 떨어지는 시각적 노이즈: 타일 아트에 너무 많은 디테일이나 그라데이션을 넣거나, 색상 구분이 모호하게 디자인하면 플레이어의 눈이 쉽게 피로해집니다"
+                    - 'button "15: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e90252] [cursor=pointer]':
+                      - 'generic "15: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e90253]': "15"
+                    - text: . 빠르고 직관적으로 매치를 찾아야 하는 장르 특성상, 심플하고 뚜렷한 형태와 색상 대비가 우선되어야 합니다
+                    - 'button "16: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e90255] [cursor=pointer]':
+                      - 'generic "16: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e90256]': "16"
+                    - text: ". 8. 인간 QA에만 의존하는 수동 레벨 밸런싱: 수백~수천 개의 레벨 난이도를 사람이 직접 테스트하여 밸런스를 맞추려는 것은 불가능합니다"
+                    - 'button "17: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e90258] [cursor=pointer]':
+                      - 'generic "17: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e90259]': "17"
+                    - 'button "18: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e90261] [cursor=pointer]':
+                      - 'generic "18: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e90262]': "18"
+                    - text: . 상용 매치3 게임들은 MCTS(몬테카를로 트리 탐색)나 SAC(Soft Actor-Critic) 같은 강화학습 AI 에이전트를 도입해 런타임 없이 수만 번의 시뮬레이션을 돌려 클리어 확률과 난이도를 자동으로 검증합니다
+                    - 'button "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90264] [cursor=pointer]':
+                      - 'generic "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90265]': "14"
+                    - text: .
+                  - generic [ref=e90267]:
+                    - text: "수익화 (Monetization) 9. 노골적인 Pay-to-Win 디자인 (과도한 억지 난이도): 플레이어의 실력이나 운으로는 절대 깰 수 없고 무조건 부스터를 결제해야만 통과할 수 있게 밸런싱된 'Fuu-effect(분노 유발)' 레벨은 수익을 늘리기는커녕 대규모 이탈을 초래합니다"
+                    - 'button "19: Match 3 Game - Wax Studios" [ref=e90269] [cursor=pointer]':
+                      - 'generic "19: Match 3 Game - Wax Studios" [ref=e90270]': "19"
+                    - 'button "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90272] [cursor=pointer]':
+                      - 'generic "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90273]': "20"
+                    - text: ". 부스터 결제는 플레이어의 선택에 따른 '편의'로 느껴져야 합니다. 10. 흐름을 끊는 방해형 광고(Interruptive Ads): 게임 플레이 도중 팝업되는 강제 동영상 광고는 퍼즐의 몰입감을 깹니다"
+                    - 'button "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90275] [cursor=pointer]':
+                      - 'generic "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90276]': "20"
+                    - text: . 매치3 게임에서는 레벨 실패 시 '이동 횟수 5회 추가'나, 클리어 후 '보상 2배'를 미끼로 플레이어가 자발적으로 시청하게 만드는 보상형 광고(Rewarded Ads) 전략이 훨씬 효과적이며 거부감이 적습니다
+                    - 'button "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90278] [cursor=pointer]':
+                      - 'generic "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90279]': "20"
+                    - 'button "21: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90281] [cursor=pointer]':
+                      - 'generic "21: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e90282]': "21"
+                    - text: .
+                  - generic [ref=e90284]: "--------------------------------------------------------------------------------"
+                  - generic [ref=e90286]: "[매치3 게임 개발을 위한 황금 규칙(Golden Rules) 5가지]"
+                  - list [ref=e90287]:
+                    - listitem [ref=e90289]:
+                      - text: "'두 세계'의 철저한 분리 (Model-View Separation) 게임의 '논리적 두뇌'와 '시각적 몸통'을 완전히 분리하십시오"
+                      - 'button "22: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90291] [cursor=pointer]':
+                        - 'generic "22: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90292]': "22"
+                      - text: . 코어 로직(Model)은 유니티의 시각 요소 없이 1차원 데이터 배열 연산만으로 매치와 낙하를 처리해야 합니다
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90294] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90295]': "1"
+                      - 'button "22: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90297] [cursor=pointer]':
+                        - 'generic "22: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90298]': "22"
+                      - text: . 뷰(View)는 그 데이터를 읽어 화면에 애니메이션을 그려주는 역할만 해야 합니다. 이 규칙을 지키면 그래픽 없이 초고속 AI 밸런싱 테스트가 가능해지며 유지보수가 극도로 쉬워집니다
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90300] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90301]': "1"
+                      - 'button "23: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90303] [cursor=pointer]':
+                        - 'generic "23: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90304]': "23"
+                      - text: .
+                    - listitem [ref=e90306]:
+                      - text: 유한 상태 머신(FSM)에 의한 엄격한 턴 통제 매치3는 연쇄 작용 도중 플레이어가 개입하면 데이터가 꼬이게 됩니다
+                      - 'button "24: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90308] [cursor=pointer]':
+                        - 'generic "24: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90309]': "24"
+                      - text: .
+                      - code [ref=e90310]: READY
+                      - text: (입력 대기) ->
+                      - code [ref=e90311]: EVALUATE
+                      - text: (스왑 검증) ->
+                      - code [ref=e90312]: MATCH
+                      - text: (파괴) ->
+                      - code [ref=e90313]: COLLAPSE
+                      - text: (낙하) 로 이어지는 명확한 상태 머신을 구축하고, 보드가 완전히 안정화되어 다시
+                      - code [ref=e90314]: READY
+                      - text: 상태로 돌아오기 전까지는 플레이어의 어떠한 조작도 차단해야 무한 루프와 크래시를 막을 수 있습니다
+                      - 'button "24: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90316] [cursor=pointer]':
+                        - 'generic "24: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90317]': "24"
+                      - 'button "25: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90319] [cursor=pointer]':
+                        - 'generic "25: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90320]': "25"
+                      - text: .
+                    - listitem [ref=e90322]:
+                      - text: 극강의 시각적·청각적 피드백, "쥬싱(Juicing)" 단순한 퍼즐 논리만으로는 성공할 수 없습니다
+                      - 'button "26: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90324] [cursor=pointer]':
+                        - 'generic "26: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90325]': "26"
+                      - text: . 매치3의 본질은 블록을 터뜨릴 때의 쾌감입니다. DOTween을 활용한 타일의 통통 튀는 탄성 애니메이션, 터지기 전의 미세한 떨림(Anticipation), 다층적인 파티클 폭발, 화면 흔들림(Screen Shake), 콤보가 거듭될수록 높아지는 사운드 피치 등 '쥬싱' 기법을 아낌없이 쏟아부어야 합니다
+                      - 'button "27: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90327] [cursor=pointer]':
+                        - 'generic "27: Squeezing more juice out of your game design! - GameAnalytics" [ref=e90328]': "27"
+                      - 'button "28: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90330] [cursor=pointer]':
+                        - 'generic "28: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90331]': "28"
+                      - text: .
+                    - listitem [ref=e90333]:
+                      - text: 스마트한 최적화 알고리즘 (Smart Match Scanning) 타일 이동 시마다 8x8 보드 전체를 매번 다시 검사하지 마십시오. 플레이어가 스왑한 단 두 개의 타일과 그 주변 인접 영역(Delta)만 먼저 스캔하는 '스마트 스캔'을 도입해야 합니다
+                      - 'button "29: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90335] [cursor=pointer]':
+                        - 'generic "29: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90336]': "29"
+                      - 'button "30: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90338] [cursor=pointer]':
+                        - 'generic "30: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90339]': "30"
+                      - text: . 전체 스캔은 폭발 후 새로운 타일들이 쏟아져 내린 직후의 연쇄 반응(Cascade) 재검사 단계에서만 사용해야 모바일 배터리 발열을 최소화하고 성능을 확보할 수 있습니다
+                      - 'button "29: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90341] [cursor=pointer]':
+                        - 'generic "29: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90342]': "29"
+                      - 'button "30: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90344] [cursor=pointer]':
+                        - 'generic "30: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90345]': "30"
+                      - text: .
+                    - listitem [ref=e90347]:
+                      - text: 장기 리텐션을 위한 메타게임(Meta-game)의 결합 현대 시장에서 퍼즐 풀기 그 자체만 제공하는 매치3 게임은 살아남기 힘듭니다
+                      - 'button "31: Match 3 Game - Wax Studios" [ref=e90349] [cursor=pointer]':
+                        - 'generic "31: Match 3 Game - Wax Studios" [ref=e90350]': "31"
+                      - text: . 플레이어가 왜 계속해서 레벨을 깨야 하는지 장기적인 목적을 제공하십시오
+                      - 'button "31: Match 3 Game - Wax Studios" [ref=e90352] [cursor=pointer]':
+                        - 'generic "31: Match 3 Game - Wax Studios" [ref=e90353]': "31"
+                      - text: . 퍼즐로 얻은 재화를 소모하여 정원을 꾸미거나(Decorating), 스토리를 진행하거나, 캐릭터를 육성하는(RPG) 메타 레이어를 반드시 게임의 코어 루프와 순환되도록 설계해야 플레이어의 감정적 투자를 끌어내어 성공적인 수익화로 이어집니다
+                      - 'button "31: Match 3 Game - Wax Studios" [ref=e90355] [cursor=pointer]':
+                        - 'generic "31: Match 3 Game - Wax Studios" [ref=e90356]': "31"
+                      - 'button "32: Match 3 Game - Wax Studios" [ref=e90358] [cursor=pointer]':
+                        - 'generic "32: Match 3 Game - Wax Studios" [ref=e90359]': "32"
+                      - text: .
+                - generic [ref=e90360]:
+                  - button "메시지를 메모에 저장" [ref=e90361]:
+                    - img [ref=e90362]: keep_pin
+                    - generic [ref=e90363]: 메모에 저장
+                  - generic [ref=e90366]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90370] [cursor=pointer]:
+                      - img [ref=e90371]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90377] [cursor=pointer]:
+                      - img [ref=e90378]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e90384] [cursor=pointer]:
+                      - img [ref=e90385]: thumb_down
+            - generic [ref=e90388]:
+              - heading [level=3] [ref=e90394]:
+                - paragraph [ref=e90395]: 나는 Unity Match3 게임을 리팩토링하는 상세 계획서를 만들고 있어. AI(Claude)가 Unity MCP 도구를 사용해서 에디터를 직접 조작하며 개발하는 방식이야. 현재 계획서의 Phase 2~5 요약을 보여줄 테니, 문제점과 빠진 것을 알려줘.
+                - paragraph [ref=e90396]: "Phase 2: 카메라 설정 + Edit 모드 프리뷰"
+                - list [ref=e90397]:
+                  - listitem [ref=e90398]: 카메라 Clear Flags를 SolidColor로 변경
+                  - listitem [ref=e90399]: "[ExecuteAlways] + OnDrawGizmos로 Edit 모드에서 보드 그리드 프리뷰 표시"
+                  - listitem [ref=e90400]: BoardPreview.cs 작성
+                - paragraph [ref=e90401]: "Phase 3: Model 분리 (순수 C#)"
+                - list [ref=e90402]:
+                  - listitem [ref=e90403]: BoardModel.cs (Grid2D 구조체, 직렬화 가능)
+                  - listitem [ref=e90404]: MatchFinder.cs (매치 검사)
+                  - listitem [ref=e90405]: DropSimulator.cs (낙하/스폰)
+                  - listitem [ref=e90406]: Strangler Pattern으로 GameGrid.cs에서 점진적 추출
+                - paragraph [ref=e90407]: "Phase 4: Controller + FSM"
+                - list [ref=e90408]:
+                  - listitem [ref=e90409]: GameStateMachine (PREGAME→READY→EVALUATE→MATCH→COLLAPSE)
+                  - listitem [ref=e90410]: InputController (터치→그리드 좌표 변환, dragThreshold 0.5)
+                  - listitem [ref=e90411]: GameController (Model/View/FSM 연결)
+                - paragraph [ref=e90412]: "Phase 5: View 분리 + Prefab 연결"
+                - list [ref=e90413]:
+                  - listitem [ref=e90414]: BoardView.cs ([ExecuteAlways], 타일 Prefab 풀링으로 Instantiate)
+                  - listitem [ref=e90415]: DOTween 애니메이션 (스왑 0.25s InOutQuad, 낙하 OutBounce, 사라짐 0.15s InBack)
+                  - listitem [ref=e90416]: TileView.cs 확장 (MoveTo, PlayDestroyEffect, PlayHintPulse)
+                - paragraph [ref=e90417]: "질문:"
+                - list [ref=e90418]:
+                  - listitem [ref=e90419]: 이 순서가 맞아? Strangler Pattern 적용 시 Phase 3부터 시작하는 게 안전한가?
+                  - listitem [ref=e90420]: Edit 모드 프리뷰는 OnDrawGizmos만으로 충분한가? Game View에서도 보이게 하려면 어떤 추가 작업이 필요한가?
+                  - listitem [ref=e90421]: BoardView에서 [ExecuteAlways]를 사용하면 Edit 모드에서 타일 Prefab을 실제로 배치할 수 있는가?
+                  - listitem [ref=e90422]: MVC 분리 시 이벤트 통신 패턴은 어떻게 해야 하는가? (C# event? UnityEvent? Observer?)
+                  - listitem [ref=e90423]: 빠진 중요한 단계가 있는가?
+              - generic [ref=e90426]:
+                - generic [ref=e90430]:
+                  - generic [ref=e90432]: 작성해주신 리팩토링 계획서는 MVC 아키텍처와 상태 머신(FSM)을 도입하는 매우 훌륭한 구조를 갖추고 있습니다. 특히 AI(Claude)가 MCP 도구를 통해 에디터를 직접 조작하는 환경이라면, 명확한 단계 분리가 더욱 중요합니다.
+                  - generic [ref=e90434]: 제시해주신 계획에 대한 구체적인 피드백과 누락된 핵심 요소들을 정리해 드립니다.
+                  - heading "1. 이 순서가 맞아? Strangler Pattern 적용 시 Phase 3부터 시작하는 게 안전한가?" [level=3] [ref=e90436]
+                  - generic [ref=e90438]: 절대적으로 안전하지 않습니다. Phase 4의 InputController 분리가 Phase 3보다 먼저 선행되어야 합니다.
+                  - generic [ref=e90440]:
+                    - text: Strangler Pattern의 핵심은 '기존 기능을 깨뜨리지 않고 바깥쪽부터 조금씩 도려내는 것'입니다. 1400줄짜리 God Object(
+                    - code [ref=e90441]: GameGrid.cs
+                    - text: )에서 가장 핵심적이고 복잡한 데이터 구조(Model)를 먼저 건드리면, 기존의 입력 및 시각적 연출 코드가 모두 에러를 뿜으며 게임이 멈추게 됩니다.
+                  - list [ref=e90442]:
+                    - listitem [ref=e90444]:
+                      - text: "권장 순서 조정:"
+                      - list [ref=e90445]:
+                        - listitem [ref=e90447]:
+                          - text: "Phase 2.5 (추가): InputController 추출. 가장 의존성이 적은 터치/드래그 입력을 먼저 분리하여 기존"
+                          - code [ref=e90448]: GameGrid.TrySwap()
+                          - text: 을 호출하게 만듭니다.
+                        - listitem [ref=e90450]:
+                          - text: "Phase 3 (Model 분리): 순수 C# 데이터 모델("
+                          - code [ref=e90451]: BoardModel
+                          - text: ","
+                          - code [ref=e90452]: MatchFinder
+                          - text: )을 분리하고, 기존
+                          - code [ref=e90453]: GameGrid
+                          - text: 가 자체 배열 대신 새 모델의 데이터를 읽어오도록(Read-only) 수정합니다.
+                        - listitem [ref=e90455]:
+                          - text: "Phase 4 (View 전환) & Phase 5 (FSM 구축): 로직이 모두 빠져나간"
+                          - code [ref=e90456]: GameGrid
+                          - text: 를
+                          - code [ref=e90457]: BoardView
+                          - text: 로 전환하고, 마지막으로
+                          - code [ref=e90458]: GameController(FSM)
+                          - text: 를 덮어씌워 흐름을 통제합니다.
+                  - heading "2. Edit 모드 프리뷰는 OnDrawGizmos만으로 충분한가? Game View에서도 보이게 하려면?" [level=3] [ref=e90460]
+                  - generic [ref=e90462]: OnDrawGizmos는 Scene View에서만 렌더링되므로 불충분합니다. (Game View에서 Gizmos 토글을 켤 수는 있지만, 실제 게임 화면의 UI나 해상도 대응을 확인하기엔 부적합합니다.)
+                  - list [ref=e90463]:
+                    - listitem [ref=e90465]:
+                      - text: "Game View 프리뷰 방법:"
+                      - code [ref=e90466]: BoardPreview.cs
+                      - text: 나 에디터 스크립트를 통해 실제 스프라이트 이미지를 렌더링해야 합니다.
+                    - listitem [ref=e90468]:
+                      - text: "권장 방식: 임시"
+                      - code [ref=e90469]: SpriteRenderer
+                      - text: 객체들을 생성하거나, Unity의
+                      - code [ref=e90470]: Graphics.DrawMesh
+                      - text: /
+                      - code [ref=e90471]: Graphics.DrawTexture
+                      - text: 를
+                      - code [ref=e90472]: OnRenderObject
+                      - text: 등에서 호출하여 실제 Game View 카메라에 타일이 어떻게 보일지 렌더링해야 직관적인 에디터 조작이 가능합니다.
+                  - heading "3. BoardView에서 [ExecuteAlways]를 사용하면 Edit 모드에서 타일 Prefab을 실제로 배치할 수 있는가?" [level=3] [ref=e90474]
+                  - generic [ref=e90476]: 가능하지만, 치명적인 메모리 씬 누수(Scene Leak)를 유발할 수 있어 매우 위험합니다.
+                  - list [ref=e90477]:
+                    - listitem [ref=e90479]:
+                      - code [ref=e90480]: "[ExecuteAlways]"
+                      - text: 상태에서
+                      - code [ref=e90481]: Update()
+                      - text: 나
+                      - code [ref=e90482]: OnValidate()
+                      - text: 를 통해
+                      - code [ref=e90483]: Instantiate()
+                      - text: 를 무턱대고 호출하면, 코드가 컴파일되거나 씬이 갱신될 때마다 타일 클론이 무한정 생성되어 에디터가 느려지고 씬 파일이 엉망이 됩니다.
+                    - listitem [ref=e90485]:
+                      - text: "안전한 구현 방법:"
+                      - list [ref=e90486]:
+                        - listitem [ref=e90488]: "Custom Inspector 버튼 활용: 에디터 자동 실행 대신, 인스펙터에 \"Generate Board\" 버튼을 만들어 기획자가 명시적으로 클릭할 때만 프리팹을 생성/파괴하도록 만듭니다."
+                        - listitem [ref=e90490]:
+                          - text: "HideFlags 사용: 불가피하게 자동 생성해야 한다면, 생성된 프리팹 인스턴스에"
+                          - code [ref=e90491]: HideFlags.HideAndDontSave
+                          - text: 를 부여하여 씬 파일에 저장되지 않도록 철저히 가비지 컬렉션을 관리해야 합니다.
+                  - heading "4. MVC 분리 시 이벤트 통신 패턴은 어떻게 해야 하는가?" [level=3] [ref=e90493]
+                  - generic [ref=e90495]:
+                    - text: Model은 순수 C# System.Action (또는 delegate)을 사용해야 합니다.
+                    - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90497] [cursor=pointer]':
+                      - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90498]': "1"
+                  - list [ref=e90499]:
+                    - listitem [ref=e90501]:
+                      - text: "Model ➔ View (C# Action):"
+                      - code [ref=e90502]: BoardModel
+                      - text: 은 유니티 엔진(UnityEngine)에 의존하지 않는 순수 C# 클래스여야 하므로,
+                      - code [ref=e90503]: UnityEvent
+                      - text: 를 사용하면 안 됩니다.
+                      - code [ref=e90504]: public event Action<Vector2Int, Vector2Int> OnTilesSwapped;
+                      - text: 와 같이 C# 이벤트를 발생시키고,
+                      - code [ref=e90505]: BoardView
+                      - text: 가 이를 구독(Subscribe)하여 애니메이션을 재생하는 옵저버 패턴이 가장 이상적입니다.
+                    - listitem [ref=e90507]:
+                      - text: "View ➔ Controller (콜백): 뷰의 애니메이션(DOTween)이 끝났음을 컨트롤러(FSM)에 알릴 때는 코루틴이나"
+                      - code [ref=e90508]: OnAnimationComplete
+                      - text: 콜백을 사용합니다.
+                    - listitem [ref=e90510]:
+                      - text: "Controller ➔ Model (직접 참조): 입력이 들어오면 컨트롤러가"
+                      - code [ref=e90511]: Model.TrySwap()
+                      - text: 을 직접 호출합니다.
+                  - heading "5. 빠진 중요한 단계가 있는가?" [level=3] [ref=e90513]
+                  - generic [ref=e90515]: 현재 계획은 기본적인 3매치 뼈대에 충실하지만, 상용 매치 3 게임을 위한 핵심 로직 3가지가 누락되어 있습니다. Phase 3(Model 분리) 단계에 반드시 추가되어야 합니다.
+                  - list [ref=e90516]:
+                    - listitem [ref=e90518]:
+                      - text: "특수 타일 형태 인식 알고리즘 (Shape Recognition): 단순한 3개 매치뿐만 아니라 직선 4개(스트라이프), L자/T자 5개(폭탄), 직선 5개(컬러밤)를 식별하고 특수 타일을 생성하는 로직이"
+                      - code [ref=e90519]: MatchFinder.cs
+                      - text: 에 포함되어야 합니다.
+                      - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90521] [cursor=pointer]':
+                        - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90522]': "2"
+                    - listitem [ref=e90524]:
+                      - text: "데드 보드(Dead Board) 감지 및 셔플 (매우 중요): 현재 보드에 더 이상 '이동 가능한 유효한 매치'가 1개도 남아있지 않은 상태를 스캔하는"
+                      - code [ref=e90525]: FindMove()
+                      - text: 알고리즘이 필요합니다.
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90527] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90528]': "1"
+                      - text: 유효한 이동이 없다면 보드를 섞어주는(Shuffle) 로직이 없으면 게임 진행이 불가능해지는 버그가 발생합니다.
+                    - listitem [ref=e90530]:
+                      - text: "장애물 및 비정방형 맵 지원: 실제 게임에서는 8x8이 꽉 찬 사각형이 아니라, 가운데가 뚫려 있거나(Empty Cell), 움직이지 않는 돌/얼음 등의 장애물이 존재합니다."
+                      - code [ref=e90531]: Grid2D
+                      - text: 구조체와
+                      - code [ref=e90532]: BoardModel
+                      - text: "이 단순히 타일 ID만 갖는 것이 아니라, 해당 셀이 '비어있는 공간'인지, '장애물'인지를 식별할 수 있는 데이터 구조(예:"
+                      - code [ref=e90533]: CellState
+                      - text: enum)를 가져야 합니다.
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90535] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90536]': "3"
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90538] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90539]': "4"
+                - generic [ref=e90540]:
+                  - button "메시지를 메모에 저장" [ref=e90541]:
+                    - img [ref=e90542]: keep_pin
+                    - generic [ref=e90543]: 메모에 저장
+                  - generic [ref=e90546]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90550] [cursor=pointer]:
+                      - img [ref=e90551]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90557] [cursor=pointer]:
+                      - img [ref=e90558]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e90564] [cursor=pointer]:
+                      - img [ref=e90565]: thumb_down
+            - generic [ref=e90568]:
+              - 'heading "나는 Unity Match3 게임(GameGrid.cs 1400줄 God Object)을 리팩토링하려고 해. AI가 Unity MCP 도구(npx unity-mcp-cli)로 에디터를 직접 조작하며 개발하는 방식이야. 현재 계획서를 검토해줘. 계획: Phase 2: 카메라 Clear Flags SolidColor + [ExecuteAlways] BoardPreview.cs로 Edit 모드 보드 그리드 프리뷰 Phase 3: BoardModel(순수C#) + MatchFinder + DropSimulator 분리 (Strangler Pattern) Phase 4: GameStateMachine + InputController + GameController 분리 Phase 5: BoardView([ExecuteAlways]) + DOTween 애니메이션 + 타일 Prefab 풀링 연결 Phase 6: Canvas UI를 에디터에서 직접 배치, 코드는 데이터 바인딩만 질문: 이 Phase 순서가 최적인가? 특히 Phase 3(Model)을 Phase 5(View) 전에 분리하는 게 맞나? Edit 모드에서 보드 프리뷰를 보여주려면 OnDrawGizmos만으로 충분한가? Game View에서도 보이게 하려면? [ExecuteAlways]로 BoardView를 만들면 Edit 모드에서 실제 타일 Prefab을 배치해서 보여줄 수 있나? MVC 분리 시 Model→View 이벤트 통신은 C# event vs UnityEvent 중 어떤 게 나은가? AI가 Unity MCP로 에디터를 조작할 때 (Prefab 생성, 컴포넌트 추가, Inspector 값 설정 등), 계획서에 MCP 도구 호출 단계를 포함해야 하나? 이 계획에서 빠진 중요한 단계가 있나?" [level=3] [ref=e90574]':
+                - paragraph [ref=e90575]: 나는 Unity Match3 게임(GameGrid.cs 1400줄 God Object)을 리팩토링하려고 해. AI가 Unity MCP 도구(npx unity-mcp-cli)로 에디터를 직접 조작하며 개발하는 방식이야. 현재 계획서를 검토해줘.
+                - paragraph [ref=e90576]: "계획: Phase 2: 카메라 Clear Flags SolidColor + [ExecuteAlways] BoardPreview.cs로 Edit 모드 보드 그리드 프리뷰 Phase 3: BoardModel(순수C#) + MatchFinder + DropSimulator 분리 (Strangler Pattern) Phase 4: GameStateMachine + InputController + GameController 분리 Phase 5: BoardView([ExecuteAlways]) + DOTween 애니메이션 + 타일 Prefab 풀링 연결 Phase 6: Canvas UI를 에디터에서 직접 배치, 코드는 데이터 바인딩만"
+                - paragraph [ref=e90577]: "질문:"
+                - list [ref=e90578]:
+                  - listitem [ref=e90579]: 이 Phase 순서가 최적인가? 특히 Phase 3(Model)을 Phase 5(View) 전에 분리하는 게 맞나?
+                  - listitem [ref=e90580]: Edit 모드에서 보드 프리뷰를 보여주려면 OnDrawGizmos만으로 충분한가? Game View에서도 보이게 하려면?
+                  - listitem [ref=e90581]: "[ExecuteAlways]로 BoardView를 만들면 Edit 모드에서 실제 타일 Prefab을 배치해서 보여줄 수 있나?"
+                  - listitem [ref=e90582]: MVC 분리 시 Model→View 이벤트 통신은 C# event vs UnityEvent 중 어떤 게 나은가?
+                  - listitem [ref=e90583]: AI가 Unity MCP로 에디터를 조작할 때 (Prefab 생성, 컴포넌트 추가, Inspector 값 설정 등), 계획서에 MCP 도구 호출 단계를 포함해야 하나?
+                  - listitem [ref=e90584]: 이 계획에서 빠진 중요한 단계가 있나?
+              - generic [ref=e90587]:
+                - generic [ref=e90591]:
+                  - generic [ref=e90593]: 작성해주신 리팩토링 계획은 AI와 Unity MCP(Model Context Protocol) 도구를 결합하여 모놀리식 구조를 해체하고 MVC 패턴으로 전환하는 매우 현대적이고 훌륭한 접근입니다.
+                  - generic [ref=e90595]: 질문하신 내용들에 대해 게임 아키텍처 및 Unity 에디터 환경(특히 AI 원격 조작)에 맞추어 구체적인 답변과 개선안을 제안해 드립니다.
+                  - generic [ref=e90597]: "--------------------------------------------------------------------------------"
+                  - heading "1. Phase 순서가 최적인가? (Model을 View보다 먼저 분리하는 게 맞나?)" [level=3] [ref=e90599]
+                  - generic [ref=e90601]:
+                    - text: 네, Model을 View보다 먼저 분리(Phase 3 ➔ Phase 5)하는 것은 MVC 아키텍처 원칙상 필수적이고 올바른 순서입니다. View는 Model의 데이터를 시각적으로 '그려주는' 역할만 하므로, 순수 C# 데이터인
+                    - code [ref=e90602]: BoardModel
+                    - text: 이 먼저 존재해야만 View가 이를 참조하여 타일을 배치할 수 있습니다
+                    - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90604] [cursor=pointer]':
+                      - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90605]': "1"
+                    - text: .
+                  - generic [ref=e90607]:
+                    - text: "💡 단, 더 안전한 Strangler Pattern을 위한 순서 조정 제안: 현재 1400줄짜리 코드에서 가장 핵심인 Model을 먼저 건드리면 에러가 폭포수처럼 발생할 수 있습니다. 따라서 Phase 3 이전에 InputController(입력 처리)를 먼저 추출하는 Phase 2.5를 추가하는 것을 강력히 권장합니다. 입력을 분리해 기존"
+                    - code [ref=e90608]: GameGrid
+                    - text: 를 호출하게 만들면 기존 코드를 깨지 않고 가장 바깥쪽부터 분리할 수 있습니다.
+                  - 'heading "2. Edit 모드 보드 프리뷰: OnDrawGizmos vs Game View" [level=3] [ref=e90610]'
+                  - generic [ref=e90612]: OnDrawGizmos는 Scene View에서만 렌더링되므로 Game View 프리뷰로는 불충분합니다. Game View에서도 타일이 배치된 모습을 보려면 다음 두 가지 방법 중 하나를 선택해야 합니다.
+                  - list [ref=e90613]:
+                    - listitem [ref=e90615]:
+                      - text: "임시 객체 렌더링 (권장):"
+                      - code [ref=e90616]: Update()
+                      - text: 나
+                      - code [ref=e90617]: OnRenderObject
+                      - text: 이벤트에서
+                      - code [ref=e90618]: Graphics.DrawMesh
+                      - text: 또는
+                      - code [ref=e90619]: Graphics.DrawTexture
+                      - text: 를 호출하여 실제 게임 오브젝트를 생성하지 않고 GPU에 직접 타일을 그립니다.
+                    - listitem [ref=e90621]:
+                      - text: "임시 SpriteRenderer 생성: 실제"
+                      - code [ref=e90622]: GameObject
+                      - text: 를 생성하되, 씬 파일에 저장되지 않도록 설정합니다 (아래 3번 답변 참조).
+                  - heading "3. [ExecuteAlways]로 BoardView에서 실제 타일 Prefab 배치 가능 여부" [level=3] [ref=e90624]:
+                    - text: "3."
+                    - code [ref=e90625]: "[ExecuteAlways]"
+                    - text: 로 BoardView에서 실제 타일 Prefab 배치 가능 여부
+                  - generic [ref=e90627]:
+                    - text: 배치는 가능하지만, 매우 치명적인 '씬 메모리 누수(Scene Leak)'를 유발할 수 있어 극도로 주의해야 합니다.
+                    - code [ref=e90628]: "[ExecuteAlways]"
+                    - text: 상태에서
+                    - code [ref=e90629]: Update
+                    - text: 나 에디터 갱신 주기에 맞춰 무턱대고
+                    - code [ref=e90630]: Instantiate()
+                    - text: 를 호출하면, 에디터가 코드를 리로드하거나 씬을 다시 그릴 때마다 타일 클론이 무한정 생성되어 씬 파일이 오염되고 에디터가 멈출 수 있습니다.
+                  - list [ref=e90631]:
+                    - listitem [ref=e90633]:
+                      - text: "해결책 1 (HideFlags 사용): 에디터 모드에서 생성된 프리팹 인스턴스에"
+                      - code [ref=e90634]: HideFlags.HideAndDontSave
+                      - text: 를 부여하여 씬에 저장되거나 Hierarchy에 쓰레기 데이터가 남지 않도록 엄격하게 관리해야 합니다.
+                    - listitem [ref=e90636]:
+                      - text: "해결책 2 (Custom Inspector 활용 - 더 안전함):"
+                      - code [ref=e90637]: "[ExecuteAlways]"
+                      - text: 를 자동 실행하지 말고, Custom Inspector에 "Generate Board Preview" 버튼을 만들어 기획자나 AI가 명시적으로 클릭할 때만 기존 프리뷰를 지우고 새로 스폰하도록 설계하는 것이 훨씬 안전합니다.
+                  - heading "4. MVC 분리 시 Model ➔ View 이벤트 통신 (C# event vs UnityEvent)" [level=3] [ref=e90639]
+                  - generic [ref=e90641]: 무조건 순수 C#의 System.Action (또는 delegate)을 사용해야 합니다.
+                  - list [ref=e90642]:
+                    - listitem [ref=e90644]:
+                      - text: "이유:"
+                      - code [ref=e90645]: BoardModel
+                      - text: 이나
+                      - code [ref=e90646]: MatchFinder
+                      - text: 는 Unity API(
+                      - code [ref=e90647]: UnityEngine
+                      - text: )에 의존하지 않는 순수 C# 논리 클래스여야 합니다
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90649] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90650]': "1"
+                      - text: .
+                      - code [ref=e90651]: UnityEvent
+                      - text: 는 인스펙터 창에서 드래그 앤 드롭으로 연결하기 위한 직렬화(Serialization) 무거운 래퍼이므로, 매 턴마다 수십 번씩 호출되는 매치 3 코어 로직에 사용하기에는 성능 오버헤드가 큽니다.
+                    - listitem [ref=e90653]:
+                      - text: "구현: Model에서"
+                      - code [ref=e90654]: public event Action<Vector2Int, Vector2Int> OnTilesSwapped;
+                      - text: 와 같이 C# 이벤트를 발생시키고,
+                      - code [ref=e90655]: BoardView
+                      - text: 계층에서 이를 구독(Subscribe)하여 애니메이션을 재생하는 형태가 최적입니다.
+                  - heading "5. AI(MCP) 도구 호출 단계의 계획서 포함 여부" [level=3] [ref=e90657]
+                  - generic [ref=e90659]: 네, 계획서에 MCP 도구 호출 단계를 명확한 'Task' 단위로 분리해서 포함해야 합니다. AI가 에디터를 제어할 때는 "코드를 작성하는 작업"과 "에디터에 반영하는 작업"을 명확히 구분해주지 않으면 누락이 발생합니다.
+                  - list [ref=e90660]:
+                    - listitem [ref=e90662]:
+                      - text: "예시 (Phase 5 구체화):"
+                      - list [ref=e90663]:
+                        - listitem [ref=e90665]:
+                          - text: "Step 5.1 (Code):"
+                          - code [ref=e90666]: BoardView.cs
+                          - text: 스크립트 작성 (C# 이벤트 구독 로직 포함)
+                        - listitem [ref=e90668]:
+                          - text: "Step 5.2 (MCP): 씬에 빈 GameObject 생성 및"
+                          - code [ref=e90669]: BoardView
+                          - text: 컴포넌트 부착
+                        - listitem [ref=e90671]:
+                          - text: "Step 5.3 (MCP): 타일 Prefab들을"
+                          - code [ref=e90672]: BoardView
+                          - text: 의
+                          - code [ref=e90673]: "[SerializeField]"
+                          - text: 배열에 할당 이렇게 작성해야 AI가 코드를 짠 뒤 "어, 인스펙터 할당을 안 했네" 하고 멈추는 것을 방지할 수 있습니다.
+                  - heading "6. 계획에서 빠진 중요한 단계" [level=3] [ref=e90675]
+                  - generic [ref=e90677]: 기본적인 구조는 훌륭하지만, 성공적인 매치 3 게임을 위한 필수 코어 로직 3가지가 Phase 3(Model 분리)에 누락되어 있습니다.
+                  - list [ref=e90678]:
+                    - listitem [ref=e90680]:
+                      - text: "특수 타일 형태 인식 알고리즘 (Shape Recognition): 단순 3매치 외에도 4매치(직선 타일), T/L자형 5매치(폭탄), 5매치(컬러밤)를 식별하고 특수 타일 조합 상호작용 매트릭스를 처리하는 로직이 필요합니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90682] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90683]': "2"
+                      - button [ref=e90685] [cursor=pointer]:
+                        - img [ref=e90686]: more_horiz
+                      - text: .
+                    - listitem [ref=e90688]:
+                      - text: "데드 보드(Dead Board) 감지 및 자동 셔플 (필수): 현재 보드에 매치가 가능한 유효 이동(Possible Move)이 단 하나도 남지 않은 상태를 전체 스캔하는"
+                      - code [ref=e90689]: FindMove()
+                      - text: 로직과 셔플 로직이 없으면 게임이 영원히 멈추는(소프트락) 버그가 발생합니다
+                      - 'button "5: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90691] [cursor=pointer]':
+                        - 'generic "5: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90692]': "5"
+                      - text: .
+                    - listitem [ref=e90694]:
+                      - text: "장애물 및 다층(Multi-layer) 맵 지원 프레임워크: 단순한 타일 교체 외에도 얼음(고정형), 사슬(잠금형), 박스 등 매치 3의 필수인 장애물(Blockers)의 체력과 상태를 관리하는 데이터 구조가 초기에 설계되어야 합니다"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90696] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90697]': "6"
+                      - text: .
+                  - generic [ref=e90699]: "수정된 Phase 3 제안:"
+                  - list [ref=e90700]:
+                    - listitem [ref=e90702]:
+                      - text: "Phase 3:"
+                      - code [ref=e90703]: InputController
+                      - text: 선 분리 ➔
+                      - code [ref=e90704]: BoardModel
+                      - text: (1차원 배열/장애물 지원) ➔
+                      - code [ref=e90705]: MatchFinder
+                      - text: (특수 모양 인식 포함) ➔
+                      - code [ref=e90706]: DropSimulator
+                      - text: ➔
+                      - code [ref=e90707]: DeadBoardDetector
+                      - text: (데드 보드 검사) 추출 (Strangler Pattern)
+                - generic [ref=e90708]:
+                  - button "메시지를 메모에 저장" [ref=e90709]:
+                    - img [ref=e90710]: keep_pin
+                    - generic [ref=e90711]: 메모에 저장
+                  - generic [ref=e90714]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90718] [cursor=pointer]:
+                      - img [ref=e90719]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90725] [cursor=pointer]:
+                      - img [ref=e90726]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e90732] [cursor=pointer]:
+                      - img [ref=e90733]: thumb_down
+                - generic [ref=e90738]:
+                  - button "1D 배열 Grid2D 구조체의 직렬화와 인덱스 변환 로직은 어떻게 작성하나요?" [ref=e90739] [cursor=pointer]:
+                    - generic [ref=e90740]: 1D 배열 Grid2D 구조체의 직렬화와 인덱스 변환 로직은 어떻게 작성하나요?
+                  - button "MatchFinder에서 4/5매치와 T/L자형 특수 타일 생성 로직을 어떻게 구분하나요?" [ref=e90741] [cursor=pointer]:
+                    - generic [ref=e90742]: MatchFinder에서 4/5매치와 T/L자형 특수 타일 생성 로직을 어떻게 구분하나요?
+                  - button "Unity MCP를 활용해 Prefab Variant와 Sprite Atlas를 자동 구성하는 단계는?" [ref=e90743] [cursor=pointer]:
+                    - generic [ref=e90744]: Unity MCP를 활용해 Prefab Variant와 Sprite Atlas를 자동 구성하는 단계는?
+            - generic [ref=e90745]:
+              - 'heading "고마워. 피드백 반영해서 순서를 수정할게. 추가 질문: AI가 Unity MCP 도구로 에디터를 조작해서 개발하는 상황이야. MCP로 할 수 있는 것: Prefab 생성, 컴포넌트 추가/수정, Inspector 값 설정, 씬 저장, 스크립트 생성, Play 모드 진입/종료, 스크린샷 등. 계획서에 각 단계마다 구체적인 MCP 도구 호출 순서를 포함해야 할까? 아니면 \"무엇을 해야 하는지\"만 적으면 되나? Particle System 설정을 MCP로 하려면 script-execute로 C# 코드를 실행해서 ParticleSystem 모듈을 수정해야 해. 이걸 계획서에 어떻게 적는 게 좋을까? 카메라 설정, UI Canvas 배치 같은 것도 MCP로 하는 게 좋을까, 아니면 사람이 에디터에서 직접 하는 게 좋을까? DOTween 애니메이션의 구체적인 설정값(Duration, Ease)을 코드에 하드코딩 vs ScriptableObject로 관리 vs Inspector SerializeField 중 어떤 게 best practice야? Match3에서 타일 풀링 구현 시, 풀 사이즈는 얼마가 적정한가? 6x6 보드 기준으로." [level=3] [ref=e90751]':
+                - paragraph [ref=e90752]: "고마워. 피드백 반영해서 순서를 수정할게. 추가 질문:"
+                - list [ref=e90753]:
+                  - listitem [ref=e90754]:
+                    - paragraph [ref=e90755]: "AI가 Unity MCP 도구로 에디터를 조작해서 개발하는 상황이야. MCP로 할 수 있는 것: Prefab 생성, 컴포넌트 추가/수정, Inspector 값 설정, 씬 저장, 스크립트 생성, Play 모드 진입/종료, 스크린샷 등. 계획서에 각 단계마다 구체적인 MCP 도구 호출 순서를 포함해야 할까? 아니면 \"무엇을 해야 하는지\"만 적으면 되나?"
+                  - listitem [ref=e90756]:
+                    - paragraph [ref=e90757]: Particle System 설정을 MCP로 하려면 script-execute로 C# 코드를 실행해서 ParticleSystem 모듈을 수정해야 해. 이걸 계획서에 어떻게 적는 게 좋을까?
+                  - listitem [ref=e90758]:
+                    - paragraph [ref=e90759]: 카메라 설정, UI Canvas 배치 같은 것도 MCP로 하는 게 좋을까, 아니면 사람이 에디터에서 직접 하는 게 좋을까?
+                  - listitem [ref=e90760]:
+                    - paragraph [ref=e90761]: DOTween 애니메이션의 구체적인 설정값(Duration, Ease)을 코드에 하드코딩 vs ScriptableObject로 관리 vs Inspector SerializeField 중 어떤 게 best practice야?
+                  - listitem [ref=e90762]:
+                    - paragraph [ref=e90763]: Match3에서 타일 풀링 구현 시, 풀 사이즈는 얼마가 적정한가? 6x6 보드 기준으로.
+              - generic [ref=e90766]:
+                - generic [ref=e90770]:
+                  - generic [ref=e90772]: 질문해주신 내용들은 AI(MCP)를 활용한 유니티 개발 파이프라인과 게임 최적화 아키텍처를 설계할 때 매우 중요한 실무적인 고민들입니다. 각 질문에 대해 가장 효율적이고 안전한 Best Practice를 제안해 드립니다.
+                  - generic [ref=e90774]: "--------------------------------------------------------------------------------"
+                  - heading "1. MCP 도구 호출 시 계획서의 구체성 수준" [level=3] [ref=e90776]
+                  - generic [ref=e90778]: "\"무엇을 해야 하는지(What to do)\"를 적되, 작업 단계를 '스크립트 ➔ 컴포넌트 부착 ➔ 인스펙터 할당'의 3단계로 명확히 쪼개서 명시하는 것이 가장 좋습니다."
+                  - list [ref=e90779]:
+                    - listitem [ref=e90781]: AI에게 특정 도구(tool api)를 쓰라고 명령어까지 적어줄 필요는 없지만, "BoardView를 만들어줘"라고 뭉뚱그려 지시하면 스크립트만 만들고 하이어라키(Hierarchy)에 오브젝트를 생성하거나 인스펙터를 연결하는 것을 빼먹기 쉽습니다.
+                    - listitem [ref=e90783]:
+                      - text: "권장 작성법 예시:"
+                      - list [ref=e90784]:
+                        - listitem [ref=e90786]:
+                          - text: "Step 1:"
+                          - code [ref=e90787]: BoardView.cs
+                          - text: 스크립트 생성 (DOTween 로직 포함)
+                        - listitem [ref=e90789]: "Step 2: 씬에 빈 GameObject 'BoardView' 생성 후 컴포넌트 부착"
+                        - listitem [ref=e90791]:
+                          - text: "Step 3: 인스펙터의"
+                          - code [ref=e90792]: Tile Prefab
+                          - text: 배열에 8색 타일 프리팹 할당
+                  - heading "2. Particle System 설정을 MCP로 처리할 때의 계획서 작성법" [level=3] [ref=e90794]
+                  - generic [ref=e90796]:
+                    - text: 파티클 시스템은 모듈이 매우 많아 코드로 세팅하기 까다롭습니다. MCP가
+                    - code [ref=e90797]: script-execute
+                    - text: 를 써야 한다면, '일회성 에디터 스크립트(Editor Script) 자동 생성 및 실행' 방식으로 계획서에 명시하는 것이 좋습니다.
+                  - list [ref=e90798]:
+                    - listitem [ref=e90800]:
+                      - text: "권장 작성법 예시:"
+                      - list [ref=e90801]:
+                        - listitem [ref=e90803]: "Task: 폭발 파티클 프리팹 생성 및 설정"
+                        - listitem [ref=e90805]:
+                          - text: "Method: \"AI는"
+                          - code [ref=e90806]: ParticleSetupHelper.cs
+                          - text: 라는 임시 에디터 스크립트를 작성하고 실행(script-execute)하여, Emission Rate, Shape(Sphere), Color over Lifetime, Size over Lifetime 값을 프리팹에 세팅한 뒤 스크립트를 삭제할 것."
+                    - listitem [ref=e90808]:
+                      - text: "💡 현실적인 팁: 파티클은 시각적인 미세 조정(Tweaking)이 필수적입니다. AI에게는 기본 뼈대(Shape, Emission 정도)만 코드로 세팅하게 하고, 커브(Curve)나 그라데이션 같은 디테일한 쥬싱(Juicing)은 사람이 직접 에디터에서 만지는 것이 훨씬 빠르고 결과물이 좋습니다"
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90810] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90811]': "1"
+                      - text: .
+                  - heading "3. 카메라 설정 및 UI Canvas 배치 (MCP vs 사람)" [level=3] [ref=e90813]
+                  - generic [ref=e90815]: 카메라 세팅과 UI Canvas 배치는 '사람이 에디터에서 직접' 하는 것을 강력히 권장합니다.
+                  - list [ref=e90816]:
+                    - listitem [ref=e90818]: 유니티의 UI(RectTransform, Anchor, Pivot)와 카메라의 시야각(Frustum) 및 해상도 대응은 숫자로만 계산해서 코드로 맞추기 매우 어렵고 비효율적입니다.
+                    - listitem [ref=e90820]:
+                      - text: "역할 분담: AI(MCP)에게는 \"Canvas와 기본 UI GameObject들을 생성하고,"
+                      - code [ref=e90821]: ScoreUI
+                      - text: ","
+                      - code [ref=e90822]: LevelUI
+                      - text: 스크립트를 붙여서 데이터 바인딩을 준비해"라고만 지시하십시오. 오브젝트가 씬에 생성되면, 화면 비율에 맞게 앵커를 당기고 텍스트의 크기를 시각적으로 예쁘게 맞추는 것은 사람이 씬 뷰(Scene View)에서 마우스로 처리하는 것이 베스트입니다.
+                  - heading "4. DOTween 애니메이션 설정값 (Hardcoding vs SO vs SerializeField)" [level=3] [ref=e90824]
+                  - generic [ref=e90826]:
+                    - text: 절대로 코드 내부에 하드코딩해서는 안 되며
+                    - 'button "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90828] [cursor=pointer]':
+                      - 'generic "2: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90829]': "2"
+                    - text: ", 기본적으로 Inspector SerializeField를 사용하는 것이 가장 모범적인 접근(Best Practice)입니다."
+                  - list [ref=e90830]:
+                    - listitem [ref=e90832]:
+                      - code [ref=e90833]: Catlike Coding
+                      - text: 의 매치 3 튜토리얼 등 검증된 구조를 보면, 타일 스왑을 담당하는 클래스 내부에
+                      - code [ref=e90834]: "[SerializeField, Range(0.1f, 10f)] float duration = 0.25f;"
+                      - text: 와 같이 선언하여 에디터에서 쉽게 애니메이션 속도를 테스트할 수 있게 합니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90836] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90837]': "3"
+                      - text: .
+                    - listitem [ref=e90839]:
+                      - text: "ScriptableObject를 써야 하는 경우: 만약 타일 스왑 속도, 낙하 속도, 파괴 시 스케일 축소 시간 등을 여러 씬(로비, 게임, 미니게임)이나 여러 클래스에서 공통으로 참조해야 한다면"
+                      - code [ref=e90840]: JuiceConfig.asset
+                      - text: 과 같은
+                      - code [ref=e90841]: ScriptableObject
+                      - text: 로 묶어서 관리하는 것이 좋습니다.
+                    - listitem [ref=e90843]: 디자이너가 코드를 열지 않고도 애니메이션의 이징(Ease)이나 지속 시간(Duration)을 인스펙터에서 즉각적으로 수정하고 플레이해 볼 수 있어야 진정한 최적화가 가능합니다.
+                  - heading "5. 매치 3 타일 풀링(Object Pooling) 시 적정 풀 사이즈 (6x6 기준)" [level=3] [ref=e90845]
+                  - generic [ref=e90847]: 6x6 보드라면 보드 위에 존재하는 타일의 총합은 36개입니다. 이때 풀 사이즈는 **최대 타일 수의 2배~2.5배인 '72개 ~ 90개' 정도의 캐파(Capacity)**로 잡는 것이 가장 안정적입니다.
+                  - list [ref=e90848]:
+                    - listitem [ref=e90850]:
+                      - text: "이유: 플레이어가 컬러밤(Color Bomb) 같은 특수 블록을 터뜨려 보드 전체(36개)가 한 번에 파괴될 수 있습니다. 이때 기존 타일 36개가 파괴 애니메이션(사라짐, 파티클 재생)을 0.25초 동안 재생하는 중이므로 아직 풀에 반환되지 않았습니다"
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90852] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90853]': "3"
+                      - text: . 그와 동시에 빈 공간을 채우기 위해 위에서 새로운 타일 36개가 스폰되어 떨어져야 합니다.
+                    - listitem [ref=e90855]:
+                      - text: 따라서 게임 도중
+                      - code [ref=e90856]: Instantiate
+                      - text: 가 호출되어 가비지 컬렉션(GC) 스파이크가 발생하는 것을 막으려면
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90858] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e90859]': "4"
+                      - text: ", **기본 보드 크기(36) + 낙하를 위해 대기하는 최대 타일 수(36)**를 합친 72개 이상이 필요합니다."
+                    - listitem [ref=e90861]: "색상별 풀링: 8가지 색상이 있다면 특정 색상이 유독 많이 스폰될 경우를 대비해, 색상(Prefab Variant)당 **1520개씩 미리 생성(Pre-warm)**해두어 총 120160개 정도를 풀에 넣어두는 것도 메모리 면에서 전혀 부담이 되지 않으며 매우 안전한 방법입니다."
+                - generic [ref=e90862]:
+                  - button "메시지를 메모에 저장" [ref=e90863]:
+                    - img [ref=e90864]: keep_pin
+                    - generic [ref=e90865]: 메모에 저장
+                  - generic [ref=e90868]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90872] [cursor=pointer]:
+                      - img [ref=e90873]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90879] [cursor=pointer]:
+                      - img [ref=e90880]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e90886] [cursor=pointer]:
+                      - img [ref=e90887]: thumb_down
+                - generic [ref=e90892]:
+                  - button "특수 타일 모양 인식 알고리즘의 구체적인 구현 예시를 보여줘" [ref=e90893] [cursor=pointer]:
+                    - generic [ref=e90894]: 특수 타일 모양 인식 알고리즘의 구체적인 구현 예시를 보여줘
+                  - button "Dead Board 감지 알고리즘과 셔플 로직을 Phase 3에 어떻게 추가할까?" [ref=e90895] [cursor=pointer]:
+                    - generic [ref=e90896]: Dead Board 감지 알고리즘과 셔플 로직을 Phase 3에 어떻게 추가할까?
+                  - button "Unity MCP로 8색 타일 프리팹 베리언트를 일괄 생성하는 명령어를 알려줘" [ref=e90897] [cursor=pointer]:
+                    - generic [ref=e90898]: Unity MCP로 8색 타일 프리팹 베리언트를 일괄 생성하는 명령어를 알려줘
+            - generic [ref=e90899]:
+              - heading "특수 타일 모양 인식 알고리즘의 구체적인 구현 예시를 보여줘" [level=3] [ref=e90905]:
+                - paragraph [ref=e90906]: 특수 타일 모양 인식 알고리즘의 구체적인 구현 예시를 보여줘
+              - generic [ref=e90909]:
+                - generic [ref=e90913]:
+                  - generic [ref=e90915]:
+                    - text: 매치 3 게임에서 4매치(줄무늬), 5매치(컬러 밤), 그리고 L자/T자(폭탄) 형태를 인식하는 알고리즘의 핵심은 **'수평 매치와 수직 매치의 교차점(Intersection)을 찾는 집합론(Set Theory)적 접근'**입니다
+                    - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90917] [cursor=pointer]':
+                      - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90918]': "1"
+                    - text: .
+                  - generic [ref=e90920]: 단순히 가로, 세로 길이를 세는 것만으로는 L자나 T자 형태를 구별할 수 없으므로, 알고리즘은 다음과 같은 순서로 작동해야 합니다.
+                  - heading "1. 알고리즘 설계의 3단계" [level=3] [ref=e90922]
+                  - list [ref=e90923]:
+                    - listitem [ref=e90925]:
+                      - text: "1차 스캔 (기본 매치 탐색): 보드 전체(또는 스와이프된 주변)를 가로와 세로로 스캔하여 길이가 3 이상인 모든 매칭 그룹을"
+                      - code [ref=e90926]: List
+                      - text: 로 수집합니다
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90928] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90929]': "1"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90931] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e90932]': "2"
+                      - text: .
+                    - listitem [ref=e90934]:
+                      - text: "교차점 검사 (L자/T자/십자 형태 인식): 수집된 가로 매치 리스트와 세로 매치 리스트를 비교하여, 동일한 타일(좌표)이 가로 매치와 세로 매치 양쪽 모두에 포함되어 있는지(교집합) 확인합니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90936] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90937]': "1"
+                      - text: . 이 교차점이 바로 L자/T자 폭탄이 생성될 위치가 됩니다
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90939] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90940]': "1"
+                      - text: .
+                    - listitem [ref=e90942]:
+                      - text: "길이 검사 (직선 4매치 / 5매치 인식): 교차하지 않는 나머지 매치들에 대해 길이를 검사합니다. 길이가 5 이상이면 컬러 밤, 4면 줄무늬(Striped) 타일로 판정합니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90944] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90945]': "1"
+                      - 'button "3: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90947] [cursor=pointer]':
+                        - 'generic "3: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90948]': "3"
+                      - text: .
+                  - generic [ref=e90950]: "--------------------------------------------------------------------------------"
+                  - heading "2. 구체적인 C# 구현 예시 (Unity 환경)" [level=3] [ref=e90952]
+                  - generic [ref=e90954]:
+                    - text: 이해를 돕기 위해 순수 C# 모델 계층(
+                    - code [ref=e90955]: BoardModel.cs
+                    - text: 또는
+                    - code [ref=e90956]: MatchFinder.cs
+                    - text: )에서 실행될 수 있는 알고리즘 코드를 구성해 보았습니다.
+                  - code [ref=e90959]: "using System.Collections.Generic; using UnityEngine; using System.Linq; // 매치 결과를 담을 데이터 구조 [1] public class MatchInfo { public List<Vector2Int> Tiles = new List<Vector2Int>(); public bool IsHorizontal; } public class MatchFinder { public void EvaluateMatches(Vector2Int swappedTilePos) { // 1. 가로 및 세로 매치 그룹을 각각 찾음 List<MatchInfo> horizontalMatches = FindAllHorizontalMatches(); List<MatchInfo> verticalMatches = FindAllVerticalMatches(); HashSet<Vector2Int> tilesToRemove = new HashSet<Vector2Int>(); List<SpecialTileSpawnInfo> specialTilesToSpawn = new List<SpecialTileSpawnInfo>(); // 2. 교차점 검사 (L자, T자, 십자 형태 찾기) [1] for (int h = horizontalMatches.Count - 1; h >= 0; h--) { for (int v = verticalMatches.Count - 1; v >= 0; v--) { MatchInfo hMatch = horizontalMatches[h]; MatchInfo vMatch = verticalMatches[v]; // 두 매치 그룹 간의 교집합(교차하는 좌표) 찾기 var intersection = hMatch.Tiles.Intersect(vMatch.Tiles).ToList(); if (intersection.Count > 0) { // L자 또는 T자 매치 발견! 교차점에 폭탄(Bomb) 생성 [1, 3] Vector2Int spawnPos = intersection.First(); specialTilesToSpawn.Add(new SpecialTileSpawnInfo(spawnPos, SpecialType.Bomb)); // 파괴할 타일 목록에 추가 tilesToRemove.UnionWith(hMatch.Tiles); tilesToRemove.UnionWith(vMatch.Tiles); // 처리된 매치는 리스트에서 제거하여 중복 검사 방지 horizontalMatches.RemoveAt(h); verticalMatches.RemoveAt(v); break; // 다음 가로 매치로 넘어감 } } } // 3. 남은 단일 방향 매치들 검사 (4매치, 5매치) [3] List<MatchInfo> remainingMatches = new List<MatchInfo>(); remainingMatches.AddRange(horizontalMatches); remainingMatches.AddRange(verticalMatches); foreach (var match in remainingMatches) { tilesToRemove.UnionWith(match.Tiles); // 생성 위치는 플레이어가 방금 스와이프한 위치이거나, 매치의 중심점 Vector2Int spawnPos = match.Tiles.Contains(swappedTilePos) ? swappedTilePos : match.Tiles[4]; if (match.Tiles.Count >= 5) { // 5개 이상 직선 매치 -> 컬러 밤 생성 [3] specialTilesToSpawn.Add(new SpecialTileSpawnInfo(spawnPos, SpecialType.ColorBomb)); } else if (match.Tiles.Count == 4) { // 4개 직선 매치 -> 줄무늬 타일 생성 [3] // 가로 매치면 세로 파괴(혹은 그 반대) 등 규칙에 따라 방향 결정 SpecialType type = match.IsHorizontal ? SpecialType.VerticalStriped : SpecialType.HorizontalStriped; specialTilesToSpawn.Add(new SpecialTileSpawnInfo(spawnPos, type)); } } // 4. 결과 전달 (View에게 타일 파괴 및 특수 타일 생성 지시) ProcessBoard(tilesToRemove, specialTilesToSpawn); } } public struct SpecialTileSpawnInfo { public Vector2Int Position; public SpecialType Type; public SpecialTileSpawnInfo(Vector2Int pos, SpecialType type) { Position = pos; Type = type; } } public enum SpecialType { None, HorizontalStriped, VerticalStriped, Bomb, ColorBomb }"
+                  - heading "3. 알고리즘 구현 시 중요한 디테일 (Best Practices)" [level=3] [ref=e90961]
+                  - list [ref=e90962]:
+                    - listitem [ref=e90964]:
+                      - text: "스폰 위치의 결정: 특수 타일이 어디에 생성될 것인가를 정하는 것은 매우 중요합니다. 교차점(L/T 형태)의 경우 두 매치가 만나는 그 좌표("
+                      - code [ref=e90965]: intersection
+                      - text: )가 스폰 위치가 되어야 합니다
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90967] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e90968]': "1"
+                      - text: . 4/5 직선 매치의 경우, 보통 **'플레이어가 방금 드래그를 놓은 좌표(
+                      - code [ref=e90969]: swappedTilePos
+                      - text: )'**에 생성되도록 만들어야 플레이어에게 직관적인 피드백을 줄 수 있습니다.
+                    - listitem [ref=e90971]:
+                      - text: "중복 카운팅 방지 (HashSet 활용): 교차점이 있는 경우 한 타일이 가로, 세로 양쪽 리스트에 모두 포함됩니다. 이때 배열 대신"
+                      - code [ref=e90972]: HashSet<Vector2Int>
+                      - text: 을 사용하여 삭제할 좌표를 수집하면, 교차점의 타일이 두 번 삭제되는 버그(인덱스 오류)를 안전하게 방지할 수 있습니다.
+                    - listitem [ref=e90974]:
+                      - text: "연쇄 반응(Cascade) 시 스폰 위치: 플레이어의 직접적인 조작이 아닌, 위에서 떨어지는 타일들로 인해 4/5매치가 우연히 형성된 경우에는 플레이어의 스와이프 좌표가 없습니다. 이때는 매칭된 리스트의 중간 인덱스("
+                      - code [ref=e90975]: match.Tiles[match.Tiles.Count / 2]
+                      - text: ) 좌표를 스폰 위치로 지정하는 로직을 추가해야 합니다.
+                - generic [ref=e90976]:
+                  - button "메시지를 메모에 저장" [ref=e90977]:
+                    - img [ref=e90978]: keep_pin
+                    - generic [ref=e90979]: 메모에 저장
+                  - generic [ref=e90982]:
+                    - button "클립보드에 모델 대답 복사" [ref=e90986] [cursor=pointer]:
+                      - img [ref=e90987]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e90993] [cursor=pointer]:
+                      - img [ref=e90994]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e91000] [cursor=pointer]:
+                      - img [ref=e91001]: thumb_down
+                - generic [ref=e91006]:
+                  - button "AI와 MCP를 활용한 셔플(Shuffle) 로직 구현 방법이 궁금해요." [ref=e91007] [cursor=pointer]:
+                    - generic [ref=e91008]: AI와 MCP를 활용한 셔플(Shuffle) 로직 구현 방법이 궁금해요.
+                  - button "데드 보드(Dead Board) 감지를 위한 스마트 스캔 알고리즘을 알려줘." [ref=e91009] [cursor=pointer]:
+                    - generic [ref=e91010]: 데드 보드(Dead Board) 감지를 위한 스마트 스캔 알고리즘을 알려줘.
+                  - button "장애물(Blockers) 시스템을 위한 확장 가능한 클래스 구조는?" [ref=e91011] [cursor=pointer]:
+                    - generic [ref=e91012]: 장애물(Blockers) 시스템을 위한 확장 가능한 클래스 구조는?
+            - generic [ref=e91013]:
+              - 'heading "상용 수준의 Match3 게임 GDD(Game Design Document)를 작성하려고 해. 다음을 아주 구체적으로 알려줘: 코어 게임플레이 규칙: 스와이프 방식, 매치 최소 개수, 연쇄 반응(cascade) 규칙, 턴 종료 조건을 명확한 숫자와 조건으로 특수 타일 종류와 생성 조건: 4매치/5매치/L자/T자 각각 무엇이 생성되고, 효과 범위(몇x몇), 점수 배수를 구체적 숫자로 특수 타일 조합 시너지: 스트라이프+스트라이프, 스트라이프+폭탄, 폭탄+폭탄, 컬러밤+일반 등 모든 조합의 효과를 구체적으로 승리/패배 조건: 이동수 모드, 시간 모드, 장애물 모드 각각의 규칙 점수 시스템: 기본 매치 점수, 연쇄 보너스 배수, 특수 타일 보너스, 남은 이동수 보너스를 구체적 숫자로 부스터 3종(망치/셔플/+5이동)의 효과, 가격(코인), 획득 방법 레벨 구조: 총 몇 레벨, 월드당 몇 레벨, 난이도 곡선은 어떻게 모든 항목에 구체적 숫자를 포함해서 알려줘. Candy Crush, Royal Match 수준의 상용 게임 기준으로." [level=3] [ref=e91019]':
+                - paragraph [ref=e91020]: "상용 수준의 Match3 게임 GDD(Game Design Document)를 작성하려고 해. 다음을 아주 구체적으로 알려줘:"
+                - list [ref=e91021]:
+                  - listitem [ref=e91022]: "코어 게임플레이 규칙: 스와이프 방식, 매치 최소 개수, 연쇄 반응(cascade) 규칙, 턴 종료 조건을 명확한 숫자와 조건으로"
+                  - listitem [ref=e91023]: "특수 타일 종류와 생성 조건: 4매치/5매치/L자/T자 각각 무엇이 생성되고, 효과 범위(몇x몇), 점수 배수를 구체적 숫자로"
+                  - listitem [ref=e91024]: "특수 타일 조합 시너지: 스트라이프+스트라이프, 스트라이프+폭탄, 폭탄+폭탄, 컬러밤+일반 등 모든 조합의 효과를 구체적으로"
+                  - listitem [ref=e91025]: "승리/패배 조건: 이동수 모드, 시간 모드, 장애물 모드 각각의 규칙"
+                  - listitem [ref=e91026]: "점수 시스템: 기본 매치 점수, 연쇄 보너스 배수, 특수 타일 보너스, 남은 이동수 보너스를 구체적 숫자로"
+                  - listitem [ref=e91027]: 부스터 3종(망치/셔플/+5이동)의 효과, 가격(코인), 획득 방법
+                  - listitem [ref=e91028]: "레벨 구조: 총 몇 레벨, 월드당 몇 레벨, 난이도 곡선은 어떻게"
+                - paragraph [ref=e91029]: 모든 항목에 구체적 숫자를 포함해서 알려줘. Candy Crush, Royal Match 수준의 상용 게임 기준으로.
+              - generic [ref=e91032]:
+                - generic [ref=e91036]:
+                  - generic [ref=e91038]: 상용 수준(Candy Crush Saga, Royal Match 등)의 매치 3 게임 개발을 위한 구체적이고 수치화된 게임 기획서(GDD) 세부 가이드라인입니다.
+                  - heading "1. 코어 게임플레이 규칙 (Core Gameplay Rules)" [level=3] [ref=e91040]
+                  - list [ref=e91041]:
+                    - listitem [ref=e91043]:
+                      - text: "스와이프 방식: 플레이어는 인접한 상, 하, 좌, 우 4방향으로만 1칸씩 타일을 스와이프할 수 있으며 대각선 이동은 금지됩니다"
+                      - 'button "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91045] [cursor=pointer]':
+                        - 'generic "1: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91046]': "1"
+                      - 'button "2: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91048] [cursor=pointer]':
+                        - 'generic "2: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91049]': "2"
+                      - text: . 스와이프한 결과가 매치를 형성하지 않으면, 0.25초의 애니메이션과 함께 원래 자리로 튕겨 돌아옵니다(Ping-pong)
+                      - 'button "3: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91051] [cursor=pointer]':
+                        - 'generic "3: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91052]': "3"
+                      - text: .
+                    - listitem [ref=e91054]:
+                      - text: "매치 최소 개수: 동일한 색상/모양의 타일이 직선(가로 또는 세로)으로 최소 3개 이상 정렬되어야 매치로 인정되어 파괴됩니다"
+                      - 'button "4: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91056] [cursor=pointer]':
+                        - 'generic "4: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91057]': "4"
+                      - 'button "5: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91059] [cursor=pointer]':
+                        - 'generic "5: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91060]': "5"
+                      - text: .
+                    - listitem [ref=e91062]:
+                      - text: "연쇄 반응(Cascade) 규칙: 타일 파괴 후 생긴 빈칸은 상단에서 0.2초 속도의 중력 낙하를 통해 새로운 타일로 채워집니다"
+                      - 'button "6: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91064] [cursor=pointer]':
+                        - 'generic "6: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91065]': "6"
+                      - 'button "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91067] [cursor=pointer]':
+                        - 'generic "7: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91068]': "7"
+                      - text: . 낙하한 타일이 다시 3개 이상의 매치를 형성할 경우 자동으로 연속 매치(Cascade)가 발생합니다
+                      - 'button "8: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91070] [cursor=pointer]':
+                        - 'generic "8: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91071]': "8"
+                      - text: .
+                    - listitem [ref=e91073]:
+                      - text: "턴 종료 조건: 보드 전체에 더 이상 매칭될 타일이 없고 모든 타일 낙하 애니메이션이 완전히 종료된 '안정화(Stable)' 상태(READY 상태)에 진입해야 1턴(이동 수 1회)이 소비되며 플레이어의 다음 입력이 허용됩니다"
+                      - 'button "6: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91075] [cursor=pointer]':
+                        - 'generic "6: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91076]': "6"
+                      - 'button "9: Match-3 game design : r/gamedesign - Reddit" [ref=e91078] [cursor=pointer]':
+                        - 'generic "9: Match-3 game design : r/gamedesign - Reddit" [ref=e91079]': "9"
+                      - text: .
+                    - listitem [ref=e91081]:
+                      - text: "힌트 노출: 플레이어가 10초 동안 아무런 조작을 하지 않으면, 유효한 스왑이 가능한 타일 2개가 제자리에서 미세하게 흔들리며(0.5초 주기) 힌트를 제공합니다"
+                      - 'button "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91083] [cursor=pointer]':
+                        - 'generic "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91084]': "10"
+                      - text: .
+                  - heading "2. 특수 타일 종류와 생성 조건" [level=3] [ref=e91086]
+                  - generic [ref=e91088]:
+                    - text: 매치된 타일의 기하학적 배열 형태와 개수에 따라 다음과 같은 특수 타일이 생성됩니다
+                    - 'button "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91090] [cursor=pointer]':
+                      - 'generic "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91091]': "11"
+                    - 'button "12: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91093] [cursor=pointer]':
+                      - 'generic "12: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91094]': "12"
+                    - text: .
+                  - list [ref=e91095]:
+                    - listitem [ref=e91097]:
+                      - text: "4매치 (가로/세로 직선): 스트라이프 타일 (Striped/Line Bomb)"
+                      - list [ref=e91098]:
+                        - listitem [ref=e91100]:
+                          - text: "효과 범위: 발동 시 이동 방향에 따라 가로 1줄(1x9) 또는 세로 1줄(9x1) 전체 파괴"
+                          - 'button "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91102] [cursor=pointer]':
+                            - 'generic "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91103]': "11"
+                          - button [ref=e91105] [cursor=pointer]:
+                            - img [ref=e91106]: more_horiz
+                          - text: .
+                        - listitem [ref=e91108]: "점수 배수: 일반 타일 제거 점수의 2배."
+                    - listitem [ref=e91110]:
+                      - text: "5매치 (T자 또는 L자 교차): 폭탄 타일 (Wrapped/Bomb)"
+                      - list [ref=e91111]:
+                        - listitem [ref=e91113]:
+                          - text: "효과 범위: 스왑 위치를 중심으로 3x3 반경(총 9칸)의 타일 및 1단계 장애물 제거. 발동 시 제자리에서 2번 연속으로 폭발함"
+                          - 'button "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91115] [cursor=pointer]':
+                            - 'generic "11: How can I create Special Candies? - Candy Crush Saga" [ref=e91116]': "11"
+                          - button [ref=e91118] [cursor=pointer]:
+                            - img [ref=e91119]: more_horiz
+                          - text: .
+                        - listitem [ref=e91121]: "점수 배수: 일반 타일 제거 점수의 3배."
+                    - listitem [ref=e91123]:
+                      - text: "5매치 (직선): 컬러 밤 (Color Bomb/Supercrystal)"
+                      - list [ref=e91124]:
+                        - listitem [ref=e91126]:
+                          - text: "효과 범위: 스왑한 타일과 동일한 색상의 보드 위 '모든 타일' 일괄 제거"
+                          - 'button "12: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91128] [cursor=pointer]':
+                            - 'generic "12: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91129]': "12"
+                          - button [ref=e91131] [cursor=pointer]:
+                            - img [ref=e91132]: more_horiz
+                          - text: .
+                        - listitem [ref=e91134]: "점수 배수: 일괄 제거된 타일 수 × 4배의 보너스 점수."
+                    - listitem [ref=e91136]:
+                      - text: "4매치 (2x2 정사각형): 유도형 타일 (Paper Plane/Rocket)"
+                      - list [ref=e91137]:
+                        - listitem [ref=e91139]:
+                          - text: "효과 범위: 십자(상하좌우 4칸) 형태로 터진 후, 가장 주요한 타겟(목표물이나 제거하기 힘든 장애물) 1개를 스스로 추적해 날아가 타격합니다"
+                          - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91141] [cursor=pointer]':
+                            - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91142]': "16"
+                          - text: .
+                  - heading "3. 특수 타일 조합 시너지" [level=3] [ref=e91144]
+                  - generic [ref=e91146]:
+                    - text: 두 특수 타일이 인접해 있을 때 서로 스왑하면 단일 효과를 뛰어넘는 거대한 시너지 폭발이 일어납니다
+                    - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91148] [cursor=pointer]':
+                      - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91149]': "16"
+                    - button [ref=e91151] [cursor=pointer]:
+                      - img [ref=e91152]: more_horiz
+                    - text: .
+                  - list [ref=e91153]:
+                    - listitem [ref=e91155]:
+                      - text: "스트라이프 + 스트라이프: 각각의 방향과 무관하게 스왑된 좌표를 중심으로 가로 1줄, 세로 1줄의 거대한 십자(+) 모양으로 타일을 제거합니다"
+                      - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91157] [cursor=pointer]':
+                        - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91158]': "16"
+                      - button [ref=e91160] [cursor=pointer]:
+                        - img [ref=e91161]: more_horiz
+                      - text: .
+                    - listitem [ref=e91163]:
+                      - text: "스트라이프 + 폭탄: 두께가 3줄인 거대한 십자가(가로 3줄 + 세로 3줄) 영역의 타일과 장애물을 광범위하게 쓸어버립니다"
+                      - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91165] [cursor=pointer]':
+                        - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91166]': "16"
+                      - button [ref=e91168] [cursor=pointer]:
+                        - img [ref=e91169]: more_horiz
+                      - text: .
+                    - listitem [ref=e91171]:
+                      - text: "폭탄 + 폭탄: 기존 3x3 반경이 5x5(총 25칸) 반경으로 대폭 확대되며, 동일하게 2회 연속 폭발하여 견고한 장애물을 효과적으로 철거합니다"
+                      - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91173] [cursor=pointer]':
+                        - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91174]': "16"
+                      - button [ref=e91176] [cursor=pointer]:
+                        - img [ref=e91177]: more_horiz
+                      - text: .
+                    - listitem [ref=e91179]:
+                      - text: "컬러 밤 + 일반 타일: 컬러 밤이 일반 타일 색상과 작용해 보드 위 해당 색상 전체를 삭제합니다"
+                      - 'button "14: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91181] [cursor=pointer]':
+                        - 'generic "14: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91182]': "14"
+                      - 'button "15: How can I create Special Candies? - Candy Crush Saga" [ref=e91184] [cursor=pointer]':
+                        - 'generic "15: How can I create Special Candies? - Candy Crush Saga" [ref=e91185]': "15"
+                      - text: .
+                    - listitem [ref=e91187]:
+                      - text: "컬러 밤 + 스트라이프/폭탄/유도형: 해당 타일과 같은 색상의 보드 위 모든 일반 타일이 스와이프한 특수 타일로 즉시 일괄 변환된 후 동시다발적으로 기폭되어 화면 전체를 초토화시킵니다"
+                      - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91189] [cursor=pointer]':
+                        - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91190]': "16"
+                      - button [ref=e91192] [cursor=pointer]:
+                        - img [ref=e91193]: more_horiz
+                      - text: .
+                    - listitem [ref=e91195]:
+                      - text: "컬러 밤 + 컬러 밤: 보드 위의 모든 타일을 1회 싹쓸이하며, 얼음이나 사슬 등 모든 장애물 레이어를 1단계씩 즉시 파괴합니다"
+                      - 'button "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91197] [cursor=pointer]':
+                        - 'generic "16: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91198]': "16"
+                      - button [ref=e91200] [cursor=pointer]:
+                        - img [ref=e91201]: more_horiz
+                      - text: .
+                  - heading "4. 승리/패배 조건" [level=3] [ref=e91203]
+                  - list [ref=e91204]:
+                    - listitem [ref=e91206]:
+                      - text: "이동수(Move) 모드: 제한된 이동 횟수(예: 25회) 내에 목표로 제시된 미션(예: 빨간 사과 15개, 노란 바나나 20개 수집)을 100% 달성하면 승리, 이동 횟수가 0이 될 때까지 미달성 시 패배합니다"
+                      - 'button "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91208] [cursor=pointer]':
+                        - 'generic "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91209]': "19"
+                      - 'button "20: Match 3 Game - Wax Studios" [ref=e91211] [cursor=pointer]':
+                        - 'generic "20: Match 3 Game - Wax Studios" [ref=e91212]': "20"
+                      - text: .
+                    - listitem [ref=e91214]:
+                      - text: "시간(Time) 모드: 제한 시간(예: 60초) 내에 미션을 달성해야 승리하며, 타이머가 0초에 도달하면 패배합니다. 연쇄 반응 발생 시 1초, 시간 보너스 타일 파괴 시 5초가 추가되는 기믹이 포함됩니다"
+                      - 'button "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91216] [cursor=pointer]':
+                        - 'generic "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91217]': "10"
+                      - 'button "21: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91219] [cursor=pointer]':
+                        - 'generic "21: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91220]': "21"
+                      - text: .
+                    - listitem [ref=e91222]:
+                      - text: "장애물 모드: 제한 이동수/시간 내에 다중 레이어를 가진 블로커(예: 3겹의 얼음 12칸 파괴, 보물상자 해제)를 모두 파괴하면 승리합니다"
+                      - 'button "20: Match 3 Game - Wax Studios" [ref=e91224] [cursor=pointer]':
+                        - 'generic "20: Match 3 Game - Wax Studios" [ref=e91225]': "20"
+                      - button [ref=e91227] [cursor=pointer]:
+                        - img [ref=e91228]: more_horiz
+                      - text: .
+                  - heading "5. 점수 시스템" [level=3] [ref=e91230]
+                  - list [ref=e91231]:
+                    - listitem [ref=e91233]:
+                      - text: "기본 매치 점수: 일반 타일 1개 파괴 당 20점. 3매치 시 기본 60점 획득"
+                      - 'button "24: Match 3 Game - Wax Studios" [ref=e91235] [cursor=pointer]':
+                        - 'generic "24: Match 3 Game - Wax Studios" [ref=e91236]': "24"
+                      - text: .
+                    - listitem [ref=e91238]:
+                      - text: "연쇄 보너스(Cascade Multiplier): 1차 매치 x1. 낙하로 인한 2연쇄 매치는 획득 점수의 x2, 3연쇄는 x3 식으로 배수가 지속 증가하여 누적됩니다"
+                      - 'button "24: Match 3 Game - Wax Studios" [ref=e91240] [cursor=pointer]':
+                        - 'generic "24: Match 3 Game - Wax Studios" [ref=e91241]': "24"
+                      - text: .
+                    - listitem [ref=e91243]: "특수 타일 콤보 보너스: 스트라이프 기폭 시 120점, 폭탄 200점, 컬러 밤 300점 고정 추가 + 파괴된 타일당 점수 누적."
+                    - listitem [ref=e91245]:
+                      - text: "남은 이동수 보너스 (보너스 타임): 레벨 목표 조기 달성 후 남은 이동수 1회당 보드 위의 일반 타일 1개가 무작위로 특수 타일(스트라이프 등)로 변환되며 일제히 기폭됩니다. 변환 1회당 1,000점 + 콤보 연쇄 폭발 점수를 추가 부여해 고득점을 제공합니다"
+                      - 'button "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91247] [cursor=pointer]':
+                        - 'generic "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91248]': "25"
+                      - 'button "26: Match 3 Game - Wax Studios" [ref=e91250] [cursor=pointer]':
+                        - 'generic "26: Match 3 Game - Wax Studios" [ref=e91251]': "26"
+                      - text: .
+                  - heading "6. 부스터 (Boosters)" [level=3] [ref=e91253]
+                  - generic [ref=e91255]:
+                    - text: 인게임 하단에 배치되어 턴 소모 없이 즉시 사용 가능한 아이템입니다
+                    - 'button "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91257] [cursor=pointer]':
+                      - 'generic "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91258]': "25"
+                    - text: .
+                  - list [ref=e91259]:
+                    - listitem [ref=e91261]:
+                      - text: "망치 (Lollipop Hammer / Magnifier): 보드 위 원하는 타일 1개 또는 장애물을 지정하여 터뜨리거나 레이어 1단계를 파괴합니다"
+                      - 'button "21: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91263] [cursor=pointer]':
+                        - 'generic "21: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91264]': "21"
+                      - 'button "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91266] [cursor=pointer]':
+                        - 'generic "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91267]': "25"
+                      - text: .
+                      - list [ref=e91268]:
+                        - listitem [ref=e91270]: "가격/획득: 900 코인. 일일 룰렛이나 출석 보상으로 획득 가능."
+                    - listitem [ref=e91272]:
+                      - text: "셔플 (Shuffle): 보드 위 모든 일반 타일의 배치를 완전히 랜덤하게 섞어 새로운 매치 기회를 창출합니다(장애물 제외)"
+                      - 'button "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91274] [cursor=pointer]':
+                        - 'generic "10: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91275]': "10"
+                      - 'button "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91277] [cursor=pointer]':
+                        - 'generic "25: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91278]': "25"
+                      - text: .
+                      - list [ref=e91279]:
+                        - listitem [ref=e91281]: "가격/획득: 600 코인. 특정 레벨 구간 돌파 보상 등."
+                    - listitem [ref=e91283]:
+                      - text: "+5 이동수 (Extra Moves): 레벨 실패(이동수 0) 직전 팝업을 통해 5회의 추가 턴을 제공하여 재도전 기회를 줍니다"
+                      - 'button "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91285] [cursor=pointer]':
+                        - 'generic "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91286]': "19"
+                      - text: .
+                      - list [ref=e91287]:
+                        - listitem [ref=e91289]:
+                          - text: "가격/획득: 최초 900 코인. 동일 레벨에서 연이어 구매 시 1,900 코인, 2,900 코인 등 인플레이션 가격 정책을 사용하여 고래(Whale) 유저의 IAP 결제를 유도합니다"
+                          - 'button "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91291] [cursor=pointer]':
+                            - 'generic "19: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91292]': "19"
+                          - text: . 광고(Rewarded Video) 1회 시청으로도 1회에 한해 대체 지급 가능.
+                  - heading "7. 레벨 구조와 난이도 곡선" [level=3] [ref=e91294]
+                  - list [ref=e91295]:
+                    - listitem [ref=e91297]:
+                      - text: "총 레벨 수: 라이브 서비스 런칭 시 500개 이상으로 시작, 주 단위 라이브옵스(LiveOps)를 통해 40~80개의 검증된 새 레벨을 지속 업데이트하여 총 10,000개 이상의 레벨 구성을 목표로 합니다"
+                      - 'button "27: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e91299] [cursor=pointer]':
+                        - 'generic "27: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e91300]': "27"
+                      - 'button "28: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91302] [cursor=pointer]':
+                        - 'generic "28: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91303]': "28"
+                      - text: .
+                    - listitem [ref=e91305]:
+                      - text: "월드 구조: 15~20개의 레벨 단위로 하나의 에피소드(World/Theme)를 구성하며, 월드가 바뀔 때마다 신규 기믹(포털, 컨베이어 등) 1종 또는 스토리 컷신이 잠금 해제됩니다"
+                      - 'button "29: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91307] [cursor=pointer]':
+                        - 'generic "29: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91308]': "29"
+                      - text: .
+                    - listitem [ref=e91310]:
+                      - text: "난이도 곡선 (Difficulty Curve): SAC 등 기계 학습(AI/RL) 알고리즘을 사용해 클리어 확률(Win Rate)을 철저히 검증하여 아래의 곡선을 구성합니다"
+                      - 'button "30: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e91312] [cursor=pointer]':
+                        - 'generic "30: Optimizing Stage Construction and Level Balancing of Match-3 Puzzle Game with PPO Algorithm Machine Learning - MDPI" [ref=e91313]': "30"
+                      - text: .
+                      - list [ref=e91314]:
+                        - listitem [ref=e91316]:
+                          - text: "Level 1~20 (Easy & Fun): 승률 95% 이상. 튜토리얼 성격으로 결제 유도가 없으며 콤보의 시각적 쾌감 위주"
+                          - 'button "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91318] [cursor=pointer]':
+                            - 'generic "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91319]': "31"
+                          - text: .
+                        - listitem [ref=e91321]:
+                          - text: "Level 21~50 (Mildly Challenging): 승률 70% 내외. 체인을 가진 타일이나 1단계 돌 등 방해물 등장. 약한 수준의 전략 필요"
+                          - 'button "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91323] [cursor=pointer]':
+                            - 'generic "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91324]': "31"
+                          - text: .
+                        - listitem [ref=e91326]:
+                          - text: "Level 51~100 (Engaging/Rewarding): 승률 50% 내외. 다중 레이어 장애물 등장. 종종 재도전을 요구하며 부스터 사용법 터득 유도"
+                          - 'button "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91328] [cursor=pointer]':
+                            - 'generic "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91329]': "31"
+                          - text: .
+                        - listitem [ref=e91331]:
+                          - text: "Level 101+ (Tactical Mastery): 승률 30~40%. 특수 타일 조합을 의도적으로 세팅해야 클리어 가능한 본격적인 퍼즐 레벨"
+                          - 'button "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91333] [cursor=pointer]':
+                            - 'generic "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91334]': "31"
+                          - text: .
+                        - listitem [ref=e91336]:
+                          - text: "Level 200+ 및 정기 하드코어 레벨 (Fuu-effect 구간): 승률 10~20%. 특정 에피소드의 끝자락 등에 배치된 '매우 어려운 레벨(Hard/Super Hard)'. 기본 주어지는 이동수로는 극한의 운이 따라야 하며, 플레이어의 +5 이동수 구매 및 부스터 인앱 결제(IAP)를 이끌어내는 핵심 수익 창출 구간입니다"
+                          - 'button "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91338] [cursor=pointer]':
+                            - 'generic "31: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91339]': "31"
+                          - 'button "32: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91341] [cursor=pointer]':
+                            - 'generic "32: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91342]': "32"
+                          - text: .
+                - generic [ref=e91343]:
+                  - button "메시지를 메모에 저장" [ref=e91344]:
+                    - img [ref=e91345]: keep_pin
+                    - generic [ref=e91346]: 메모에 저장
+                  - generic [ref=e91349]:
+                    - button "클립보드에 모델 대답 복사" [ref=e91353] [cursor=pointer]:
+                      - img [ref=e91354]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e91360] [cursor=pointer]:
+                      - img [ref=e91361]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e91367] [cursor=pointer]:
+                      - img [ref=e91368]: thumb_down
+                - generic [ref=e91373]:
+                  - button "Match-3 게임을 위한 AI 에이전트(MCTS/SAC)를 Unity에서 어떻게 구현하나요?" [ref=e91374] [cursor=pointer]:
+                    - generic [ref=e91375]: Match-3 게임을 위한 AI 에이전트(MCTS/SAC)를 Unity에서 어떻게 구현하나요?
+                  - button "특수 타일 생성 시 중복 인덱스 오류를 방지하는 HashSet 활용법을 더 알려주세요." [ref=e91376] [cursor=pointer]:
+                    - generic [ref=e91377]: 특수 타일 생성 시 중복 인덱스 오류를 방지하는 HashSet 활용법을 더 알려주세요.
+                  - button "상용 게임의 '데드 보드' 감지 및 셔플 알고리즘의 구체적인 구현 방식은 무엇인가요?" [ref=e91378] [cursor=pointer]:
+                    - generic [ref=e91379]: 상용 게임의 '데드 보드' 감지 및 셔플 알고리즘의 구체적인 구현 방식은 무엇인가요?
+            - generic [ref=e91380]:
+              - 'heading "Match3 특수 타일 시스템을 Unity에서 구현할 때 구체적인 코드 구조와 에디터 설정을 알려줘: ScriptableObject로 특수 타일 데이터를 정의할 때 포함해야 할 필드는? (Inspector에서 설정할 값 목록) Strategy 패턴으로 ISpecialTileEffect를 구현할 때 클래스 구조는? (StripedEffect, BombEffect, ColorBombEffect 각각) MatchFinder에서 Shape Recognition 알고리즘을 구현할 때 교차점 검사의 구체적 단계는? 특수 타일 폭발 시 BoardModel과 BoardView의 역할 분담은? 특수 타일 조합(시너지) 처리 시 우선순위는? (여러 특수 타일이 동시에 기폭될 때 순서) 특수 타일 전용 파티클 이펙트 Inspector 설정값은? (스트라이프 라인 이펙트, 폭탄 범위 이펙트 등)" [level=3] [ref=e91386]':
+                - paragraph [ref=e91387]: "Match3 특수 타일 시스템을 Unity에서 구현할 때 구체적인 코드 구조와 에디터 설정을 알려줘:"
+                - list [ref=e91388]:
+                  - listitem [ref=e91389]: ScriptableObject로 특수 타일 데이터를 정의할 때 포함해야 할 필드는? (Inspector에서 설정할 값 목록)
+                  - listitem [ref=e91390]: Strategy 패턴으로 ISpecialTileEffect를 구현할 때 클래스 구조는? (StripedEffect, BombEffect, ColorBombEffect 각각)
+                  - listitem [ref=e91391]: MatchFinder에서 Shape Recognition 알고리즘을 구현할 때 교차점 검사의 구체적 단계는?
+                  - listitem [ref=e91392]: 특수 타일 폭발 시 BoardModel과 BoardView의 역할 분담은?
+                  - listitem [ref=e91393]: 특수 타일 조합(시너지) 처리 시 우선순위는? (여러 특수 타일이 동시에 기폭될 때 순서)
+                  - listitem [ref=e91394]: 특수 타일 전용 파티클 이펙트 Inspector 설정값은? (스트라이프 라인 이펙트, 폭탄 범위 이펙트 등)
+              - generic [ref=e91397]:
+                - generic [ref=e91401]:
+                  - generic [ref=e91403]:
+                    - text: 1. ScriptableObject 기반 특수 타일 데이터 정의 (Inspector 필드) 특수 타일의 속성과 기획 데이터를 코드와 분리하여 관리하기 위해
+                    - code [ref=e91404]: Match3PieceConfiguration
+                    - text: 과 같은
+                    - code [ref=e91405]: ScriptableObject
+                    - text: 를 사용합니다
+                    - 'button "1: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91407] [cursor=pointer]':
+                      - 'generic "1: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91408]': "1"
+                    - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91410] [cursor=pointer]':
+                      - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91411]': "2"
+                    - text: . Inspector에 노출해야 할 핵심 필드는 다음과 같습니다.
+                  - list [ref=e91412]:
+                    - listitem [ref=e91414]:
+                      - text: "ID / Name: 타일의 고유 식별자 및 이름 (예:"
+                      - code [ref=e91415]: Striped_Horizontal
+                      - text: ","
+                      - code [ref=e91416]: ColorBomb
+                      - text: )
+                      - 'button "3: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91418] [cursor=pointer]':
+                        - 'generic "3: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91419]': "3"
+                      - 'button "4: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91421] [cursor=pointer]':
+                        - 'generic "4: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91422]': "4"
+                      - text: .
+                    - listitem [ref=e91424]:
+                      - text: "Type (타일 유형):"
+                      - code [ref=e91425]: Normal
+                      - text: ","
+                      - code [ref=e91426]: Special
+                      - text: ","
+                      - code [ref=e91427]: Obstacle
+                      - text: 등을 구분하는 Enum 값
+                      - 'button "4: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91429] [cursor=pointer]':
+                        - 'generic "4: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91430]': "4"
+                      - text: .
+                    - listitem [ref=e91432]:
+                      - text: "Prefab / Visuals: 뷰(View) 계층에서 스폰할 실제"
+                      - code [ref=e91433]: GameObject
+                      - text: 프리팹이나 스파인/스프라이트 데이터
+                      - 'button "1: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91435] [cursor=pointer]':
+                        - 'generic "1: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91436]': "1"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91438] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91439]': "2"
+                      - text: .
+                    - listitem [ref=e91441]:
+                      - text: "Priority (우선순위): 연쇄 폭발이나 시너지 발생 시 먼저 실행될 순서를 결정하는 정수값"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91443] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91444]': "2"
+                      - 'button "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91446] [cursor=pointer]':
+                        - 'generic "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91447]': "5"
+                      - text: .
+                    - listitem [ref=e91449]:
+                      - text: "Effect Range (효과 범위): 폭탄의 경우 폭발 반경(예: 1이면 3x3, 2면 5x5)을 지정하는 설정값"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91451] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91452]': "2"
+                      - text: .
+                    - listitem [ref=e91454]:
+                      - text: "Boolean Flags (행동 제어):"
+                      - code [ref=e91455]: CanBeSwapped
+                      - text: (스왑 가능 여부),
+                      - code [ref=e91456]: CanBeMoved
+                      - text: (중력에 의해 낙하하는지),
+                      - code [ref=e91457]: CanBeTriggered
+                      - text: (터치나 매치로 기폭 가능한지)를 제어하는 플래그
+                      - 'button "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91459] [cursor=pointer]':
+                        - 'generic "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91460]': "5"
+                      - text: .
+                  - generic [ref=e91462]:
+                    - text: 2. Strategy 패턴을 활용한 ISpecialTileEffect 클래스 구조 각 특수 타일의 폭발 로직을 거대한 switch문으로 하드코딩하지 않고,
+                    - code [ref=e91463]: ScriptableObject
+                    - text: 의 다형성이나 Strategy 패턴을 활용해 분리해야 확장성이 높습니다
+                    - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91465] [cursor=pointer]':
+                      - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91466]': "2"
+                    - button [ref=e91468] [cursor=pointer]:
+                      - img [ref=e91469]: more_horiz
+                    - text: .
+                  - list [ref=e91470]:
+                    - listitem [ref=e91472]:
+                      - text: "인터페이스/기본 클래스:"
+                      - code [ref=e91473]: "public abstract class SpecialTileEffect : ScriptableObject"
+                      - text: 형식으로 구현하며,
+                      - code [ref=e91474]: public abstract List<Vector2Int> CalculateDestroyArea(Vector2Int center, BoardModel model)
+                      - text: 메서드를 강제합니다.
+                    - listitem [ref=e91476]:
+                      - text: "StripedEffect: 매개변수로 전달된 중심 좌표("
+                      - code [ref=e91477]: center
+                      - text: )를 기준으로
+                      - code [ref=e91478]: BoardModel
+                      - text: 의 전체 너비(또는 높이)만큼 반복문을 돌아 가로 1줄 또는 세로 1줄의 모든
+                      - code [ref=e91479]: Vector2Int
+                      - text: 좌표를 리스트에 담아 반환합니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91481] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91482]': "2"
+                      - 'button "8: How can I create Special Candies? - Candy Crush Saga" [ref=e91484] [cursor=pointer]':
+                        - 'generic "8: How can I create Special Candies? - Candy Crush Saga" [ref=e91485]': "8"
+                      - text: .
+                    - listitem [ref=e91487]:
+                      - text: "BombEffect:"
+                      - code [ref=e91488]: center
+                      - text: "좌표를 기준으로 이중 루프(예: -1 ~ +1)를 순회하며 3x3 영역의 좌표를 계산합니다. 이때 그리드 배열의 경계(Out of Bounds)를 벗어나지 않도록 유효성을 검사한 뒤 좌표 리스트를 반환합니다"
+                      - 'button "8: How can I create Special Candies? - Candy Crush Saga" [ref=e91490] [cursor=pointer]':
+                        - 'generic "8: How can I create Special Candies? - Candy Crush Saga" [ref=e91491]': "8"
+                      - 'button "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91493] [cursor=pointer]':
+                        - 'generic "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91494]': "9"
+                      - text: .
+                    - listitem [ref=e91496]:
+                      - text: "ColorBombEffect: 삭제할 타겟 색상을 지정받은 뒤,"
+                      - code [ref=e91497]: BoardModel
+                      - text: 의 전체 배열을 스캔하여 해당 색상과 일치하는 모든 타일의 좌표를 수집하여 반환합니다
+                      - 'button "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91499] [cursor=pointer]':
+                        - 'generic "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91500]': "9"
+                      - 'button "10: How can I create Special Candies? - Candy Crush Saga" [ref=e91502] [cursor=pointer]':
+                        - 'generic "10: How can I create Special Candies? - Candy Crush Saga" [ref=e91503]': "10"
+                      - text: .
+                  - generic [ref=e91505]:
+                    - text: 3. MatchFinder의 Shape Recognition (교차점 검사) 구체적 단계 스와이프 후 L자, T자, 4매치 등을 인식하여 특수 타일을 생성하기 위해서는 단순 길이 스캔과 집합론적 교차점 검사를 결합해야 합니다
+                    - 'button "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91507] [cursor=pointer]':
+                      - 'generic "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91508]': "9"
+                    - text: .
+                  - list [ref=e91509]:
+                    - listitem [ref=e91511]:
+                      - text: "1단계 (1차 스캔): 보드의 가로와 세로를 각각 스캔하여 길이가 3 이상인 모든 기본 매칭 그룹("
+                      - code [ref=e91512]: List<Vector2Int>
+                      - text: )을 수집합니다
+                      - 'button "11: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91514] [cursor=pointer]':
+                        - 'generic "11: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91515]': "11"
+                      - text: .
+                    - listitem [ref=e91517]:
+                      - text: "2단계 (교차점 검사): 수집된 가로 매치 리스트와 세로 매치 리스트를 이중 루프로 비교하며, C#의"
+                      - code [ref=e91518]: Intersect()
+                      - text: 메서드나 HashSet을 사용하여 양쪽 리스트에 공통으로 포함된 좌표(교집합)를 찾습니다
+                      - 'button "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91520] [cursor=pointer]':
+                        - 'generic "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91521]': "9"
+                      - text: .
+                    - listitem [ref=e91523]:
+                      - text: "3단계 (폭탄 생성): 교차점이 존재한다면 L자 또는 T자 형태이므로, 해당 교차점 좌표를"
+                      - code [ref=e91524]: Bomb
+                      - text: 타일 스폰 위치로 지정하고 검사된 타일들을 매치 리스트에서 제거합니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91526] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91527]': "2"
+                      - 'button "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91529] [cursor=pointer]':
+                        - 'generic "9: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91530]': "9"
+                      - text: .
+                    - listitem [ref=e91532]:
+                      - text: "4단계 (직선 매치 검사): 교차하지 않은 나머지 매치 그룹의 길이를 검사합니다. 길이가 5 이상이면"
+                      - code [ref=e91533]: ColorBomb
+                      - text: 을 생성하고, 길이가 4이면 플레이어의 스와이프 방향(또는 매치 방향)을 기준으로
+                      - code [ref=e91534]: Striped
+                      - text: 타일을 생성합니다
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91536] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91537]': "2"
+                      - button [ref=e91539] [cursor=pointer]:
+                        - img [ref=e91540]: more_horiz
+                      - text: .
+                  - generic [ref=e91542]:
+                    - text: 4. 특수 타일 폭발 시 BoardModel과 BoardView의 역할 분담 게임 로직(Model)과 시각적 표현(View)을 철저히 분리하여 '두 세계 시스템(Two-World System)'을 구축해야 합니다
+                    - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91544] [cursor=pointer]':
+                      - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91545]': "13"
+                    - 'button "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91547] [cursor=pointer]':
+                      - 'generic "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91548]': "14"
+                    - text: .
+                  - list [ref=e91549]:
+                    - listitem [ref=e91551]:
+                      - text: "BoardModel (데이터/로직 처리): 유니티 API("
+                      - code [ref=e91552]: GameObject
+                      - text: )에 의존하지 않는 순수 C# 배열입니다.
+                      - code [ref=e91553]: ISpecialTileEffect
+                      - text: 를 호출하여 삭제될 좌표 리스트를 넘겨받고, 해당 배열 인덱스의 데이터를
+                      - code [ref=e91554]: "null"
+                      - text: 이나
+                      - code [ref=e91555]: None
+                      - text: 으로 즉시 변경합니다
+                      - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91557] [cursor=pointer]':
+                        - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91558]': "13"
+                      - 'button "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91560] [cursor=pointer]':
+                        - 'generic "14: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91561]': "14"
+                      - text: . 이후
+                      - code [ref=e91562]: OnTilesDestroyed(List<Vector2Int>)
+                      - text: 와 같은 C# 이벤트를 발생시켜 뷰에 변경 사실을 알립니다
+                      - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91564] [cursor=pointer]':
+                        - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91565]': "13"
+                      - text: .
+                    - listitem [ref=e91567]:
+                      - text: "BoardView (시각적 연출): 모델의 이벤트를 구독(Subscribe)하고 대기합니다. 이벤트가 수신되면, 전달받은 좌표 리스트에 해당하는"
+                      - code [ref=e91568]: GameObject
+                      - text: 타일들을 찾습니다. 즉시
+                      - code [ref=e91569]: Destroy()
+                      - text: 하지 않고, DOTween을 사용해 스케일 축소/페이드 아웃 애니메이션을 0.15초간 재생한 뒤, 파티클을 스폰하고
+                      - code [ref=e91570]: PiecePool.Return()
+                      - text: 을 호출해 오브젝트 풀로 반환합니다
+                      - 'button "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91572] [cursor=pointer]':
+                        - 'generic "13: The Logic Behind Match-3 Games: Building with Unity & C# - Azumo" [ref=e91573]': "13"
+                      - button [ref=e91575] [cursor=pointer]:
+                        - img [ref=e91576]: more_horiz
+                      - text: .
+                  - generic [ref=e91578]:
+                    - text: 5. 특수 타일 조합(시너지) 처리 우선순위 및 순서 두 개의 특수 타일이 인접해 교체될 때 거대한 연쇄 반응이 일어나며, 이는 상호작용 매트릭스에 의해 우선순위가 결정됩니다
+                    - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91580] [cursor=pointer]':
+                      - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91581]': "2"
+                    - 'button "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91583] [cursor=pointer]':
+                      - 'generic "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91584]': "17"
+                    - text: .
+                  - list [ref=e91585]:
+                    - listitem [ref=e91587]:
+                      - text: "우선순위 (Priority): 일반적으로 컬러밤(ColorBomb) > 폭탄(Bomb) > 스트라이프(Striped) 순으로 시너지 덮어쓰기 권한을 가집니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91589] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91590]': "2"
+                      - 'button "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91592] [cursor=pointer]':
+                        - 'generic "5: sempitern0/match3-board: This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library · GitHub" [ref=e91593]': "5"
+                      - text: .
+                    - listitem [ref=e91595]:
+                      - text: "기폭 순서 (Execution Order):"
+                      - list [ref=e91596]:
+                        - listitem [ref=e91598]:
+                          - text: "변환 페이즈(Transformation): 컬러밤과 다른 특수 타일(예: 스트라이프)이 결합된 경우, 가장 먼저 보드 위에서 가장 많은 색상(또는 교체된 타일 색상)의 일반 타일들을 모두 스트라이프 타일로 '변환'합니다"
+                          - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91600] [cursor=pointer]':
+                            - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91601]': "2"
+                          - 'button "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91603] [cursor=pointer]':
+                            - 'generic "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91604]': "17"
+                          - text: .
+                        - listitem [ref=e91606]: "합체 페이즈(Merge): 두 특수 타일이 스왑된 좌표(중심점)에서 결합되며 시너지 이펙트 정보가 생성됩니다."
+                        - listitem [ref=e91608]:
+                          - text: "동시 기폭 페이즈(Trigger): 변환된 타일들이나 확장된 범위(예: 3열/3행 십자 타격, 5x5 반경 폭발)가 즉시 계산되어"
+                          - code [ref=e91609]: BoardModel
+                          - text: 의 데이터를 한 번에 소거합니다
+                          - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91611] [cursor=pointer]':
+                            - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91612]': "2"
+                          - 'button "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91614] [cursor=pointer]':
+                            - 'generic "17: What Special Bomb Combinations can I make? — Mystery Match Village Help Center" [ref=e91615]': "17"
+                          - text: .
+                  - generic [ref=e91617]:
+                    - text: 6. 특수 타일 전용 파티클 이펙트 Inspector 설정값 (Juicing) 쥬싱(Juicing)을 극대화하기 위해 유니티 내장
+                    - code [ref=e91618]: Particle System
+                    - text: 의 다층적 설정이 필요합니다
+                    - 'button "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91620] [cursor=pointer]':
+                      - 'generic "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91621]': "18"
+                    - 'button "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91623] [cursor=pointer]':
+                      - 'generic "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91624]': "19"
+                    - text: .
+                  - list [ref=e91625]:
+                    - listitem [ref=e91627]:
+                      - text: "스트라이프 타일 이펙트 (Line Bomb):"
+                      - list [ref=e91628]:
+                        - listitem [ref=e91630]:
+                          - text: "Shape:"
+                          - code [ref=e91631]: Box
+                          - text: 또는
+                          - code [ref=e91632]: Edge
+                          - text: 형태로 맵 끝까지 뻗어나가도록 설정합니다.
+                        - listitem [ref=e91634]:
+                          - text: "Emission: 파괴되는 순간"
+                          - code [ref=e91635]: Burst
+                          - text: 모드로 30~50개의 파티클을 일시에 방출합니다
+                          - 'button "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91637] [cursor=pointer]':
+                            - 'generic "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91638]': "18"
+                          - text: .
+                        - listitem [ref=e91640]:
+                          - text: "Velocity over Lifetime / Trails: 좌우(또는 상하)로 빠른 속도로 날아가는 궤적(Trail)을 추가하여 타격 방향을 명확히 시각화합니다"
+                          - 'button "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91642] [cursor=pointer]':
+                            - 'generic "20: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91643]': "20"
+                          - text: .
+                    - listitem [ref=e91645]:
+                      - text: "폭탄 타일 이펙트 (3x3 Bomb):"
+                      - list [ref=e91646]:
+                        - listitem [ref=e91648]:
+                          - text: "Shape:"
+                          - code [ref=e91649]: Sphere
+                          - text: 로 설정하여 사방으로 퍼지게 합니다.
+                        - listitem [ref=e91651]:
+                          - text: "Emission / Size:"
+                          - code [ref=e91652]: Burst
+                          - text: 로 다량의 파편을 터뜨리고,
+                          - code [ref=e91653]: Size over Lifetime
+                          - text: 을 커브로 설정해 파티클이 빠르게 커졌다가 사라지도록 합니다
+                          - 'button "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91655] [cursor=pointer]':
+                            - 'generic "18: Squeezing more juice out of your game design! - GameAnalytics" [ref=e91656]': "18"
+                          - 'button "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91658] [cursor=pointer]':
+                            - 'generic "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91659]': "19"
+                          - text: .
+                        - listitem [ref=e91661]:
+                          - text: "Sub Emitters & Camera Shake: 연기, 섬광, 파편의 3가지 입자 시스템을 자식 노드(Sub Emitter)로 결합하고, 폭발 타이밍에 맞춰"
+                          - code [ref=e91662]: DOTween
+                          - text: 이나 Cinemachine Impulse를 활용해 미세한 화면 흔들림(Screen Shake)을 동기화합니다
+                          - 'button "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91664] [cursor=pointer]':
+                            - 'generic "19: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91665]': "19"
+                          - text: .
+                - generic [ref=e91666]:
+                  - button "메시지를 메모에 저장" [ref=e91667]:
+                    - img [ref=e91668]: keep_pin
+                    - generic [ref=e91669]: 메모에 저장
+                  - generic [ref=e91672]:
+                    - button "클립보드에 모델 대답 복사" [ref=e91676] [cursor=pointer]:
+                      - img [ref=e91677]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e91683] [cursor=pointer]:
+                      - img [ref=e91684]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e91690] [cursor=pointer]:
+                      - img [ref=e91691]: thumb_down
+                - generic [ref=e91696]:
+                  - button "Match-3의 45가지 장애물 기믹 중 가장 인기 있는 것들은 무엇인가요?" [ref=e91697] [cursor=pointer]:
+                    - generic [ref=e91698]: Match-3의 45가지 장애물 기믹 중 가장 인기 있는 것들은 무엇인가요?
+                  - button "PPO와 SAC 알고리즘 중 레벨 밸런싱에 더 유리한 것은?" [ref=e91699] [cursor=pointer]:
+                    - generic [ref=e91700]: PPO와 SAC 알고리즘 중 레벨 밸런싱에 더 유리한 것은?
+                  - button "Match-3 게임의 리텐션을 높이는 메타 레이어 설계법이 궁금해요." [ref=e91701] [cursor=pointer]:
+                    - generic [ref=e91702]: Match-3 게임의 리텐션을 높이는 메타 레이어 설계법이 궁금해요.
+            - generic [ref=e91703]:
+              - 'heading "Match3 게임의 난이도 곡선 설계에 대해 구체적으로 알려줘: 사인파(Sine Wave) 기반 난이도 곡선이란? 구체적으로 어떤 파라미터를 어떻게 조절하는 거야? (이동수, 장애물 수, 색상 수, 보드 크기 등 각각의 구체적 숫자로) Dynamic Difficulty Adjustment(DDA)를 Match3에서 구현하는 구체적 방법은? 연속 실패 시 어떤 보정이 이루어지나? 타일 스폰 가중치(Controlled Chaos)란? 순수 랜덤 vs 가중치 기반의 차이는? Candy Crush/Royal Match에서 실제로 사용하는 난이도 관련 수치들은? (레벨별 이동수, 장애물 배치 비율 등) AI 헤드리스 시뮬레이션으로 레벨 밸런싱하는 구체적 방법은? (PPO, SAC 알고리즘 등)" [level=3] [ref=e91709]':
+                - paragraph [ref=e91710]: "Match3 게임의 난이도 곡선 설계에 대해 구체적으로 알려줘:"
+                - list [ref=e91711]:
+                  - listitem [ref=e91712]: 사인파(Sine Wave) 기반 난이도 곡선이란? 구체적으로 어떤 파라미터를 어떻게 조절하는 거야? (이동수, 장애물 수, 색상 수, 보드 크기 등 각각의 구체적 숫자로)
+                  - listitem [ref=e91713]: Dynamic Difficulty Adjustment(DDA)를 Match3에서 구현하는 구체적 방법은? 연속 실패 시 어떤 보정이 이루어지나?
+                  - listitem [ref=e91714]: 타일 스폰 가중치(Controlled Chaos)란? 순수 랜덤 vs 가중치 기반의 차이는?
+                  - listitem [ref=e91715]: Candy Crush/Royal Match에서 실제로 사용하는 난이도 관련 수치들은? (레벨별 이동수, 장애물 배치 비율 등)
+                  - listitem [ref=e91716]: AI 헤드리스 시뮬레이션으로 레벨 밸런싱하는 구체적 방법은? (PPO, SAC 알고리즘 등)
+              - generic [ref=e91719]:
+                - generic [ref=e91723]:
+                  - generic [ref=e91725]:
+                    - text: 1. 사인파(Sine Wave) 기반 난이도 곡선과 파라미터 조절 사인파 기반 난이도 곡선이란 게임 내내 어려운 레벨만 지속되는 것을 피하고, 쉬운 레벨과 도전적인 레벨을 교대로 배치하여 플레이어의 긴장과 이완을 조절하는 디자인 기법입니다
+                    - 'button "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91727] [cursor=pointer]':
+                      - 'generic "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91728]': "1"
+                    - text: . 너무 많은 어려운 레벨은 플레이어에게 좌절감을 주며, 반대로 쉬운 레벨만 계속되면 지루함을 유발하기 때문입니다
+                    - 'button "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91730] [cursor=pointer]':
+                      - 'generic "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91731]': "1"
+                    - text: . Royal Match의 경우 이러한 난이도 밸런싱을 효과적으로 수행하여 394%의 성장을 기록했습니다
+                    - 'button "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91733] [cursor=pointer]':
+                      - 'generic "1: Match-3 Game Design: What Is It & How to Make - VSQUAD Studio" [ref=e91734]': "1"
+                    - text: .
+                  - generic [ref=e91736]: 난이도를 조절하기 위해 설계자들은 다음과 같은 구체적인 파라미터를 조작합니다.
+                  - list [ref=e91737]:
+                    - listitem [ref=e91739]:
+                      - text: "색상 수: 맵에 등장하는 타일의 색상은 보통 4~6가지로 제한됩니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91741] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91742]': "2"
+                      - text: ". 색상이 적을수록(예: 4개) 특수 타일이나 매치 조합을 만들 확률이 급격히 올라가 난이도가 크게 쉬워집니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91744] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91745]': "2"
+                      - 'button "3: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91747] [cursor=pointer]':
+                        - 'generic "3: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91748]': "3"
+                      - text: .
+                    - listitem [ref=e91750]:
+                      - text: "보드 크기 및 형태: 기본 8x8 격자를 사용하지만"
+                      - 'button "4: Match-three puzzle games algorithm - Game Development Stack Exchange" [ref=e91752] [cursor=pointer]':
+                        - 'generic "4: Match-three puzzle games algorithm - Game Development Stack Exchange" [ref=e91753]': "4"
+                      - text: ", 포털이나 컨베이어 벨트를 추가하거나 모서리를 깎아내어 타일이 교체될 수 있는 공간적 제약을 만들어 난이도를 높입니다"
+                      - 'button "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91755] [cursor=pointer]':
+                        - 'generic "2: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91756]': "2"
+                      - 'button "5: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91758] [cursor=pointer]':
+                        - 'generic "5: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91759]': "5"
+                      - text: .
+                    - listitem [ref=e91761]:
+                      - text: "이동 수(Moves): 25회 등 제한된 턴 수 안에 목표를 달성하도록 압박하며"
+                      - 'button "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91763] [cursor=pointer]':
+                        - 'generic "6: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91764]': "6"
+                      - text: ", 타이트하게 설정될수록 난이도가 기하급수적으로 올라갑니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91766] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91767]': "7"
+                      - text: .
+                    - listitem [ref=e91769]:
+                      - text: "장애물(Blockers): 초기에는 한 번의 타격으로 깨지는 얼음 등을 배치하지만, 난이도를 높일 때는 2~5번에 걸쳐 부서지는 다층(Multi-layered) 돌 장애물이나"
+                      - 'button "8: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91771] [cursor=pointer]':
+                        - 'generic "8: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91772]': "8"
+                      - button [ref=e91774] [cursor=pointer]:
+                        - img [ref=e91775]: more_horiz
+                      - text: ", 매 턴마다 퍼져나가는 안개(Fog) 등의 증식형 장애물을 배치합니다"
+                      - 'button "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91777] [cursor=pointer]':
+                        - 'generic "10: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91778]': "10"
+                      - 'button "11: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91780] [cursor=pointer]':
+                        - 'generic "11: Match 3 Basics | Hidden City Wiki - Fandom" [ref=e91781]': "11"
+                      - text: .
+                  - generic [ref=e91783]:
+                    - text: 2. Dynamic Difficulty Adjustment(DDA)의 구체적 구현 Match3에서의 DDA는 플레이어의 스킬 수준과 플레이 스타일 데이터를 수집하여, 대상 유저에게 맞춤형으로 게임 변수를 조절하는 시스템입니다
+                    - 'button "12: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91785] [cursor=pointer]':
+                      - 'generic "12: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91786]': "12"
+                    - text: . 가장 대표적인 보정 방식은 플레이어가 특정 레벨에서 연속으로 실패하며 고전하고 있을 때, 시스템이 다음 타일이 떨어질 확률(Tile drops)을 플레이어에게 약간 더 유리하게 동적으로 변경해 주는 것입니다
+                    - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91788] [cursor=pointer]':
+                      - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91789]': "13"
+                    - text: . 플레이어가 눈치채지 못하게 조용히 도움을 주어 레벨을 클리어하게 만듦으로써, 지속적인 패배로 인한 게임 이탈(Churn)을 방지하고 리텐션을 끌어올립니다
+                    - 'button "12: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91791] [cursor=pointer]':
+                      - 'generic "12: Smart & Casual: How to Build Match 3 Games Level Design | Room 8 Studio" [ref=e91792]': "12"
+                    - 'button "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91794] [cursor=pointer]':
+                      - 'generic "13: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91795]': "13"
+                    - text: .
+                  - generic [ref=e91797]:
+                    - text: 3. 타일 스폰 가중치 (Controlled Chaos) 매치 3 게임에서 보드 위로 떨어지는 새 타일은 순수한 무작위성(Pure Randomness)에 의존하지 않고, 철저히 **'통제된 혼돈(Controlled Chaos)'**의 확률을 따릅니다
+                    - 'button "14: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91799] [cursor=pointer]':
+                      - 'generic "14: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91800]': "14"
+                    - text: .
+                  - list [ref=e91801]:
+                    - listitem [ref=e91803]:
+                      - text: "순수 랜덤의 문제점: 타일을 100% 무작위로 떨어뜨리면, 매치할 곳이 단 하나도 없는 데드 보드(Unsolvable boards)가 빈번하게 발생하거나, 반대로 플레이어가 의도하지 않았는데 알아서 끝없이 연쇄 폭발이 일어나는 문제가 생깁니다"
+                      - 'button "15: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91805] [cursor=pointer]':
+                        - 'generic "15: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91806]': "15"
+                      - text: .
+                    - listitem [ref=e91808]:
+                      - text: "가중치 기반 스폰: 이를 방지하기 위해 현재 레벨의 난이도, 보드의 상태, 파워업 아이템의 위치 등 맥락(Context)에 기반하여 타일 스폰 확률(가중치)을 지속적으로 조정합니다"
+                      - 'button "16: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91810] [cursor=pointer]':
+                        - 'generic "16: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91811]': "16"
+                      - text: . 극단적으로 운이 나쁜 상황이 길어지는 것을 방지하는 소프트 보호(Soft protections) 장치를 포함시켜, 플레이어가 불합리하다고 느끼지 않도록 통제합니다
+                      - 'button "16: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91813] [cursor=pointer]':
+                        - 'generic "16: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e91814]': "16"
+                      - text: .
+                  - generic [ref=e91816]:
+                    - text: 4. Candy Crush / Royal Match 수준의 실제 난이도 수치 상용 게임들은 유저의 결제 여부와 잔존율을 고려하여 레벨 구간별로 철저히 계산된 난이도 목표치를 사용합니다
+                    - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91818] [cursor=pointer]':
+                      - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91819]': "7"
+                    - text: .
+                  - list [ref=e91820]:
+                    - listitem [ref=e91822]:
+                      - text: "Level 1~20 (Easy & Fun): 쉬운 튜토리얼 구간. 결제를 유도하지 않으며, 승률이 매우 높고 연쇄 반응의 시각적 쾌감을 통해 플레이어를 게임에 훅(Hook) 시키는 데 집중합니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91824] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91825]': "7"
+                      - text: .
+                    - listitem [ref=e91827]:
+                      - text: "Level 21~50 (Mildly Challenging): 제한된 이동 수와 장애물(Blockers)이 본격적으로 등장하기 시작하여 약간의 전략적 사고를 요구합니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91829] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91830]': "7"
+                      - text: .
+                    - listitem [ref=e91832]:
+                      - text: "Level 51~100 (Engaging/Rewarding): 복잡한 메커니즘이 추가되지만, 여전히 공정한 난이도로 설정되어 클리어 시 성취감을 느낄 수 있습니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91834] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91835]': "7"
+                      - text: .
+                    - listitem [ref=e91837]:
+                      - text: "Level 101+ (Tactical Mastery): 제한된 턴 수 내에 부스터를 매우 효율적으로 사용해야만 깰 수 있는 전술적 구간입니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91839] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91840]': "7"
+                      - text: .
+                    - listitem [ref=e91842]:
+                      - text: "Level 200+ (Hardcore 구간): 코어 플레이어들을 위한 구간으로, 기본으로 주어지는 턴 수나 운만으로는 돌파하기 매우 어렵게 설정되어 강력한 인앱 결제(IAP) 및 부스터 구매를 유도합니다"
+                      - 'button "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91844] [cursor=pointer]':
+                        - 'generic "7: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e91845]': "7"
+                      - text: .
+                  - generic [ref=e91847]:
+                    - text: 5. AI 헤드리스 시뮬레이션을 통한 레벨 밸런싱 방법 수천 개의 레벨을 일일이 사람이 플레이해 볼 수 없기 때문에, 그래픽 렌더링 뷰를 제거한 순수 데이터 로직 환경(Headless)에서 AI 에이전트를 통해 초고속으로 수만 번의 시뮬레이션을 돌려 밸런싱을 검증합니다
+                    - 'button "17: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91849] [cursor=pointer]':
+                      - 'generic "17: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91850]': "17"
+                    - 'button "18: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91852] [cursor=pointer]':
+                      - 'generic "18: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e91853]': "18"
+                    - text: . Unity ML-Agents를 활용해 두 가지 주요 강화학습 알고리즘이 연구 및 활용됩니다
+                    - 'button "19: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91855] [cursor=pointer]':
+                      - 'generic "19: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91856]': "19"
+                    - button [ref=e91858] [cursor=pointer]:
+                      - img [ref=e91859]: more_horiz
+                    - text: .
+                  - list [ref=e91860]:
+                    - listitem [ref=e91862]:
+                      - text: "PPO (Proximal Policy Optimization): 가장 널리 사용되는 강화학습 알고리즘으로, 학습 속도가 매우 빠릅니다(SAC 대비 약 2배 빠른 속도)"
+                      - 'button "17: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91864] [cursor=pointer]':
+                        - 'generic "17: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91865]': "17"
+                      - 'button "22: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91867] [cursor=pointer]':
+                        - 'generic "22: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91868]': "22"
+                      - text: .
+                    - listitem [ref=e91870]:
+                      - text: "SAC (Soft Actor-Critic): 최근 주목받는 알고리즘으로, 보상 정책에 '엔트로피(Entropy)'라는 불확실성/무작위성 측정 개념을 결합하여 에이전트의 탐색 효율성을 극대화한 기법입니다"
+                      - 'button "23: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91872] [cursor=pointer]':
+                        - 'generic "23: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91873]': "23"
+                      - 'button "24: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91875] [cursor=pointer]':
+                        - 'generic "24: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91876]': "24"
+                      - text: .
+                    - listitem [ref=e91878]:
+                      - text: "결론: PPO 알고리즘이 학습 속도는 훨씬 빠르지만, 무작위로 떨어지는 타일과 장애물이 존재하는 매치 3 게임 환경에서는 더 높은 학습 성능과 압도적인 안정성(Stability)을 보여주는 SAC 알고리즘이 스테이지 밸런싱 검증에 가장 최적화된 방법으로 평가받고 있습니다"
+                      - 'button "25: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91880] [cursor=pointer]':
+                        - 'generic "25: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91881]': "25"
+                      - 'button "26: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91883] [cursor=pointer]':
+                        - 'generic "26: Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - MDPI" [ref=e91884]': "26"
+                      - text: .
+                - generic [ref=e91885]:
+                  - button "메시지를 메모에 저장" [ref=e91886]:
+                    - img [ref=e91887]: keep_pin
+                    - generic [ref=e91888]: 메모에 저장
+                  - generic [ref=e91891]:
+                    - button "클립보드에 모델 대답 복사" [ref=e91895] [cursor=pointer]:
+                      - img [ref=e91896]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e91902] [cursor=pointer]:
+                      - img [ref=e91903]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e91909] [cursor=pointer]:
+                      - img [ref=e91910]: thumb_down
+                - generic [ref=e91915]:
+                  - button "L자/T자 폭탄 생성 시 교차점 알고리즘의 C# 구현 예시를 보여줘" [ref=e91916] [cursor=pointer]:
+                    - generic [ref=e91917]: L자/T자 폭탄 생성 시 교차점 알고리즘의 C# 구현 예시를 보여줘
+                  - button "특수 타일 조합(시너지)의 효과와 점수 배수를 숫자로 알려줘" [ref=e91918] [cursor=pointer]:
+                    - generic [ref=e91919]: 특수 타일 조합(시너지)의 효과와 점수 배수를 숫자로 알려줘
+                  - button "SAC 알고리즘을 활용한 레벨 밸런싱 검증 수치와 방법은?" [ref=e91920] [cursor=pointer]:
+                    - generic [ref=e91921]: SAC 알고리즘을 활용한 레벨 밸런싱 검증 수치와 방법은?
+            - generic [ref=e91922]:
+              - 'heading "Match3 게임의 튜토리얼 시스템을 Unity 에디터에서 구현할 때, Unity 에디터 도구를 반드시 사용해야 하는 부분만 구체적으로 알려줘: 튜토리얼에서 Unity 에디터(Inspector/Scene View)에서 반드시 설정해야 하는 것은? (코드로는 안 되고 에디터에서만 해야 하는 것) 마스킹(반투명 오버레이 + 구멍)을 Canvas에서 구현할 때 구체적인 Unity 에디터 조작 순서는? 손가락 힌트 애니메이션은 Animator vs DOTween 중 어떤 것이 적합한가? 튜토리얼 단계별 고정 보드 배열을 ScriptableObject로 관리할 때 Inspector에서 어떻게 시각적으로 편집하나? Unity 에디터 작업이 필요 없는 순수 코드 부분은 간결하게만 알려줘." [level=3] [ref=e91928]':
+                - paragraph [ref=e91929]: "Match3 게임의 튜토리얼 시스템을 Unity 에디터에서 구현할 때, Unity 에디터 도구를 반드시 사용해야 하는 부분만 구체적으로 알려줘:"
+                - list [ref=e91930]:
+                  - listitem [ref=e91931]: 튜토리얼에서 Unity 에디터(Inspector/Scene View)에서 반드시 설정해야 하는 것은? (코드로는 안 되고 에디터에서만 해야 하는 것)
+                  - listitem [ref=e91932]: 마스킹(반투명 오버레이 + 구멍)을 Canvas에서 구현할 때 구체적인 Unity 에디터 조작 순서는?
+                  - listitem [ref=e91933]: 손가락 힌트 애니메이션은 Animator vs DOTween 중 어떤 것이 적합한가?
+                  - listitem [ref=e91934]: 튜토리얼 단계별 고정 보드 배열을 ScriptableObject로 관리할 때 Inspector에서 어떻게 시각적으로 편집하나?
+                - paragraph [ref=e91935]: Unity 에디터 작업이 필요 없는 순수 코드 부분은 간결하게만 알려줘.
+              - generic [ref=e91938]:
+                - generic [ref=e91942]:
+                  - generic [ref=e91944]: Unity 에디터 환경에서 매치 3 게임의 튜토리얼 시스템을 구축할 때, 코드 작성보다 에디터(Inspector/Scene View)를 통한 시각적 조작과 세팅이 필수적인 부분에 집중하여 답변해 드립니다.
+                  - generic [ref=e91946]: "--------------------------------------------------------------------------------"
+                  - heading "1. 튜토리얼에서 Unity 에디터에서 반드시 설정해야 하는 것" [level=3] [ref=e91948]
+                  - generic [ref=e91950]: 이전 대화에서도 강조했듯, 카메라 시야각과 UI의 화면 비율 대응은 코드로 계산하기 매우 어렵고 비효율적입니다. 따라서 다음 사항들은 반드시 에디터에서 직접 세팅해야 합니다.
+                  - list [ref=e91951]:
+                    - listitem [ref=e91953]:
+                      - text: "UI 앵커(Anchor)와 피벗(Pivot) 맞춤: 다양한 모바일 기기의 해상도와 노치(Notch) 디자인에 대응하기 위해, 튜토리얼 텍스트 창과 캐릭터 마스코트의 위치를 Canvas 내부의"
+                      - code [ref=e91954]: RectTransform
+                      - text: 앵커를 뷰포트 가장자리나 중앙으로 직접 당겨서 고정해야 합니다.
+                    - listitem [ref=e91956]:
+                      - text: "Raycast Target 토글 설정: 튜토리얼 중에는 플레이어가 의도치 않은 버튼이나 타일을 누르지 못하도록 막아야 합니다. Inspector에서 튜토리얼 투명 패널의"
+                      - code [ref=e91957]: Raycast Target
+                      - text: 을 켜서 입력을 차단하고, 클릭을 허용할 특정 UI나 타일만
+                      - code [ref=e91958]: Raycast Target
+                      - text: 을 켜거나 Sorting Layer를 위로 올리는 계층(Hierarchy) 작업이 필수입니다.
+                    - listitem [ref=e91960]:
+                      - text: "오디오 및 파티클 프리팹 할당: 튜토리얼 성공 시 터지는 폭죽이나 칭찬 사운드(예: \"Great!\")를 위한 Audio Source, Particle System 프리팹을"
+                      - code [ref=e91961]: "[SerializeField]"
+                      - text: 슬롯에 드래그 앤 드롭으로 연결하는 작업은 Inspector에서 시각적으로 확인하며 꽂아 넣어야 누락이 없습니다.
+                    - listitem [ref=e91963]:
+                      - text: "(순수 코드 부분): 현재 튜토리얼의 단계(State)를 추적하고, 다음 단계로 넘어가는 논리 흐름 제어("
+                      - code [ref=e91964]: TutorialController.cs
+                      - text: 내의
+                      - code [ref=e91965]: switch
+                      - text: 또는 FSM 로직).
+                  - generic [ref=e91967]: "--------------------------------------------------------------------------------"
+                  - heading "2. 마스킹(반투명 오버레이 + 구멍)을 Canvas에서 구현할 때의 에디터 조작 순서" [level=3] [ref=e91969]
+                  - generic [ref=e91971]:
+                    - text: 특정 타일이나 UI만 밝게 보여주고 나머지를 어둡게 처리하는 '역마스크(Inverted Mask/Hole)'는 코드가 아닌 Canvas 계층과 매터리얼 조작으로 만들어야 가장 깔끔합니다. UI Toolkit의 Stencil 버퍼나 사각형 마스킹을 활용할 수도 있습니다
+                    - 'button "1: Optimizing performance - Unity - Manual" [ref=e91973] [cursor=pointer]':
+                      - 'generic "1: Optimizing performance - Unity - Manual" [ref=e91974]': "1"
+                    - text: .
+                  - list [ref=e91975]:
+                    - listitem [ref=e91977]:
+                      - text: "구체적인 Unity 에디터 조작 순서:"
+                      - list [ref=e91978]:
+                        - listitem [ref=e91980]:
+                          - text: "Canvas 하위에 전체 화면 패널 생성:"
+                          - code [ref=e91981]: UI > Image
+                          - text: 를 생성하고 이름을
+                          - code [ref=e91982]: TutorialOverlay
+                          - text: 로 변경한 뒤, 색상을 검은색(Alpha 150 정도)으로 설정하고 앵커를 늘려 전체 화면을 덮게(Stretch) 만듭니다.
+                        - listitem [ref=e91984]:
+                          - text: "구멍(Hole) 영역 생성:"
+                          - code [ref=e91985]: TutorialOverlay
+                          - text: 의 자식으로
+                          - code [ref=e91986]: UI > Image
+                          - text: "를 하나 더 생성하고(이름:"
+                          - code [ref=e91987]: Hole
+                          - text: ), 하이라이트할 대상 타일 크기만큼 RectTransform을 조절합니다. (둥근 사각형 스프라이트를 넣으면 둥근 구멍이 됩니다.)
+                        - listitem [ref=e91989]:
+                          - text: "컴포넌트 부착:"
+                          - code [ref=e91990]: TutorialOverlay
+                          - text: 에
+                          - code [ref=e91991]: Mask
+                          - text: 컴포넌트(또는
+                          - code [ref=e91992]: RectMask2D
+                          - text: )를 부착합니다
+                          - 'button "1: Optimizing performance - Unity - Manual" [ref=e91994] [cursor=pointer]':
+                            - 'generic "1: Optimizing performance - Unity - Manual" [ref=e91995]': "1"
+                          - text: .
+                        - listitem [ref=e91997]:
+                          - text: "역마스크 매터리얼 할당 (핵심): Unity 기본 Mask는 지정한 영역'만' 보여주므로, Inspector에서"
+                          - code [ref=e91998]: TutorialOverlay
+                          - text: 의 Material 슬롯에 **'Stencil 버퍼를 이용해 구멍을 뚫는 커스텀 역마스크 매터리얼'**을 드래그하여 할당해야 합니다.
+                    - listitem [ref=e92000]:
+                      - text: "(순수 코드 부분): 스크립트에서는 구멍 UI("
+                      - code [ref=e92001]: Hole
+                      - text: )의
+                      - code [ref=e92002]: RectTransform.position
+                      - text: 을 현재 튜토리얼에서 강조해야 할 타일의 Screen 좌표로 이동시키는 단 한 줄의 코드만 실행합니다.
+                  - generic [ref=e92004]: "--------------------------------------------------------------------------------"
+                  - 'heading "3. 손가락 힌트 애니메이션: Animator vs DOTween" [level=3] [ref=e92006]'
+                  - generic [ref=e92008]: 튜토리얼에서 타일을 어떻게 스와이프해야 하는지 알려주는 손가락 애니메이션에는 DOTween이 압도적으로 적합합니다.
+                  - list [ref=e92009]:
+                    - listitem [ref=e92011]:
+                      - text: "이유: 이전 대화에서도 언급했듯, 타일의 위치나 튜토리얼이 지시하는 스왑 좌표"
+                      - code [ref=e92012]: (x1, y1)
+                      - text: 에서
+                      - code [ref=e92013]: (x2, y2)
+                      - text: 는 고정되어 있지 않고 기기 해상도나 보드의 오프셋에 따라 **동적인 동적 좌표(Dynamic Coordinates)**를 가집니다
+                      - 'button "2: Match 3 - Catlike Coding" [ref=e92015] [cursor=pointer]':
+                        - 'generic "2: Match 3 - Catlike Coding" [ref=e92016]': "2"
+                      - 'button "3: Match 3 - Catlike Coding" [ref=e92018] [cursor=pointer]':
+                        - 'generic "3: Match 3 - Catlike Coding" [ref=e92019]': "3"
+                      - text: .
+                      - code [ref=e92020]: Animator
+                      - text: 는 특정 픽셀 위치로 이동시키는 정적인 애니메이션(프레임별 고정 위치)에는 좋지만, 동적으로 변하는 화면 좌표 사이를 오가는 작업에는 매우 부적합합니다.
+                    - listitem [ref=e92022]:
+                      - text: "권장 구현: 에디터에서는 손가락 UI를 캔버스에 배치해두기만 하고, 이동 로직은 DOTween의 이징(Easing)을 활용해 탄력 있게 움직이게 해야 합니다"
+                      - 'button "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92024] [cursor=pointer]':
+                        - 'generic "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92025]': "4"
+                      - 'button "5: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92027] [cursor=pointer]':
+                        - 'generic "5: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92028]': "5"
+                      - text: .
+                    - listitem [ref=e92030]:
+                      - text: "(순수 코드 부분):"
+                      - code [ref=e92031]: fingerUI.DOMove(targetTilePos, 0.5f).SetLoops(-1, LoopType.Restart).SetEase(Ease.InOutQuad);
+                  - generic [ref=e92033]: "--------------------------------------------------------------------------------"
+                  - heading "4. 튜토리얼 단계별 고정 보드 배열을 ScriptableObject로 관리할 때의 시각적 편집" [level=3] [ref=e92035]
+                  - generic [ref=e92037]:
+                    - text: 유니티 Inspector는 2차원 배열을 기본적으로 지원하지 않으므로, 기획자가 에디터에서 직관적으로 튜토리얼 맵을 그리려면 1차원 배열 데이터를 기반으로 한 Custom Inspector 창을 만들어야 합니다
+                    - 'button "6: Match 3 - Catlike Coding" [ref=e92039] [cursor=pointer]':
+                      - 'generic "6: Match 3 - Catlike Coding" [ref=e92040]': "6"
+                    - text: .
+                  - list [ref=e92041]:
+                    - listitem [ref=e92043]:
+                      - text: "에디터 시각적 편집 방법 (Custom Editor):"
+                      - list [ref=e92044]:
+                        - listitem [ref=e92046]:
+                          - text: "데이터 구조화: 튜토리얼 맵의 데이터를 직렬화 가능한 1차원 배열(예:"
+                          - code [ref=e92047]: Grid2D<TileState>
+                          - text: )로 ScriptableObject에 정의합니다
+                          - 'button "6: Match 3 - Catlike Coding" [ref=e92049] [cursor=pointer]':
+                            - 'generic "6: Match 3 - Catlike Coding" [ref=e92050]': "6"
+                          - 'button "7: Match 3 - Catlike Coding" [ref=e92052] [cursor=pointer]':
+                            - 'generic "7: Match 3 - Catlike Coding" [ref=e92053]': "7"
+                          - text: .
+                        - listitem [ref=e92055]:
+                          - text: "에디터 창 조작:"
+                          - code [ref=e92056]: "[CustomEditor]"
+                          - text: 속성을 붙인 에디터 스크립트를 작성합니다. Inspector 창이 열리면, 이 스크립트가 1차원 배열을 읽어와서 보드의 너비(
+                          - code [ref=e92057]: SizeX
+                          - text: )와 높이(
+                          - code [ref=e92058]: SizeY
+                          - text: )에 맞춰
+                          - code [ref=e92059]: GUILayout.BeginHorizontal
+                          - text: 과
+                          - code [ref=e92060]: BeginVertical
+                          - text: 을 사용해 정사각형 버튼들의 2D 그리드 모양으로 Inspector 화면에 렌더링합니다.
+                        - listitem [ref=e92062]:
+                          - text: "버튼 클릭으로 타일 토글: 기획자가 Inspector 창에서 특정 칸의 버튼을 마우스로 클릭하면, 해당 인덱스의 타일 열거형(Enum) 값(예: 일반 타일, 특수 타일, 빈칸)이 다음 값으로 토글되도록 처리합니다"
+                          - 'button "7: Match 3 - Catlike Coding" [ref=e92064] [cursor=pointer]':
+                            - 'generic "7: Match 3 - Catlike Coding" [ref=e92065]': "7"
+                          - text: . 색상이나 아이콘을 버튼에 입히면 완벽한 시각적 맵 에디터가 됩니다.
+                    - listitem [ref=e92067]:
+                      - text: "(순수 코드 부분):"
+                      - code [ref=e92068]: OnInspectorGUI()
+                      - text: 함수 내에서 이중 for문을 돌며
+                      - code [ref=e92069]: GUILayout.Button()
+                      - text: 을 그리고, 반환값에 따라 SO의 1차원 배열
+                      - code [ref=e92070]: cells[y * width + x]
+                      - text: 의 값을 변경한 뒤
+                      - code [ref=e92071]: EditorUtility.SetDirty()
+                      - text: 로 저장합니다.
+                - generic [ref=e92072]:
+                  - button "메시지를 메모에 저장" [ref=e92073]:
+                    - img [ref=e92074]: keep_pin
+                    - generic [ref=e92075]: 메모에 저장
+                  - generic [ref=e92078]:
+                    - button "클립보드에 모델 대답 복사" [ref=e92082] [cursor=pointer]:
+                      - img [ref=e92083]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e92089] [cursor=pointer]:
+                      - img [ref=e92090]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e92096] [cursor=pointer]:
+                      - img [ref=e92097]: thumb_down
+                - generic [ref=e92102]:
+                  - button "MCP 도구로 에디터 작업을 지시할 때 구체적인 프롬프트 작성 팁은?" [ref=e92103] [cursor=pointer]:
+                    - generic [ref=e92104]: MCP 도구로 에디터 작업을 지시할 때 구체적인 프롬프트 작성 팁은?
+                  - button "폭탄과 스트라이프 타일 조합 시 발생하는 3x3 파괴 로직 구현법은?" [ref=e92105] [cursor=pointer]:
+                    - generic [ref=e92106]: 폭탄과 스트라이프 타일 조합 시 발생하는 3x3 파괴 로직 구현법은?
+                  - button "데드 보드 상태를 감지하여 자동으로 타일을 섞는 셔플 알고리즘은?" [ref=e92107] [cursor=pointer]:
+                    - generic [ref=e92108]: 데드 보드 상태를 감지하여 자동으로 타일을 섞는 셔플 알고리즘은?
+            - generic [ref=e92109]:
+              - 'heading "Match3 게임의 오디오/사운드 시스템에서 Unity 에디터에서 반드시 설정해야 하는 것을 구체적으로 알려줘: Audio Mixer를 에디터에서 생성하고 설정하는 구체적 단계는? (Group 구성, Exposed Parameter, Snapshot 등) Match3에서 연쇄 반응(cascade) 시 피치가 점진적으로 상승하는 사운드를 구현하는 방법은? Audio Source의 어떤 설정을 어떻게 바꾸나? 상용 Match3 게임의 SFX 구성은 어떤 것들이 있나? (종류와 재생 타이밍) BGM은 어떤 스타일이 적합한가? 레벨 선택 vs 인게임 vs 보스 레벨의 BGM 차이는? 프로시저럴 오디오(코드로 사인파 생성)를 실제 Audio Clip으로 교체할 때 주의사항은?" [level=3] [ref=e92115]':
+                - paragraph [ref=e92116]: "Match3 게임의 오디오/사운드 시스템에서 Unity 에디터에서 반드시 설정해야 하는 것을 구체적으로 알려줘:"
+                - list [ref=e92117]:
+                  - listitem [ref=e92118]: Audio Mixer를 에디터에서 생성하고 설정하는 구체적 단계는? (Group 구성, Exposed Parameter, Snapshot 등)
+                  - listitem [ref=e92119]: Match3에서 연쇄 반응(cascade) 시 피치가 점진적으로 상승하는 사운드를 구현하는 방법은? Audio Source의 어떤 설정을 어떻게 바꾸나?
+                  - listitem [ref=e92120]: 상용 Match3 게임의 SFX 구성은 어떤 것들이 있나? (종류와 재생 타이밍)
+                  - listitem [ref=e92121]: BGM은 어떤 스타일이 적합한가? 레벨 선택 vs 인게임 vs 보스 레벨의 BGM 차이는?
+                  - listitem [ref=e92122]: 프로시저럴 오디오(코드로 사인파 생성)를 실제 Audio Clip으로 교체할 때 주의사항은?
+              - generic [ref=e92125]:
+                - generic [ref=e92129]:
+                  - generic [ref=e92131]: 제공된 소스에는 Match3 게임의 사운드 디자인 원칙과 BGM 최적화 지침이 포함되어 있으나, Unity 에디터(Audio Mixer)의 구체적인 조작 단계, 피치 조절을 위한 C# 제어 방식, 보스전 BGM의 구성 차이, 오디오 클립의 겹침 제어 등 기술적인 세부 구현 방법은 포함되어 있지 않습니다. 따라서 아래 답변의 기술적 구현 방법과 에디터 조작법 등은 외부의 Unity 개발 지식을 바탕으로 보완되었으므로 독립적인 확인을 권장합니다.
+                  - generic [ref=e92133]: "--------------------------------------------------------------------------------"
+                  - generic [ref=e92135]: 1. Audio Mixer 에디터 생성 및 설정 단계 (외부 지식) 게임 내 사운드의 계층적 관리를 위해 Unity 에디터에서 Audio Mixer를 다음과 같이 설정해야 합니다.
+                  - list [ref=e92136]:
+                    - listitem [ref=e92138]:
+                      - text: "Group 구성:"
+                      - code [ref=e92139]: Window > Audio > Audio Mixer
+                      - text: 창을 열어 새 믹서를 생성합니다. 최상위 'Master' 그룹 아래에 자식 그룹으로 'BGM(배경음)'과 'SFX(효과음)' 그룹을 나란히 생성하여 각각의 볼륨을 독립적으로 제어할 수 있게 만듭니다.
+                    - listitem [ref=e92141]:
+                      - text: "Exposed Parameter: 플레이어가 인게임 환경설정에서 소리를 끄거나 줄일 수 있도록 볼륨 파라미터를 스크립트에 노출해야 합니다. 각 Group의 Inspector 창에서 'Volume' 글자를 우클릭한 뒤"
+                      - code [ref=e92142]: Expose Volume (of group) to script
+                      - text: "를 선택합니다. 이후 Mixer 창 우측 상단의 'Exposed Parameters' 드롭다운을 열어 이름을 코드에서 접근하기 쉬운 직관적인 이름(예:"
+                      - code [ref=e92143]: BGM_Volume
+                      - text: ","
+                      - code [ref=e92144]: SFX_Volume
+                      - text: )으로 변경합니다.
+                    - listitem [ref=e92146]:
+                      - text: "Snapshot 설정: 특수한 상황(예: 게임 오버 팝업 등장, 중요한 튜토리얼 음성 출력)에서 배경음을 줄이고 특정 효과음을 부각시키는 '오디오 더킹(Ducking)' 효과를 위해 Snapshot을 활용합니다. 기본 상태(Default) 외에 'Ducked' 스냅샷을 생성해 BGM 볼륨을 낮춰두고, 코드에서"
+                      - code [ref=e92147]: Snapshot.TransitionTo()
+                      - text: 를 호출하여 부드러운 전환을 줍니다.
+                  - generic [ref=e92149]:
+                    - text: 2. 연쇄 반응(Cascade) 시 점진적 피치 상승 구현 방법 매치 3 게임에서 콤보가 이어질 때 사운드의 피치(Pitch)를 점진적으로 높이는 것은 긴장감과 쾌감을 극대화하는 핵심 쥬싱(Juicing) 기법입니다
+                    - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e92151] [cursor=pointer]':
+                      - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e92152]': "1"
+                    - text: .
+                  - list [ref=e92153]:
+                    - listitem [ref=e92155]:
+                      - text: "Audio Source 설정 및 로직 (외부 지식): 스크립트 단에서 현재의 연속 매칭 횟수를 추적하는 변수(예:"
+                      - code [ref=e92156]: comboCount
+                      - text: )를 둡니다.
+                    - listitem [ref=e92158]:
+                      - text: 타일이 파괴되어 SFX가 재생될 때마다 해당
+                      - code [ref=e92159]: AudioSource.pitch
+                      - text: 속성 값을 기본값인
+                      - code [ref=e92160]: 1.0f
+                      - text: 에
+                      - code [ref=e92161]: comboCount * 0.05f
+                      - text: (또는 0.1f)를 더한 값으로 설정하여 소리의 음정을 점진적으로 올립니다.
+                    - listitem [ref=e92163]:
+                      - text: 소리가 너무 날카로워지거나 깨지는 것을 막기 위해
+                      - code [ref=e92164]: Mathf.Clamp()
+                      - text: "를 사용하여 피치의 최댓값(예: 1.5f ~ 2.0f)을 제한해야 합니다."
+                    - listitem [ref=e92166]:
+                      - text: 낙하 및 연쇄 반응이 모두 끝나고 보드가 'READY' 상태(안정화)로 돌아오면,
+                      - code [ref=e92167]: comboCount
+                      - text: 를 0으로 리셋하고 피치도
+                      - code [ref=e92168]: 1.0f
+                      - text: 로 원상 복구합니다.
+                  - generic [ref=e92170]: 3. 상용 Match3 게임의 SFX 구성 (종류와 재생 타이밍)
+                  - list [ref=e92171]:
+                    - listitem [ref=e92173]:
+                      - text: "재생 타이밍: 플레이어의 모든 조작과 보드의 반응에 소리가 동기화되어야 합니다. 타일 스와이프, 매칭 성립, 폭탄이나 스트라이프 타일 같은 파워업 발동 시 등 모든 상호작용에 각각 뚜렷하게 구분되는 사운드를 지정해야 합니다"
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92175] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92176]': "2"
+                      - text: . 특히, 타일이 파괴되거나 낙하할 때의 시각적인 애니메이션 효과(VFX)와 '기분 좋은 팝(pop)' 소리나 '강력한 붐(boom)' 소리를 완벽한 타이밍에 맞춰야 합니다
+                      - 'button "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e92178] [cursor=pointer]':
+                        - 'generic "1: 매치 3(Match-3) 게임 개발 방법론과 알고리즘 아키텍처 및 통합 구축 전략 보고서" [ref=e92179]': "1"
+                      - 'button "3: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e92181] [cursor=pointer]':
+                        - 'generic "3: Key Algorithmic Tricks for Match 3 Game Development - Logic Simplified" [ref=e92182]': "3"
+                      - text: .
+                    - listitem [ref=e92184]:
+                      - text: "사운드 디자인 종류: 매치 3는 반복 플레이가 잦은 캐주얼 게임이므로, 보람을 주고 멜로디컬하며 행복한 톤의 효과음을 사용해야 하며 공격적이거나 귀에 거슬리는 소리는 피해야 합니다"
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92186] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92187]': "2"
+                      - 'button "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92189] [cursor=pointer]':
+                        - 'generic "4: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92190]': "4"
+                      - text: . 또한, 플레이어의 피로감을 유발하지 않도록 사운드의 길이를 짧게 유지하고 동일한 효과음이라도 미세한 변주를 두어 단조로움을 줄여야 합니다
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92192] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92193]': "2"
+                      - text: .
+                  - generic [ref=e92195]: 4. 적합한 BGM 스타일과 상황별 차이
+                  - list [ref=e92196]:
+                    - listitem [ref=e92198]:
+                      - text: "기본 BGM 스타일: 퍼즐을 푸는 플레이어의 전략적 집중을 방해하지 않도록 가사가 없는 기악곡(Instrumental) 트랙이 가장 적합합니다"
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92200] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92201]': "2"
+                      - text: . 곡의 처음과 끝이 거칠게 끊기지 않는 매끄러운 루프(Seamless loops) 구조여야 합니다
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92203] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92204]': "2"
+                      - text: .
+                    - listitem [ref=e92206]:
+                      - text: "사운드스케이프(Soundscapes) 활용: BGM 외에도 바람 소리, 물 흐르는 소리 같은 환경음을 게임 음악 뒤에 은은하게 혼합하여 플레이어를 게임의 세계관에 자연스럽게 몰입(Grounding)시키는 것이 좋습니다"
+                      - 'button "5: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92208] [cursor=pointer]':
+                        - 'generic "5: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92209]': "5"
+                      - text: .
+                    - listitem [ref=e92211]:
+                      - text: "진행에 따른 BGM 전환: 월드맵이나 에피소드에 따라 배경이 달라지면 BGM도 그 지역의 테마를 반영하여 변화해야 합니다"
+                      - 'button "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92213] [cursor=pointer]':
+                        - 'generic "2: How To Make A Match-3 Game like Royal Match (In Just 3 Months) - Mind Studios Games" [ref=e92214]': "2"
+                      - text: .
+                    - listitem [ref=e92216]:
+                      - text: "상황별 차이 (외부 지식 포함):"
+                      - list [ref=e92217]:
+                        - listitem [ref=e92219]: "레벨 선택(로비): 플레이어가 긴장을 풀고 보상을 열거나 정비할 수 있도록 차분하고 이완된 분위기를 제공합니다."
+                        - listitem [ref=e92221]: "인게임: 반복적이지 않은 리듬감으로 경쾌하고 집중할 수 있는 템포를 유지합니다."
+                        - listitem [ref=e92223]: "보스 레벨/하드 모드: 타악기를 강화하고 템포(BPM)를 올려 시간에 쫓기는 압박감이나 아드레날린을 유발하는 극적인 스타일로 전환합니다."
+                  - generic [ref=e92225]:
+                    - text: 5. 프로시저럴 오디오를 실제 Audio Clip으로 교체할 때 주의사항 코드를 통해 실시간으로 만들어내던 단순한 사인파(Sine wave)를 미리 렌더링된 고품질
+                    - code [ref=e92226]: Audio Clip
+                    - text: 에셋으로 교체할 때는 시스템 리소스 및 오디오 겹침 현상에 유의해야 합니다.
+                  - list [ref=e92227]:
+                    - listitem [ref=e92229]:
+                      - text: "메모리 압박과 Import Settings 최적화: BGM처럼 재생 시간이 긴 오디오 클립은 메모리에 큰 부담을 줍니다. Unity 에디터의 오디오 Import Settings에서 Load Type을 반드시 'Streaming'으로 설정해야 합니다"
+                      - 'button "6: Optimization Approaches for Project Assets - Unity Learn" [ref=e92231] [cursor=pointer]':
+                        - 'generic "6: Optimization Approaches for Project Assets - Unity Learn" [ref=e92232]': "6"
+                      - text: . 'Decompress on Load(로드 시 압축 해제)'나 'Compressed in Memory'를 선택하면 파일 전체가 RAM에 로드되지만, Streaming을 사용하면 재생 시작 시 미세한 딜레이가 생길 수 있는 대신 필요한 램 사용량을 획기적으로 줄일 수 있습니다
+                      - 'button "6: Optimization Approaches for Project Assets - Unity Learn" [ref=e92234] [cursor=pointer]':
+                        - 'generic "6: Optimization Approaches for Project Assets - Unity Learn" [ref=e92235]': "6"
+                      - text: .
+                    - listitem [ref=e92237]: "오디오 채널 제한과 클리핑 (외부 지식): 연쇄 반응으로 한 번에 수십 개의 타일이 터질 경우, 할당된 Audio Clip이 동시에 수십 개 재생되면서 소리가 심하게 증폭되거나(Clipping) 오디오 채널 제한 초과로 일부 효과음이 끊기는 현상이 발생합니다. 이를 막으려면 짧은 시간 내에 동일한 Audio Clip이 재생되는 최대 횟수를 스크립트 단에서 제한하거나, Audio Mixer에 컴프레서(Compressor) 이펙트를 추가하여 갑작스러운 볼륨 증폭을 눌러주어야 합니다."
+                - generic [ref=e92238]:
+                  - button "메시지를 메모에 저장" [ref=e92239]:
+                    - img [ref=e92240]: keep_pin
+                    - generic [ref=e92241]: 메모에 저장
+                  - generic [ref=e92244]:
+                    - button "클립보드에 모델 대답 복사" [ref=e92248] [cursor=pointer]:
+                      - img [ref=e92249]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e92255] [cursor=pointer]:
+                      - img [ref=e92256]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e92262] [cursor=pointer]:
+                      - img [ref=e92263]: thumb_down
+                - generic [ref=e92268]:
+                  - button "연쇄 반응 시 피치 상승 효과를 구현하는 구체적인 C# 코드를 보여줘" [ref=e92269] [cursor=pointer]:
+                    - generic [ref=e92270]: 연쇄 반응 시 피치 상승 효과를 구현하는 구체적인 C# 코드를 보여줘
+                  - button "MCTS와 SAC 알고리즘을 활용한 AI 시뮬레이션의 장단점을 비교해줘" [ref=e92271] [cursor=pointer]:
+                    - generic [ref=e92272]: MCTS와 SAC 알고리즘을 활용한 AI 시뮬레이션의 장단점을 비교해줘
+                  - button "1차원 배열(Grid2D) 기반의 데이터 구조가 성능상 유리한 기술적 이유는?" [ref=e92273] [cursor=pointer]:
+                    - generic [ref=e92274]: 1차원 배열(Grid2D) 기반의 데이터 구조가 성능상 유리한 기술적 이유는?
+            - generic [ref=e92275]:
+              - 'heading "Match3 게임의 그래픽/디자인에서 Unity 에디터에서 반드시 설정해야 하는 것을 알려줘: 2D 타일 스프라이트의 Import Settings는? (Pixels Per Unit, Filter Mode, Compression 등 구체적 값) URP에서 2D 라이팅을 사용할 때 에디터에서 설정해야 하는 것은? (Light 2D, Sprite Custom Lit 셰이더) Sprite Atlas를 에디터에서 설정할 때의 구체적 단계와 최적 설정값은? 매치 시 타일의 시각적 피드백(Juicing)을 위해 에디터에서 설정해야 하는 것은? (Shader Graph, Material, Post-Processing 등) 모바일 2D 게임에서 텍스처 압축 포맷은? (ASTC vs ETC2, 구체적 설정)" [level=3] [ref=e92281]':
+                - paragraph [ref=e92282]: "Match3 게임의 그래픽/디자인에서 Unity 에디터에서 반드시 설정해야 하는 것을 알려줘:"
+                - list [ref=e92283]:
+                  - listitem [ref=e92284]: 2D 타일 스프라이트의 Import Settings는? (Pixels Per Unit, Filter Mode, Compression 등 구체적 값)
+                  - listitem [ref=e92285]: URP에서 2D 라이팅을 사용할 때 에디터에서 설정해야 하는 것은? (Light 2D, Sprite Custom Lit 셰이더)
+                  - listitem [ref=e92286]: Sprite Atlas를 에디터에서 설정할 때의 구체적 단계와 최적 설정값은?
+                  - listitem [ref=e92287]: 매치 시 타일의 시각적 피드백(Juicing)을 위해 에디터에서 설정해야 하는 것은? (Shader Graph, Material, Post-Processing 등)
+                  - listitem [ref=e92288]: 모바일 2D 게임에서 텍스처 압축 포맷은? (ASTC vs ETC2, 구체적 설정)
+              - generic [ref=e92291]:
+                - generic [ref=e92295]:
+                  - generic [ref=e92297]:
+                    - text: 1. 2D 타일 스프라이트의 Import Settings 매치 3 게임의 타일은 배열 연산과 배치의 편의를 위해 보통 가로세로를 '1 유닛(Unit)' 길이로 맞추어 설정합니다
+                    - 'button "1: Match 3 - Catlike Coding" [ref=e92299] [cursor=pointer]':
+                      - 'generic "1: Match 3 - Catlike Coding" [ref=e92300]': "1"
+                    - text: ". 성능 최적화를 위해 스프라이트 텍스처의 규격은 반드시 2의 제곱수(Power of 2) 형태(예: 128, 256, 512)를 유지하고, 가급적 정사각형 크기로 만들어야 GPU의 메모리 처리 효율성을 극대화할 수 있습니다"
+                    - 'button "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92302] [cursor=pointer]':
+                      - 'generic "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92303]': "2"
+                    - text: . 시각적 노이즈를 줄이고 매치 가능성을 쉽게 파악하기 위해 뚜렷한 경계선과 명확한 형태를 갖추어야 합니다
+                    - 'button "3: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e92305] [cursor=pointer]':
+                      - 'generic "3: How to Play And Deconstruct Match 3 Games Like A Pro" [ref=e92306]': "3"
+                    - text: ". (외부 지식 참고: Pixels Per Unit(PPU)은 타일의 원본 픽셀 해상도와 동일하게 설정(예: 256x256 텍스처라면 PPU를 256으로 지정)하여 1 Unit 크기를 맞추는 것이 좋습니다. 또한 선명한 2D 픽셀이나 외곽선을 원한다면 Filter Mode를 Point(No Filter)나 Bilinear로 설정합니다.)"
+                  - generic [ref=e92308]:
+                    - text: 2. URP에서 2D 라이팅 사용 시 에디터 설정 2D 조명을 활성화하려면 프로젝트에 URP를 구성하고 '2D Renderer Asset'을 렌더 파이프라인 설정에 할당해야 합니다
+                    - 'button "4: Optimizing performance - Unity - Manual" [ref=e92310] [cursor=pointer]':
+                      - 'generic "4: Optimizing performance - Unity - Manual" [ref=e92311]': "4"
+                    - text: . 이전 대화에서도 다루었듯, 타일에 입체감을 주고 조명에 반응하게 하려면 에디터 상에서 해당 스프라이트에 노멀 맵(Normal Map)이나 마스크 맵(Mask Map)을 추가해야 합니다
+                    - 'button "4: Optimizing performance - Unity - Manual" [ref=e92313] [cursor=pointer]':
+                      - 'generic "4: Optimizing performance - Unity - Manual" [ref=e92314]': "4"
+                    - text: . 이를 통해 2D 점광원(Point Light)에 의한 스페큘러 하이라이트(빛 반사)를 생성할 수 있습니다. 단순한 기본 셰이더를 넘어 더 세밀한 제어가 필요하다면 셰이더 그래프(Shader Graph)를 활용하여 2D 조명 연산이 포함된 커스텀 셰이더(Custom Lit)를 직접 제작하여 적용합니다
+                    - 'button "4: Optimizing performance - Unity - Manual" [ref=e92316] [cursor=pointer]':
+                      - 'generic "4: Optimizing performance - Unity - Manual" [ref=e92317]': "4"
+                    - text: .
+                  - generic [ref=e92319]:
+                    - text: 3. Sprite Atlas 설정 모든 2D 스프라이트 및 UI 그래픽 요소는 반드시 Sprite Atlas로 묶어서(Packing) 관리해야 합니다
+                    - 'button "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92321] [cursor=pointer]':
+                      - 'generic "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92322]': "2"
+                    - text: . 이렇게 하면 GPU가 수백 개의 타일과 UI를 개별적으로 처리하지 않고 한 번의 일괄 처리(Batching)로 그릴 수 있어, 드로우 콜(Draw Call)과 성능 오버헤드를 획기적으로 줄일 수 있습니다
+                    - 'button "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92324] [cursor=pointer]':
+                      - 'generic "2: Optimization Approaches for Project Assets - Unity Learn" [ref=e92325]': "2"
+                    - 'button "5: Optimizing performance - Unity - Manual" [ref=e92327] [cursor=pointer]':
+                      - 'generic "5: Optimizing performance - Unity - Manual" [ref=e92328]': "5"
+                    - text: . 미리 만들어진 정적 콘텐츠는 2D Sprite Atlas에 묶고, 런타임에 동적으로 추가/변경되는 텍스처는 UI Toolkit의 Dynamic Texture Atlas를 활용해 혼용하는 것이 좋습니다
+                    - 'button "6: Optimizing performance - Unity - Manual" [ref=e92330] [cursor=pointer]':
+                      - 'generic "6: Optimizing performance - Unity - Manual" [ref=e92331]': "6"
+                    - text: ". (외부 지식 참고: Atlas를 생성할 때 텍스처 가장자리가 서로 번지는 블리딩(Bleeding) 현상을 막기 위해 Padding(간격)을 2~4 픽셀 부여해야 합니다. Atlas 텍스처의 최대 크기는 2048x2048 이내로 제한하고, UI 요소가 회전하여 깨지는 것을 막으려면 'Allow Rotation' 옵션을 체크 해제하는 것이 최적의 설정입니다.)"
+                  - generic [ref=e92333]: 4. 매치 시 시각적 피드백(Juicing)을 위한 설정 쥬싱(Juicing)은 게임을 더욱 만족스럽고 타격감 있게 만드는 핵심입니다.
+                  - list [ref=e92334]:
+                    - listitem [ref=e92336]:
+                      - text: "Post-Processing (후처리): 볼륨(Volume)을 통해 색수차(Chromatic Aberration)와 비네팅(Vignette) 같은 효과를 더해 폭발 효과를 강조할 수 있습니다. 다만 색수차를 과도하게 사용하면 화면이 오히려 지저분해 보일 수 있으므로(gross) 절제하여 적용해야 합니다"
+                      - 'button "7: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e92338] [cursor=pointer]':
+                        - 'generic "7: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e92339]': "7"
+                      - text: .
+                    - listitem [ref=e92341]:
+                      - text: "Shader Graph / Material: 셰이더 내부에서 사인(Sine)/코사인(Cosine) 함수를 결합하여 스크립트 없이도 타일이 살아 숨 쉬듯 일렁거리거나(Wobble) 젤리처럼 뛰는 움직임을 수학적으로 가볍게 구현할 수 있습니다"
+                      - 'button "8: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92343] [cursor=pointer]':
+                        - 'generic "8: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92344]': "8"
+                      - text: . 버텍스 컬러(Vertex Colors)를 마스킹에 사용하여 오브젝트의 특정 부위만 반응하도록 세팅할 수도 있습니다
+                      - 'button "9: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92346] [cursor=pointer]':
+                        - 'generic "9: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92347]': "9"
+                      - text: .
+                    - listitem [ref=e92349]:
+                      - text: "VFX / Particle System: 타일이 부딪히거나 터질 때 먼지(Dust), 스파클(Sparkles), 궤적(Trails) 파티클을 재생합니다"
+                      - 'button "10: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92351] [cursor=pointer]':
+                        - 'generic "10: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92352]': "10"
+                      - button [ref=e92354] [cursor=pointer]:
+                        - img [ref=e92355]: more_horiz
+                      - text: . 단, 궤적(Trails) 효과는 자칫 애니메이션의 속도감을 둔해 보이게 할 수 있으므로 충돌 즉시 사라지게 세팅해야 합니다
+                      - 'button "12: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92357] [cursor=pointer]':
+                        - 'generic "12: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92358]': "12"
+                      - text: .
+                    - listitem [ref=e92360]:
+                      - text: "화면 흔들림 및 정지(Hold): 폭발이나 큰 충돌이 일어날 때 아주 짧은 순간 동안 렌더링 프레임을 멈추는 '홀드(Hold/Hitstop)' 기법을 적용하면 타격감이 크게 향상됩니다"
+                      - 'button "11: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92362] [cursor=pointer]':
+                        - 'generic "11: Squeezing more juice out of your game design! - GameAnalytics" [ref=e92363]': "11"
+                      - text: . 또한 화면 흔들림(Screenshake)을 게임패드 등의 햅틱 진동(Haptics)과 동기화하면 쾌감을 극대화할 수 있습니다
+                      - 'button "13: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e92365] [cursor=pointer]':
+                        - 'generic "13: You can instantly add a lot of satisfaction to your game with JUICE! Screenshake, particles & VFX, SFX, haptics, etc. All thrown into to my 2.5D Portal game. What do you think? : r/Unity3D - Reddit" [ref=e92366]': "13"
+                      - text: .
+                  - generic [ref=e92368]:
+                    - text: 5. 모바일 2D 게임의 텍스처 압축 포맷 (ASTC vs ETC2) 모바일 환경에서 메모리 대역폭을 아끼고 기기 발열(Thermal Throttling)을 막으려면 타겟 플랫폼에 맞는 GPU 텍스처 압축 포맷을 적용해야 합니다
+                    - 'button "14: Best practices for profiling game performance - Unity" [ref=e92370] [cursor=pointer]':
+                      - 'generic "14: Best practices for profiling game performance - Unity" [ref=e92371]': "14"
+                    - 'button "15: Optimizing performance - Unity - Manual" [ref=e92373] [cursor=pointer]':
+                      - 'generic "15: Optimizing performance - Unity - Manual" [ref=e92374]': "15"
+                    - text: ". (외부 지식 참고: 제공된 소스에는 ASTC와 ETC2의 구체적인 블록 설정 수치가 명시되어 있지 않으므로, 유니티 모바일 최적화 실무 지식을 바탕으로 설명합니다.)"
+                  - list [ref=e92375]:
+                    - listitem [ref=e92377]: "ASTC (Adaptive Scalable Texture Compression): 최신 iOS 및 안드로이드 기기의 표준입니다. 2D 매치 3 게임의 타일처럼 뚜렷한 색상과 경계선이 중요한 에셋은 손실을 최소화하기 위해 ASTC 4x4 또는 ASTC 5x5, 6x6 블록 크기를 권장합니다. 8x8 이상으로 압축하면 타일의 경계선이 뭉개지는 아티팩트가 심하게 발생할 수 있습니다."
+                    - listitem [ref=e92379]: "ETC2: ASTC를 하드웨어적으로 지원하지 않는 구형 안드로이드 기기를 위한 Fallback(대체) 포맷입니다. 투명도(Alpha)가 포함된 타일 스프라이트나 파티클 이미지는 반드시 ETC2 8-bit (RGBA) 포맷을 선택해야 알파 채널 깨짐을 방지할 수 있습니다."
+                - generic [ref=e92380]:
+                  - button "메시지를 메모에 저장" [ref=e92381]:
+                    - img [ref=e92382]: keep_pin
+                    - generic [ref=e92383]: 메모에 저장
+                  - generic [ref=e92386]:
+                    - button "클립보드에 모델 대답 복사" [ref=e92390] [cursor=pointer]:
+                      - img [ref=e92391]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e92397] [cursor=pointer]:
+                      - img [ref=e92398]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e92404] [cursor=pointer]:
+                      - img [ref=e92405]: thumb_down
+                - generic [ref=e92410]:
+                  - button "FSM 각 상태를 Unity C#으로 구현한 상세 코드를 보여줘" [ref=e92411] [cursor=pointer]:
+                    - generic [ref=e92412]: FSM 각 상태를 Unity C#으로 구현한 상세 코드를 보여줘
+                  - button "MCTS와 SAC 알고리즘을 활용한 자동 밸런싱 도구의 차이점은?" [ref=e92413] [cursor=pointer]:
+                    - generic [ref=e92414]: MCTS와 SAC 알고리즘을 활용한 자동 밸런싱 도구의 차이점은?
+                  - button "상용 게임에서 쓰이는 45가지 매치 3 특수 기믹 종류를 알려줘" [ref=e92415] [cursor=pointer]:
+                    - generic [ref=e92416]: 상용 게임에서 쓰이는 45가지 매치 3 특수 기믹 종류를 알려줘
+            - generic [ref=e92417]:
+              - 'heading "Match3 게임 개발의 나머지 시스템들에 대해 각각 Unity 에디터에서 반드시 해야 하는 작업이 있는지, 있다면 구체적으로 알려줘: 성능 최적화(10): Unity Profiler 사용법, 모바일 60fps를 위한 에디터 설정은? 데이터 저장(11): PlayerPrefs→JSON 전환 시 Unity 에디터에서 설정할 것이 있나? 수익화(05): Unity IAP, 광고 SDK 통합 시 에디터에서 설정해야 하는 것은? 메타게임(06): 월드맵/스토리 시스템을 에디터에서 구성하는 방법은? 라이브이벤트(14): Addressables로 에셋 원격 배포 시 에디터 설정은? 출시 준비(15): Unity Localization 패키지, 접근성 설정은? 운영 인프라(16): Firebase SDK 통합 시 에디터 설정은? 각 항목에서 Unity 에디터 작업이 필요 없으면 \"없음\"이라고 명시해줘. 필요한 것만 구체적으로." [level=3] [ref=e92423]':
+                - paragraph [ref=e92424]: "Match3 게임 개발의 나머지 시스템들에 대해 각각 Unity 에디터에서 반드시 해야 하는 작업이 있는지, 있다면 구체적으로 알려줘:"
+                - list [ref=e92425]:
+                  - listitem [ref=e92426]: "성능 최적화(10): Unity Profiler 사용법, 모바일 60fps를 위한 에디터 설정은?"
+                  - listitem [ref=e92427]: "데이터 저장(11): PlayerPrefs→JSON 전환 시 Unity 에디터에서 설정할 것이 있나?"
+                  - listitem [ref=e92428]: "수익화(05): Unity IAP, 광고 SDK 통합 시 에디터에서 설정해야 하는 것은?"
+                  - listitem [ref=e92429]: "메타게임(06): 월드맵/스토리 시스템을 에디터에서 구성하는 방법은?"
+                  - listitem [ref=e92430]: "라이브이벤트(14): Addressables로 에셋 원격 배포 시 에디터 설정은?"
+                  - listitem [ref=e92431]: "출시 준비(15): Unity Localization 패키지, 접근성 설정은?"
+                  - listitem [ref=e92432]: "운영 인프라(16): Firebase SDK 통합 시 에디터 설정은?"
+                - paragraph [ref=e92433]: 각 항목에서 Unity 에디터 작업이 필요 없으면 "없음"이라고 명시해줘. 필요한 것만 구체적으로.
+              - generic [ref=e92436]:
+                - generic [ref=e92440]:
+                  - generic [ref=e92442]: 제시해주신 Match3 게임 개발의 7가지 나머지 시스템에 대해, 순수 코딩을 제외하고 반드시 Unity 에디터(Inspector, Window, Project 뷰 등) 창에서 직접 마우스와 UI로 조작하고 설정해야 하는 구체적인 작업들을 정리해 드립니다.
+                  - generic [ref=e92444]: 에디터 작업이 불필요한 부분은 요청하신 대로 **"없음"**으로 명기했습니다.
+                  - generic [ref=e92446]: "--------------------------------------------------------------------------------"
+                  - generic [ref=e92448]: 1. 성능 최적화(10)
+                  - list [ref=e92449]:
+                    - listitem [ref=e92451]:
+                      - text: "Unity Profiler 사용법: 에디터에서"
+                      - code [ref=e92452]: Window > Analysis > Profiler
+                      - text: 창을 열고, CPU Usage 모듈의 Timeline 뷰를 확인합니다. 여기서 Main Thread, Render Thread, Worker Thread(Job System 사용 시)의 처리 시간과
+                      - code [ref=e92453]: GC.Alloc
+                      - text: 마커(메모리 가비지 생성) 구간을 시각적으로 추적하여 병목을 찾습니다
+                      - 'button "1: Best practices for profiling game performance - Unity" [ref=e92455] [cursor=pointer]':
+                        - 'generic "1: Best practices for profiling game performance - Unity" [ref=e92456]': "1"
+                      - button [ref=e92458] [cursor=pointer]:
+                        - img [ref=e92459]: more_horiz
+                      - text: .
+                    - listitem [ref=e92461]:
+                      - text: "모바일 60fps 에디터 설정: 코드에서"
+                      - code [ref=e92462]: Application.targetFrameRate = 60
+                      - text: 을 선언하더라도, 에디터의
+                      - code [ref=e92463]: Edit > Project Settings > Quality
+                      - text: 메뉴에서 VSync Count 옵션을 반드시 **'Don't Sync'**로 설정해야 목표 프레임이 강제 고정되지 않고 정상 작동합니다
+                      - 'button "4: Best practices for profiling game performance - Unity" [ref=e92465] [cursor=pointer]':
+                        - 'generic "4: Best practices for profiling game performance - Unity" [ref=e92466]': "4"
+                      - text: .
+                    - listitem [ref=e92468]:
+                      - text: "에셋 최적화 세팅:"
+                      - list [ref=e92469]:
+                        - listitem [ref=e92471]:
+                          - text: "2D 그래픽: Project 창에서 여러 타일 스프라이트들을 모아"
+                          - code [ref=e92472]: Sprite Atlas
+                          - text: 에셋에 패킹(Pack) 설정합니다
+                          - 'button "5: Optimization Approaches for Project Assets - Unity Learn" [ref=e92474] [cursor=pointer]':
+                            - 'generic "5: Optimization Approaches for Project Assets - Unity Learn" [ref=e92475]': "5"
+                          - text: .
+                        - listitem [ref=e92477]:
+                          - text: "오디오: 배경음악(BGM) 오디오 클립의 Inspector 창에서 메모리 절약을 위해"
+                          - code [ref=e92478]: Load Type
+                          - text: 을 **'Streaming'**으로 변경해야 합니다
+                          - 'button "5: Optimization Approaches for Project Assets - Unity Learn" [ref=e92480] [cursor=pointer]':
+                            - 'generic "5: Optimization Approaches for Project Assets - Unity Learn" [ref=e92481]': "5"
+                          - text: .
+                  - generic [ref=e92483]: 2. 데이터 저장(11) (PlayerPrefs → JSON 전환)
+                  - list [ref=e92484]:
+                    - listitem [ref=e92486]: 없음.
+                    - listitem [ref=e92488]:
+                      - text: "이유: 데이터를 구조체/클래스로 직렬화(Serialize)하고"
+                      - code [ref=e92489]: JsonUtility
+                      - text: 나
+                      - code [ref=e92490]: Newtonsoft.Json
+                      - text: 을 활용해 파일 입출력을 처리하는 것은 100% C# 코드 작성으로 진행됩니다. 유니티 에디터 창 자체에서 마우스로 조작해야 할 필수 설정은 없습니다.
+                  - generic [ref=e92492]: 3. 수익화(05)
+                  - list [ref=e92493]:
+                    - listitem [ref=e92495]:
+                      - text: "Unity IAP 통합:"
+                      - list [ref=e92496]:
+                        - listitem [ref=e92498]:
+                          - code [ref=e92499]: Window > Package Manager
+                          - text: 에서 Unity IAP 패키지를 인스톨합니다.
+                        - listitem [ref=e92501]:
+                          - text: 에디터 우측 상단의 클라우드 모양 아이콘(Services)을 눌러 프로젝트를 Unity Dashboard와 연동한 후,
+                          - code [ref=e92502]: In-App Purchasing
+                          - text: 서비스를 활성화합니다.
+                        - listitem [ref=e92504]:
+                          - code [ref=e92505]: Window > Unity IAP > IAP Catalog
+                          - text: 창을 열어, 구글/애플 스토어에 등록할 상품 ID와 타입(Consumable-소모성 부스터/하트, Non-consumable-광고제거)을 에디터 상에 직접 기입하고 저장합니다.
+                    - listitem [ref=e92507]:
+                      - text: "광고 SDK(LevelPlay 등) 통합: 패키지 임포트 후, 상단 메뉴바에 생성되는 전용 메뉴("
+                      - code [ref=e92508]: Edit > Project Settings > 광고 플랫폼
+                      - text: )에서 iOS 및 Android용 App Key를 복사해서 붙여넣고 저장하는 에디터 작업이 필수입니다.
+                  - generic [ref=e92510]: 4. 메타게임(06)
+                  - list [ref=e92511]:
+                    - listitem [ref=e92513]:
+                      - text: "월드맵 구성:"
+                      - list [ref=e92514]:
+                        - listitem [ref=e92516]:
+                          - code [ref=e92517]: Hierarchy
+                          - text: 창에서
+                          - code [ref=e92518]: ScrollRect
+                          - text: 컴포넌트가 부착된 대형 캔버스 이미지를 배치하고, 그 위에 개별 레벨 진입 노드(Button)들을 드래그하여 시각적으로 맵 모양에 맞게 배치합니다.
+                        - listitem [ref=e92520]: 다양한 모바일 해상도(태블릿, 노치 디자인 등)에 맵이 깨지지 않도록 Inspector 창에서 앵커(Anchor)와 피벗(Pivot)을 마우스로 조절해 화면 구석이나 중앙에 고정해야 합니다.
+                    - listitem [ref=e92522]:
+                      - text: "스토리 시스템: 기획자가 에디터에서 대사를 작성할 수 있도록"
+                      - code [ref=e92523]: ScriptableObject
+                      - text: 에셋을
+                      - code [ref=e92524]: Project
+                      - text: 창에서 우클릭(
+                      - code [ref=e92525]: Create > ...
+                      - text: )으로 생성하고, Inspector 창을 열어 대사 텍스트와 말하는 캐릭터의 스탠딩 이미지(Sprite)를 직접 드래그 앤 드롭으로 할당해야 합니다.
+                  - generic [ref=e92527]: 5. 라이브이벤트(14)
+                  - list [ref=e92528]:
+                    - listitem [ref=e92530]:
+                      - text: "Addressables 에셋 원격 배포 에디터 설정:"
+                      - list [ref=e92531]:
+                        - listitem [ref=e92533]: 패키지 매니저에서 Addressables 패키지를 설치합니다.
+                        - listitem [ref=e92535]:
+                          - text: 배포할 에셋(새 이벤트 레벨 프리팹, 신규 타일 이미지 등)을 Project 창에서 선택하고, Inspector 창 최상단의 'Addressable' 체크박스를 클릭하여 활성화합니다
+                          - 'button "6: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e92537] [cursor=pointer]':
+                            - 'generic "6: Top 7 Unity Architecture Mistakes in Match3 Games | by Siarhei ..." [ref=e92538]': "6"
+                          - text: .
+                        - listitem [ref=e92540]:
+                          - code [ref=e92541]: Window > Asset Management > Addressables > Groups
+                          - text: 창을 엽니다.
+                        - listitem [ref=e92543]:
+                          - text: Profile 설정 메뉴를 열어
+                          - code [ref=e92544]: Build Path
+                          - text: 와
+                          - code [ref=e92545]: Load Path
+                          - text: "를 기본 로컬 경로에서 **원격 서버(Remote URL, 예: AWS S3 주소)**로 변경합니다."
+                        - listitem [ref=e92547]:
+                          - text: 앱 클라이언트 빌드와 별개로, Groups 창의
+                          - code [ref=e92548]: Build > New Build > Default Build Script
+                          - text: 메뉴를 클릭해 에디터에서 에셋 번들을 직접 추출해야 합니다.
+                  - generic [ref=e92550]: 6. 출시 준비(15)
+                  - list [ref=e92551]:
+                    - listitem [ref=e92553]:
+                      - text: "Unity Localization 패키지 설정:"
+                      - list [ref=e92554]:
+                        - listitem [ref=e92556]:
+                          - text: 패키지를 설치한 후
+                          - code [ref=e92557]: Window > Asset Management > Localization Tables
+                          - text: "창을 열어, 지원할 언어(예: 한국어, 영어) 탭을 추가하고 번역 텍스트를 기입하는 String Table을 생성합니다"
+                          - 'button "7: Optimizing performance - Unity - Manual" [ref=e92559] [cursor=pointer]':
+                            - 'generic "7: Optimizing performance - Unity - Manual" [ref=e92560]': "7"
+                          - text: .
+                        - listitem [ref=e92562]:
+                          - text: 다국어 처리가 필요한 모든 UI 텍스트(TextMeshPro) 게임 오브젝트를 선택하고, Inspector 창에서
+                          - code [ref=e92563]: Localize String Event
+                          - text: 컴포넌트를 추가합니다.
+                        - listitem [ref=e92565]: 추가한 컴포넌트의 빈 슬롯에 앞서 생성한 테이블의 특정 키(Key)를 마우스로 선택해 연결(매핑)합니다.
+                    - listitem [ref=e92567]: "접근성(Accessibility) 설정: 유니티에서 글자 크기 조정, 색약 모드용 대비 필터 등은 위 로컬라이제이션 기능과 UI Scale 모드를 조합하여 Inspector 창의 파라미터(Font Size Min/Max)를 조작하는 방식으로 에디터에서 세팅합니다."
+                  - generic [ref=e92569]: 7. 운영 인프라(16)
+                  - list [ref=e92570]:
+                    - listitem [ref=e92572]:
+                      - text: "Firebase SDK 통합 설정:"
+                      - list [ref=e92573]:
+                        - listitem [ref=e92575]:
+                          - code [ref=e92576]: .unitypackage
+                          - text: 를 임포트한 후, Firebase 콘솔 웹사이트에서 다운로드 받은 설정 파일인 google-services.json (Android용)과 GoogleService-Info.plist (iOS용) 파일을 유니티 에디터의 Project 창(Assets 폴더 내부)으로 드래그 앤 드롭하여 추가해야 합니다. 이 파일이 없으면 초기화에 실패합니다.
+                        - listitem [ref=e92578]:
+                          - text: 패키지 추가 후 라이브러리 충돌을 막기 위해 상단 메뉴에서
+                          - code [ref=e92579]: Assets > External Dependency Manager > Android Resolver > Force Resolve
+                          - text: 를 직접 클릭하여 에디터가 필수 백엔드 라이브러리를 다운로드하도록 유도해야 빌드 에러를 방지할 수 있습니다.
+                - generic [ref=e92580]:
+                  - button "메시지를 메모에 저장" [ref=e92581]:
+                    - img [ref=e92582]: keep_pin
+                    - generic [ref=e92583]: 메모에 저장
+                  - generic [ref=e92586]:
+                    - button "클립보드에 모델 대답 복사" [ref=e92590] [cursor=pointer]:
+                      - img [ref=e92591]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e92597] [cursor=pointer]:
+                      - img [ref=e92598]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e92604] [cursor=pointer]:
+                      - img [ref=e92605]: thumb_down
+                - generic [ref=e92610]:
+                  - button "더 많은 Match3 레벨 기믹 아이디어를 추천해 주세요." [ref=e92611] [cursor=pointer]:
+                    - generic [ref=e92612]: 더 많은 Match3 레벨 기믹 아이디어를 추천해 주세요.
+                  - button "SAC 알고리즘을 사용한 밸런싱 AI의 학습 보상 설계 방법은?" [ref=e92613] [cursor=pointer]:
+                    - generic [ref=e92614]: SAC 알고리즘을 사용한 밸런싱 AI의 학습 보상 설계 방법은?
+                  - button "Unity Addressables를 이용한 실시간 레벨 업데이트 구현 방법은?" [ref=e92615] [cursor=pointer]:
+                    - generic [ref=e92616]: Unity Addressables를 이용한 실시간 레벨 업데이트 구현 방법은?
+            - generic [ref=e92617]:
+              - heading [level=3] [ref=e92623]:
+                - paragraph [ref=e92624]: 내가 만든 Match3 게임의 나머지 7개 Phase 계획서를 검증해줘. 각각 문제점이나 빠진 것이 있으면 알려줘.
+                - paragraph [ref=e92625]: "Phase 10 (성능 최적화): 오브젝트 풀링(Queue 기반, Pre-warm 타일64/파티클20), Sprite Atlas(TileAtlas+UIAtlas, Pack Preview), 텍스처 압축(ASTC 6x6), Profiler(Window>Analysis>Profiler, GC Alloc 0 목표), VSync Don't Sync + targetFrameRate=60, SRP Batcher, Audio Streaming(BGM), 물리 엔진 미사용"
+                - paragraph [ref=e92626]: "Phase 11 (데이터 저장): Unity 에디터 작업 없음(100% 코드). PlayerPrefs→JSON 전환. JsonUtility 사용. UserData POCO → Application.persistentDataPath 저장"
+                - paragraph [ref=e92627]: "Phase 5 (수익화): Unity IAP(Package Manager 설치, IAP Catalog에서 7개 상품 등록), 광고 SDK(LevelPlay, App Key 에디터 설정), 시즌패스"
+                - paragraph [ref=e92628]: "Phase 6 (메타게임): ScrollRect 월드맵(에디터 배치), 스토리 SO, 일일 보상, 후보 3가지(스토리+꾸미기/캐릭터수집/월드맵탐험)"
+                - paragraph [ref=e92629]: "Phase 14 (라이브이벤트): Addressables(패키지 설치, 에셋 Addressable 체크, 그룹 생성, Remote Path 설정, 빌드→CDN 업로드)"
+                - paragraph [ref=e92630]: "Phase 15 (출시 준비): Localization(패키지 설치, Locale ko/en 생성, String Table Collection, Localize String Event 컴포넌트), 폰트(Noto Sans KR)"
+                - paragraph [ref=e92631]: "Phase 16 (운영 인프라): Firebase SDK(.unitypackage 임포트, EDM, google-services.json Assets/ 배치, Android Resolver), Analytics/Crashlytics/FCM/RemoteConfig"
+                - paragraph [ref=e92632]: 각 Phase에서 빠진 것, 틀린 것, 추가해야 할 것을 알려줘.
+              - generic [ref=e92635]:
+                - generic [ref=e92639]:
+                  - generic [ref=e92641]: 제시해주신 리팩토링 및 시스템 통합 계획(Phase 10 ~ Phase 16)은 상용 매치 3 게임으로 가기 위한 핵심 요소들을 아주 잘 파악하고 있습니다.
+                  - generic [ref=e92643]: 하지만 실제 프로덕션(모바일 환경)에서 발생할 수 있는 치명적인 버그나 성능 저하, 보안 문제 등을 방지하기 위해 수정하거나 추가해야 할 디테일들이 있습니다. 각 Phase별로 누락된 부분과 수정 권장 사항을 검증해 드립니다.
+                  - generic [ref=e92645]: "--------------------------------------------------------------------------------"
+                  - heading "Phase 10 (성능 최적화)" [level=3] [ref=e92647]
+                  - list [ref=e92648]:
+                    - listitem [ref=e92650]:
+                      - text: "수정 요망 (풀링 수량): 8x8(64칸) 보드 기준으로 타일 64개, 파티클 20개는 절대적으로 부족합니다. 컬러밤+컬러밤 조합 등으로 보드 전체가 한 번에 터질 때, 기존 64개의 타일이 0.15초 동안 파괴 애니메이션을 재생 중인 상태에서 위에서 새 타일 64개가 즉시 스폰되어 떨어져야 합니다. 따라서 타일은 최소 128160개, 파티클은 50100개 이상으로 Pre-warm 사이즈를 늘려야 GC 스파이크를 막을 수 있습니다"
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92652] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92653]': "1"
+                      - text: .
+                    - listitem [ref=e92655]:
+                      - text: "수정 요망 (텍스처 압축): ASTC 6x6은 용량 최적화에는 좋으나, 매치 3 게임처럼 선명한 2D 외곽선과 가독성이 필수인 그래픽에서는 아티팩트(깨짐)가 발생할 수 있습니다. UI와 핵심 타일 그래픽은 ASTC 4x4 또는 5x5를 권장합니다"
+                      - 'button "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92657] [cursor=pointer]':
+                        - 'generic "1: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92658]': "1"
+                      - text: .
+                    - listitem [ref=e92660]:
+                      - text: "추가 사항: 모바일 발열 제어(Thermal Throttling)를 위해 무조건 60fps로 고정하기보다는, 배터리 절약 모드나 저사양 기기를 위한 30fps 분기 처리를 넣는 것이 좋습니다"
+                      - 'button "2: Best practices for profiling game performance - Unity" [ref=e92662] [cursor=pointer]':
+                        - 'generic "2: Best practices for profiling game performance - Unity" [ref=e92663]': "2"
+                      - text: .
+                  - heading "Phase 11 (데이터 저장)" [level=3] [ref=e92665]
+                  - list [ref=e92666]:
+                    - listitem [ref=e92668]:
+                      - text: "틀린 부분 (JsonUtility 사용): Unity 내장"
+                      - code [ref=e92669]: JsonUtility
+                      - text: 는 Dictionary나 복잡한 다형성(Polymorphism), 중첩 구조를 직렬화하는 데 치명적인 한계가 있습니다. 인벤토리, 레벨별 별 획득 상태 등 복잡한 메타 데이터를 저장하려면 Newtonsoft.Json 패키지 사용을 강력히 권장합니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92671] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92672]': "3"
+                      - text: .
+                    - listitem [ref=e92674]:
+                      - text: "빠진 부분 (보안 및 치팅 방지):"
+                      - code [ref=e92675]: UserData
+                      - text: 를
+                      - code [ref=e92676]: persistentDataPath
+                      - text: 에 평문(Plain text) JSON으로 그대로 저장하면, 유저가 파일 탐색기로 열어서 코인이나 부스터 수량을 마음대로 조작할 수 있습니다. 최소한 AES 암호화나 Base64 인코딩을 거쳐서 저장하는 로직이 반드시 추가되어야 합니다.
+                    - listitem [ref=e92678]: "빠진 부분: 향후 기기 변경을 대비한 클라우드 세이브(Google Play Games, Apple Game Center 또는 Firebase Firestore) 확장 구조를 모델에 미리 염두에 두어야 합니다."
+                  - heading "Phase 5 (수익화)" [level=3] [ref=e92680]
+                  - list [ref=e92681]:
+                    - listitem [ref=e92683]: "빠진 부분 (결제 검증): Unity IAP 연동 시 로컬 또는 서버 기반의 영수증 검증(Receipt Validation) 로직이 빠져 있습니다. 이를 구현하지 않으면 크랙된 앱(Fake IAP)을 통해 유저들이 유료 상품을 무료로 뚫어버리게 됩니다."
+                    - listitem [ref=e92685]:
+                      - text: "추가 사항 (광고 위치 설계): 광고 SDK(LevelPlay)를 넣는 것 외에, 기획적으로 '강제 전면 광고' 대신 유저가 자발적으로 시청하는 '보상형 광고(Rewarded Video - 이동 횟수 5회 추가, 보상 2배 등)' 위주로만 배치해야 유저 이탈(Churn)을 막을 수 있습니다"
+                      - 'button "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92687] [cursor=pointer]':
+                        - 'generic "4: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92688]': "4"
+                      - text: .
+                  - heading "Phase 6 (메타게임)" [level=3] [ref=e92690]
+                  - list [ref=e92691]:
+                    - listitem [ref=e92693]:
+                      - text: "빠진 부분 (ScrollRect 최적화): 레벨이 수백~수천 개로 늘어나는 월드맵을 단순"
+                      - code [ref=e92694]: ScrollRect
+                      - text: 로 렌더링하면 메모리와 드로우콜이 폭발합니다. 화면에 보이는 노드만 활성화하는 오브젝트 풀링 기반의 재사용 스크롤(Recycling ScrollRect) 구현이 필수입니다
+                      - 'button "5: Optimizing performance - Unity - Manual" [ref=e92696] [cursor=pointer]':
+                        - 'generic "5: Optimizing performance - Unity - Manual" [ref=e92697]': "5"
+                      - text: .
+                    - listitem [ref=e92699]:
+                      - text: "후보 추천: 후보 3가지 중 수익성과 장기 리텐션을 고려한다면 압도적으로 스토리+꾸미기(Decor) 모델을 추천합니다. 정원이나 집을 꾸미는 요소는 유저의 감정적 투자를 끌어내어 인앱 결제에 대한 거부감을 줄여줍니다"
+                      - 'button "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92701] [cursor=pointer]':
+                        - 'generic "6: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92702]': "6"
+                      - 'button "7: Match 3 Games | What Are Match Three Games & How create them - iLogos Game Studios" [ref=e92704] [cursor=pointer]':
+                        - 'generic "7: Match 3 Games | What Are Match Three Games & How create them - iLogos Game Studios" [ref=e92705]': "7"
+                      - text: .
+                    - listitem [ref=e92707]: "빠진 부분 (어뷰징 방지): '일일 보상'을 기기의 로컬 타임(PlayerPrefs)으로만 검사하면 시간 조작 꼼수(Time skip)에 당합니다. 백엔드(NTP 서버 또는 Firebase)의 서버 시간(Server Time)을 가져와서 출석을 검증하는 로직이 필요합니다."
+                  - heading "Phase 14 (라이브이벤트)" [level=3] [ref=e92709]
+                  - list [ref=e92710]:
+                    - listitem [ref=e92712]: "빠진 부분 (런타임 다운로드 로직): 에디터에서의 Addressable 설정 및 CDN 업로드 계획은 완벽하나, 클라이언트(코드) 단에서 게임 진입 시 새로운 카탈로그가 있는지 확인(Addressables.CheckForCatalogUpdates)하고 리소스를 다운로드하며 프로그레스 바를 보여주는 '로딩 씬' 구현 단계가 누락되어 있습니다."
+                  - heading "Phase 15 (출시 준비)" [level=3] [ref=e92714]
+                  - list [ref=e92715]:
+                    - listitem [ref=e92717]:
+                      - text: "틀린 부분 (폰트 처리): Noto Sans KR"
+                      - code [ref=e92718]: .ttf
+                      - text: 폰트를 그대로 넣고 끝내면 TextMeshPro(TMP)에서 한국어가 정상적으로 렌더링되지 않거나 최적화 문제가 생깁니다. 에디터에서
+                      - code [ref=e92719]: Window > TextMeshPro > Font Asset Creator
+                      - text: 를 사용해 반드시 SDF(Signed Distance Field) 폰트 에셋으로 굽는(Bake) 과정이 포함되어야 합니다
+                      - 'button "8: Optimizing performance - Unity - Manual" [ref=e92721] [cursor=pointer]':
+                        - 'generic "8: Optimizing performance - Unity - Manual" [ref=e92722]': "8"
+                      - text: ". 한국어는 글자가 많으므로 아틀라스 크기(예: 4096x4096) 설정이나 동적 폰트 폴백(Dynamic Fallback) 설정이 필요합니다."
+                    - listitem [ref=e92724]:
+                      - text: "빠진 부분 (Safe Area 대응): 최신 모바일 기기의 노치(Notch)나 펀치홀에 UI가 가려지지 않도록 Canvas 내부에 Safe Area 처리용 앵커 스크립트 적용이 빠져 있습니다"
+                      - 'button "9: Match 3 - Candy Tile-Match - App Store - Apple" [ref=e92726] [cursor=pointer]':
+                        - 'generic "9: Match 3 - Candy Tile-Match - App Store - Apple" [ref=e92727]': "9"
+                      - 'button "10: Optimizing performance - Unity - Manual" [ref=e92729] [cursor=pointer]':
+                        - 'generic "10: Optimizing performance - Unity - Manual" [ref=e92730]': "10"
+                      - text: .
+                  - heading "Phase 16 (운영 인프라)" [level=3] [ref=e92732]
+                  - list [ref=e92733]:
+                    - listitem [ref=e92735]:
+                      - text: "틀린 부분/빠진 부분 (iOS 환경 파일): Android용"
+                      - code [ref=e92736]: google-services.json
+                      - text: 배치만 언급되어 있습니다. iOS 빌드를 위해서는 반드시 GoogleService-Info.plist 파일도 Assets 폴더에 함께 배치해야 합니다
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92738] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92739]': "3"
+                      - text: .
+                    - listitem [ref=e92741]:
+                      - text: "빠진 부분 (초기화 코드): Firebase SDK는 패키지 임포트만으로 작동하지 않습니다. 게임 첫 실행 시 스크립트에서 FirebaseApp.CheckAndFixDependenciesAsync()를 호출하여 기기에 Google Play 서비스가 정상적으로 설치되어 있는지 종속성을 검증하고 초기화하는 단계가 가장 먼저 실행되어야 합니다"
+                      - 'button "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92743] [cursor=pointer]':
+                        - 'generic "3: (PDF) Efficient Difficulty Level Balancing in Match-3 Puzzle Games: A Comparative Study of Proximal Policy Optimization and Soft Actor-Critic Algorithms - ResearchGate" [ref=e92744]': "3"
+                      - text: .
+                    - listitem [ref=e92746]: "추가 사항 (Remote Config 연동): RemoteConfig를 붙이는 목적은 레벨 난이도(이동 횟수, 타일 스폰 가중치 등)를"
+                - generic [ref=e92747]:
+                  - button "메시지를 메모에 저장" [ref=e92748]:
+                    - img [ref=e92749]: keep_pin
+                    - generic [ref=e92750]: 메모에 저장
+                  - generic [ref=e92753]:
+                    - button "클립보드에 모델 대답 복사" [ref=e92757] [cursor=pointer]:
+                      - img [ref=e92758]: copy_all
+                    - button "대답을 좋음으로 평가" [ref=e92764] [cursor=pointer]:
+                      - img [ref=e92765]: thumb_up
+                    - button "대답을 좋지 않음으로 평가" [ref=e92771] [cursor=pointer]:
+                      - img [ref=e92772]: thumb_down
+          - generic [ref=e828]:
+            - textbox "쿼리 상자" [active] [ref=e829]:
+              - /placeholder: 입력을 시작하세요…
+            - generic [ref=e830]:
+              - generic [ref=e832]: 소스 38개
+              - button "제출" [disabled]:
+                - img: arrow_forward
+      - generic [ref=e834]:
+        - generic [ref=e835]:
+          - navigation [ref=e836]:
+            - heading "스튜디오" [level=2] [ref=e837]:
+              - generic [ref=e838]: 스튜디오
+          - button "스튜디오 패널 접기" [ref=e839] [cursor=pointer]:
+            - img [ref=e840]: dock_to_left
+        - generic [ref=e844]:
+          - generic [ref=e845]:
+            - button "AI 오디오 오버뷰" [ref=e847] [cursor=pointer]:
+              - generic [ref=e848]:
+                - generic [ref=e849]:
+                  - img [ref=e851]: audio_magic_eraser
+                  - generic [ref=e852]: AI 오디오 오버뷰
+                - button "AI 오디오 오버뷰 맞춤설정" [ref=e854]:
+                  - img [ref=e855]: chevron_forward
+            - button "슬라이드 자료" [ref=e859] [cursor=pointer]:
+              - generic [ref=e860]:
+                - generic [ref=e861]:
+                  - img [ref=e863]: tablet
+                  - generic [ref=e864]: 슬라이드 자료
+                - button "슬라이드 자료 맞춤설정" [ref=e866]:
+                  - img [ref=e867]: chevron_forward
+            - button "동영상 개요" [ref=e871] [cursor=pointer]:
+              - generic [ref=e872]:
+                - generic [ref=e873]:
+                  - img [ref=e875]: subscriptions
+                  - generic [ref=e876]: 동영상 개요
+                - img [ref=e878]: chevron_forward
+            - button "마인드맵" [ref=e880] [cursor=pointer]:
+              - generic [ref=e882]:
+                - img [ref=e884]: flowchart
+                - generic [ref=e885]: 마인드맵
+            - button "보고서" [ref=e887] [cursor=pointer]:
+              - generic [ref=e888]:
+                - generic [ref=e889]:
+                  - img [ref=e891]: auto_tab_group
+                  - generic [ref=e892]: 보고서
+                - img [ref=e894]: chevron_forward
+            - button "플래시카드" [ref=e896] [cursor=pointer]:
+              - generic [ref=e897]:
+                - generic [ref=e898]:
+                  - img [ref=e900]: cards_star
+                  - generic [ref=e901]: 플래시카드
+                - button "플래시카드 맞춤설정" [ref=e903]:
+                  - img [ref=e904]: chevron_forward
+            - button "퀴즈" [ref=e908] [cursor=pointer]:
+              - generic [ref=e909]:
+                - generic [ref=e910]:
+                  - img [ref=e912]: quiz
+                  - generic [ref=e913]: 퀴즈
+                - button "퀴즈 맞춤설정" [ref=e915]:
+                  - img [ref=e916]: chevron_forward
+            - button "인포그래픽" [ref=e920] [cursor=pointer]:
+              - generic [ref=e921]:
+                - generic [ref=e922]:
+                  - img [ref=e924]: stacked_bar_chart
+                  - generic [ref=e925]: 인포그래픽
+                - button "인포그래픽 맞춤설정" [ref=e927]:
+                  - img [ref=e928]: chevron_forward
+            - button "데이터 표" [ref=e932] [cursor=pointer]:
+              - generic [ref=e933]:
+                - generic [ref=e934]:
+                  - img [ref=e936]: table_view
+                  - generic [ref=e937]: 데이터 표
+                - button "데이터 표 맞춤설정" [ref=e939]:
+                  - img [ref=e940]: chevron_forward
+          - generic [ref=e944]:
+            - generic [ref=e946]:
+              - img [ref=e947]: edit_fix_auto
+              - generic [ref=e948]: 스튜디오 출력이 여기에 저장됩니다
+              - generic [ref=e949]: 소스를 추가한 후 클릭하여 AI 오디오 오버뷰, 학습 가이드, 마인드맵 등을 추가해 보세요.
+            - button "메모 추가" [ref=e950]:
+              - img [ref=e951]: sticky_note_2
+              - generic [ref=e952]: 메모 추가
+    - contentinfo [ref=e955]: NotebookLM이 부정확한 정보를 표시할 수 있으므로 대답을 다시 한번 확인하세요.
+  - generic [ref=e956]: 답변 준비가 완료되었습니다.

@@ -1,72 +1,107 @@
 # Match3 게임 고도화 - 인수인계 문서
 
-## ⚠️ 현재 상태 (2026-03-23)
+## 현재 상태 (2026-03-23)
 
-### 이번 세션에서 한 것
-1. **판타지 테마 배경 적용** — Antigravity+Gemini로 생성, bg2.png 교체 완료
-2. **레벨 버튼 통일** — LevelSelect.cs에서 1~5 전부 level_btn.png로 동적 생성
-3. **Unity MCP 연결 성공** — stdio 방식 (.mcp.json), npx unity-mcp-cli로 도구 호출
-4. **16개 Phase 계획서 수립** — NotebookLM + Playwright로 리서치, docs/00-master-plan.md
-5. **이미지 에셋 생성** — 타일 8색, 특수타일 4종, 장애물 4종, 앱 아이콘 (asset-tracker.md 참조)
-6. **Phase 1 에셋 생성 (부실)** — Prefab/SO/Atlas 파일은 만들었으나 내용 미흡
+### 프로젝트 실제 코드 구조 (변경 안 됨)
+```
+Assets/Scripts/           ← 폴더 분리 없음 (전부 플랫)
+├── GameGrid.cs           ← 1393줄 God Object (터치, 매치, 낙하, 생성 전부)
+├── MatchParticles.cs     ← 274줄 코드로 파티클 생성 (Prefab 미사용)
+├── MobileHUDLayout.cs    ← 237줄 코드로 HUD UI 생성
+├── BoosterUI.cs          ← 코드로 부스터 UI 생성
+├── LevelSelect.cs        ← 코드로 레벨 버튼 동적 생성
+├── ProceduralAudio.cs    ← 163줄 사인파 코드 생성
+├── ColorPiece.cs         ← 타일 색상 매핑 (colorSprites 배열)
+├── GamePiece.cs, MovablePiece.cs, ClearablePiece.cs ...
+├── TileView.cs           ← Phase 1에서 만듦 (게임에서 아직 안 쓰임)
+├── GameConfig.cs, LevelConfig.cs ← SO 정의 (게임에서 아직 안 읽음)
+└── Editor/
+    ├── LevelConfigEditor.cs  ← Custom Editor (그리드 프리뷰)
+    └── Phase1Setup.cs        ← 에셋 셋업 유틸리티
+```
 
-### ⛔ 중요: Phase 1이 제대로 안 됨
-Phase 1 (에디터 에셋 기반 구축)의 파일은 존재하지만 **계획서 요구 수준에 미달**:
-- 타일 Prefab: Base + Variant 구조가 아닌 개별 Prefab
-- TileView.cs: 코드만 있고 Prefab에 미부착
-- 파티클 Prefab: 코드로 생성, 에디터에서 시각적 설정 안 함
-- UI Prefab: 실제 이미지 미할당, 빈 껍데기
-- Custom Editor: 미작성
-- Sprite Atlas: Pack Preview 미확인
+### Phase 1에서 만든 에셋 (존재하지만 게임 코드가 아직 안 쓰는 것들)
+- `Assets/Prefabs/Tiles/BaseTile.prefab` + 8 Variant
+- `Assets/Prefabs/Effects/` 파티클 4종
+- `Assets/Prefabs/UI/` UI Prefab 4종
+- `Assets/ScriptableObjects/` GameConfig + LevelConfig 5개
+- `Assets/SpriteAtlases/` TileAtlas + UIAtlas
+- Tiles SortingLayer 추가됨
 
-### ⛔ Phase 2-3 롤백됨
-- 이전에 계획서 순서를 무시하고 Phase 2(Model), Phase 3(Controller)을 먼저 진행했다가 **전부 롤백**함
-- GameGrid.cs는 원래 1393줄 상태로 복원됨
-- **반드시 Phase 1을 제대로 완료한 후 Phase 2로 넘어갈 것**
+### Edit 모드 문제 (아직 해결 안 됨)
+- 카메라 Clear Flags = Nothing → Edit 모드 Game View 깨짐
+- 타일이 런타임에만 동적 생성 → Edit 모드에서 보드 안 보임
 
 ---
 
-## 계획서 체계
-- **마스터 계획서**: `docs/00-master-plan.md` (16개 Phase 전체 현황)
-- **Phase 1**: `docs/01-architecture.plan.md` (아키텍처 리팩토링)
-- **Phase 2~16**: 각각 `docs/02~16-*.plan.md`
-- **에셋 트래커**: `docs/asset-tracker.md` (이미지 생성 현황)
+## 작업 방식 (매우 중요 — 반드시 따를 것)
 
-## 절대 규칙 (MEMORY.md에도 있음)
-1. **계획서(.plan.md)를 반드시 Read로 읽고 그 순서대로 실행**
-2. **계획서 변경 시 사용자 보고+승인 필수**
-3. **작업 덩어리 완료 즉시 계획서+마스터+인수인계 업데이트**
-4. **빌드는 사용자 승인 후에만**
-5. **Unity 에디터 기능 최대 활용** (코드 생성 금지, Prefab/Inspector 사용)
+### 스텝 바이 스텝 진행
+1. 01-architecture.plan.md를 **Phase 1-1, 1-2, 1-3...** 으로 분할
+2. 각 서브 Phase마다 **별도 상세 계획 파일** 작성 (`docs/01/phase-1-1.md` 등)
+3. **한 번에 하나의 서브 Phase만 진행**
+4. 완료할 때마다 **진행도를 메모리 + 파일에 즉시 저장**
+5. 모든 서브 Phase 완료 → 최종 확인 → 다음 큰 Phase로
 
-## 다음 작업
-1. **Phase 1을 제대로 다시 해야 함** — 01-architecture.plan.md의 Phase 1 항목 하나씩 확인
-   - Base Tile Prefab + Variant 8개 (에디터에서)
-   - TileView.cs를 Prefab에 부착
-   - 파티클을 에디터 Particle System으로 설정
-   - UI Prefab에 실제 이미지 할당
-   - Custom Editor 작성
-2. Phase 1 완료 후 Phase 2 (Model 분리) 진행
+### Unity MCP 적극 활용 (필수)
+- **모든 에디터 작업은 MCP(`npx unity-mcp-cli run-tool`)로 처리**
+- MCP 직접 호출(`mcp__mcp-unity__`) 하면 타임아웃됨 — **반드시 CLI 방식**
+- 코드 작성 → `script-update-or-create` → `assets-refresh` → 컴파일 확인
+- Inspector 설정 → `gameobject-component-modify` 또는 `script-execute`
+- 테스트 → `editor-application-set-state` {isPlaying: true}
+- 확인 → `screenshot-game-view` 또는 `win32-inspector capture_screen`
+
+### 클릭/조작이 필요할 때
+- **Unity 에디터 UI 클릭**: `win32-inspector`의 `click`, `capture_screen` 사용
+- **메뉴 항목 실행**: MCP `execute-menu-item` 사용
+- **직접 조작이 안 되는 경우만** 사용자에게 요청 (최소화)
+
+### 테스트 (매 작업 후 필수)
+1. `editor-application-set-state` → Play 모드 진입
+2. `screenshot-game-view` → 화면 캡처하여 직접 확인
+3. `console-get-logs` → 에러 없는지 확인
+4. 가능하면 `win32-inspector`로 클릭/조작하여 실제 플레이 테스트
+5. **직접 조작이 안 되는 경우만** 사용자에게 "Play 모드에서 스왑 테스트 부탁드립니다" 요청
+6. `editor-application-set-state` → Play 모드 종료
+
+### 사용자 개입 최소화
+- 사용자가 해야 하는 것: **최종 확인 + 승인만**
+- AI가 해야 하는 것: **코드 작성, 에디터 설정, 테스트, 스크린샷 확인 전부**
+- "할까요?" 묻지 말고 바로 실행 (CLAUDE.md 규칙)
+
+---
+
+## MCP 사용법
+
+```bash
+cd c:/Project/Match3 && npx unity-mcp-cli run-tool <도구명> --input-file - <<'EOF'
+{파라미터 JSON}
+EOF
+```
+
+### 주요 도구
+| 도구 | 용도 |
+|------|------|
+| `script-update-or-create` | C# 스크립트 생성/수정 |
+| `script-read` | 스크립트 읽기 |
+| `script-execute` | C# 코드 즉시 실행 (class Script { static string Main() }) |
+| `assets-refresh` | 컴파일 트리거 |
+| `assets-find` | 에셋 검색 |
+| `editor-application-get-state` | 에디터 상태 확인 |
+| `editor-application-set-state` | Play 모드 시작/종료 |
+| `screenshot-game-view` | Game View 스크린샷 |
+| `console-get-logs` | 콘솔 에러 확인 |
+| `scene-save` | 씬 저장 |
+
+---
 
 ## 프로젝트 위치
 - **Unity 프로젝트**: `C:/Project/Match3/`
 - **Unity 버전**: 6.3 LTS (6000.3.11f1)
-- **APK 최신**: Match3_25 (`G:\내 드라이브\apk\`)
-- **다음 APK 번호**: Match3_26
+- **계획서**: `docs/README.md` (전체 요약), `docs/01-architecture.plan.md` (아키텍처)
 
-## MCP 설정
-- `.mcp.json`: mcp-unity (stdio) + win32-inspector
-- Unity MCP: `npx unity-mcp-cli run-tool <도구> --input-file -`
-- NotebookLM MCP: 반복 응답 문제 있음 → Playwright MCP로 직접 접근 가능
-
-## NotebookLM 노트북
-- match3-1: `eb5804c6` — 게임 아키텍처/알고리즘
-- match3-2: `9621b87a` — 추가 리서치
-- match3 (그래픽): `b0886bfe` — 디자인/그래픽
-- unity-android-mcp: `40bb5215` — MCP 설정
-
-## Antigravity
-- 실행: `env -u ELECTRON_RUN_AS_NODE "C:/Users/comes/AppData/Local/Programs/Antigravity/Antigravity.exe"`
-- ELECTRON_RUN_AS_NODE=1 환경변수 해제 필수
-- Gemini Pro 일일 쿼터 제한 있음
-- 가이드: `C:/Users/comes/.claude/projects/c--Project/memory/guide_antigravity.md`
+## 계획서 문서 구조
+- `docs/README.md` — 16개 Phase 한눈에 보기
+- `docs/01-architecture.plan.md` — 아키텍처 리팩토링 마스터 계획
+- `docs/01/` — Phase 1의 서브 Phase별 상세 계획 (이 폴더를 만들어서 진행)
+- `docs/02~16-*.plan.md` — 나머지 Phase (로드맵 수준, 해당 Phase 시작 시 구체화)

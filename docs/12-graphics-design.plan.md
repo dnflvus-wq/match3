@@ -141,6 +141,56 @@
 - 일일 보상/이벤트 배너
 - 시즌패스 UI
 
+## Unity 에디터 필수 설정 (NotebookLM 확인)
+
+### 스프라이트 Import Settings
+```
+타일 스프라이트 (256×256 텍스처):
+  - Texture Type: Sprite (2D and UI)
+  - Pixels Per Unit: 256 (텍스처 크기와 동일 → 1 Unit = 1 타일)
+  - Filter Mode: Bilinear (선명한 외곽선)
+  - Max Size: 256
+  - Compression: ASTC 4x4 (Android) / ASTC 4x4 (iOS)
+  - Generate Mip Maps: OFF (2D 게임에서 불필요)
+
+UI 스프라이트:
+  - Texture Type: Sprite (2D and UI)
+  - Filter Mode: Bilinear
+  - Max Size: 1024 (배경은 2048)
+  - Compression: ASTC 6x6 (UI는 약간 손실 허용)
+
+배경 스프라이트:
+  - Max Size: 2048
+  - Compression: ASTC 6x6
+```
+
+### 텍스처 압축 (NLM 확인)
+- **ASTC 4x4~6x6**: 최신 Android/iOS 표준. 타일은 4x4 (최소 손실)
+- **ETC2 8-bit RGBA**: 구형 Android Fallback (Alpha 포함 시 필수)
+- 8x8 이상 압축 시 타일 경계선 뭉개짐 → 사용 금지
+
+### Sprite Atlas 최적 설정 (NLM 확인)
+```
+TileAtlas.spriteatlas Inspector:
+  - Padding: 4 (블리딩 방지)
+  - Allow Rotation: OFF (UI 요소 회전 깨짐 방지)
+  - Max Texture Size: 2048
+  - Compression: ASTC 4x4
+
+UIAtlas.spriteatlas Inspector:
+  - Padding: 2
+  - Allow Rotation: OFF
+  - Max Texture Size: 2048
+  - Compression: ASTC 6x6
+```
+
+### Juicing 에디터 설정 (NLM 확인)
+- **Post-Processing Volume**: Vignette (폭발 시 ON/OFF), Chromatic Aberration (절제 사용)
+- **Shader Graph**: Sine/Cosine으로 타일 Wobble 효과 (스크립트 없이)
+- **Screen Shake**: DOTween `DOShakePosition(0.1s, 0.1f)` (폭발 시)
+- **Hitstop**: `Time.timeScale = 0` for 0.05s → 타격감 강화
+- **Haptics**: 모바일 진동 `Handheld.Vibrate()` (폭발 시)
+
 ## 검증 항목
 - [ ] 타일 8색 스프라이트 일관성
 - [ ] 특수 타일 4종 비주얼 구분 명확
@@ -151,5 +201,21 @@
 - [ ] Shader Graph 이펙트 2종 이상
 - [ ] 캐릭터 일러스트 1종
 - [ ] 앱 아이콘
+
+## MCP 도구 호출 순서
+
+```
+Step 1: script-execute → 텍스처 Import Settings 일괄 변경 (PPU, Filter Mode, ASTC 압축)
+Step 2: script-execute → Sprite Atlas에 스프라이트 추가 + Padding/Rotation 설정
+Step 3: assets-refresh → 리임포트
+Step 4: screenshot-game-view → 압축 후 시각적 품질 확인
+Step 5: script-execute → Shader Graph Material 생성 (Wobble, Glow 등)
+```
+
+**에셋 생성**: Antigravity+Gemini로 이미지 생성 → rembg 누끼 → Unity 에디터에 임포트
+**MCP로 처리:**
+- Shader Graph → script-execute로 ShaderGraph API 또는 Material 속성 설정
+- Post-Processing Volume → script-execute로 Volume Profile 생성 + 값 설정
+- 최종 시각 확인만 사용자가 screenshot-game-view로 검토
 
 ## 진행률: 5% (판타지 배경 1종 완료)
