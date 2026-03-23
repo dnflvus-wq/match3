@@ -31,6 +31,9 @@ namespace Match3
         public float swapTime = 0.25f;
         public float swapBackTime = 0.2f;
 
+        [Header("Config (Optional)")]
+        public GameConfig gameConfig;
+
         public Level level;
 
         public PiecePrefab[] piecePrefabs;
@@ -70,6 +73,15 @@ namespace Match3
 
         private void Awake()
         {
+            // GameConfig가 있으면 값 적용
+            if (gameConfig != null)
+            {
+                fillTime = gameConfig.fillTime;
+                swapTime = gameConfig.swapTime;
+                swapBackTime = gameConfig.swapBackTime;
+                hintDelay = gameConfig.hintDelay;
+            }
+
             _piecePrefabDict = new Dictionary<PieceType, GameObject>();
             for (int i = 0; i < piecePrefabs.Length; i++)
             {
