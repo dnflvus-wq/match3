@@ -196,7 +196,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -100
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 77be3e2575e9d7d4aa3354bbaa28c49f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &455804010
 Transform:
@@ -341,6 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581336196}
   - component: {fileID: 581336197}
+  - component: {fileID: 581336198}
   m_Layer: 0
   m_Name: GameGrid
   m_TagString: Untagged
@@ -380,6 +381,7 @@ MonoBehaviour:
   fillTime: 0.1
   swapTime: 0.25
   swapBackTime: 0.2
+  gameConfig: {fileID: 0}
   level: {fileID: 1773144088}
   piecePrefabs:
   - type: 0
@@ -424,6 +426,18 @@ MonoBehaviour:
     x: 8
     y: 5
   hintDelay: 5
+--- !u!114 &581336198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581336195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482e69fe2663b364284929f95cd5aed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Match3.InputController
 --- !u!1 &606057589
 GameObject:
   m_ObjectHideFlags: 0
