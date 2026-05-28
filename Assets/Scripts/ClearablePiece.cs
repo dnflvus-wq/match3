@@ -5,6 +5,8 @@ namespace Match3
 {
     public class ClearablePiece : MonoBehaviour
     {
+        private const float FallbackClearDuration = 0.15f;
+
         public AnimationClip clearAnimation;
 
         public bool IsBeingCleared { get; private set; }
@@ -18,7 +20,7 @@ namespace Match3
 
         public virtual void Clear()
         {
-            piece.GameGridRef.level.OnPieceCleared(piece);
+            piece.OnCleared?.Invoke(piece);
             IsBeingCleared = true;
             StartCoroutine(ClearCoroutine());
         }
@@ -35,7 +37,7 @@ namespace Match3
             else
             {
                 // Juice 이펙트: 스케일 축소 + 페이드 아웃 (0.15초)
-                float duration = 0.15f;
+                float duration = FallbackClearDuration;
                 Vector3 startScale = transform.localScale;
                 SpriteRenderer sr = transform.Find("piece")?.GetComponent<SpriteRenderer>();
                 Color startColor = sr != null ? sr.color : Color.white;

@@ -5,6 +5,11 @@ namespace Match3
 {
     public class MovablePiece : MonoBehaviour
     {
+        private const float SwapArcZ = -0.1f;
+        private const float SquashDuration = 0.1f;
+        private const float SquashScaleX = 1.15f;
+        private const float SquashScaleY = 0.85f;
+
         private GamePiece _piece;
         private IEnumerator _moveCoroutine;
 
@@ -30,7 +35,7 @@ namespace Match3
             _piece.Y = newY;
 
             Vector3 startPos = transform.position;
-            Vector3 endPos = _piece.GameGridRef.GetWorldPosition(newX, newY);
+            Vector3 endPos = _piece.CalcWorldPosition(newX, newY);
 
             for (float t = 0; t <= time; t += Time.deltaTime)
             {
@@ -64,7 +69,7 @@ namespace Match3
         private IEnumerator MoveVisualCoroutine(int targetX, int targetY, float time, bool useArc)
         {
             Vector3 startPos = transform.position;
-            Vector3 endPos = _piece.GameGridRef.GetWorldPosition(targetX, targetY);
+            Vector3 endPos = _piece.CalcWorldPosition(targetX, targetY);
 
             for (float t = 0; t <= time; t += Time.deltaTime)
             {
@@ -75,7 +80,7 @@ namespace Match3
                 // Z축 아크: 교차 시 겹침 방지 (Sin 곡선으로 앞으로 나왔다 복귀)
                 if (useArc)
                 {
-                    pos.z = Mathf.Sin(normalizedT * Mathf.PI) * -0.1f;
+                    pos.z = Mathf.Sin(normalizedT * Mathf.PI) * SwapArcZ;
                 }
 
                 _piece.transform.position = pos;
@@ -101,7 +106,7 @@ namespace Match3
             _piece.Y = newY;
 
             Vector3 startPos = transform.position;
-            Vector3 endPos = _piece.GameGridRef.GetWorldPosition(newX, newY);
+            Vector3 endPos = _piece.CalcWorldPosition(newX, newY);
 
             // 낙하 (Ease-In: 가속)
             for (float t = 0; t <= time; t += Time.deltaTime)
@@ -115,12 +120,11 @@ namespace Match3
             _piece.transform.position = endPos;
 
             // Squash & Stretch: 착지 시 찌그러짐 → 복원
-            float squashDuration = 0.1f;
-            for (float t = 0; t < squashDuration; t += Time.deltaTime)
+            for (float t = 0; t < SquashDuration; t += Time.deltaTime)
             {
-                float progress = t / squashDuration;
-                float scaleX = Mathf.Lerp(1.15f, 1f, progress);
-                float scaleY = Mathf.Lerp(0.85f, 1f, progress);
+                float progress = t / SquashDuration;
+                float scaleX = Mathf.Lerp(SquashScaleX, 1f, progress);
+                float scaleY = Mathf.Lerp(SquashScaleY, 1f, progress);
                 transform.localScale = new Vector3(scaleX, scaleY, 1f);
                 yield return null;
             }

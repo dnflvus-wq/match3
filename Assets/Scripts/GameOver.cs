@@ -20,6 +20,19 @@ namespace Match3
             {
                 stars[i].enabled = false;
             }
+
+            EnsureCanvasScaler();
+        }
+
+        private void EnsureCanvasScaler()
+        {
+            var canvas = GetComponentInParent<Canvas>();
+            if (canvas == null) return;
+            var scaler = canvas.GetComponent<CanvasScaler>();
+            if (scaler == null) scaler = canvas.gameObject.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1080, 2160);
+            scaler.matchWidthOrHeight = 0.5f;
         }
 
         public void ShowLose()

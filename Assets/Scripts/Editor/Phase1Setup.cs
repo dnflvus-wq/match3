@@ -13,7 +13,7 @@ namespace Match3.Editor
             SetupUIPrefabs();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-            Debug.Log("[Phase1] All setup complete!");
+
         }
 
         [MenuItem("Match3/Phase1 - 1. Tile Prefabs")]
@@ -43,7 +43,7 @@ namespace Match3.Editor
 
             GameObject basePrefab = PrefabUtility.SaveAsPrefabAsset(baseGo, basePath);
             Object.DestroyImmediate(baseGo);
-            Debug.Log("[Phase1] Created BaseTile.prefab");
+
 
             // 2. Create Prefab Variants (6 colors with sprites)
             foreach (var (tileName, spritePath) in spriteMap)
@@ -60,7 +60,7 @@ namespace Match3.Editor
 
                 PrefabUtility.SaveAsPrefabAsset(instance, variantPath);
                 Object.DestroyImmediate(instance);
-                Debug.Log("[Phase1] Variant: " + tileName + " sprite=" + (sprite != null ? sprite.name : "NULL"));
+
             }
 
             // Orange/Cyan (future colors, no sprite yet)
@@ -71,7 +71,7 @@ namespace Match3.Editor
                 instance.name = tileName;
                 PrefabUtility.SaveAsPrefabAsset(instance, variantPath);
                 Object.DestroyImmediate(instance);
-                Debug.Log("[Phase1] Variant (no sprite): " + tileName);
+
             }
 
             AssetDatabase.SaveAssets();
@@ -109,7 +109,7 @@ namespace Match3.Editor
                 color: new Color(0.8f, 0.9f, 1f));
 
             AssetDatabase.SaveAssets();
-            Debug.Log("[Phase1] Particle prefabs configured!");
+
         }
 
         static void ConfigureParticle(string path, float duration, float startSpeed,
@@ -117,7 +117,7 @@ namespace Match3.Editor
             ParticleSystemShapeType shape, float radius, Color color)
         {
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
-            if (prefab == null) { Debug.LogError("Not found: " + path); return; }
+            if (prefab == null) return;
 
             var root = PrefabUtility.LoadPrefabContents(path);
             var ps = root.GetComponent<ParticleSystem>();
@@ -184,7 +184,7 @@ namespace Match3.Editor
                 }
                 PrefabUtility.SaveAsPrefabAsset(root, path);
                 PrefabUtility.UnloadPrefabContents(root);
-                Debug.Log("[Phase1] LevelButton: sprite assigned");
+
             }
 
             // HudPanel - add image + text children
@@ -204,7 +204,7 @@ namespace Match3.Editor
 
                 PrefabUtility.SaveAsPrefabAsset(root, path);
                 PrefabUtility.UnloadPrefabContents(root);
-                Debug.Log("[Phase1] HudPanel: image + texts assigned");
+
             }
 
             // GameOverPanel - overlay + buttons
@@ -232,7 +232,7 @@ namespace Match3.Editor
 
                 PrefabUtility.SaveAsPrefabAsset(root, path);
                 PrefabUtility.UnloadPrefabContents(root);
-                Debug.Log("[Phase1] GameOverPanel: configured");
+
             }
 
             // BoosterButton - icon + count
@@ -256,11 +256,11 @@ namespace Match3.Editor
 
                 PrefabUtility.SaveAsPrefabAsset(root, path);
                 PrefabUtility.UnloadPrefabContents(root);
-                Debug.Log("[Phase1] BoosterButton: configured");
+
             }
 
             AssetDatabase.SaveAssets();
-            Debug.Log("[Phase1] All UI prefabs configured!");
+
         }
 
         static void AddTextChild(Transform parent, string name, string text, int fontSize)

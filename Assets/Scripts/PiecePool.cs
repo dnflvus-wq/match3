@@ -46,13 +46,6 @@ namespace Match3
                 obj.transform.position = position;
                 obj.transform.localScale = Vector3.one;
                 obj.SetActive(true);
-
-                // 컴포넌트 리셋
-                var clearable = obj.GetComponent<ClearablePiece>();
-                if (clearable != null)
-                {
-                    // IsBeingCleared 리셋은 ClearablePiece에서 처리
-                }
             }
             else
             {

@@ -9,7 +9,7 @@ public class FixArchitecture
     {
         var before = PlayerSettings.Android.targetArchitectures;
         // IL2CPP + ARM64 + x86_64
-        PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
+        PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64 | AndroidArchitecture.X86_64;
         var after = PlayerSettings.Android.targetArchitectures;
         Debug.Log($"[FixArchitecture] IL2CPP+ARM64: {before} -> {after}");
@@ -19,7 +19,7 @@ public class FixArchitecture
     static void BuildAndroid()
     {
         // IL2CPP로 전환 (ARM64 + x86_64 지원, 에뮬레이터 호환)
-        PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
+        PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         // ARM64 + x86_64 (실제 ARM 디바이스 + x86_64 에뮬레이터 모두 지원)
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64 | AndroidArchitecture.X86_64;
 
@@ -64,7 +64,7 @@ public class FixArchitecture
         catch (System.Exception e) { Debug.LogWarning("[FixArchitecture] Reflection error: " + e.Message); }
 
         var actual = PlayerSettings.Android.targetArchitectures;
-        Debug.Log($"[FixArchitecture] Building: got={actual}({(int)actual}), scriptingBackend={PlayerSettings.GetScriptingBackend(BuildTargetGroup.Android)}");
+        Debug.Log($"[FixArchitecture] Building: got={actual}({(int)actual}), scriptingBackend={PlayerSettings.GetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android)}");
 
         // 모바일 UI 설정 (씬/prefab에 런타임 스크립트 추가)
         MobileUISetup.Run();

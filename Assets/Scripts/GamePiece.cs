@@ -27,7 +27,15 @@ namespace Match3
 
         private GameGrid _gameGrid;
 
-        public GameGrid GameGridRef => _gameGrid;
+        private BoardModel _boardModel;
+        public BoardModel BoardModelRef => _boardModel;
+
+        private Vector2 _boardOrigin;
+        private int _boardWidth, _boardHeight;
+
+        public System.Action<GamePiece> OnCleared;
+
+        private InputController _inputController;
 
         private MovablePiece _movableComponent;
 
@@ -53,14 +61,27 @@ namespace Match3
             _x = x;
             _y = y;
             _gameGrid = gameGrid;
+            _boardModel = gameGrid.GetComponent<BoardModel>();
+            _inputController = gameGrid.GetComponent<InputController>();
             _type = type;
+            _boardOrigin = gameGrid.transform.position;
+            _boardWidth = gameGrid.xDim;
+            _boardHeight = gameGrid.yDim;
+            OnCleared = (p) => gameGrid.level.OnPieceCleared(p);
         }
 
-        private void OnMouseEnter() => _gameGrid.EnterPiece(this);
+        public Vector2 CalcWorldPosition(int px, int py)
+        {
+            return new Vector2(
+                _boardOrigin.x - _boardWidth / 2.0f + px + 0.5f,
+                _boardOrigin.y + _boardHeight / 2.0f - py - 0.5f);
+        }
 
-        private void OnMouseDown() => _gameGrid.PressPiece(this);
+        private void OnMouseEnter() => _inputController?.EnterPiece(this);
 
-        private void OnMouseUp() => _gameGrid.ReleasePiece();
+        private void OnMouseDown() => _inputController?.PressPiece(this);
+
+        private void OnMouseUp() => _inputController?.ReleasePiece();
 
         public bool IsMovable() => _movableComponent != null;
 

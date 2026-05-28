@@ -10,11 +10,11 @@
 
             if (isRow)
             {            
-                piece.GameGridRef.ClearRow(piece.Y);
+                piece.BoardModelRef.ClearRow(piece.Y);
             }
             else
             {            
-                piece.GameGridRef.ClearColumn(piece.X);
+                piece.BoardModelRef.ClearColumn(piece.X);
             }
         }
     }

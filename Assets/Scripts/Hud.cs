@@ -28,6 +28,7 @@ namespace Match3
 
         public void SetScore(int score)
         {
+            if (scoreText == null || level == null) return;
             scoreText.text = score.ToString();
 
             int visibleStar = 0;
@@ -53,11 +54,11 @@ namespace Match3
             _starIndex = visibleStar;
         }
 
-        public void SetTarget(int target) => targetText.text = target.ToString();
+        public void SetTarget(int target) { if (targetText != null) targetText.text = target.ToString(); }
 
-        public void SetRemaining(int remaining) => remainingText.text = remaining.ToString();
+        public void SetRemaining(int remaining) { if (remainingText != null) remainingText.text = remaining.ToString(); }
 
-        public void SetRemaining(string remaining) => remainingText.text = remaining;
+        public void SetRemaining(string remaining) { if (remainingText != null) remainingText.text = remaining; }
 
         public void SetLevelType(LevelType type)
         {
@@ -80,6 +81,7 @@ namespace Match3
 
         public void OnGameWin(int score)
         {
+            if (gameOver == null) return;
             gameOver.ShowWin(score, _starIndex);
             if (_starIndex > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0))
             {
@@ -87,6 +89,6 @@ namespace Match3
             }
         }
 
-        public void OnGameLose() => gameOver.ShowLose();
+        public void OnGameLose() { if (gameOver != null) gameOver.ShowLose(); }
     }
 }

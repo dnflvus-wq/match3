@@ -18,6 +18,10 @@ namespace Match3
         public float timeLimit = 90f;
         public int targetScore = 15000;
 
+        [Header("Timing")]
+        [Range(0.01f, 0.5f)]
+        public float fillTime = 0.1f;
+
         [Header("Tiles")]
         [Range(4, 8)]
         public int numColors = 6;

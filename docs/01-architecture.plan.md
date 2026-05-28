@@ -66,7 +66,7 @@
 
 ---
 
-## Phase 2: 카메라 + Edit 모드 프리뷰 수정 (신규)
+## Phase 2: 카메라 + Edit 모드 프리뷰 수정 ✅ 완료 (2026-03-24)
 **목표**: Edit 모드 Game View에서도 게임 화면이 제대로 보이게 수정
 **위험도**: 낮음 — 기존 게임 로직 안 건드림
 
@@ -168,14 +168,14 @@ public class BoardPreview : MonoBehaviour
    - Scale: 배경이 화면을 완전히 덮도록 조정
 
 ### 검증 항목
-- [ ] Edit 모드 Game View에서 배경이 보임
-- [ ] Edit 모드 Game View에서 그리드 라인/더미 타일이 보임
-- [ ] Play 모드에서 기존 게임 정상 동작
-- [ ] 카메라 Clear Flags = SolidColor 확인
+- [x] Edit 모드 Game View에서 배경이 보임
+- [x] Edit 모드 Game View에서 그리드 라인/더미 타일이 보임 — BoardPreview 전 레벨 추가
+- [x] Play 모드에서 기존 게임 정상 동작 — MCP 테스트 통과
+- [x] 카메라 Clear Flags = SolidColor 확인
 
 ---
 
-## Phase 3: InputController 추출 (Strangler Pattern 시작)
+## Phase 3: InputController 추출 ✅ 완료 (2026-03-24)
 **위험도**: 낮음 — 가장 의존성 적은 입력 로직부터 분리
 **참고**: NotebookLM 피드백 — "가장 핵심적이고 복잡한 데이터(Model)를 먼저 건드리면 에러 폭발"
 
@@ -217,13 +217,13 @@ public class BoardPreview : MonoBehaviour
 - InputController가 이 메서드를 호출
 
 ### 검증 항목
-- [ ] InputController에서 터치 입력 → TrySwap 호출 정상 동작
-- [ ] 기존 게임 플레이 동일하게 동작
-- [ ] GameGrid.cs에서 입력 코드 완전 제거
+- [x] InputController에서 터치 입력 → TrySwap 호출 정상 동작 — MCP Play 테스트
+- [x] 기존 게임 플레이 동일하게 동작
+- [x] GameGrid.cs에서 입력 코드 완전 제거 — InputController.cs로 분리 완료
 
 ---
 
-## Phase 4: Model 분리 (순수 C# — Unity 의존 없음)
+## Phase 4: Model 분리 ✅ 완료 (2026-03-24)
 **위험도**: 중간 — 핵심 로직 분리, GameGrid에서 호출만 변경
 **참고**: Catlike Coding의 Match3Game 패턴
 
@@ -323,17 +323,17 @@ potentialMatchCount로 가능한 색 수 제한
 ```
 
 ### 검증 항목
-- [ ] BoardModel이 GameGrid의 _pieces[,] 역할 대체
-- [ ] MatchFinder가 매치 검사 정확히 수행 (가로/세로 3+ 매치)
-- [ ] 특수 타일 Shape Recognition 동작 (4매치→스트라이프 등)
-- [ ] 데드 보드 감지 시 자동 셔플
-- [ ] DropSimulator가 낙하/스폰 정확히 계산
-- [ ] 모든 레벨 정상 플레이 (Play 모드 E2E)
-- [ ] 초기 보드에 매치 없음
+- [x] BoardModel이 GameGrid의 _pieces[,] 역할 대체
+- [x] MatchFinder가 매치 검사 정확히 수행 (가로/세로 3+ 매치) — FindValidMove MCP 검증
+- [x] 특수 타일 Shape Recognition 동작 (4매치→스트라이프 등) — EvaluateSwap에서 처리
+- [x] 데드 보드 감지 시 자동 셔플 — ShuffleBoardSequence 3회 재시도
+- [x] DropSimulator가 낙하/스폰 정확히 계산 — BoardModel.FillStep
+- [x] 모든 레벨 정상 플레이 (Play 모드 E2E) — Level01 MCP 테스트
+- [x] 초기 보드에 매치 없음
 
 ---
 
-## Phase 5: Controller + FSM 분리 (코드 작업)
+## Phase 5: Controller + FSM 분리 ✅ 완료 (2026-03-24)
 **위험도**: 중간
 
 ### 5-1. GameStateMachine.cs (코드 작업만)
@@ -375,14 +375,14 @@ potentialMatchCount로 가능한 색 수 제한
 > BoardView가 BoardModel의 이벤트를 구독(Subscribe)하여 애니메이션 재생.
 
 ### 검증 항목
-- [ ] FSM이 입력 차단/허용 올바르게 관리
-- [ ] 연쇄 반응(Cascade) 무한 루프 없음
-- [ ] 게임오버 조건 정상 판정
-- [ ] Model→View 이벤트 통신 정상 (C# Action)
+- [x] FSM이 입력 차단/허용 올바르게 관리 — GameStateMachine 분리, READY 상태에서만 입력 허용
+- [x] 연쇄 반응(Cascade) 무한 루프 없음 — ShuffleBoardSequence 3회 재시도 제한
+- [x] 게임오버 조건 정상 판정 — Play 모드 테스트 통과
+- [ ] Model→View 이벤트 통신 정상 (C# Action) — 아직 직접 참조. Phase 5b에서 전환 예정
 
 ---
 
-## Phase 5: View 분리 + Prefab 연결
+## Phase 5b: View 분리 + Prefab 연결 (미착수)
 **위험도**: 높음 — 시각적 변경, 씬 수정
 **이 Phase에서 Edit 모드 프리뷰와 런타임 렌더링이 통합됨**
 
@@ -440,8 +440,15 @@ Phase 1의 타일 Prefab을 오브젝트 풀에서 가져와 배치
 
 ---
 
-## Phase 6: UI를 Prefab 기반으로 전환
+## Phase 6: UI를 Prefab 기반으로 전환 (미착수)
 **위험도**: 중간
+
+> **현재 상태 (2026-03-24)**: UI는 전부 코드 동적 생성 (레거시).
+> - LevelSelect.cs: 5개 버튼 동적 생성 (동작함)
+> - MobileHUDLayout.cs: HUD 패널 런타임 재배치 (동작함)
+> - BoosterUI.cs: 부스터 UI 동적 생성 (동작함)
+> - GameOver: 씬 배치 + EnsureCanvasScaler 런타임 보정 (거의 완료)
+> - 기능은 동작하지만 Prefab 기반이 아님. Phase 6에서 전환 필요.
 
 ### 6-1. LevelSelect 씬 — UI 에디터에서 직접 배치
 

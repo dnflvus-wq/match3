@@ -8,7 +8,7 @@
         {
             base.Clear();
 
-            piece.GameGridRef.ClearColor(Color);
+            piece.BoardModelRef.ClearColor(Color);
         }
     }
 }
